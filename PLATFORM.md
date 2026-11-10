@@ -33,9 +33,10 @@ Each public page links to its counterpart on the other domain:
 - The v5 preview already outputs these tags, pointing at the GitHub Pages preview URLs.
 
 ## Legal and age rules per region
-- **NL/EU: 21+.** We ask for the birth year and an explicit confirmation. GDPR applies: a privacy policy, data export and deletion, and a processing register.
-- **USA:** 18+ is legally possible, but **we keep 21+ unless Stefan decides otherwise.** The minimum age should be a per-region config value (`min_age`), so it can change without new code.
-- US-specific items to settle before launch: Terms and Privacy for US users (including CCPA/CPRA for California), sales tax, payment-provider rules for dating, and any state-level age-verification laws.
+- **Minimum age: 18+ on both domains** (Stefan's decision, 2026-11-10). We ask for the birth year and an explicit "I'm 18 or older" confirmation at signup.
+- Keep `min_age` as a per-region config value (currently `18` for `nl` and `us`), so it can change without new code. In the v5 preview it is `MIN_AGE` in `v5/build.py`.
+- NL/EU: GDPR applies: a privacy policy, data export and deletion, and a processing register.
+- US items to settle before launch: Terms and Privacy for US users (including CCPA/CPRA for California), sales tax, payment-provider rules for dating, and state-level age-verification laws, some of which may require more than a checkbox.
 - Both regions: no offering or requesting sex for money. Profiles can be reported and blocked, and profile verification comes at launch.
 
 ## Front-end preview (this repo)

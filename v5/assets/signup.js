@@ -4,16 +4,16 @@
 (function(){
   var T = window.SD || {};
   var KEY = T.storage || "sugardates-v5";
-  var YEAR_MAX = new Date().getFullYear() - 21, YEAR_MIN = YEAR_MAX - 70;
+  var YEAR_MAX = new Date().getFullYear() - (T.minAge || 18), YEAR_MIN = YEAR_MAX - 70;
   var STEPS = ["role","about","looking","bio","account"];
-  var IMG = {baby:"rooftop", daddy:"dinner"};
+  var IMG = T.imgs || {baby:"woman", daddy:"man"};
   var state = {role:"",displayName:"",location:"",birthYear:"",who:"",what:[],bio:"",email:"",done:false};
   var i = 0;
   var panel = document.getElementById("panel"), back = document.getElementById("back-btn"),
       count = document.getElementById("step-count"), fill = document.getElementById("progress-fill"),
       live = document.getElementById("step-live"), trust = document.getElementById("trust");
-  var TICK = '<span class="tick" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1b1410" stroke-width="3"><path d="M5 12.5l5 5 9-10"/></svg></span>';
-  var ARR = ' <svg class="arr" width="16" height="10" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M1 6h18M14 1l5 5-5 5"/></svg>';
+  var TICK = '<span class="tick" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5"><path d="M5 12.5l5 5 9-10"/></svg></span>';
+  var ARR = '';
 
   function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
   function fmt(s,o){ return s.replace(/\{(\w+)\}/g,function(_,k){ return o[k]; }); }
@@ -24,54 +24,54 @@
       if(Array.isArray(d.what)) state.what=d.what.filter(function(x){return typeof x==="string";});
       state.done=!!d.done; if(typeof d.i==="number"&&d.i>=0&&d.i<STEPS.length) i=d.i; }catch(e){} }
   function rm(){ return window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches; }
-  function nextBtn(extra){ return '<div class="actions sticky"><button type="button" class="btn btn-gold btn-block" data-next>'+T.next+ARR+'</button>'+(extra||"")+'</div>'; }
+  function nextBtn(extra){ return '<div class="actions sticky"><button type="button" class="btn btn-primary btn-block" data-next>'+T.next+ARR+'</button>'+(extra||"")+'</div>'; }
   function lead(){ return state.role ? '<p class="personal">'+esc(state.role==="baby"?T.lead_baby:T.lead_daddy)+'</p>' : ""; }
   function opts(list, sel, cls){ return '<div class="opts '+(cls||"")+'" role="group">'+list.map(function(o){ var on=sel.indexOf(o[0])>=0; return '<button type="button" class="opt'+(on?" is-on":"")+'" data-opt="'+o[0]+'" aria-pressed="'+on+'"><span>'+esc(o[1])+'</span>'+TICK+'</button>'; }).join("")+'</div>'; }
   function options(vals, cur){ return vals.map(function(v){ return '<option value="'+esc(v)+'"'+(cur===v?" selected":"")+'>'+esc(v)+'</option>'; }).join(""); }
-  function pic(n){ return '<picture><source srcset="'+T.root+'img/'+n+'.webp" type="image/webp"><img src="'+T.root+'img/'+n+'.jpg" alt="" width="864" height="1152"></picture>'; }
+  function pic(n){ return '<picture><source srcset="'+T.root+'img/'+n+'.webp" type="image/webp"><img src="'+T.root+'img/'+n+'.jpg" alt="" width="1152" height="864"></picture>'; }
 
   function step(id){
     if(id==="role") return '<h1 class="title">'+T.role_h+'</h1><p class="lead2">'+T.role_p+'</p><div class="role-pick">'+
-      ["baby","daddy"].map(function(r){ return '<button type="button" class="role-card'+(state.role===r?" is-on":"")+'" data-role="'+r+'">'+pic(IMG[r])+'<span class="shade"></span><span class="rc"><span class="k">'+T["role_"+r+"_k"]+'</span><span class="t">'+T["role_"+r+"_t"]+'</span></span></button>'; }).join("")+'</div><p class="err" id="err" hidden></p>';
+      ["baby","daddy"].map(function(r){ return '<button type="button" class="role-card'+(state.role===r?" is-on":"")+'" data-role="'+r+'">'+pic(IMG[r])+'<span class="rc"><span class="t">'+T["role_"+r+"_t"]+'</span><span class="k">'+T["role_"+r+"_k"]+'</span></span></button>'; }).join("")+'</div><p class="err" id="err" hidden></p>';
     if(id==="about"){
       var years=[]; for(var y=YEAR_MAX;y>=YEAR_MIN;y--) years.push(String(y));
       var loc = T.regions.length
         ? '<optgroup label="'+esc(T.grp_cities)+'">'+options(T.cities,state.location)+'</optgroup><optgroup label="'+esc(T.grp_regions)+'">'+options(T.regions,state.location)+'</optgroup>'
         : options(T.cities,state.location);
       return lead()+'<h1 class="title">'+T.about_h+'</h1><p class="lead2">'+T.about_p+'</p>'+
-        '<div class="field"><input id="displayName" class="inp" type="text" maxlength="32" autocomplete="nickname" placeholder=" " value="'+esc(state.displayName)+'"><label for="displayName">'+T.f_name+'</label></div>'+
-        '<div class="field is-select"><select id="location" class="inp"><option value="">'+esc(T.f_loc_ph)+'</option>'+loc+'<option value="'+esc(T.other)+'"'+(state.location===T.other?" selected":"")+'>'+esc(T.other)+'</option></select><label for="location">'+T.f_loc+'</label></div>'+
-        '<div class="field is-select"><select id="birthYear" class="inp"><option value="">'+esc(T.f_year_ph)+'</option>'+options(years,state.birthYear)+'</select><label for="birthYear">'+T.f_year+'</label></div>'+
+        '<div class="field"><label for="displayName">'+T.f_name+'</label><input id="displayName" class="inp" type="text" maxlength="32" autocomplete="nickname" value="'+esc(state.displayName)+'"></div>'+
+        '<div class="field"><label for="location">'+T.f_loc+'</label><select id="location" class="inp"><option value="">'+esc(T.f_loc_ph)+'</option>'+loc+'<option value="'+esc(T.other)+'"'+(state.location===T.other?" selected":"")+'>'+esc(T.other)+'</option></select></div>'+
+        '<div class="field"><label for="birthYear">'+T.f_year+'</label><select id="birthYear" class="inp"><option value="">'+esc(T.f_year_ph)+'</option>'+options(years,state.birthYear)+'</select></div>'+
         '<p class="micro">'+T.about_micro+'</p><p class="err" id="err" hidden></p>'+nextBtn();
     }
     if(id==="looking") return lead()+'<h1 class="title">'+T.looking_h+'</h1><p class="lead2">'+T.looking_p+'</p>'+
       '<p class="grp-label">'+T.grp_who+'</p>'+opts(T.who, state.who?[state.who]:[], "two")+
       '<p class="grp-label">'+T.grp_what+'</p>'+opts(T.what, state.what)+'<p class="err" id="err" hidden></p>'+nextBtn();
     if(id==="bio") return lead()+'<h1 class="title">'+T.bio_h+'</h1><p class="lead2">'+T.bio_p+'</p>'+
-      '<div class="field is-area"><textarea id="bio" class="inp" rows="3" maxlength="120" placeholder=" ">'+esc(state.bio)+'</textarea><label for="bio">'+T.f_bio+'</label></div>'+
-      '<p class="micro">'+T.bio_micro+'</p><p class="err" id="err" hidden></p>'+nextBtn('<button type="button" class="btn btn-line btn-block" data-skip>'+T.skip+'</button>');
+      '<div class="field"><label for="bio">'+T.f_bio+'</label><textarea id="bio" class="inp" rows="3" maxlength="120">'+esc(state.bio)+'</textarea></div>'+
+      '<p class="micro">'+T.bio_micro+'</p><p class="err" id="err" hidden></p>'+nextBtn('<button type="button" class="btn btn-outline btn-block" data-skip>'+T.skip+'</button>');
     if(id==="account") return lead()+'<h1 class="title">'+T.acc_h+'</h1><p class="lead2">'+T.acc_p+'</p><form id="acc" novalidate>'+
-      '<div class="field"><input id="email" class="inp" type="email" autocomplete="email" inputmode="email" placeholder=" " value="'+esc(state.email)+'"><label for="email">'+T.f_email+'</label></div>'+
-      '<div class="field"><input id="password" class="inp" type="password" autocomplete="new-password" minlength="8" placeholder=" "><label for="password">'+T.f_pass+'</label></div>'+
+      '<div class="field"><label for="email">'+T.f_email+'</label><input id="email" class="inp" type="email" autocomplete="email" inputmode="email" value="'+esc(state.email)+'"></div>'+
+      '<div class="field"><label for="password">'+T.f_pass+'</label><input id="password" class="inp" type="password" autocomplete="new-password" minlength="8"></div>'+
       '<p class="micro">'+T.acc_micro+'</p>'+
       '<label class="chk-row"><input id="age" type="checkbox" class="chk"><span>'+T.chk_age+'</span></label>'+
       '<label class="chk-row"><input id="terms" type="checkbox" class="chk"><span>'+T.chk_terms+'</span></label>'+
-      '<p class="err" id="err" hidden></p><div class="actions sticky"><button type="submit" class="btn btn-gold btn-block">'+T.submit+ARR+'</button></div></form>';
+      '<p class="err" id="err" hidden></p><div class="actions sticky"><button type="submit" class="btn btn-primary btn-block">'+T.submit+ARR+'</button></div></form>';
     return "";
   }
   function success(){
     var rows=[[T.s_role, state.role==="baby"?T.r_baby:T.r_daddy],[T.s_name,state.displayName],[T.s_loc,state.location],[T.s_year,state.birthYear],
       [T.s_who,label(T.who,state.who)],[T.s_what,state.what.map(function(w){return label(T.what,w);}).join(", ")],[T.s_bio,state.bio],[T.s_email,state.email]];
-    return '<svg class="ok" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27.2l7.2 7.2 15-16"/></svg>'+
+    return '<svg class="ok" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#f1ecfb"/><path d="M16 27l7 7 13-15" fill="none" stroke="#7351c0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'+
       '<h1 class="title">'+fmt(T.ok_h,{name:esc(state.displayName)})+'</h1><p class="lead2">'+fmt(esc(T.ok_p),{email:esc(state.email)})+'</p>'+
       '<dl class="summary">'+rows.filter(function(r){return r[1];}).map(function(r){return '<div><dt>'+esc(r[0])+'</dt><dd>'+esc(r[1])+'</dd></div>';}).join("")+'</dl>'+
-      '<p class="micro">'+T.ok_next+'</p><div class="actions"><a class="btn btn-gold btn-block" href="../">'+T.home+'</a><button type="button" class="btn btn-line btn-block" id="reset">'+T.reset+'</button></div>';
+      '<p class="micro">'+T.ok_next+'</p><div class="actions"><a class="btn btn-primary btn-block" href="../">'+T.home+'</a><button type="button" class="btn btn-outline btn-block" id="reset">'+T.reset+'</button></div>';
   }
   function chrome(){
     var t=STEPS.length, n=state.done?t:i+1;
     fill.style.width=Math.round(n/t*100)+"%";
     back.hidden = state.done || i===0;
-    count.innerHTML = state.done ? esc(T.done) : (i===t-1 ? "<b>"+esc(T.left1)+"</b>" : fmt(esc(T.stepOf),{n:"<b>"+n+"</b>",t:t})+' · '+esc(T.steps[STEPS[i]]));
+    count.innerHTML = state.done ? esc(T.done) : (i===t-1 ? "<b>"+esc(T.left1)+"</b> · "+esc(T.steps[STEPS[i]]) : fmt(esc(T.stepOf),{n:"<b>"+n+"</b>",t:t})+' · '+esc(T.steps[STEPS[i]]));
     trust.hidden = state.done;
   }
   var first=true;
