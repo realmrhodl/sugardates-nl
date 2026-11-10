@@ -19,117 +19,85 @@ CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox
 COPY = {
 "nl": {
   "lang":"nl", "locale":"nl_NL", "hreflang":"nl-NL", "path":"", "signup":"aanmelden/",
-  "title":"SugarDates – sugardating in Nederland",
-  "desc":"Sugardating in Nederland. Maak een profiel, zeg eerlijk wat je zoekt en spreek af op jullie voorwaarden. Meld je gratis aan.",
+  "title":"SugarDates – sugardating in Nederland en Europa",
+  "desc":"Sugardating zonder omwegen. Maak een profiel, wees open over wat je zoekt en ontmoet iemand die daarbij past. Discreet en in je eigen tempo.",
   "skip":"Naar de inhoud", "cta_top":"Aanmelden",
-  "hero_h1":"Sugardating in Nederland",
-  "hero_sub":"Voor sugardaddy's, sugarmama's en sugarbaby's die eerlijk willen zijn over wat ze zoeken. Maak een profiel, leer elkaar kennen en maak duidelijke afspraken.",
+  "hero_h1":"Sugardating, zonder omwegen.",
+  "hero_sub":"Voor wie weet wat hij zoekt. Wees open over je verwachtingen en ontmoet iemand die daarbij past.",
   "role_baby":"Ik ben sugarbaby", "role_daddy":"Ik ben sugardaddy / sugarmama",
-  "hero_note":"Aanmelden is gratis. SugarDates is nog niet live; je komt op de wachtlijst. Alleen 18+.",
-  "p_kicker":"In het kort",
-  "promise":[("Profiel maken","Vertel wie je bent en wat je zoekt. Je mag een bijnaam gebruiken."),
-             ("Praten","Bespreek wat jullie van elkaar verwachten, voordat je afspreekt."),
-             ("Afspreken","Spreek af als het voor allebei goed voelt.")],
-  "how_kicker":"Hoe het werkt", "how_h2":"In drie stappen begonnen",
-  "how_lead":"Aanmelden duurt een paar minuten. De rest vul je aan wanneer het jou uitkomt.",
-  "how":[("Meld je aan","Kies je rol, een gebruikersnaam en je regio. Daarna je e-mailadres en een wachtwoord."),
-         ("Maak je profiel af","Schrijf een korte tekst en geef aan wat je zoekt."),
-         ("Stuur berichten","Bekijk profielen in je regio en stuur berichten.")],
-  "trust_kicker":"Veiligheid en privacy", "trust_h2":"Waarom SugarDates",
-  "trust_lead":"",
-  "trust":[("Bijnaam mag","Je hoeft je echte naam niet te gebruiken."),
-           ("Jij kiest wat je deelt","Je woonplaats is een stad of provincie, nooit een adres."),
-           ("E-mailadres blijft privé","Andere leden zien je e-mailadres niet.")],
-  "web_kicker":"Op elk apparaat", "web_h2":"Geen app nodig",
-  "web_lead":"SugarDates werkt in de browser op je telefoon, tablet en computer. Je hoeft niets te installeren.",
-  "web_list":["iPhone, Android en desktop","Geen app-icoon op je telefoon","Inloggen met e-mail en wachtwoord"],
-  "web_alt":"Sfeerbeeld: iemand met een telefoon in een café, geen echte leden",
-  "types_kicker":"Voor wie", "types_h2":"Sugardaddy's, sugarmama's en sugarbaby's",
-  "type_daddy_k":"Sugardaddy / sugarmama", "type_daddy_h":"Wat is een sugardaddy of sugarmama?",
-  "type_daddy_p":"Iemand die succesvol is en graag tijd doorbrengt met een leuk en energiek gezelschap. Je bent open over wat je zoekt en wat je kunt bieden.",
-  "type_daddy_list":["Gezelschap voor diners, uitjes en reizen","Iemand steunen of begeleiden","Duidelijke afspraken vooraf"],
-  "type_daddy_cta":"Aanmelden als sugardaddy / sugarmama", "type_daddy_alt":"Sfeerbeeld: man in een lunchroom, geen echte leden",
-  "type_baby_k":"Sugarbaby", "type_baby_h":"Wat is een sugarbaby?",
-  "type_baby_p":"Iemand die zelfstandig is en weet wat hij of zij wil. Bijvoorbeeld een student, starter of ondernemer. Jij bepaalt je grenzen.",
-  "type_baby_list":["Een ervaren gesprekspartner of mentor","Nieuwe plekken en ervaringen","Steun die past bij jullie afspraken"],
-  "type_baby_cta":"Aanmelden als sugarbaby", "type_baby_alt":"Sfeerbeeld: vrouw loopt langs een gracht, geen echte leden",
-  "cr_kicker":"Kosten", "cr_h2":"Hoe betalen werkt",
-  "cr_lead":"SugarDates werkt met credits. Je betaalt alleen voor wat je gebruikt, zonder abonnement.",
-  "credits":[("Gratis aanmelden","Een account en profiel aanmaken is gratis."),
-             ("Credits voor contact","Voor sommige functies, zoals berichten sturen, gebruik je credits."),
-             ("Prijzen vooraf bekend","Je ziet altijd eerst wat iets kost.")],
+  "hero_alt":"Sfeerbeeld: man en vrouw wandelen langs een Amsterdamse gracht, geen echte leden",
+  "intro":"SugarDates brengt sugardaddy's, sugarmama's en sugarbaby's samen die eerlijk willen zijn over wat ze zoeken. Discreet, duidelijk en in je eigen tempo.",
+  "how_kicker":"Hoe het werkt", "how_h2":"Drie stappen.",
+  "how":[("Maak een profiel","Kies je rol, een gebruikersnaam en je regio. Een bijnaam is prima."),
+         ("Zeg wat je zoekt","Gezelschap, begeleiding, samen reizen. Duidelijk vooraf, zodat niemand hoeft te raden."),
+         ("Leer elkaar kennen","Stuur berichten en spreek af wanneer het voor jullie allebei goed voelt.")],
+  "daddy_k":"Sugardaddy / sugarmama", "daddy_h":"Voor wie graag geeft en weet wat hij zoekt.",
+  "daddy_p":"Je bent gevestigd, je hebt het druk en je waardeert goed gezelschap. Je bent open over wat je zoekt en wat je kunt bieden.",
+  "daddy_list":["Gezelschap voor diners, reizen en evenementen","Iemand steunen of begeleiden","Duidelijke afspraken in plaats van verwachtingen"],
+  "daddy_cta":"Aanmelden als sugardaddy / sugarmama", "daddy_alt":"Sfeerbeeld: man in een hotellounge in Amsterdam, geen echte leden",
+  "baby_k":"Sugarbaby", "baby_h":"Voor wie ambitieus is en eigen grenzen stelt.",
+  "baby_p":"Je bent zelfstandig en weet wat je wilt. Je zoekt iemand met ervaring die ruimhartig is en jouw tempo respecteert.",
+  "baby_list":["Een ervaren gesprekspartner of mentor","Nieuwe plekken en ervaringen","Steun die past bij jullie afspraken"],
+  "baby_cta":"Aanmelden als sugarbaby", "baby_alt":"Sfeerbeeld: vrouw met koffie op de stoep van een grachtenpand, geen echte leden",
+  "pr_kicker":"Privacy", "pr_h2":"Discreet als uitgangspunt.",
+  "pr":[("Bijnaam mag","Je hoeft je echte naam niet te gebruiken."),
+        ("Jij kiest wat je deelt","Je woonplaats is een stad of regio, nooit een adres."),
+        ("E-mail blijft privé","Andere leden zien je e-mailadres niet."),
+        ("Geen app nodig","Werkt in de browser. Geen app-icoon op je telefoon.")],
   "faq_kicker":"Vragen", "faq_h2":"Veelgestelde vragen",
   "faq":[("Wat is sugardating?","Daten waarbij je vooraf eerlijk bespreekt wat je van elkaar verwacht, zoals gezelschap, begeleiding of steun. Wat jullie afspreken, bepalen jullie samen."),
+         ("Wat kost het?","Een account aanmaken is gratis. Voor sommige functies, zoals berichten sturen, gebruik je credits. Geen abonnement, en je ziet altijd vooraf wat iets kost."),
          ("Moet ik mijn echte naam gebruiken?","Nee. Je kiest zelf een gebruikersnaam. Je e-mailadres is niet zichtbaar voor andere leden."),
-         ("Wat kost het?","Een account aanmaken is gratis. Voor sommige functies gebruik je credits."),
-         ("Wat gebeurt er met mijn gegevens?","We maken je gegevens niet openbaar. Je kunt je aanmelding altijd laten verwijderen. Zie ons privacybeleid."),
+         ("Wat gebeurt er met mijn gegevens?","We maken je gegevens niet openbaar. Je kunt je account altijd laten verwijderen. Zie ons privacybeleid."),
          ("Is dit een escortsite?","Nee. SugarDates is een datingsite. Seks aanbieden of vragen tegen betaling is niet toegestaan.")],
-  "close_h2":"Meld je aan voor SugarDates",
-  "close_lead":"Aanmelden duurt een paar minuten.",
-  "hero_alt":"Sfeerbeeld: man en vrouw op een terras aan de gracht, geen echte leden",
+  "band_alt":"Sfeerbeeld: man en vrouw op een terras aan de gracht, geen echte leden",
+  "close_h2":"Begin met een profiel.", "close_lead":"Aanmelden duurt een paar minuten.",
   "f_about":"Sugardating voor Nederland en Europa. Een site van Forest Road B.V., het bedrijf achter Paydates.nl.",
-  "f_site":"SugarDates", "f_links":[("Hoe het werkt","#hoe"),("Veelgestelde vragen","#faq"),("Privacy","#"),("Voorwaarden","#"),("Contact","#")],
-  "f_region":"Land", "region_here":"SugarDates.nl · Nederland/EU", "region_other":"SugarDates.net · USA", "region_soon":"binnenkort",
+  "f_links":[("Hoe het werkt","#hoe"),("Vragen","#faq"),("Privacy","#"),("Voorwaarden","#"),("Contact","#")],
   "f_legal":"Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam · KvK 97957232 · BTW NL868303550B01 · © 2026",
   "su_title":"Aanmelden – SugarDates",
-  "su_alt":"Sfeerbeeld: man en vrouw op een terras, geen echte leden",
+  "su_alt":"Sfeerbeeld: man en vrouw wandelen langs een gracht, geen echte leden",
 },
 "en": {
   "lang":"en", "locale":"en_US", "hreflang":"en-US", "path":"en/", "signup":"signup/",
-  "title":"SugarDates – sugar dating",
-  "desc":"Sugar dating made simple. Create a profile, be upfront about what you want and meet on your own terms. Sign up for free.",
+  "title":"SugarDates – sugar dating, without the guesswork",
+  "desc":"Sugar dating without the guesswork. Create a profile, be upfront about what you want and meet someone who fits. Discreet and at your own pace.",
   "skip":"Skip to content", "cta_top":"Join",
-  "hero_h1":"Sugar dating, made simple",
-  "hero_sub":"For sugar daddies, sugar mommies and sugar babies who want to be upfront about what they're looking for. Create a profile, get to know each other and agree on what works.",
+  "hero_h1":"Sugar dating, without the guesswork.",
+  "hero_sub":"For people who know what they want. Be upfront about your expectations and meet someone who fits.",
   "role_baby":"I'm a sugar baby", "role_daddy":"I'm a sugar daddy / mommy",
-  "hero_note":"Joining is free. SugarDates isn't live yet, so you'll join the waitlist. 18+ only.",
-  "p_kicker":"In short",
-  "promise":[("Create a profile","Say who you are and what you're looking for. A nickname is fine."),
-             ("Talk","Discuss what you expect from each other before you meet."),
-             ("Meet","Meet up when it feels right for both of you.")],
-  "how_kicker":"How it works", "how_h2":"Get started in three steps",
-  "how_lead":"Signing up takes a few minutes. Fill in the rest whenever you like.",
-  "how":[("Sign up","Choose your role, a username and your state. Then your email and a password."),
-         ("Finish your profile","Write a short intro and say what you're looking for."),
-         ("Send messages","Browse profiles near you and send messages.")],
-  "trust_kicker":"Safety and privacy", "trust_h2":"Why SugarDates",
-  "trust_lead":"",
-  "trust":[("Nicknames welcome","You don't have to use your real name."),
-           ("You choose what to share","Your location is a city or state, never an address."),
-           ("Your email stays private","Other members can't see your email address.")],
-  "web_kicker":"On any device", "web_h2":"No app needed",
-  "web_lead":"SugarDates works in the browser on your phone, tablet and computer. Nothing to install.",
-  "web_list":["iPhone, Android and desktop","No app icon on your phone","Sign in with email and password"],
-  "web_alt":"Mood image: someone using a phone in a café, not real members",
-  "types_kicker":"Who it's for", "types_h2":"Sugar daddies, sugar mommies and sugar babies",
-  "type_daddy_k":"Sugar daddy / mommy", "type_daddy_h":"What is a sugar daddy or sugar mommy?",
-  "type_daddy_p":"Someone successful who enjoys spending time with fun, energetic company. You're open about what you're looking for and what you can offer.",
-  "type_daddy_list":["Company for dinners, events and travel","Supporting or mentoring someone","Clear agreements up front"],
-  "type_daddy_cta":"Join as a sugar daddy / mommy", "type_daddy_alt":"Mood image: man in a restaurant, not real members",
-  "type_baby_k":"Sugar baby", "type_baby_h":"What is a sugar baby?",
-  "type_baby_p":"Someone independent who knows what they want. For example a student, young professional or entrepreneur. You set your boundaries.",
-  "type_baby_list":["An experienced mentor to talk to","New places and experiences","Support that fits what you agree on"],
-  "type_baby_cta":"Join as a sugar baby", "type_baby_alt":"Mood image: woman walking along a canal, not real members",
-  "cr_kicker":"Pricing", "cr_h2":"How payment works",
-  "cr_lead":"SugarDates uses credits. You only pay for what you use, with no subscription.",
-  "credits":[("Free to join","Creating an account and profile is free."),
-             ("Credits for contact","Some features, like sending messages, use credits."),
-             ("Prices shown up front","You'll always see the cost first.")],
+  "hero_alt":"Mood image: a man and woman walking along an Amsterdam canal, not real members",
+  "intro":"SugarDates brings together sugar daddies, sugar mommies and sugar babies who want to be honest about what they're looking for. Discreet, clear and at your own pace.",
+  "how_kicker":"How it works", "how_h2":"Three steps.",
+  "how":[("Create a profile","Choose your role, a username and your area. A nickname is fine."),
+         ("Say what you want","Companionship, mentoring, travel. Clear from the start, so nobody has to guess."),
+         ("Get to know each other","Send messages and meet when it feels right for both of you.")],
+  "daddy_k":"Sugar daddy / mommy", "daddy_h":"For people who like to give and know what they want.",
+  "daddy_p":"You're established, busy and you value good company. You're open about what you're looking for and what you can offer.",
+  "daddy_list":["Company for dinners, travel and events","Supporting or mentoring someone","Clear agreements instead of assumptions"],
+  "daddy_cta":"Join as a sugar daddy / mommy", "daddy_alt":"Mood image: man in a hotel lounge, not real members",
+  "baby_k":"Sugar baby", "baby_h":"For people who are ambitious and set their own boundaries.",
+  "baby_p":"You're independent and know what you want. You're looking for someone experienced and generous who respects your pace.",
+  "baby_list":["An experienced mentor to talk to","New places and experiences","Support that fits what you agree on"],
+  "baby_cta":"Join as a sugar baby", "baby_alt":"Mood image: woman with coffee on the steps of a canal house, not real members",
+  "pr_kicker":"Privacy", "pr_h2":"Discreet by design.",
+  "pr":[("Nicknames welcome","You don't have to use your real name."),
+        ("You choose what to share","Your location is a city or state, never an address."),
+        ("Your email stays private","Other members can't see your email address."),
+        ("No app needed","Works in your browser. No app icon on your phone.")],
   "faq_kicker":"Questions", "faq_h2":"Frequently asked questions",
   "faq":[("What is sugar dating?","Dating where you're upfront about what you expect from each other, such as companionship, mentoring or support. What you agree on is up to the two of you."),
+         ("What does it cost?","Creating an account is free. Some features, like sending messages, use credits. No subscription, and you always see the cost first."),
          ("Do I have to use my real name?","No. You choose a username. Your email isn't shown to other members."),
-         ("What does it cost?","Creating an account is free. Some features use credits."),
-         ("What happens to my data?","We don't make your data public. You can ask us to delete your signup at any time. See our privacy policy."),
+         ("What happens to my data?","We don't make your data public. You can ask us to delete your account at any time. See our privacy policy."),
          ("Is this an escort site?","No. SugarDates is a dating site. Offering or asking for sex for money isn't allowed.")],
-  "close_h2":"Join SugarDates",
-  "close_lead":"Signing up takes a few minutes.",
-  "hero_alt":"Mood image: a man and woman at a canal-side café, not real members",
+  "band_alt":"Mood image: a man and woman at a canal-side café, not real members",
+  "close_h2":"Start with a profile.", "close_lead":"Signing up takes a few minutes.",
   "f_about":"SugarDates.net is the US site of SugarDates, on the same platform as SugarDates.nl. Operated by Forest Road B.V.",
-  "f_site":"SugarDates", "f_links":[("How it works","#how"),("FAQ","#faq"),("Privacy","#"),("Terms","#"),("Contact","#")],
-  "f_region":"Country", "region_here":"SugarDates.net · USA", "region_other":"SugarDates.nl · Netherlands/EU", "region_soon":"",
+  "f_links":[("How it works","#how"),("FAQ","#faq"),("Privacy","#"),("Terms","#"),("Contact","#")],
   "f_legal":"Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam, the Netherlands · Chamber of Commerce 97957232 · VAT NL868303550B01 · © 2026",
   "su_title":"Join – SugarDates",
-  "su_alt":"Mood image: a man and woman at a café, not real members",
+  "su_alt":"Mood image: a man and woman walking along a canal, not real members",
 },
 }
 
@@ -160,8 +128,8 @@ def head(c, title, desc, canon, root, alt_nl, alt_en, robots="index,follow"):
   <link rel="icon" href="{root}assets/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{root}assets/site.css?v=9">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{root}assets/site.css?v=10">
 </head>
 '''
 
@@ -216,7 +184,8 @@ def langline(c, hrefs):
         else: out.append(f'<a href="{hrefs[code]}" hreflang="{hl}" lang="{code}">{flag(code,16)}{SHORT[code]}</a>')
     return '<p class="foot-lang">'+'<span class="sep">/</span>'.join(out)+'</p>'
 
-LM_JS = """<script>(function(){document.querySelectorAll('[data-lm]').forEach(function(m){var b=m.querySelector('.lm-btn'),l=m.querySelector('.lm-list');
+LM_JS = """<script>(function(){var t=document.querySelector('.top');if(!t)return;function f(){t.classList.toggle('is-scrolled',scrollY>8)}f();addEventListener('scroll',f,{passive:true});})();</script>
+<script>(function(){document.querySelectorAll('[data-lm]').forEach(function(m){var b=m.querySelector('.lm-btn'),l=m.querySelector('.lm-list');
 function set(o,f){b.setAttribute('aria-expanded',o);l.hidden=!o;if(o&&f){var a=l.querySelector('a');a&&a.focus();}}
 b.addEventListener('click',function(e){set(b.getAttribute('aria-expanded')!=='true',e.detail===0);});
 b.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();set(true,true);}});
@@ -227,17 +196,18 @@ document.addEventListener('click',function(e){if(!m.contains(e.target))set(false
 m.addEventListener('focusout',function(e){if(e.relatedTarget&&!m.contains(e.relatedTarget))set(false);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!l.hidden){set(false);b.focus();}});});})();</script>"""
 
-def pic(root, name, alt, w=1152, h=864, lazy=True):
+def pic(root, name, alt, w=864, h=1152, lazy=True):
     ld = ' loading="lazy" decoding="async"' if lazy else ' fetchpriority="high"'
     return f'<picture><source srcset="{root}img/{name}.webp" type="image/webp"><img src="{root}img/{name}.jpg" alt="{e(alt)}" width="{w}" height="{h}"{ld}></picture>'
 
 def brand(root, href):
-    return f'<a class="brand" href="{href}" aria-label="SugarDates"><img src="{root}assets/logo.svg" alt="" width="30" height="30">SugarDates</a>'
+    return f'<a class="brand" href="{href}" aria-label="SugarDates">SugarDates<span class="brand-dot" aria-hidden="true"></span></a>'
 
-def roles(c, su, alt=False):
-    a, b = ("btn-white","btn-ghost-w") if alt else ("btn-primary","btn-outline")
-    return (f'<div class="roles"><a class="btn {a}" href="{su}?rol=baby">{c["role_baby"]}</a>'
-            f'<a class="btn {b}" href="{su}?rol=daddy">{c["role_daddy"]}</a></div>')
+ARR = '<svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+
+def roles(c, su):
+    return (f'<div class="roles"><a class="btn btn-primary" href="{su}?rol=baby">{c["role_baby"]}</a>'
+            f'<a class="btn btn-secondary" href="{su}?rol=daddy">{c["role_daddy"]}</a></div>')
 
 def landing(c):
     nl = c["lang"]=="nl"
@@ -245,90 +215,74 @@ def landing(c):
     su = c["signup"]
     canon = BASE + c["path"]
     LH = {"nl":"./","en":"en/"} if nl else {"nl":"../","en":"./"}
-    hdr = f'''<header class="top"><div class="wrap top-in">
-    {brand(root, "./")}
-    <div class="top-right">{langmenu(c, LH)}<a class="btn btn-primary btn-sm top-cta" href="{su}">{c["cta_top"]}</a></div>
-  </div></header>'''
-    promise = "".join(f'<li><span class="num">{i+1}</span><div><h3>{t}</h3><p>{p}</p></div></li>' for i,(t,p) in enumerate(c["promise"]))
-    how = "".join(f'<li><h3>{t}</h3><p>{p}</p></li>' for t,p in c["how"])
-    trust = "".join(f'<div>{CHECK}<div><h3>{t}</h3><p>{p}</p></div></div>' for t,p in c["trust"])
-    weblist = "".join(f"<li>{x}</li>" for x in c["web_list"])
-    def typ(k, img, alt):
-        lst = "".join(f"<li>{x}</li>" for x in c[f"type_{k}_list"])
-        btn = "btn-primary" if k=="baby" else "btn-outline"
-        return f'''<article class="type"><div class="type-img">{pic(root,img,c[alt])}</div><div class="type-body">
-        <p class="eyebrow">{c[f"type_{k}_k"]}</p><h3>{c[f"type_{k}_h"]}</h3><p>{c[f"type_{k}_p"]}</p><ul class="checks">{lst}</ul>
-        <a class="btn {btn} btn-block" href="{su}?rol={k}">{c[f"type_{k}_cta"]}</a></div></article>'''
-    credits = "".join(f'<div class="credit"><h3>{t}</h3><p>{p}</p></div>' for t,p in c["credits"])
-    faq = "".join(f'<details><summary>{q}</summary><div class="ans">{a}</div></details>' for q,a in c["faq"])
-    links = "".join(f'<li><a href="{h}">{t}</a></li>' for t,h in c["f_links"])
     hid = "hoe" if nl else "how"
+    how = "".join(f'<li><span class="n">0{i+1}</span><h3>{t}</h3><p>{p}</p></li>' for i,(t,p) in enumerate(c["how"]))
+    pr = "".join(f'<li><h3>{t}</h3><p>{p}</p></li>' for t,p in c["pr"])
+    faq = "".join(f'<details><summary>{q}<span class="pm" aria-hidden="true"></span></summary><div class="ans">{a}</div></details>' for q,a in c["faq"])
+    links = "".join(f'<li><a href="{h}">{t}</a></li>' for t,h in c["f_links"])
+    def feature(k, img, rev=False):
+        lst = "".join(f"<li>{x}</li>" for x in c[f"{k}_list"])
+        return f'''<section class="feature{' rev' if rev else ''}"><div class="feature-img">{pic(root,img,c[k+"_alt"])}</div>
+      <div class="feature-copy"><p class="kicker">{c[k+"_k"]}</p><h2>{c[k+"_h"]}</h2><p class="body">{c[k+"_p"]}</p><ul class="lines">{lst}</ul>
+      <a class="link-cta" href="{su}?rol={k}">{c[k+"_cta"]} {ARR}</a></div></section>'''
     body = f'''<body>
   <a class="skip" href="#inhoud">{c["skip"]}</a>
-  {hdr}
+  <header class="top"><div class="top-in">
+    {brand(root, "./")}
+    <div class="top-right">{langmenu(c, LH)}<a class="btn btn-ghost btn-sm top-cta" href="{su}">{c["cta_top"]}</a></div>
+  </div></header>
   <main id="inhoud">
-  <section class="hero"><div class="wrap hero-grid">
-    <div class="hero-img">{pic(root,"terrace",c["hero_alt"],1280,720,lazy=False)}</div>
-    <div>
+  <section class="hero">
+    <div class="hero-copy"><div class="hero-copy-in">
       <h1>{c["hero_h1"]}</h1>
       <p class="sub">{c["hero_sub"]}</p>
       {roles(c, su)}
-    </div>
+    </div></div>
+    <div class="hero-img">{pic(root,"walk",c["hero_alt"],lazy=False)}</div>
+  </section>
+
+  <section class="intro"><div class="wrap"><p>{c["intro"]}</p></div></section>
+
+  <section class="how" id="{hid}"><div class="wrap">
+    <div class="head-row"><p class="kicker">{c["how_kicker"]}</p><h2>{c["how_h2"]}</h2></div>
+    <ol class="how-list">{how}</ol>
   </div></section>
 
-  <section class="sec sec-soft"><div class="wrap">
-    <div class="sec-head"><p class="eyebrow">{c["p_kicker"]}</p></div>
-    <ul class="promise">{promise}</ul>
+  <div class="features">
+  {feature("daddy","man2")}
+  {feature("baby","woman2", rev=True)}
+  </div>
+
+  <section class="privacy"><div class="wrap">
+    <div class="head-row"><p class="kicker">{c["pr_kicker"]}</p><h2>{c["pr_h2"]}</h2></div>
+    <ul class="pr-list">{pr}</ul>
   </div></section>
 
-  <section class="sec" id="{hid}"><div class="wrap">
-    <div class="sec-head"><p class="eyebrow">{c["how_kicker"]}</p><h2>{c["how_h2"]}</h2><p class="lead">{c["how_lead"]}</p></div>
-    <ol class="steps">{how}</ol>
-  </div></section>
-
-  <section class="sec sec-soft"><div class="wrap">
-    <div class="sec-head"><p class="eyebrow">{c["trust_kicker"]}</p><h2>{c["trust_h2"]}</h2></div>
-    <div class="trust-grid">{trust}</div>
-  </div></section>
-
-  <section class="sec"><div class="wrap">
-    <div class="sec-head"><p class="eyebrow">{c["types_kicker"]}</p><h2>{c["types_h2"]}</h2></div>
-    <div class="types">{typ("daddy","man","type_daddy_alt")}{typ("baby","woman","type_baby_alt")}</div>
-  </div></section>
-
-  <section class="sec sec-soft"><div class="wrap split">
-    <div class="split-img">{pic(root,"phone",c["web_alt"])}</div>
-    <div class="split-copy"><p class="eyebrow">{c["web_kicker"]}</p><h2>{c["web_h2"]}</h2><p class="lead">{c["web_lead"]}</p><ul class="checks">{weblist}</ul></div>
-  </div></section>
-
-  <section class="sec"><div class="wrap">
-    <div class="sec-head"><p class="eyebrow">{c["cr_kicker"]}</p><h2>{c["cr_h2"]}</h2><p class="lead">{c["cr_lead"]}</p></div>
-    <div class="credits">{credits}</div>
-  </div></section>
-
-  <section class="sec sec-soft" id="faq"><div class="wrap faq-wrap">
-    <div class="sec-head"><p class="eyebrow">{c["faq_kicker"]}</p><h2>{c["faq_h2"]}</h2></div>
+  <section class="faq-sec" id="faq"><div class="wrap faq-grid">
+    <div><p class="kicker">{c["faq_kicker"]}</p><h2>{c["faq_h2"]}</h2></div>
     <div class="faq">{faq}</div>
   </div></section>
 
-  <section class="close"><div class="wrap"><div class="close-box">
-    <h2>{c["close_h2"]}</h2><p>{c["close_lead"]}</p>{roles(c, su, alt=True)}
-  </div></div></section>
+  <section class="band">{pic(root,"terrace",c["band_alt"],1280,720)}</section>
+
+  <section class="close"><div class="wrap">
+    <h2>{c["close_h2"]}</h2><p>{c["close_lead"]}</p>{roles(c, su)}
+  </div></section>
   </main>
 
   <footer class="foot"><div class="wrap">
-    <div class="foot-grid foot-grid-2">
-      <div>{brand(root, "./")}<p style="margin-top:.8rem;max-width:26rem">{c["f_about"]}</p></div>
-      <div><h4>{c["f_site"]}</h4><ul>{links}</ul></div>
+    <div class="foot-top">
+      <div class="foot-brand">{brand(root, "./")}<p>{c["f_about"]}</p></div>
+      <ul class="foot-links">{links}</ul>
     </div>
-    <div class="foot-legal"><p>{c["f_legal"]}</p></div>
-    {langline(c, LH)}
+    <div class="foot-bottom"><p>{c["f_legal"]}</p>{langline(c, LH)}</div>
   </div></footer>
   {LM_JS}
 </body>
 </html>
 '''
     return head(c, c["title"], c["desc"], canon, root, BASE, BASE+"en/") + body
+
 
 SU = {
 "nl": {
@@ -396,15 +350,15 @@ def signup(c):
     root = "../" if nl else "../../"
     canon = BASE + c["path"] + c["signup"]
     s = dict(SU[c["lang"]]); s["lang"]=c["lang"]; s["storage"]="sugardates-v5-"+c["lang"]; s["root"]=root; s["minAge"]=MIN_AGE
-    s["imgs"]={"baby":"woman","daddy":"man"}
+    s["imgs"]={"baby":"woman2","daddy":"man2"}
     SH = {"nl":"./","en":"../en/signup/"} if nl else {"nl":"../../aanmelden/","en":"./"}
     lang = langmenu(c, SH)
     body = f'''<body>
   <a class="skip" href="#inhoud">{c["skip"]}</a>
   <div class="su-page">
-    <header class="top"><div class="wrap top-in" style="max-width:none">{brand(root, "../")}{lang}</div></header>
+    <header class="top"><div class="top-in">{brand(root, "../")}{lang}</div></header>
     <div class="su-wrap">
-      <aside class="su-visual">{pic(root,"terrace",c["su_alt"],1280,720,lazy=False)}</aside>
+      <aside class="su-visual">{pic(root,"walk",c["su_alt"],lazy=False)}</aside>
       <section class="su-main">
         <div class="su-card">
           <div class="step-meta">
@@ -415,14 +369,14 @@ def signup(c):
           <p class="sr-only" id="step-live" aria-live="polite"></p>
           <main id="inhoud"><div id="panel" class="panel-anim"></div></main>
         </div>
-        <div class="su-trust" id="trust">{"".join(f"<span>{t}</span>" for t in s["trust"])}</div>
+        <p class="su-trust" id="trust">{" · ".join(s["trust"])}</p>
         <footer class="su-foot"><p>{c["f_legal"]}</p>{langline(c, SH)}</footer>
       </section>
     </div>
   </div>
   <noscript><p style="padding:1rem;text-align:center">JavaScript is required.</p></noscript>
   <script>window.SD={json.dumps(s, ensure_ascii=False)};</script>
-  <script src="{root}assets/signup.js?v=7"></script>
+  <script src="{root}assets/signup.js?v=10"></script>
   {LM_JS}
 </body>
 </html>

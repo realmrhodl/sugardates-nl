@@ -28,7 +28,7 @@
   function lead(){ return state.role ? '<p class="personal">'+esc(state.role==="baby"?T.lead_baby:T.lead_daddy)+'</p>' : ""; }
   function opts(list, sel, cls){ return '<div class="opts '+(cls||"")+'" role="group">'+list.map(function(o){ var on=sel.indexOf(o[0])>=0; return '<button type="button" class="opt'+(on?" is-on":"")+'" data-opt="'+o[0]+'" aria-pressed="'+on+'"><span>'+esc(o[1])+'</span>'+TICK+'</button>'; }).join("")+'</div>'; }
   function options(vals, cur){ return vals.map(function(v){ return '<option value="'+esc(v)+'"'+(cur===v?" selected":"")+'>'+esc(v)+'</option>'; }).join(""); }
-  function pic(n){ return '<picture><source srcset="'+T.root+'img/'+n+'.webp" type="image/webp"><img src="'+T.root+'img/'+n+'.jpg" alt="" width="1152" height="864"></picture>'; }
+  function pic(n){ return '<picture><source srcset="'+T.root+'img/'+n+'.webp" type="image/webp"><img src="'+T.root+'img/'+n+'.jpg" alt="" width="864" height="1152"></picture>'; }
 
   function step(id){
     if(id==="role") return '<h1 class="title">'+T.role_h+'</h1><p class="lead2">'+T.role_p+'</p><div class="role-pick">'+
