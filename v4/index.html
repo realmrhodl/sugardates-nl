@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Aanmelden – SugarDates</title>
   <meta name="description" content="Meld je aan voor SugarDates, sugardating in Nederland. Binnenkort live. Alleen 21+.">
-  <meta name="theme-color" content="#6849ad">
+  <meta name="theme-color" content="#2a1848">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://realmrhodl.github.io/sugardates-nl/v4/">
   <meta property="og:type" content="website">
@@ -26,113 +26,254 @@
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {theme:{extend:{
-      colors:{
-        pd:{DEFAULT:'#7351c0',header:'#6849ad',dark:'#5b3ba3',darker:'#462d7e',light:'#a089d4',lighter:'#cdc1e9',op:'rgba(115,81,192,.75)'},
-        body:{DEFAULT:'#edf0f7',light:'#f8f9fc'},
-        ink:{DEFAULT:'#343a40',muted:'#5d738d',soft:'#a1aebd'},
-        line:'#dfe4f1', gold:'#EEBD22'
-      },
-      fontFamily:{sans:['Poppins','sans-serif']},
-      borderRadius:{pill:'1.125rem'},
-      boxShadow:{block:'0 1px 3px rgba(214,221,237,.5),0 1px 2px rgba(214,221,237,.5)',pill:'0 0 .875rem 0 #e3e4e5'}
-    }}};
-  </script>
-  <link rel="stylesheet" href="../assets/app.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- v4-immersive-20261110 -->
   <style>
-    .chk{accent-color:#7351c0;width:1.15rem;height:1.15rem;flex-shrink:0;margin-top:.15rem}
-    .v4-shell{min-height:100svh;display:flex;flex-direction:column}
-    .v4-main{flex:1;display:flex;flex-direction:column;padding:1.25rem 0 1.75rem}
-    .progress-track{height:4px;background:#e6dff5;overflow:hidden}
-    .progress-fill{height:100%;width:0;background:#7351c0;transition:width .35s ease}
-    .step-meta{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:.9rem;min-height:1.25rem}
-    .back-btn{background:none;border:0;padding:0;color:#7351c0;font-weight:600;font-size:13px;font-family:Poppins,sans-serif;cursor:pointer}
-    .back-btn:hover{color:#5c419a}
-    .back-btn[hidden]{display:none}
-    .lead{color:#5d738d;font-weight:400;font-size:14px;line-height:1.6;margin:.4rem 0 0}
-    .micro{color:#5d738d;font-weight:400;font-size:12px;line-height:1.55;margin:.75rem 0 0}
-    .personal{color:#7351c0;font-weight:500;font-size:13px;line-height:1.5;margin:0 0 .55rem}
-    .err{color:#b42318;font-size:13px;font-weight:500;margin:.7rem 0 0}
-    .err[hidden]{display:none}
-    .role-grid{display:grid;gap:.75rem;margin-top:1.1rem}
-    @media(min-width:640px){.role-grid{grid-template-columns:1fr 1fr;gap:1rem}}
-    .role-card{text-align:left;background:#fff;border:2px solid #dfe4f1;border-radius:.75rem;padding:1.1rem 1.05rem 1.15rem;box-shadow:0 1px 3px rgba(214,221,237,.5);cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .15s;width:100%;font-family:Poppins,sans-serif;color:#343a40}
-    .role-card:hover,.role-card:focus-visible{border-color:#7351c0;box-shadow:0 6px 18px rgba(115,81,192,.12)}
-    .role-card.is-on{border-color:#7351c0;background:#f7f4fc;transform:scale(1.01)}
-    .role-kicker{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7351c0;margin-bottom:.35rem}
-    .role-title{display:block;font-size:16px;font-weight:700;color:#212529;line-height:1.3}
-    .role-text{display:block;margin-top:.35rem;font-size:13px;font-weight:400;color:#5d738d;line-height:1.55}
-    .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.1rem}
-    .chip{appearance:none;background:#fff;color:#343a40;font-weight:600;font-size:13px;font-family:Poppins,sans-serif;border-radius:1.125rem;border:2px solid #dfe4f1;box-shadow:0 0 .5rem 0 #e3e4e5;padding:.55rem .95rem;min-height:44px;cursor:pointer;transition:background .15s,color .15s,border-color .15s,transform .15s}
-    .chip:hover,.chip:focus-visible{border-color:#7351c0;color:#7351c0}
-    button.chip.is-on{border-color:#7351c0;background:#7351c0;color:#fff;transform:scale(1.03)}
-    #panel h1:focus{outline:none}
-    .actions{margin-top:1.15rem;display:flex;flex-wrap:wrap;gap:.6rem}
+    :root{
+      --pd:#7351c0; --pd-dark:#5b3ba3; --pd-deeper:#2a1848; --pd-ink:#1a1228;
+      --gold:#d9b76b; --ivory:#fbf8f3; --muted:#5c5270; --line:rgba(115,81,192,.18);
+      --sans:"Poppins",system-ui,sans-serif; --serif:"Cormorant Garamond",Georgia,serif;
+      --r:22px; --shadow:0 24px 60px -20px rgba(42,24,72,.35),0 8px 24px -12px rgba(42,24,72,.2);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;min-height:100%;background:#140b24;color:var(--pd-ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    html,body{overflow-x:hidden}
+    a{color:var(--pd);text-decoration-thickness:1px;text-underline-offset:2px}
+    a:hover{color:var(--pd-dark)}
+    :focus-visible{outline:2px solid var(--pd);outline-offset:3px}
+    .skip{position:absolute;left:.75rem;top:-4rem;z-index:80;background:var(--pd);color:#fff;padding:.5rem .85rem;font-weight:600;text-decoration:none;border-radius:.4rem}
+    .skip:focus{top:.75rem}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    .summary{margin:1rem 0 0;padding:0;list-style:none}
-    .summary li{display:flex;gap:.75rem;padding:.55rem 0;border-top:1px solid #dfe4f1;font-size:13px;line-height:1.5}
-    .summary li:first-child{border-top:0}
-    .summary dt,.summary .k{flex:0 0 8.5rem;color:#5d738d;font-weight:500}
-    .summary .v{color:#212529;font-weight:500}
-    .next-list{margin:1rem 0 0;padding:0;list-style:none;display:grid;gap:.65rem}
-    .next-list li{display:flex;gap:.7rem;align-items:flex-start;font-size:13px;font-weight:400;color:#5d738d;line-height:1.55}
-    .n{flex:none;width:22px;height:22px;border-radius:50%;background:#7351c017;color:#7351c0;font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
-    .step-panel{width:100%}
+
+    .shell{min-height:100svh;display:flex;flex-direction:column}
+    .visual{position:relative;height:30vh;min-height:210px;max-height:280px;overflow:hidden;background:#1a1028;flex:none}
+    .slides,.slide{position:absolute;inset:0}
+    .slide{opacity:0;transition:opacity 1s ease}
+    .slide.is-on{opacity:1;z-index:1}
+    .slide img{width:100%;height:100%;object-fit:cover;display:block}
+    .slide[data-img="dinner"] img{object-position:50% 28%}
+    .slide[data-img="rooftop"] img{object-position:35% 18%}
+    .slide[data-img="canal"] img{object-position:50% 42%}
+    .visual-overlay{position:absolute;inset:0;z-index:2;pointer-events:none;background:
+      linear-gradient(180deg, rgba(16,8,30,.7) 0%, rgba(16,8,30,.2) 42%, rgba(26,12,46,.15) 68%, rgba(20,10,32,.35) 100%),
+      linear-gradient(90deg, rgba(80,40,130,.22), transparent 60%)}
+    .visual-brand{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;padding:1rem 1.15rem;color:#fff;pointer-events:none;gap:.35rem}
+    .brand{display:inline-flex;align-items:center;gap:.55rem;color:#fff;text-decoration:none;pointer-events:auto;width:max-content}
+    .brand img{height:28px;width:28px;border-radius:7px}
+    .brand span{font-weight:700;font-size:1.05rem;letter-spacing:-.02em}
+    .tagline{margin:0;font-family:var(--serif);font-style:italic;font-size:.98rem;font-weight:500;color:rgba(255,255,255,.95);text-shadow:0 2px 14px rgba(0,0,0,.6)}
+    .tagline:before{display:none}
+
+    .funnel{flex:1;display:flex;flex-direction:column;position:relative;z-index:4;margin-top:-1.75rem;background:
+      radial-gradient(1200px 400px at 80% -10%, rgba(115,81,192,.2), transparent 55%),
+      linear-gradient(180deg,#f7f3fb 0%,#efe8f6 100%);
+      border-radius:28px 28px 0 0;min-height:0}
+    .funnel-glow{display:none}
+    .funnel-inner{flex:1;width:100%;max-width:34rem;margin:0 auto;padding:1rem 1.15rem 1.25rem;display:flex;flex-direction:column;min-width:0}
+    .funnel-card{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:1.25rem 1.15rem 1.35rem;border:1px solid rgba(255,255,255,.8);position:relative}
+    .funnel-card:before{content:"";position:absolute;left:1.4rem;right:1.4rem;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.7}
+
+    .progress-wrap{display:flex;align-items:center;gap:.75rem;margin:0 0 .85rem}
+    .progress-track{flex:1;height:3px;background:#e4dcf2;border-radius:99px;overflow:hidden}
+    .progress-fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#8a66d4,var(--pd),var(--gold));transition:width .4s ease}
+    .dots{display:flex;gap:4px;flex:none}
+    .dot{width:6px;height:6px;border-radius:50%;background:#d7cce8;display:block}
+    .dot.is-done{background:var(--pd)}
+    .dot.is-now{background:var(--gold);transform:scale(1.25)}
+
+    .step-meta{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:.85rem;min-height:1.2rem}
+    .back-btn{background:none;border:0;padding:0;color:var(--pd);font-weight:600;font-size:13px;font-family:var(--sans);cursor:pointer;display:inline-flex;align-items:center;gap:.3rem}
+    .back-btn:hover{color:var(--pd-dark)}
+    .back-btn[hidden]{display:none}
+    .step-count{margin:0;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.02em}
+
+    .title{font-family:var(--sans);font-weight:700;font-size:clamp(1.75rem,4.6vw,2.65rem);line-height:1.12;letter-spacing:-.035em;color:var(--pd-ink);margin:0}
+    .title em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--pd-dark);letter-spacing:0}
+    #panel h1:focus{outline:none}
+    .lead{color:var(--muted);font-weight:400;font-size:15px;line-height:1.55;margin:.55rem 0 0}
+    .micro{color:var(--muted);font-weight:400;font-size:12.5px;line-height:1.55;margin:.8rem 0 0}
+    .personal{color:var(--pd-dark);font-weight:500;font-size:13px;line-height:1.5;margin:0 0 .4rem}
+    .err{color:#9b1c2c;font-size:13px;font-weight:500;margin:.75rem 0 0}
+    .err[hidden]{display:none}
+
+    .role-grid{display:grid;gap:.75rem;margin-top:1.15rem}
+    .role-card{position:relative;display:block;width:100%;padding:0;border:2px solid transparent;border-radius:18px;overflow:hidden;cursor:pointer;background:#1a1028;font-family:var(--sans);text-align:left;color:#fff;min-height:148px;box-shadow:0 10px 24px -12px rgba(26,16,40,.45);transition:transform .2s,box-shadow .2s,border-color .2s}
+    .role-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .role-card[data-role="daddy"] img{object-position:50% 30%}
+    .role-card[data-role="baby"] img{object-position:30% 15%}
+    .role-card .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,8,28,.1) 20%,rgba(16,8,28,.82) 100%)}
+    .role-copy{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;min-height:148px;padding:1rem 1rem 1.05rem}
+    .role-kicker{display:block;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.28rem}
+    .role-title{display:block;font-size:1.05rem;font-weight:700;line-height:1.25}
+    .role-text{display:block;margin-top:.28rem;font-size:12.5px;font-weight:400;color:rgba(255,255,255,.86);line-height:1.45}
+    .role-check{position:absolute;top:.7rem;right:.7rem;z-index:2;width:26px;height:26px;border-radius:50%;background:var(--pd);color:#fff;display:none;align-items:center;justify-content:center;box-shadow:0 0 0 3px rgba(217,183,107,.35)}
+    .role-card:hover,.role-card:focus-visible{transform:translateY(-2px);border-color:rgba(217,183,107,.7);box-shadow:0 16px 32px -12px rgba(26,16,40,.5)}
+    .role-card.is-on{border-color:var(--pd);box-shadow:0 0 0 3px rgba(115,81,192,.28),0 16px 32px -12px rgba(26,16,40,.5)}
+    .role-card.is-on .role-check{display:flex}
+
+    .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.15rem}
+    .chip{appearance:none;display:inline-flex;align-items:center;gap:.45rem;background:#fff;color:var(--pd-ink);font-weight:600;font-size:13px;font-family:var(--sans);border-radius:999px;border:1.5px solid #e3d8f0;padding:.62rem 1rem;min-height:46px;cursor:pointer;transition:background .15s,color .15s,border-color .15s,box-shadow .15s,transform .15s}
+    .chip .ico{width:16px;height:16px;flex:none}
+    .chip:hover,.chip:focus-visible{border-color:var(--pd);color:var(--pd-dark)}
+    button.chip.is-on{border-color:var(--pd);background:var(--pd);color:#fff;box-shadow:0 6px 18px rgba(115,81,192,.38);transform:translateY(-1px)}
+
+    .actions{margin-top:1.15rem;display:flex;flex-wrap:wrap;gap:.55rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;border-radius:999px;font-weight:700;padding:.9rem 1.35rem;min-height:52px;transition:.15s;border:0;cursor:pointer;font-family:var(--sans);text-decoration:none;line-height:1.2;font-size:15px}
+    .btn-pd{background:var(--pd);color:#fff;box-shadow:0 10px 22px -8px rgba(115,81,192,.7)}
+    .btn-pd:hover{background:var(--pd-dark);color:#fff}
+    .btn-ghost{background:transparent;color:var(--pd);border:1.5px solid #d5c7ea}
+    .btn-ghost:hover{background:#f4eefb}
+    .btn-block{width:100%}
+
+    .field{position:relative;margin-top:1.15rem}
+    .inp, select.inp, textarea.inp{width:100%;border:1.5px solid #e3d8f0;border-radius:14px;background:#fff;font-size:16px;font-family:var(--sans);color:var(--pd-ink);outline:none;transition:border-color .15s,box-shadow .15s}
+    input.inp, select.inp{height:56px;padding:1.2rem 1rem .45rem}
+    textarea.inp{min-height:112px;padding:1.35rem 1rem .7rem;resize:vertical;line-height:1.5}
+    .field label{position:absolute;left:1rem;top:1.05rem;color:#8a7ea0;font-size:15px;font-weight:500;pointer-events:none;transition:all .15s}
+    .field.is-select label,.field.is-area label,
+    .field .inp:focus + label,
+    .field .inp:not(:placeholder-shown) + label{top:.42rem;font-size:11px;font-weight:600;color:var(--pd);letter-spacing:.04em;text-transform:uppercase}
+    .inp:focus{border-color:var(--pd);box-shadow:0 0 0 4px rgba(115,81,192,.16)}
+
+    .chk-row{display:flex;align-items:flex-start;gap:.7rem;margin-top:1rem;font-size:14px;font-weight:500;line-height:1.45;cursor:pointer;color:var(--pd-ink)}
+    .chk{accent-color:var(--pd);width:1.2rem;height:1.2rem;flex-shrink:0;margin-top:.15rem}
+
+    .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:.3rem .75rem;margin-top:.95rem;color:var(--muted);font-size:11px;font-weight:500;letter-spacing:.01em}
+    .trust span{display:inline-flex;align-items:center;gap:.28rem}
+    .trust .ico{width:13px;height:13px}
+    .trust[hidden]{display:none}
+
+    .ok{width:52px;height:52px;margin:0 auto .4rem;display:block;border-radius:50%;background:radial-gradient(circle,rgba(115,81,192,.12),transparent 68%)}
+    .ok circle{fill:none;stroke:var(--pd);stroke-width:2;stroke-dasharray:150;stroke-dashoffset:150}
+    .ok path{fill:none;stroke:var(--pd);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:40;stroke-dashoffset:40}
+    .ok.is-in circle{animation:draw .6s ease forwards}
+    .ok.is-in path{animation:draw .45s ease .35s forwards}
+    @keyframes draw{to{stroke-dashoffset:0}}
+
+    .summary-chips{display:flex;flex-wrap:wrap;gap:.28rem;margin:.6rem 0 0}
+    .tag{display:inline-flex;align-items:center;gap:.3rem;background:#f4eefb;color:var(--pd-deeper);border-radius:999px;padding:.28rem .62rem;font-size:11.5px;font-weight:600}
+    .tag b{font-weight:500;color:var(--muted);margin-right:.15rem}
+    .next-list{margin:.5rem 0 0;padding:0;list-style:none;display:grid;gap:.42rem}
+    .next-list li{display:flex;gap:.6rem;align-items:flex-start;font-size:13px;font-weight:400;color:var(--muted);line-height:1.5}
+    .n{flex:none;width:24px;height:24px;border-radius:50%;background:#7351c01a;color:var(--pd);font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+
+    .foot{margin-top:.55rem;padding:.35rem 0 .2rem;color:#9a92a8;font-size:10px;line-height:1.45;font-weight:400}
+    .foot p{margin:0}
+    .foot p + p{margin-top:.2rem}
+    .foot a{color:#6d6280}
+
+    .grain{pointer-events:none;position:absolute;inset:0;z-index:5;opacity:.04;border-radius:inherit;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+    @media (min-width:640px){
+      .role-grid{grid-template-columns:1fr 1fr;gap:.85rem}
+      .role-card,.role-copy{min-height:220px}
+      .funnel-card{padding:1.6rem 1.7rem 1.7rem}
+      .visual{height:38vh;max-height:360px;min-height:260px}
+    }
+    @media (min-width:960px){
+      .shell{flex-direction:row;height:100svh;overflow:hidden}
+      .visual{width:50%;height:auto;max-height:none;min-height:100svh;flex:none}
+      .visual-overlay{background:
+        linear-gradient(180deg, rgba(16,8,30,.58) 0%, rgba(16,8,30,.1) 38%, rgba(26,12,46,.22) 64%, rgba(16,8,30,.78) 100%),
+        linear-gradient(90deg, rgba(80,40,130,.3), transparent 55%)}
+      .visual-brand{justify-content:space-between;padding:2rem 2.1rem 2.2rem}
+      .brand span{font-size:1.2rem}
+      .brand img{height:32px;width:32px}
+      .tagline{font-size:1.85rem;color:#fff;text-shadow:0 8px 24px rgba(0,0,0,.35)}
+      .tagline:before{content:"";display:block;width:2.2rem;height:1px;background:var(--gold);margin-bottom:.5rem}
+      .funnel{margin-top:0;border-radius:0;width:50%;height:100svh;overflow:auto;
+        background:
+          radial-gradient(700px 480px at 10% 0%, rgba(115,81,192,.22), transparent 60%),
+          radial-gradient(600px 400px at 110% 80%, rgba(217,183,107,.14), transparent 55%),
+          linear-gradient(165deg,#f8f4fb 0%,#eee7f6 100%)}
+      .funnel-inner{max-width:36rem;padding:1.15rem 2.15rem .7rem;justify-content:flex-start}
+      .funnel-card{padding:1.55rem 1.9rem 1.3rem;margin-top:auto;margin-bottom:auto;
+        box-shadow:0 28px 70px -22px rgba(42,24,72,.4),0 8px 24px -12px rgba(42,24,72,.18),0 0 90px -24px rgba(115,81,192,.45)}
+      .foot{margin-top:0;padding:.45rem 0 .15rem}
+      .title{font-size:clamp(1.85rem,2.5vw,2.65rem)}
+      .actions.is-split{display:grid;grid-template-columns:1fr 1fr;margin-top:.85rem}
+      .actions.is-split .btn{min-height:48px;font-size:13.5px;padding:.65rem .85rem;white-space:nowrap}
+      .h-next{margin-top:.75rem!important}
+      .step-meta{margin-bottom:.6rem}
+    }
     @media (prefers-reduced-motion:reduce){
-      .progress-fill,.role-card,.chip,.btn,.pd-cta{transition:none!important}
+      .slide,.progress-fill,.role-card,.chip,.btn,.panel-anim{transition:none!important}
+      .ok circle,.ok path{stroke-dashoffset:0;animation:none}
       .role-card.is-on,.chip.is-on{transform:none}
     }
+    .panel-anim{transition:opacity .22s ease, transform .22s ease}
+    .panel-anim.is-leave{opacity:0;transform:translateY(8px)}
   </style>
 </head>
-<body class="font-sans antialiased v4-shell bg-body">
+<body>
   <a class="skip" href="#inhoud">Naar de inhoud</a>
-
-  <header class="bg-pd-header text-white">
-    <div class="max-w-[720px] mx-auto px-3 sm:px-6 h-14 flex items-center">
-      <a href="#top" class="flex items-center gap-1.5 sm:gap-2 shrink-0 min-w-0" id="top" aria-label="SugarDates">
-        <img src="../assets/logo.png" alt="" class="h-7 sm:h-8 w-auto">
-        <span class="text-[17px] sm:text-[19px] font-bold tracking-tight">SugarDates</span>
-      </a>
-    </div>
-  </header>
-  <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
-
-  <main id="inhoud" class="v4-main">
-    <div class="max-w-[32rem] mx-auto w-full px-3 sm:px-6">
-      <div class="step-meta">
-        <button type="button" class="back-btn" id="back-btn" hidden>Terug</button>
-        <p class="text-[12px] text-ink-muted font-medium m-0 ml-auto" id="step-count"></p>
+  <div class="shell">
+    <aside class="visual" aria-hidden="false">
+      <div class="slides">
+        <div class="slide is-on" data-img="dinner">
+          <picture>
+            <source srcset="img/dinner.webp" type="image/webp">
+            <img src="img/dinner.jpg" alt="Sfeerbeeld: een diner bij kaarslicht, geen echte leden." width="864" height="1152">
+          </picture>
+        </div>
+        <div class="slide" data-img="rooftop">
+          <picture>
+            <source srcset="img/rooftop.webp" type="image/webp">
+            <img src="img/rooftop.jpg" alt="Sfeerbeeld: avondlicht op een dakterras, geen echte leden." width="864" height="1152">
+          </picture>
+        </div>
+        <div class="slide" data-img="canal">
+          <picture>
+            <source srcset="img/canal.webp" type="image/webp">
+            <img src="img/canal.jpg" alt="Sfeerbeeld: wandeling langs een gracht in de schemer, geen echte leden." width="864" height="1152">
+          </picture>
+        </div>
       </div>
-      <p class="sr-only" id="step-live" aria-live="polite"></p>
-      <div id="panel" class="step-panel"></div>
-      <p class="text-center text-[12px] text-ink-muted mt-5 font-normal" id="age-line">Alleen voor 21 jaar en ouder.</p>
-    </div>
-  </main>
-
-  <footer class="bg-white border-t border-line text-[12px] text-ink-muted">
-    <div class="max-w-[720px] mx-auto px-3 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-      <div class="font-normal leading-relaxed">
-        <strong class="font-semibold text-ink">Forest Road B.V.</strong> · Herengracht 449A, 1017 BR Amsterdam<br>
-        KvK 97957232 · BTW NL868303550B01
+      <div class="visual-overlay"></div>
+      <div class="visual-brand">
+        <a class="brand" href="#top" id="top" aria-label="SugarDates">
+          <img src="../assets/logo.png" alt="">
+          <span>SugarDates</span>
+        </a>
+        <p class="tagline">Dating op jullie voorwaarden.</p>
       </div>
-      <div class="flex flex-col sm:items-end gap-1.5 font-normal">
-        <p class="m-0">Een site van Forest Road B.V. · ook op <a href="https://paydates.nl" class="text-pd font-semibold hover:text-pd-darker">Paydates.nl</a></p>
-        <ul class="flex flex-wrap gap-x-3 gap-y-1">
-          <li><a href="#" class="hover:text-pd">Privacy</a></li>
-          <li><a href="#" class="hover:text-pd">Voorwaarden</a></li>
-          <li><a href="#" class="hover:text-pd">Contact</a></li>
-        </ul>
-        <p class="m-0">© 2026 Forest Road B.V.</p>
-      </div>
-    </div>
-  </footer>
+    </aside>
 
-  <noscript>
-    <p class="text-center text-[13px] p-4">Voor deze aanmelding is JavaScript nodig.</p>
-  </noscript>
+    <section class="funnel">
+      <div class="funnel-inner">
+        <div class="progress-wrap">
+          <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+          <div class="dots" id="dots" aria-hidden="true"></div>
+        </div>
+        <div class="funnel-card">
+          <span class="grain"></span>
+          <div class="step-meta">
+            <button type="button" class="back-btn" id="back-btn" hidden>
+              <svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 19l-7-7 7-7"/></svg>
+              Terug
+            </button>
+            <p class="step-count" id="step-count"></p>
+          </div>
+          <p class="sr-only" id="step-live" aria-live="polite"></p>
+          <main id="inhoud">
+            <div id="panel" class="panel-anim"></div>
+          </main>
+          <div class="trust" id="trust">
+            <span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Discreet</span>
+            <span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 19c1.2-3.2 3.7-5 7-5s5.8 1.8 7 5"/></svg>Pseudoniem welkom</span>
+            <span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>21+</span>
+            <span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l7 4v6c0 4.2-2.9 7.2-7 8-4.1-.8-7-3.8-7-8V7l7-4z"/></svg>Jij bepaalt wat je deelt</span>
+          </div>
+        </div>
+        <footer class="foot">
+          <p>Alleen voor 21 jaar en ouder. · Een site van Forest Road B.V. · ook op <a href="https://paydates.nl">Paydates.nl</a></p>
+          <p>Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam · KvK 97957232 · BTW NL868303550B01 · <a href="#">Privacy</a> · <a href="#">Voorwaarden</a> · <a href="#">Contact</a> · © 2026</p>
+        </footer>
+      </div>
+    </section>
+  </div>
+
+  <noscript><p style="padding:1rem;color:#fff;text-align:center">Voor deze aanmelding is JavaScript nodig.</p></noscript>
 
   <script>
   (function () {
@@ -140,10 +281,35 @@
     // Answers + e-mail may be saved in localStorage as a placeholder waitlist.
     // The password is NEVER written to localStorage, sessionStorage, cookies, or the network.
     var STORAGE_KEY = "sugardates-v4-funnel-demo";
-    var YEAR_MAX = 2005; // 21+ in 2026; 21+ is also confirmed later with a checkbox
+    var YEAR_MAX = 2005;
     var YEAR_MIN = 1946;
-
     var STEPS = ["role","looking","intent","values","arrangement","location","age","name","bio","account"];
+    var VISUAL = {role:"dinner",looking:"rooftop",intent:"canal",values:"dinner",arrangement:"canal",location:"canal",age:"rooftop",name:"dinner",bio:"rooftop",account:"dinner",success:"canal"};
+
+    var ICO = {
+      sugardaddy:'<path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4z"/><path d="M4 20c1.3-3.5 4-5 8-5s6.7 1.5 8 5"/>',
+      sugarmama:'<path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4z"/><path d="M4 20c1.3-3.5 4-5 8-5s6.7 1.5 8 5"/>',
+      sugarbaby:'<path d="M12 3l2.1 6.3H21l-5.2 3.8 2 6.4L12 16.4 6.2 19.5l2-6.4L3 9.3h6.9z"/>',
+      any:'<circle cx="12" cy="12" r="8"/><path d="M3 12h18M12 4c3 3.2 3 12.8 0 16M12 4c-3 3.2-3 12.8 0 16"/>',
+      langdurig:'<rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/>',
+      afentoe:'<circle cx="12" cy="12" r="8"/><path d="M12 8v5l3 2"/>',
+      mentor:'<path d="M3 10l9-5 9 5-9 5-9-5z"/><path d="M7 12.5v4.2L12 19l5-2.3v-4.2"/>',
+      reizen:'<path d="M3 12l18-8-4 18-5-6-6 3 3-9z"/>',
+      chatten:'<path d="M5 16.5A7.5 7.5 0 1 1 16.5 19L19 21l-1.2-4A7.5 7.5 0 0 1 5 16.5z"/>',
+      discretie:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+      chemie:'<path d="M12 3l2.1 6.3H21l-5.2 3.8 2 6.4L12 16.4 6.2 19.5l2-6.4L3 9.3h6.9z"/>',
+      afspraken:'<path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/>',
+      grenzen:'<path d="M12 3l7 4v6c0 4.2-2.9 7.2-7 8-4.1-.8-7-3.8-7-8V7l7-4z"/>',
+      eerlijk:'<path d="M12 4v16M4 8h16"/><path d="M7 8l-3 8h6L7 8zm10 0l-3 8h6l-3-8z"/>',
+      "online-eerst":'<path d="M5 16.5A7.5 7.5 0 1 1 16.5 19L19 21l-1.2-4A7.5 7.5 0 0 1 5 16.5z"/>',
+      open:'<path d="M4 6h16v10H7l-3 3V6z"/>',
+      publiek:'<path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/>',
+      tempo:'<circle cx="12" cy="12" r="8"/><path d="M12 7v5l4 1"/>',
+      "nog-niet":'<circle cx="6" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="18" cy="12" r="1.4" fill="currentColor"/>'
+    };
+    function ico(name){
+      return '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(ICO[name]||"")+"</svg>";
+    }
 
     var LOOKING = [
       {id:"sugardaddy", label:"Een sugardaddy"},
@@ -175,19 +341,7 @@
     var CITIES = ["Amsterdam","Rotterdam","Den Haag","Utrecht","Eindhoven","Groningen","Almere","Tilburg","Breda","Nijmegen","Arnhem","Apeldoorn","Haarlem","Haarlemmermeer","Zaanstad","Amersfoort","Enschede","Den Bosch","Zwolle","Zoetermeer","Leiden","Leeuwarden","Maastricht","Ede","Dordrecht","Westland","Alphen aan den Rijn","Alkmaar","Delft","Emmen","Deventer","Venlo"];
     var PROVINCES = ["Drenthe","Flevoland","Friesland","Gelderland","Groningen","Limburg","Noord-Brabant","Noord-Holland","Overijssel","Utrecht","Zeeland","Zuid-Holland"];
 
-    var state = {
-      role: "",
-      lookingFor: "",
-      intents: [],
-      values: [],
-      arrangements: [],
-      location: "",
-      birthYear: "",
-      displayName: "",
-      oneLiner: "",
-      email: "",
-      completed: false
-    };
+    var state = {role:"",lookingFor:"",intents:[],values:[],arrangements:[],location:"",birthYear:"",displayName:"",oneLiner:"",email:"",completed:false};
     var stepIndex = 0;
     var onSuccess = false;
 
@@ -196,533 +350,406 @@
     var stepCount = document.getElementById("step-count");
     var progressFill = document.getElementById("progress-fill");
     var live = document.getElementById("step-live");
-    var ageLine = document.getElementById("age-line");
+    var trust = document.getElementById("trust");
+    var dots = document.getElementById("dots");
 
-    function reduceMotion() {
-      return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    }
-    function escapeHtml(str) {
-      return String(str == null ? "" : str)
-        .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
-        .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
-    }
-    function labelOf(list, id) {
-      for (var i=0;i<list.length;i++) if (list[i].id===id) return list[i].label;
-      return id;
-    }
-    function labelsOf(list, ids) {
-      return (ids||[]).map(function(id){ return labelOf(list,id); });
-    }
-    function roleLabel() {
-      if (state.role === "baby") return "sugarbaby";
-      if (state.role === "daddy") return "sugardaddy of sugarmama";
+    function reduceMotion(){ return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; }
+    function escapeHtml(str){ return String(str==null?"":str).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;"); }
+    function labelOf(list,id){ for (var i=0;i<list.length;i++) if(list[i].id===id) return list[i].label; return id; }
+    function labelsOf(list,ids){ return (ids||[]).map(function(id){ return labelOf(list,id); }); }
+    function lookingLabel(){
+      if (state.lookingFor==="sugardaddy") return "een sugardaddy";
+      if (state.lookingFor==="sugarmama") return "een sugarmama";
+      if (state.lookingFor==="sugarbaby") return "een sugarbaby";
       return "";
     }
-    function lookingLabel() {
-      if (state.lookingFor === "sugardaddy") return "een sugardaddy";
-      if (state.lookingFor === "sugarmama") return "een sugarmama";
-      if (state.lookingFor === "sugarbaby") return "een sugarbaby";
-      return "";
-    }
-    function personalLead() {
+    function personalLead(){
       var who = lookingLabel();
-      if (who) {
+      if (who){
         var extra = "";
-        if (state.intents.indexOf("langdurig") >= 0) extra = " die past bij een langdurige regeling";
-        else if (state.intents.indexOf("chatten") >= 0) extra = ", en dat je eerst wilt chatten";
-        else if (state.intents.indexOf("mentor") >= 0) extra = ", met ruimte voor mentorschap";
-        return "Fijn dat je " + who + " zoekt" + extra + ".";
+        if (state.intents.indexOf("langdurig")>=0) extra = " die past bij een langdurige regeling";
+        else if (state.intents.indexOf("chatten")>=0) extra = ", en dat je eerst wilt chatten";
+        else if (state.intents.indexOf("mentor")>=0) extra = ", met ruimte voor mentorschap";
+        return "Fijn dat je "+who+" zoekt"+extra+".";
       }
-      if (state.role === "baby") return "Fijn dat je je als sugarbaby aanmeldt.";
-      if (state.role === "daddy") return "Fijn dat je je als sugardaddy of sugarmama aanmeldt.";
+      if (state.role==="baby") return "Fijn dat je je als sugarbaby aanmeldt.";
+      if (state.role==="daddy") return "Fijn dat je je als sugardaddy of sugarmama aanmeldt.";
       return "";
     }
-
-    function remainingText() {
+    function remainingText(){
       if (onSuccess) return "";
       var left = STEPS.length - stepIndex - 1;
-      if (left <= 0) return "Laatste stap";
-      if (left === 1) return "Nog 1 vraag";
-      return "Nog " + left + " vragen";
+      if (left<=0) return "Laatste stap";
+      if (left===1) return "Nog 1 vraag";
+      return "Nog "+left+" vragen";
     }
-
-    function saveAnswers() {
-      // Placeholder only: no backend. Never includes a password.
+    function saveAnswers(){
       try {
-        var copy = {
-          role: state.role,
-          lookingFor: state.lookingFor,
-          intents: state.intents.slice(),
-          values: state.values.slice(),
-          arrangements: state.arrangements.slice(),
-          location: state.location,
-          birthYear: state.birthYear,
-          displayName: state.displayName,
-          oneLiner: state.oneLiner,
-          email: state.email,
-          completed: state.completed,
-          stepIndex: Math.min(stepIndex, STEPS.length - 1),
-          onSuccess: onSuccess
-        };
+        var copy = {role:state.role,lookingFor:state.lookingFor,intents:state.intents.slice(),values:state.values.slice(),arrangements:state.arrangements.slice(),location:state.location,birthYear:state.birthYear,displayName:state.displayName,oneLiner:state.oneLiner,email:state.email,completed:state.completed,stepIndex:Math.min(stepIndex,STEPS.length-1),onSuccess:onSuccess};
         localStorage.setItem(STORAGE_KEY, JSON.stringify(copy));
-      } catch (e) {}
+      } catch(e){}
     }
-    function loadAnswers() {
+    function loadAnswers(){
       try {
         var raw = localStorage.getItem(STORAGE_KEY);
         if (!raw) return;
         var data = JSON.parse(raw);
-        if (!data || typeof data !== "object") return;
-        ["role","lookingFor","location","birthYear","displayName","oneLiner","email"].forEach(function(k){
-          if (typeof data[k] === "string") state[k] = data[k];
-        });
-        ["intents","values","arrangements"].forEach(function(k){
-          if (Array.isArray(data[k])) state[k] = data[k].filter(function(x){ return typeof x === "string"; });
-        });
+        if (!data || typeof data!=="object") return;
+        ["role","lookingFor","location","birthYear","displayName","oneLiner","email"].forEach(function(k){ if (typeof data[k]==="string") state[k]=data[k]; });
+        ["intents","values","arrangements"].forEach(function(k){ if (Array.isArray(data[k])) state[k]=data[k].filter(function(x){ return typeof x==="string"; }); });
         state.completed = !!data.completed;
-        if (state.completed) { onSuccess = true; stepIndex = STEPS.length - 1; }
-        else if (typeof data.stepIndex === "number" && data.stepIndex >= 0 && data.stepIndex < STEPS.length) {
-          stepIndex = data.stepIndex;
-        }
-      } catch (e) {}
+        if (state.completed){ onSuccess=true; stepIndex=STEPS.length-1; }
+        else if (typeof data.stepIndex==="number" && data.stepIndex>=0 && data.stepIndex<STEPS.length) stepIndex=data.stepIndex;
+      } catch(e){}
     }
 
-    function updateChrome() {
-      var total = STEPS.length;
-      var current = onSuccess ? total : stepIndex + 1;
-      progressFill.style.width = Math.round((current / total) * 100) + "%";
-      backBtn.hidden = onSuccess || stepIndex === 0;
-      if (onSuccess) {
-        stepCount.textContent = "Aanmelding ontvangen";
-      } else {
-        stepCount.textContent = "Stap " + current + " van " + total + " · " + remainingText();
+    function updateVisual(){
+      var key = onSuccess ? "success" : STEPS[stepIndex];
+      var name = VISUAL[key] || "dinner";
+      document.querySelectorAll(".slide").forEach(function(s){ s.classList.toggle("is-on", s.getAttribute("data-img")===name); });
+    }
+    function updateDots(){
+      var total = STEPS.length, current = onSuccess ? total : stepIndex+1, html="";
+      for (var i=1;i<=total;i++){
+        var cls = "dot";
+        if (i<current) cls += " is-done";
+        else if (i===current) cls += " is-now";
+        html += '<span class="'+cls+'"></span>';
       }
-      ageLine.hidden = onSuccess;
+      dots.innerHTML = html;
     }
-
-    function announce(title) {
-      var text = onSuccess ? title : ("Stap " + (stepIndex + 1) + " van " + STEPS.length + ": " + title);
-      live.textContent = text;
+    function updateChrome(){
+      var total = STEPS.length, current = onSuccess ? total : stepIndex+1;
+      progressFill.style.width = Math.round((current/total)*100)+"%";
+      backBtn.hidden = onSuccess || stepIndex===0;
+      stepCount.textContent = onSuccess ? "Aanmelding ontvangen" : ("Stap "+current+" van "+total+" · "+remainingText());
+      trust.hidden = !!onSuccess;
+      updateVisual();
+      updateDots();
     }
-
-    function focusHeading() {
+    function announce(title){
+      live.textContent = onSuccess ? title : ("Stap "+(stepIndex+1)+" van "+STEPS.length+": "+title);
+    }
+    function focusHeading(){
       var h = panel.querySelector("h1");
       if (!h) return;
-      h.setAttribute("tabindex", "-1");
-      try { h.focus({preventScroll: true}); } catch (e) { h.focus(); }
+      h.setAttribute("tabindex","-1");
+      try { h.focus({preventScroll:true}); } catch(e){ h.focus(); }
     }
+    function toggleIn(arr,id){ var i=arr.indexOf(id); if(i>=0) arr.splice(i,1); else arr.push(id); return arr; }
 
-    function toggleIn(arr, id) {
-      var i = arr.indexOf(id);
-      if (i >= 0) arr.splice(i, 1);
-      else arr.push(id);
-      return arr;
+    function chipsHtml(list, selected){
+      return '<div class="chips" role="group">'+list.map(function(item){
+        var on = selected.indexOf(item.id)>=0;
+        return '<button type="button" class="chip'+(on?" is-on":"")+'" data-chip="'+item.id+'" aria-pressed="'+(on?"true":"false")+'">'+ico(item.id)+escapeHtml(item.label)+"</button>";
+      }).join("")+"</div>";
     }
-
-    function chipsHtml(list, selected) {
-      return '<div class="chips" role="group">' + list.map(function(item){
-        var on = selected.indexOf(item.id) >= 0;
-        return '<button type="button" class="chip' + (on ? ' is-on' : '') + '" data-chip="' + item.id + '" aria-pressed="' + (on ? "true" : "false") + '">' + escapeHtml(item.label) + '</button>';
-      }).join("") + "</div>";
-    }
-
-    function optionsHtml(values, current, placeholder) {
-      var html = '<option value="">' + escapeHtml(placeholder) + "</option>";
-      values.forEach(function(v){
-        html += '<option value="' + escapeHtml(v) + '"' + (current===v ? " selected" : "") + ">" + escapeHtml(v) + "</option>";
-      });
+    function optionsHtml(values, current, placeholder){
+      var html = '<option value="">'+escapeHtml(placeholder)+"</option>";
+      values.forEach(function(v){ html += '<option value="'+escapeHtml(v)+'"'+(current===v?" selected":"")+">"+escapeHtml(v)+"</option>"; });
       return html;
     }
-
-    function render() {
-      updateChrome();
-      var html = "";
-      if (onSuccess) html = renderSuccess();
-      else html = renderStep(STEPS[stepIndex]);
-      panel.innerHTML = html;
-      bindStep();
-      focusHeading();
+    function pic(name, posClass){
+      var alt = {dinner:"Sfeerbeeld: diner bij kaarslicht, geen echte leden.",rooftop:"Sfeerbeeld: avondlicht op een dakterras, geen echte leden.",canal:"Sfeerbeeld: wandeling langs een gracht, geen echte leden."}[name]||"";
+      return '<picture><source srcset="img/'+name+'.webp" type="image/webp"><img src="img/'+name+'.jpg" alt="'+alt+'" width="864" height="1152"></picture>';
     }
 
-    function renderStep(id) {
+    var firstPaint = true;
+    function render(){
+      updateChrome();
+      var html = onSuccess ? renderSuccess() : renderStep(STEPS[stepIndex]);
+      function paint(){
+        panel.innerHTML = html;
+        panel.classList.remove("is-leave");
+        bindStep();
+        focusHeading();
+        var ok = panel.querySelector(".ok");
+        if (ok && !reduceMotion()) requestAnimationFrame(function(){ ok.classList.add("is-in"); });
+        else if (ok) ok.classList.add("is-in");
+        var h = panel.querySelector("h1");
+        if (h) announce(h.textContent);
+      }
+      if (reduceMotion() || firstPaint){ firstPaint=false; paint(); return; }
+      panel.classList.add("is-leave");
+      window.setTimeout(paint, 160);
+    }
+
+    function renderStep(id){
       var lead = personalLead();
-      var leadHtml = lead ? '<p class="personal">' + escapeHtml(lead) + "</p>" : "";
-      if (id === "role") {
+      var leadHtml = lead ? '<p class="personal">'+escapeHtml(lead)+"</p>" : "";
+      if (id==="role"){
         return (
-          '<h1 class="text-[24px] sm:text-[28px] font-bold text-[#212529] leading-tight">Wie ben je op SugarDates?</h1>' +
-          '<p class="lead">Kies wat het beste bij je past. Je kunt je antwoord later nog aanpassen.</p>' +
-          '<div class="role-grid">' +
-            '<button type="button" class="role-card' + (state.role==="daddy"?" is-on":"") + '" data-role="daddy">' +
-              '<span class="role-kicker">Genereus</span>' +
-              '<span class="role-title">Ik ben sugardaddy of sugarmama</span>' +
-              '<span class="role-text">Je zoekt gezelschap en wilt daar open over zijn, met duidelijke afspraken.</span>' +
-            '</button>' +
-            '<button type="button" class="role-card' + (state.role==="baby"?" is-on":"") + '" data-role="baby">' +
-              '<span class="role-kicker">Op jouw voorwaarden</span>' +
-              '<span class="role-title">Ik ben sugarbaby</span>' +
-              '<span class="role-text">Je zoekt iemand die ruimhartig is en duidelijk communiceert. Jij bepaalt je grenzen.</span>' +
-            '</button>' +
-          '</div>' +
-          '<p class="micro">SugarDates is gemaakt voor Nederland. Geen haast, geen vast script.</p>' +
+          '<h1 class="title">Wie ben je op <em>SugarDates</em>?</h1>'+
+          '<p class="lead">Kies wat het beste bij je past. Je kunt je antwoord later nog aanpassen.</p>'+
+          '<div class="role-grid">'+
+            '<button type="button" class="role-card'+(state.role==="daddy"?" is-on":"")+'" data-role="daddy">'+
+              pic("dinner")+
+              '<span class="shade"></span>'+
+              '<span class="role-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M5 12.5l5 5 9-10"/></svg></span>'+
+              '<span class="role-copy"><span class="role-kicker">Genereus</span><span class="role-title">Ik ben sugardaddy of sugarmama</span><span class="role-text">Je zoekt gezelschap en wilt daar open over zijn, met duidelijke afspraken.</span></span>'+
+            "</button>"+
+            '<button type="button" class="role-card'+(state.role==="baby"?" is-on":"")+'" data-role="baby">'+
+              pic("rooftop")+
+              '<span class="shade"></span>'+
+              '<span class="role-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M5 12.5l5 5 9-10"/></svg></span>'+
+              '<span class="role-copy"><span class="role-kicker">Op jouw voorwaarden</span><span class="role-title">Ik ben sugarbaby</span><span class="role-text">Je zoekt iemand die ruimhartig is en duidelijk communiceert. Jij bepaalt je grenzen.</span></span>'+
+            "</button>"+
+          "</div>"+
+          '<p class="micro">SugarDates is gemaakt voor Nederland. Geen haast, geen vast script.</p>'+
           '<p class="err" id="err" hidden></p>'
         );
       }
-      if (id === "looking") {
-        return leadHtml +
-          '<h1 class="text-[24px] sm:text-[28px] font-bold text-[#212529] leading-tight">Wie zoek je?</h1>' +
-          '<p class="lead">Dan stemmen we de volgende vragen daarop af.</p>' +
-          chipsHtml(LOOKING, state.lookingFor ? [state.lookingFor] : []) +
-          '<p class="micro">Je kunt dit later nog wijzigen.</p>' +
-          '<p class="err" id="err" hidden></p>' +
-          '<div class="actions"><button type="button" class="btn btn-pd" data-next>Verder</button></div>';
+      if (id==="looking"){
+        return leadHtml+'<h1 class="title">Wie <em>zoek</em> je?</h1><p class="lead">Dan stemmen we de volgende vragen daarop af.</p>'+
+          chipsHtml(LOOKING, state.lookingFor?[state.lookingFor]:[])+
+          '<p class="micro">Je kunt dit later nog wijzigen.</p><p class="err" id="err" hidden></p>'+
+          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
       }
-      if (id === "intent") {
-        return leadHtml +
-          '<h1 class="text-[24px] sm:text-[28px] font-bold text-[#212529] leading-tight">Wat zoek je?</h1>' +
-          '<p class="lead">Kies wat bij je past. Meerdere antwoorden mag.</p>' +
-          chipsHtml(INTENTS, state.intents) +
-          '<p class="err" id="err" hidden></p>' +
-          '<div class="actions"><button type="button" class="btn btn-pd" data-next>Verder</button></div>';
+      if (id==="intent"){
+        return leadHtml+'<h1 class="title">Wat <em>zoek</em> je?</h1><p class="lead">Kies wat bij je past. Meerdere antwoorden mag.</p>'+
+          chipsHtml(INTENTS, state.intents)+
+          '<p class="err" id="err" hidden></p><div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
       }
-      if (id === "values") {
-        return leadHtml +
-          '<h1 class="text-[24px] sm:text-[28px] font-bold text-[#212529] leading-tight">Wat is belangrijk voor jou?</h1>' +
-          '<p class="lead">Dit helpt om verwachtingen helder te krijgen. Kies gerust meer dan één.</p>' +
-          chipsHtml(VALUES, state.values) +
-          '<p class="err" id="err" hidden></p>' +
-          '<div class="actions"><button type="button" class="btn btn-pd" data-next>Verder</button></div>';
+      if (id==="values"){
+        return leadHtml+'<h1 class="title">Wat is <em>belangrijk</em> voor jou?</h1><p class="lead">Dit helpt om verwachtingen helder te krijgen. Kies gerust meer dan één.</p>'+
+          chipsHtml(VALUES, state.values)+
+          '<p class="err" id="err" hidden></p><div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
       }
-      if (id === "arrangement") {
-        return leadHtml +
-          '<h1 class="text-[24px] sm:text-[28px] font-bold text-[#212529] leading-tight">Wat voor regeling past bij jou?</h1>' +
-          '<p class="lead">Hoe wil je het liefst beginnen? Jullie spreken samen af hoe het verder gaat.</p>' +
-          chipsHtml(ARRANGEMENTS, state.arrangements) +
-          '<p class="micro">Niets is verplicht. Een regeling is wat jullie zelf overeenkomen.</p>' +
-          '<p class="err" id="err" hidden></p>' +
-          '<div class="actions"><button type="button" class="btn btn-pd" data-next>Verder</button></div>';
+      if (id==="arrangement"){
+        return leadHtml+'<h1 class="title">Wat voor <em>regeling</em> past bij jou?</h1><p class="lead">Hoe wil je het liefst beginnen? Jullie spreken samen af hoe het verder gaat.</p>'+
+          chipsHtml(ARRANGEMENTS, state.arrangements)+
+          '<p class="micro">Niets is verplicht. Een regeling is wat jullie zelf overeenkomen.</p><p class="err" id="err" hidden></p>'+
+          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
       }
-      if (id === "location") {
-        return leadHtml +
-          '<h1 class="text-[24px] sm:text-[28px] font-bold text-[#212529] leading-tight">Waar woon je?</h1>' +
-          '<p class="lead">Een stad of provincie is genoeg. Geen adres.</p>' +
-          '<label class="lbl mt-4" for="location">Stad of provincie</label>' +
-          '<select id="location" class="inp" required>' +
-            '<option value="">Kies een stad of provincie</option>' +
-            '<optgroup label="Grote steden">' + optionsHtml(CITIES, state.location, "").replace('<option value=""></option>',"") + "</optgroup>" +
-            '<optgroup label="Provincies">' + optionsHtml(PROVINCES, state.location, "").replace('<option value=""></option>',"") + "</optgroup>" +
-            '<optgroup label="Anders"><option value="Ergens anders in Nederland"' + (state.location==="Ergens anders in Nederland"?" selected":"") + '>Ergens anders in Nederland</option></optgroup>' +
-          '</select>' +
-          '<p class="micro">We gebruiken dit alleen om je aanmelding te plaatsen, niet om je te achterhalen.</p>' +
-          '<p class="err" id="err" hidden></p>' +
-          '<div class="actions"><button type="button" class="btn btn-pd" data-next>Verder</button></div>';
+      if (id==="location"){
+        return leadHtml+'<h1 class="title">Waar <em>woon</em> je?</h1><p class="lead">Een stad of provincie is genoeg. Geen adres.</p>'+
+          '<div class="field is-select"><select id="location" class="inp" required>'+
+            '<option value="">Kies een stad of provincie</option>'+
+            '<optgroup label="Grote steden">'+optionsHtml(CITIES,state.location,"").replace('<option value=""></option>',"")+"</optgroup>"+
+            '<optgroup label="Provincies">'+optionsHtml(PROVINCES,state.location,"").replace('<option value=""></option>',"")+"</optgroup>"+
+            '<optgroup label="Anders"><option value="Ergens anders in Nederland"'+(state.location==="Ergens anders in Nederland"?" selected":"")+">Ergens anders in Nederland</option></optgroup>"+
+          '</select><label for="location">Stad of provincie</label></div>'+
+          '<p class="micro">We gebruiken dit alleen om je aanmelding te plaatsen, niet om je te achterhalen.</p><p class="err" id="err" hidden></p>'+
+          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
       }
-      if (id === "age") {
-        var years = [];
-        for (var y = YEAR_MAX; y >= YEAR_MIN; y--) years.push(String(y));
-        return leadHtml +
-          '<h1 class="text-[24px] sm:text-[28px] font-bold text-[#212529] leading-tight">Wat is je geboortejaar?</h1>' +
-          '<p class="lead">SugarDates is alleen voor mensen van 21 jaar of ouder.</p>' +
-          '<label class="lbl mt-4" for="birthYear">Geboortejaar</label>' +
-          '<select id="birthYear" class="inp" required>' + optionsHtml(years, state.birthYear, "Kies je geboortejaar") + "</select>" +
-          '<p class="micro">Je bevestigt je leeftijd later nog een keer, bij het afronden.</p>' +
-          '<p class="err" id="err" hidden></p>' +
-          '<div class="actions"><button type="button" class="btn btn-pd" data-next>Verder</button></div>';
+      if (id==="age"){
+        var years=[]; for (var y=YEAR_MAX;y>=YEAR_MIN;y--) years.push(String(y));
+        return leadHtml+'<h1 class="title">Wat is je <em>geboortejaar</em>?</h1><p class="lead">SugarDates is alleen voor mensen van 21 jaar of ouder.</p>'+
+          '<div class="field is-select"><select id="birthYear" class="inp" required>'+optionsHtml(years,state.birthYear,"Kies je geboortejaar")+'</select><label for="birthYear">Geboortejaar</label></div>'+
+          '<p class="micro">Je bevestigt je leeftijd later nog een keer, bij het afronden.</p><p class="err" id="err" hidden></p>'+
+          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
       }
-      if (id === "name") {
-        return leadHtml +
-          '<h1 class="text-[24px] sm:text-[28px] font-bold text-[#212529] leading-tight">Hoe mogen we je noemen?</h1>' +
-          '<p class="lead">Een pseudoniem is welkom. Je echte naam is niet nodig.</p>' +
-          '<label class="lbl mt-4" for="displayName">Weergavenaam</label>' +
-          '<input id="displayName" class="inp" name="displayName" type="text" maxlength="32" autocomplete="nickname" required placeholder="Bijvoorbeeld een voornaam of bijnaam" value="' + escapeHtml(state.displayName) + '">' +
-          '<p class="micro">Je bepaalt zelf wat je deelt. Dit is voor je profiel als de site live gaat, niet voor een paspoort.</p>' +
-          '<p class="err" id="err" hidden></p>' +
-          '<div class="actions"><button type="button" class="btn btn-pd" data-next>Verder</button></div>';
+      if (id==="name"){
+        return leadHtml+'<h1 class="title">Hoe mogen we je <em>noemen</em>?</h1><p class="lead">Een pseudoniem is welkom. Je echte naam is niet nodig.</p>'+
+          '<div class="field"><input id="displayName" class="inp" name="displayName" type="text" maxlength="32" autocomplete="nickname" required placeholder=" " value="'+escapeHtml(state.displayName)+'"><label for="displayName">Weergavenaam</label></div>'+
+          '<p class="micro">Je bepaalt zelf wat je deelt. Dit is voor je profiel als de site live gaat, niet voor een paspoort.</p><p class="err" id="err" hidden></p>'+
+          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
       }
-      if (id === "bio") {
-        return leadHtml +
-          '<h1 class="text-[24px] sm:text-[28px] font-bold text-[#212529] leading-tight">Waar ben je naar op zoek?</h1>' +
-          '<p class="lead">Kort, in je eigen woorden. Dit mag je overslaan.</p>' +
-          '<label class="lbl mt-4" for="oneLiner">Korte omschrijving <span class="font-normal text-ink-muted">(niet verplicht)</span></label>' +
-          '<textarea id="oneLiner" class="inp" name="oneLiner" rows="3" maxlength="140" placeholder="Wat zoek je, en hoe wil je het aanpakken?">' + escapeHtml(state.oneLiner) + "</textarea>" +
-          '<p class="micro">Maximaal 140 tekens. Je kunt dit later nog aanpassen.</p>' +
-          '<p class="err" id="err" hidden></p>' +
-          '<div class="actions">' +
-            '<button type="button" class="btn btn-pd" data-next>Verder</button>' +
-            '<button type="button" class="btn btn-ghost" data-skip>Overslaan</button>' +
-          "</div>";
+      if (id==="bio"){
+        return leadHtml+'<h1 class="title">Waar ben je naar op <em>zoek</em>?</h1><p class="lead">Kort, in je eigen woorden. Dit mag je overslaan.</p>'+
+          '<div class="field is-area"><textarea id="oneLiner" class="inp" name="oneLiner" rows="3" maxlength="140" placeholder=" ">'+escapeHtml(state.oneLiner)+'</textarea><label for="oneLiner">Korte omschrijving (niet verplicht)</label></div>'+
+          '<p class="micro">Maximaal 140 tekens. Je kunt dit later nog aanpassen.</p><p class="err" id="err" hidden></p>'+
+          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button><button type="button" class="btn btn-ghost btn-block" data-skip>Overslaan</button></div>';
       }
-      if (id === "account") {
-        return leadHtml +
-          '<h1 class="text-[24px] sm:text-[28px] font-bold text-[#212529] leading-tight">Rond je aanmelding af</h1>' +
-          '<p class="lead">Je antwoorden staan klaar. Alleen nog een e-mailadres en een wachtwoord. SugarDates is nog niet live; we zetten je op de lijst.</p>' +
-          '<form id="account-form" novalidate>' +
-            '<div class="mt-4"><label class="lbl" for="email">E-mailadres</label>' +
-            '<input id="email" class="inp" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="jij@email.nl" value="' + escapeHtml(state.email) + '"></div>' +
-            '<div class="mt-3"><label class="lbl" for="password">Wachtwoord</label>' +
-            '<input id="password" class="inp" name="password" type="password" autocomplete="new-password" minlength="8" required placeholder="Minimaal 8 tekens"></div>' +
-            '<p class="micro">Kies een wachtwoord dat je later kunt gebruiken, als de site live gaat. In deze aanmelding wordt je wachtwoord niet opgeslagen.</p>' +
-            '<label class="flex items-start gap-2.5 text-[14px] text-ink font-medium leading-snug cursor-pointer mt-4">' +
-              '<input id="age" name="age" type="checkbox" class="chk" required>' +
-              '<span>Ik ben 21 jaar of ouder</span>' +
-            "</label>" +
-            '<label class="flex items-start gap-2.5 text-[14px] text-ink font-medium leading-snug cursor-pointer mt-3">' +
-              '<input id="terms" name="terms" type="checkbox" class="chk" required>' +
-              '<span>Ik ga akkoord met de <a href="#" class="text-pd">voorwaarden</a> en het <a href="#" class="text-pd">privacybeleid</a></span>' +
-            "</label>" +
-            '<p class="err" id="err" hidden></p>' +
-            '<div class="actions"><button type="submit" class="btn btn-pd w-full sm:w-auto">Zet me op de lijst</button></div>' +
+      if (id==="account"){
+        return leadHtml+'<h1 class="title">Rond je <em>aanmelding</em> af</h1>'+
+          '<p class="lead">Je antwoorden staan klaar. Alleen nog een e-mailadres en een wachtwoord. SugarDates is nog niet live; we zetten je op de lijst.</p>'+
+          '<form id="account-form" novalidate>'+
+            '<div class="field"><input id="email" class="inp" name="email" type="email" autocomplete="email" inputmode="email" required placeholder=" " value="'+escapeHtml(state.email)+'"><label for="email">E-mailadres</label></div>'+
+            '<div class="field"><input id="password" class="inp" name="password" type="password" autocomplete="new-password" minlength="8" required placeholder=" "><label for="password">Wachtwoord (minimaal 8 tekens)</label></div>'+
+            '<p class="micro">Kies een wachtwoord dat je later kunt gebruiken, als de site live gaat. In deze aanmelding wordt je wachtwoord niet opgeslagen.</p>'+
+            '<label class="chk-row"><input id="age" name="age" type="checkbox" class="chk" required><span>Ik ben 21 jaar of ouder</span></label>'+
+            '<label class="chk-row"><input id="terms" name="terms" type="checkbox" class="chk" required><span>Ik ga akkoord met de <a href="#">voorwaarden</a> en het <a href="#">privacybeleid</a></span></label>'+
+            '<p class="err" id="err" hidden></p>'+
+            '<div class="actions"><button type="submit" class="btn btn-pd btn-block">Zet me op de lijst</button></div>'+
           "</form>";
       }
       return "";
     }
 
-    function renderSuccess() {
+    function renderSuccess(){
       var name = state.displayName || "je";
-      var rows = [
-        ["Rol", state.role === "baby" ? "Sugarbaby" : "Sugardaddy of sugarmama"],
-        ["Op zoek naar", lookingLabel() ? lookingLabel() : "Niet ingevuld"],
-        ["Wat je zoekt", labelsOf(INTENTS, state.intents).join(", ") || "—"],
-        ["Belangrijk", labelsOf(VALUES, state.values).join(", ") || "—"],
-        ["Regeling", labelsOf(ARRANGEMENTS, state.arrangements).join(", ") || "—"],
-        ["Woont in", state.location || "—"],
-        ["Geboortejaar", state.birthYear || "—"],
-        ["Weergavenaam", state.displayName || "—"]
-      ];
-      if (state.oneLiner) rows.push(["In eigen woorden", state.oneLiner]);
-      if (state.email) rows.push(["E-mail", state.email]);
-      var list = rows.map(function(row){
-        return '<li><span class="k">' + escapeHtml(row[0]) + '</span><span class="v">' + escapeHtml(row[1]) + "</span></li>";
-      }).join("");
+      var chips = [];
+      chips.push(["Rol", state.role==="baby"?"Sugarbaby":"Sugardaddy of sugarmama"]);
+      if (lookingLabel()) chips.push(["Op zoek naar", lookingLabel()]);
+      labelsOf(INTENTS,state.intents).forEach(function(v){ chips.push(["Zoekt", v]); });
+      labelsOf(VALUES,state.values).forEach(function(v){ chips.push(["Belangrijk", v]); });
+      labelsOf(ARRANGEMENTS,state.arrangements).forEach(function(v){ chips.push(["Regeling", v]); });
+      if (state.location) chips.push(["Woonplaats", state.location]);
+      if (state.birthYear) chips.push(["Geboortejaar", state.birthYear]);
+      if (state.displayName) chips.push(["Naam", state.displayName]);
+      if (state.oneLiner) chips.push(["In eigen woorden", state.oneLiner]);
+      if (state.email) chips.push(["E-mail", state.email]);
+      var tags = chips.map(function(row){ return '<span class="tag"><b>'+escapeHtml(row[0])+'</b> '+escapeHtml(row[1])+"</span>"; }).join("");
       return (
-        '<h1 class="text-[24px] sm:text-[28px] font-bold text-[#212529] leading-tight">Je staat op de lijst, ' + escapeHtml(name) + '.</h1>' +
-        '<p class="lead">Bedankt. Als SugarDates live gaat, hoor je van ons op ' + escapeHtml(state.email || "je e-mailadres") + ".</p>" +
-        '<div class="block p-4 sm:p-5 mt-4"><h2 class="text-[15px] font-bold text-[#212529] m-0">Jouw aanmelding</h2><ul class="summary">' + list + "</ul></div>" +
-        '<h2 class="text-[15px] font-bold text-[#212529] mt-5 mb-0">Wat er nu gebeurt</h2>' +
-        '<ul class="next-list">' +
-          '<li><span class="n">1</span><span>Je staat op de early-accesslijst. Er is nog geen live account.</span></li>' +
-          '<li><span class="n">2</span><span>Bij livegang vragen we je je e-mail te bevestigen.</span></li>' +
-          '<li><span class="n">3</span><span>Verificatie van profielen en online chatten komen er bij de livegang bij. Melden van profielen ook. Je bepaalt zelf wat je deelt.</span></li>' +
-        "</ul>" +
-        '<div class="actions">' +
-          '<button type="button" class="btn btn-pd" id="share-btn">Deel met een vriend of vriendin</button>' +
-          '<button type="button" class="btn btn-ghost" id="reset-btn">Nieuwe aanmelding</button>' +
-        "</div>" +
+        '<svg class="ok" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27.2l7.2 7.2 15-16"/></svg>'+
+        '<h1 class="title">Je staat op de <em>lijst</em>, '+escapeHtml(name)+'.</h1>'+
+        '<p class="lead">Bedankt. Als SugarDates live gaat, hoor je van ons op '+escapeHtml(state.email||"je e-mailadres")+".</p>"+
+        '<div class="summary-chips">'+tags+"</div>"+
+        '<h2 class="title h-next" style="font-size:1.15rem;margin-top:1.1rem">Wat er nu gebeurt</h2>'+
+        '<ul class="next-list">'+
+          '<li><span class="n">1</span><span>Je staat op de early-accesslijst. Er is nog geen live account.</span></li>'+
+          '<li><span class="n">2</span><span>Bij livegang vragen we je je e-mail te bevestigen.</span></li>'+
+          '<li><span class="n">3</span><span>Verificatie van profielen en online chatten komen er bij de livegang bij. Melden van profielen ook. Je bepaalt zelf wat je deelt.</span></li>'+
+        "</ul>"+
+        '<div class="actions is-split">'+
+          '<button type="button" class="btn btn-pd btn-block" id="share-btn">Deel met een vriend of vriendin</button>'+
+          '<button type="button" class="btn btn-ghost btn-block" id="reset-btn">Nieuwe aanmelding</button>'+
+        "</div>"+
         '<p class="micro" id="share-status" hidden></p>'
       );
     }
 
-    function showError(msg, focusEl) {
+    function showError(msg, focusEl){
       var err = document.getElementById("err");
       if (!err) return;
-      err.hidden = false;
-      err.textContent = msg;
-      if (focusEl) {
-        focusEl.setAttribute("aria-invalid", "true");
-        focusEl.focus();
-      }
+      err.hidden=false; err.textContent=msg;
+      if (focusEl){ focusEl.setAttribute("aria-invalid","true"); focusEl.focus(); }
     }
-    function clearError() {
+    function clearError(){
       var err = document.getElementById("err");
-      if (err) { err.hidden = true; err.textContent = ""; }
+      if (err){ err.hidden=true; err.textContent=""; }
     }
-
-    function go(delta) {
+    function go(delta){
       if (onSuccess) return;
-      var next = stepIndex + delta;
-      if (next < 0 || next >= STEPS.length) return;
-      stepIndex = next;
-      saveAnswers();
-      render();
-      announce(panel.querySelector("h1") ? panel.querySelector("h1").textContent : "");
+      var next = stepIndex+delta;
+      if (next<0 || next>=STEPS.length) return;
+      stepIndex=next; saveAnswers(); render();
+      announce(panel.querySelector("h1")?panel.querySelector("h1").textContent:"");
     }
-
-    function finish() {
-      state.completed = true;
-      onSuccess = true;
-      saveAnswers();
-      render();
+    function finish(){
+      state.completed=true; onSuccess=true; saveAnswers(); render();
       announce("Je staat op de lijst");
     }
+    function validEmail(value){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value); }
 
-    function validEmail(value) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-    }
-
-    function bindStep() {
+    function bindStep(){
       var id = onSuccess ? "success" : STEPS[stepIndex];
-
       panel.querySelectorAll("[data-role]").forEach(function(btn){
         btn.addEventListener("click", function(){
           state.role = btn.getAttribute("data-role");
           panel.querySelectorAll("[data-role]").forEach(function(b){ b.classList.toggle("is-on", b===btn); });
           saveAnswers();
-          window.setTimeout(function(){ go(1); }, reduceMotion() ? 0 : 180);
+          window.setTimeout(function(){ go(1); }, reduceMotion()?0:220);
         });
       });
-
       panel.querySelectorAll("[data-chip]").forEach(function(btn){
         btn.addEventListener("click", function(){
           var cid = btn.getAttribute("data-chip");
-          if (id === "looking") {
-            state.lookingFor = (state.lookingFor === cid) ? "" : cid;
+          if (id==="looking"){
+            state.lookingFor = (state.lookingFor===cid) ? "" : cid;
             panel.querySelectorAll("[data-chip]").forEach(function(b){
-              var on = b.getAttribute("data-chip") === state.lookingFor;
+              var on = b.getAttribute("data-chip")===state.lookingFor;
               b.classList.toggle("is-on", on);
-              b.setAttribute("aria-pressed", on ? "true" : "false");
+              b.setAttribute("aria-pressed", on?"true":"false");
             });
-          } else if (id === "intent") {
+          } else if (id==="intent"){
             toggleIn(state.intents, cid);
             btn.classList.toggle("is-on", state.intents.indexOf(cid)>=0);
-            btn.setAttribute("aria-pressed", state.intents.indexOf(cid)>=0 ? "true" : "false");
-          } else if (id === "values") {
+            btn.setAttribute("aria-pressed", state.intents.indexOf(cid)>=0?"true":"false");
+          } else if (id==="values"){
             toggleIn(state.values, cid);
             btn.classList.toggle("is-on", state.values.indexOf(cid)>=0);
-            btn.setAttribute("aria-pressed", state.values.indexOf(cid)>=0 ? "true" : "false");
-          } else if (id === "arrangement") {
+            btn.setAttribute("aria-pressed", state.values.indexOf(cid)>=0?"true":"false");
+          } else if (id==="arrangement"){
             toggleIn(state.arrangements, cid);
             btn.classList.toggle("is-on", state.arrangements.indexOf(cid)>=0);
-            btn.setAttribute("aria-pressed", state.arrangements.indexOf(cid)>=0 ? "true" : "false");
+            btn.setAttribute("aria-pressed", state.arrangements.indexOf(cid)>=0?"true":"false");
           }
           clearError();
         });
       });
-
       var nextBtn = panel.querySelector("[data-next]");
       if (nextBtn) nextBtn.addEventListener("click", onNext);
       var skipBtn = panel.querySelector("[data-skip]");
-      if (skipBtn) skipBtn.addEventListener("click", function(){
-        if (id === "bio") state.oneLiner = "";
-        go(1);
-      });
-
+      if (skipBtn) skipBtn.addEventListener("click", function(){ if (id==="bio") state.oneLiner=""; go(1); });
       var loc = document.getElementById("location");
-      if (loc) loc.addEventListener("change", function(){ state.location = loc.value; clearError(); });
+      if (loc) loc.addEventListener("change", function(){ state.location=loc.value; clearError(); });
       var year = document.getElementById("birthYear");
-      if (year) year.addEventListener("change", function(){ state.birthYear = year.value; clearError(); });
+      if (year) year.addEventListener("change", function(){ state.birthYear=year.value; clearError(); });
       var name = document.getElementById("displayName");
-      if (name) name.addEventListener("input", function(){ state.displayName = name.value; });
+      if (name) name.addEventListener("input", function(){ state.displayName=name.value; });
       var bio = document.getElementById("oneLiner");
-      if (bio) bio.addEventListener("input", function(){ state.oneLiner = bio.value; });
-
+      if (bio) bio.addEventListener("input", function(){ state.oneLiner=bio.value; });
       var form = document.getElementById("account-form");
       if (form) form.addEventListener("submit", onAccount);
-
       var share = document.getElementById("share-btn");
       if (share) share.addEventListener("click", onShare);
       var reset = document.getElementById("reset-btn");
       if (reset) reset.addEventListener("click", onReset);
-
       ["location","birthYear","displayName","oneLiner","email","password"].forEach(function(fid){
         var el = document.getElementById(fid);
         if (!el) return;
         el.addEventListener("keydown", function(ev){
-          if (ev.key === "Enter" && fid !== "oneLiner" && id !== "account") {
-            ev.preventDefault();
-            onNext();
-          }
+          if (ev.key==="Enter" && fid!=="oneLiner" && id!=="account"){ ev.preventDefault(); onNext(); }
         });
       });
     }
 
-    function onNext() {
+    function onNext(){
       clearError();
       var id = STEPS[stepIndex];
-      if (id === "looking") {
-        if (!state.lookingFor) return showError("Kies wie je zoekt om verder te gaan.");
+      if (id==="looking"){ if(!state.lookingFor) return showError("Kies wie je zoekt om verder te gaan."); return go(1); }
+      if (id==="intent"){ if(!state.intents.length) return showError("Kies minstens één optie om verder te gaan."); return go(1); }
+      if (id==="values"){ if(!state.values.length) return showError("Kies minstens één optie die voor jou belangrijk is."); return go(1); }
+      if (id==="arrangement"){ if(!state.arrangements.length) return showError("Kies hoe je het liefst wilt beginnen."); return go(1); }
+      if (id==="location"){
+        var loc=document.getElementById("location");
+        state.location = loc?loc.value:state.location;
+        if(!state.location) return showError("Kies een stad of provincie.", loc);
         return go(1);
       }
-      if (id === "intent") {
-        if (!state.intents.length) return showError("Kies minstens één optie om verder te gaan.");
+      if (id==="age"){
+        var yearEl=document.getElementById("birthYear");
+        state.birthYear = yearEl?yearEl.value:state.birthYear;
+        var year=parseInt(state.birthYear,10);
+        if(!year || year<YEAR_MIN || year>YEAR_MAX) return showError("Kies een geboortejaar. Je moet 21 jaar of ouder zijn.", yearEl);
         return go(1);
       }
-      if (id === "values") {
-        if (!state.values.length) return showError("Kies minstens één optie die voor jou belangrijk is.");
+      if (id==="name"){
+        var nameEl=document.getElementById("displayName");
+        state.displayName = nameEl?nameEl.value.trim():state.displayName.trim();
+        if(!state.displayName) return showError("Vul een weergavenaam in. Een bijnaam of pseudoniem is prima.", nameEl);
         return go(1);
       }
-      if (id === "arrangement") {
-        if (!state.arrangements.length) return showError("Kies hoe je het liefst wilt beginnen.");
-        return go(1);
-      }
-      if (id === "location") {
-        var loc = document.getElementById("location");
-        state.location = loc ? loc.value : state.location;
-        if (!state.location) return showError("Kies een stad of provincie.", loc);
-        return go(1);
-      }
-      if (id === "age") {
-        var yearEl = document.getElementById("birthYear");
-        state.birthYear = yearEl ? yearEl.value : state.birthYear;
-        var year = parseInt(state.birthYear, 10);
-        if (!year || year < YEAR_MIN || year > YEAR_MAX) {
-          return showError("Kies een geboortejaar. Je moet 21 jaar of ouder zijn.", yearEl);
-        }
-        return go(1);
-      }
-      if (id === "name") {
-        var nameEl = document.getElementById("displayName");
-        state.displayName = nameEl ? nameEl.value.trim() : state.displayName.trim();
-        if (!state.displayName) return showError("Vul een weergavenaam in. Een bijnaam of pseudoniem is prima.", nameEl);
-        return go(1);
-      }
-      if (id === "bio") {
-        var bioEl = document.getElementById("oneLiner");
-        state.oneLiner = bioEl ? bioEl.value.trim() : state.oneLiner.trim();
+      if (id==="bio"){
+        var bioEl=document.getElementById("oneLiner");
+        state.oneLiner = bioEl?bioEl.value.trim():state.oneLiner.trim();
         return go(1);
       }
     }
 
-    function onAccount(ev) {
+    function onAccount(ev){
       ev.preventDefault();
       clearError();
-      var emailEl = document.getElementById("email");
-      var passEl = document.getElementById("password");
-      var ageEl = document.getElementById("age");
-      var termsEl = document.getElementById("terms");
-      var email = emailEl ? emailEl.value.trim() : "";
-      var password = passEl ? passEl.value : "";
-      if (!validEmail(email)) return showError("Vul een geldig e-mailadres in.", emailEl);
-      if (!password || password.length < 8) return showError("Gebruik minstens 8 tekens voor je wachtwoord.", passEl);
-      if (!ageEl || !ageEl.checked) return showError("Bevestig dat je 21 jaar of ouder bent.", ageEl);
-      if (!termsEl || !termsEl.checked) return showError("Om je aan te melden, ga je akkoord met de voorwaarden en het privacybeleid.", termsEl);
-      state.email = email;
-      // Intentionally discard the password. Do not persist it anywhere.
-      password = "";
-      if (passEl) passEl.value = "";
+      var emailEl=document.getElementById("email"), passEl=document.getElementById("password");
+      var ageEl=document.getElementById("age"), termsEl=document.getElementById("terms");
+      var email=emailEl?emailEl.value.trim():"", password=passEl?passEl.value:"";
+      if(!validEmail(email)) return showError("Vul een geldig e-mailadres in.", emailEl);
+      if(!password || password.length<8) return showError("Gebruik minstens 8 tekens voor je wachtwoord.", passEl);
+      if(!ageEl || !ageEl.checked) return showError("Bevestig dat je 21 jaar of ouder bent.", ageEl);
+      if(!termsEl || !termsEl.checked) return showError("Om je aan te melden, ga je akkoord met de voorwaarden en het privacybeleid.", termsEl);
+      state.email=email;
+      password=""; if(passEl) passEl.value="";
       finish();
     }
-
-    function onShare() {
-      var url = window.location.href.split("#")[0];
-      var status = document.getElementById("share-status");
-      function ok() {
-        if (status) { status.hidden = false; status.textContent = "Link gekopieerd. Je kunt hem plakken in een bericht."; }
-        var btn = document.getElementById("share-btn");
-        if (btn) btn.textContent = "Link gekopieerd";
-      }
-      function fail() {
-        if (status) { status.hidden = false; status.textContent = "Kopieer deze link zelf: " + url; }
-      }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(ok).catch(fail);
-      } else {
-        fail();
-      }
+    function onShare(){
+      var url=window.location.href.split("#")[0], status=document.getElementById("share-status");
+      function ok(){ if(status){ status.hidden=false; status.textContent="Link gekopieerd. Je kunt hem plakken in een bericht."; } var btn=document.getElementById("share-btn"); if(btn) btn.textContent="Link gekopieerd"; }
+      function fail(){ if(status){ status.hidden=false; status.textContent="Kopieer deze link zelf: "+url; } }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(ok).catch(fail);
+      else fail();
     }
-
-    function onReset() {
-      try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
-      state = {role:"",lookingFor:"",intents:[],values:[],arrangements:[],location:"",birthYear:"",displayName:"",oneLiner:"",email:"",completed:false};
-      stepIndex = 0;
-      onSuccess = false;
-      render();
-      announce("Wie ben je op SugarDates?");
+    function onReset(){
+      try{ localStorage.removeItem(STORAGE_KEY); }catch(e){}
+      state={role:"",lookingFor:"",intents:[],values:[],arrangements:[],location:"",birthYear:"",displayName:"",oneLiner:"",email:"",completed:false};
+      stepIndex=0; onSuccess=false; render(); announce("Wie ben je op SugarDates?");
     }
 
     backBtn.addEventListener("click", function(){ go(-1); });
-
     loadAnswers();
     render();
-    announce(panel.querySelector("h1") ? panel.querySelector("h1").textContent : "Aanmelden");
+    announce(panel.querySelector("h1")?panel.querySelector("h1").textContent:"Aanmelden");
   })();
   </script>
 </body>
