@@ -248,3 +248,15 @@ textarea.inp{height:auto;min-height:100px;padding:.75rem .95rem;resize:vertical;
   .close-box .roles{justify-content:center}
 }
 @media (min-width:960px){.su-visual img{object-position:50% 40%}}
+/* flags */
+.flag{display:inline-block;flex:none;border-radius:3px;box-shadow:0 0 0 1px rgba(31,29,36,.14);vertical-align:middle}
+.lm-btn .flag{width:22px;height:auto}
+.lm-item{justify-content:flex-start}
+.lm-item .lm-txt{display:flex;flex-direction:column;flex:1}
+.lm-item .lm-tick{margin-left:auto}
+.lm-list{min-width:296px}
+.lm-name{white-space:nowrap}
+.foot-lang{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem}
+.foot-lang a,.foot-lang [aria-current]{display:inline-flex;align-items:center;gap:.4rem}
+.foot-lang .sep{color:var(--line);margin:0 .15rem}
+.su-foot .foot-lang{justify-content:center}

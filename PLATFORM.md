@@ -4,7 +4,7 @@ Status: concept. Only the v5 preview pages exist. Neither domain runs on this pl
 
 | | SugarDates.nl | SugarDates.net |
 |---|---|---|
-| Region | Netherlands / EU | USA |
+| Region | Europe (EU), Netherlands as home market | USA |
 | Default locale | `nl-NL` | `en-US` |
 | Currency | EUR | USD |
 | Preview | `/v5/` and `/v5/aanmelden/` | `/v5/en/` and `/v5/en/signup/` |
@@ -12,12 +12,13 @@ Status: concept. Only the v5 preview pages exist. Neither domain runs on this pl
 
 ## One database, one user base
 - Both domains run on a single application and share **one database**. There is one `users` table and one set of profiles, messages and credits.
-- An account is **shared**: the same email and password log in on both domains. A user has a `home_region` (`nl` or `us`) and a `locale`. These are set at signup from the domain the user came in on, and the user can change them later.
+- An account is **shared**: the same email and password log in on both domains. A user has a `home_region` (`eu` or `us`), a `country` and a `locale`. These are set at signup from the domain the user came in on, and the user can change them later.
 - Which members a user sees is decided by search filters (region, distance, country), not by the domain. By default a user browses members in their own region.
 - Credits are stored once, per user. Each purchase is recorded in its own currency (EUR or USD). Prices are set per region in a price table, never by converting at runtime.
 
 ## Domain, region and locale
-- The request host sets the region: `sugardates.nl` gives `nl`/EUR/`nl-NL`, and `sugardates.net` gives `us`/USD/`en-US`.
+- The request host sets the region: `sugardates.nl` serves the **whole EU** (`eu` region, EUR, default locale `nl-NL`), and `sugardates.net` serves the **US** (`us`, USD, `en-US`). EU users outside the Netherlands also sign up on .nl, with their own country and city in the profile; more EU languages can be added as locales on .nl later.
+- The site switcher shows the region with a flag: the EU flag for SugarDates.nl and the US flag for SugarDates.net.
 - The UI language can be switched on either domain (NL/EN). This switch changes the language only. It does **not** change the region, currency or legal entity of the site.
 - Each domain has its own legal pages, pricing page, payment providers, VAT and sales-tax handling, and support address.
 
@@ -34,8 +35,8 @@ Each public page links to its counterpart on the other domain:
 
 ## Legal and age rules per region
 - **Minimum age: 18+ on both domains** (Stefan's decision, 2026-11-10). We ask for the birth year and an explicit "I'm 18 or older" confirmation at signup.
-- Keep `min_age` as a per-region config value (currently `18` for `nl` and `us`), so it can change without new code. In the v5 preview it is `MIN_AGE` in `v5/build.py`.
-- NL/EU: GDPR applies: a privacy policy, data export and deletion, and a processing register.
+- Keep `min_age` as a per-region config value (currently `18` for `eu` and `us`), so it can change without new code. In the v5 preview it is `MIN_AGE` in `v5/build.py`.
+- EU (.nl): GDPR applies to all EU users: a privacy policy, data export and deletion, and a processing register.
 - US items to settle before launch: Terms and Privacy for US users (including CCPA/CPRA for California), sales tax, payment-provider rules for dating, and state-level age-verification laws, some of which may require more than a checkbox.
 - Both regions: no offering or requesting sex for money. Profiles can be reported and blocked, and profile verification comes at launch.
 

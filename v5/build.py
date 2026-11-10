@@ -161,14 +161,40 @@ def head(c, title, desc, canon, root, alt_nl, alt_en, robots="index,follow"):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{root}assets/site.css?v=7">
+  <link rel="stylesheet" href="{root}assets/site.css?v=8">
 </head>
 '''
 
 GLOBE = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15.4 0 18M12 3c-2.6 2.6-2.6 15.4 0 18"/></svg>'
 CHEV = '<svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
 TICKSVG = '<svg class="lm-tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
-LOCALES = [("nl","nl-NL","Nederlands","SugarDates.nl"),("en","en-US","English (US)","SugarDates.net")]
+LOCALES = [("nl","nl-NL","Europa · Nederlands","SugarDates.nl"),("en","en-US","United States · English","SugarDates.net")]
+SHORT = {"nl":"Europa (NL)","en":"United States (EN)"}
+
+def _eu_flag():
+    import math
+    stars = ""
+    for k in range(12):
+        a = math.radians(k*30 - 90)
+        cx, cy = 15 + 6*math.cos(a), 10 + 6*math.sin(a)
+        pts = []
+        for j in range(10):
+            r = 1.05 if j%2==0 else .42
+            b = math.radians(j*36 - 90)
+            pts.append(f"{cx + r*math.cos(b):.2f},{cy + r*math.sin(b):.2f}")
+        stars += f'<polygon points="{" ".join(pts)}"/>'
+    return f'<rect width="30" height="20" fill="#003399"/><g fill="#ffcc00">{stars}</g>'
+
+def _us_flag():
+    stripes = "".join(f'<rect y="{i*20/13:.3f}" width="30" height="{20/13:.3f}" fill="#b22234"/>' for i in range(0,13,2))
+    dots = "".join(f'<circle cx="{1.3+x*2.2+(1.1 if y%2 else 0):.2f}" cy="{1.2+y*1.7:.2f}" r=".42"/>' for y in range(6) for x in range(6 if y%2==0 else 5))
+    return f'<rect width="30" height="20" fill="#fff"/>{stripes}<rect width="13.6" height="{20*7/13:.3f}" fill="#3c3b6e"/><g fill="#fff">{dots}</g>'
+
+FLAGS = {"nl":_eu_flag(), "en":_us_flag()}
+def flag(code, w=20):
+    h = round(w*2/3, 2)
+    return f'<svg class="flag" width="{w}" height="{h}" viewBox="0 0 30 20" aria-hidden="true" focusable="false">{FLAGS[code]}</svg>'
+
 
 def langmenu(c, hrefs):
     """hrefs: {'nl': url, 'en': url} relative to the current page."""
@@ -178,17 +204,17 @@ def langmenu(c, hrefs):
     for code, hl, name, dom in LOCALES:
         on = code==cur
         attrs = ' aria-current="true"' if on else f' hreflang="{hl}" lang="{code}"'
-        items += f'<li><a class="lm-item{" is-on" if on else ""}" href="{hrefs[code]}"{attrs}><span><span class="lm-name">{name}</span><span class="lm-dom">{dom}</span></span>{TICKSVG if on else ""}</a></li>'
-    return (f'<div class="lm" data-lm><button type="button" class="lm-btn" aria-expanded="false" aria-controls="lm-list" aria-label="{label}: {dict((l[0],l[2]) for l in LOCALES)[cur]}">'
-            f'{GLOBE}<span class="lm-code">{cur.upper()}</span>{CHEV}</button>'
+        items += f'<li><a class="lm-item{" is-on" if on else ""}" href="{hrefs[code]}"{attrs}>{flag(code,24)}<span class="lm-txt"><span class="lm-name">{name}</span><span class="lm-dom">{dom}</span></span>{TICKSVG if on else ""}</a></li>'
+    return (f'<div class="lm" data-lm><button type="button" class="lm-btn" aria-expanded="false" aria-controls="lm-list" aria-label="{label}: {dict((l[0],l[2]) for l in LOCALES)[cur]}, {dict((l[0],l[3]) for l in LOCALES)[cur]}">'
+            f'{flag(cur)}<span class="lm-code">{cur.upper()}</span>{CHEV}</button>'
             f'<ul class="lm-list" id="lm-list" hidden>{items}</ul></div>')
 
 def langline(c, hrefs):
     out=[]
     for code, hl, name, dom in LOCALES:
-        if code==c["lang"]: out.append(f'<span aria-current="true">{name}</span>')
-        else: out.append(f'<a href="{hrefs[code]}" hreflang="{hl}" lang="{code}">{name}</a>')
-    return '<p class="foot-lang">'+" / ".join(out)+'</p>'
+        if code==c["lang"]: out.append(f'<span aria-current="true">{flag(code,16)}{SHORT[code]}</span>')
+        else: out.append(f'<a href="{hrefs[code]}" hreflang="{hl}" lang="{code}">{flag(code,16)}{SHORT[code]}</a>')
+    return '<p class="foot-lang">'+'<span class="sep">/</span>'.join(out)+'</p>'
 
 LM_JS = """<script>(function(){document.querySelectorAll('[data-lm]').forEach(function(m){var b=m.querySelector('.lm-btn'),l=m.querySelector('.lm-list');
 function set(o,f){b.setAttribute('aria-expanded',o);l.hidden=!o;if(o&&f){var a=l.querySelector('a');a&&a.focus();}}
