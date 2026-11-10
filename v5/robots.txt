@@ -1,0 +1,4 @@
+# Note: crawlers only read robots.txt at the domain root; copy this there at launch.
+User-agent: *
+Allow: /
+Sitemap: https://realmrhodl.github.io/sugardates-nl/v5/sitemap.xml

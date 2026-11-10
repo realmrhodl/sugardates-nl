@@ -14,6 +14,7 @@ import json, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://realmrhodl.github.io/sugardates-nl/v5/"
 MIN_AGE = 18
+CSSV = 11
 CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.5l4 4 8-9"/></svg></span>'
 
 COPY = {
@@ -103,7 +104,18 @@ COPY = {
 
 def e(s): return html.escape(s, quote=True)
 
-def head(c, title, desc, canon, root, alt_nl, alt_en, robots="index,follow"):
+def head(c, title, desc, canon, root, alts=None, robots="index,follow", preload=None, ld=None):
+    """alts: {'nl-NL': url, 'en-US': url} for paired pages (adds x-default = nl)."""
+    hl = ""
+    if alts:
+        hl = "".join(f'\n  <link rel="alternate" hreflang="{k}" href="{v}">' for k, v in alts.items())
+        hl += f'\n  <link rel="alternate" hreflang="x-default" href="{alts.get("nl-NL", canon)}">'
+    pre = ""
+    if preload:
+        name, sizes = preload
+        pre = (f'\n  <link rel="preload" as="image" type="image/webp" fetchpriority="high" href="{root}img/{name}.webp" '
+               f'imagesrcset="{srcset(root, name)}" imagesizes="{sizes}">')
+    js = f'\n  <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False, separators=(",",":"))}</script>' if ld else ""
     return f'''<!DOCTYPE html>
 <html lang="{c["hreflang"]}">
 <head>
@@ -113,10 +125,7 @@ def head(c, title, desc, canon, root, alt_nl, alt_en, robots="index,follow"):
   <meta name="description" content="{e(desc)}">
   <meta name="robots" content="{robots}">
   <meta name="theme-color" content="#ffffff">
-  <link rel="canonical" href="{canon}">
-  <link rel="alternate" hreflang="nl-NL" href="{alt_nl}">
-  <link rel="alternate" hreflang="en-US" href="{alt_en}">
-  <link rel="alternate" hreflang="x-default" href="{alt_nl}">
+  <link rel="canonical" href="{canon}">{hl}
   <meta property="og:type" content="website">
   <meta property="og:locale" content="{c["locale"]}">
   <meta property="og:site_name" content="SugarDates">
@@ -125,11 +134,11 @@ def head(c, title, desc, canon, root, alt_nl, alt_en, robots="index,follow"):
   <meta property="og:url" content="{canon}">
   <meta property="og:image" content="{BASE}img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="{root}assets/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="{root}assets/logo.svg" type="image/svg+xml">{pre}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{root}assets/site.css?v=10">
+  <link rel="stylesheet" href="{root}assets/site.css?v={CSSV}">{js}
 </head>
 '''
 
@@ -196,41 +205,125 @@ document.addEventListener('click',function(e){if(!m.contains(e.target))set(false
 m.addEventListener('focusout',function(e){if(e.relatedTarget&&!m.contains(e.relatedTarget))set(false);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!l.hidden){set(false);b.focus();}});});})();</script>"""
 
-def pic(root, name, alt, w=864, h=1152, lazy=True):
-    ld = ' loading="lazy" decoding="async"' if lazy else ' fetchpriority="high"'
-    return f'<picture><source srcset="{root}img/{name}.webp" type="image/webp"><img src="{root}img/{name}.jpg" alt="{e(alt)}" width="{w}" height="{h}"{ld}></picture>'
+SMALL = {"walk":480, "man2":480, "woman2":480, "mama":480, "terrace":768}
+FULLW = {"walk":864, "man2":864, "woman2":864, "mama":864, "terrace":1280}
+def srcset(root, name):
+    s = f"{root}img/{name}.webp {FULLW.get(name,864)}w"
+    if name in SMALL: s = f"{root}img/{name}-sm.webp {SMALL[name]}w, " + s
+    return s
+
+def pic(root, name, alt, w=864, h=1152, lazy=True, sizes="(min-width:1024px) 50vw, 100vw"):
+    ld = ' loading="lazy" decoding="async"' if lazy else ' fetchpriority="high" decoding="async"'
+    return (f'<picture><source type="image/webp" srcset="{srcset(root, name)}" sizes="{sizes}">'
+            f'<img src="{root}img/{name}.jpg" alt="{e(alt)}" width="{w}" height="{h}"{ld}></picture>')
 
 def brand(root, href):
     return f'<a class="brand" href="{href}" aria-label="SugarDates">SugarDates<span class="brand-dot" aria-hidden="true"></span></a>'
 
 ARR = '<svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
 
-def roles(c, su):
-    return (f'<div class="roles"><a class="btn btn-primary" href="{su}?rol=baby">{c["role_baby"]}</a>'
-            f'<a class="btn btn-secondary" href="{su}?rol=daddy">{c["role_daddy"]}</a></div>')
+def roles(c, su, first="baby"):
+    order = ["baby","daddy"] if first == "baby" else ["daddy","baby"]
+    a, b = order
+    return (f'<div class="roles"><a class="btn btn-primary" href="{su}?rol={a}">{c["role_"+a]}</a>'
+            f'<a class="btn btn-secondary" href="{su}?rol={b}">{c["role_"+b]}</a></div>')
 
+# ---------------------------------------------------------------- shared chrome
+NAV = {
+ "nl": [("Hoe het werkt","hoe-het-werkt/"),("Sugardaddy","sugardaddy/"),("Sugarbaby","sugarbaby/"),("Sugardating","wat-is-sugardating/"),("Steden","sugardating/"),("Veiligheid","veiligheid/")],
+ "en": [("How it works","en/how-it-works/"),("Sugar daddy","en/sugar-daddy/"),("Sugar baby","en/sugar-baby/"),("Sugar dating","en/what-is-sugar-dating/"),("Cities","en/sugar-dating/"),("Safety","en/safety/")],
+}
+HUB = {
+ "nl": [("SugarDates",[("Hoe het werkt","hoe-het-werkt/"),("Kosten","kosten/"),("Veiligheid","veiligheid/"),("Veelgestelde vragen","faq/")]),
+        ("Voor wie",[("Sugardaddy","sugardaddy/"),("Sugarbaby","sugarbaby/"),("Sugarmama","sugarmama/"),("Wat is sugardating?","wat-is-sugardating/")]),
+        ("Steden",[("Amsterdam","sugardating/amsterdam/"),("Rotterdam","sugardating/rotterdam/"),("Den Haag","sugardating/den-haag/"),("Utrecht","sugardating/utrecht/"),("Eindhoven","sugardating/eindhoven/"),("België","sugardating/belgie/")])],
+ "en": [("SugarDates",[("How it works","en/how-it-works/"),("Safety","en/safety/"),("FAQ","en/faq/")]),
+        ("Guides",[("Sugar daddy","en/sugar-daddy/"),("Sugar baby","en/sugar-baby/"),("What is sugar dating?","en/what-is-sugar-dating/")]),
+        ("Cities",[("New York","en/sugar-dating/new-york/"),("Los Angeles","en/sugar-dating/los-angeles/"),("Miami","en/sugar-dating/miami/"),("Chicago","en/sugar-dating/chicago/"),("Las Vegas","en/sugar-dating/las-vegas/")])],
+}
+LEGAL_LINKS = {"nl":[("Privacy","#"),("Voorwaarden","#"),("Contact","#")], "en":[("Privacy","#"),("Terms","#"),("Contact","#")]}
+UI = {
+ "nl":{"menu":"Menu","close":"Menu sluiten","nav":"Hoofdmenu","crumbs":"Kruimelpad","home":"Home","more_faq":"Alle vragen","more_daddy":"Meer over sugardaddy's","more_baby":"Meer over sugarbaby's","more_how":"Lees hoe het werkt","foot_nav":"Sitemap"},
+ "en":{"menu":"Menu","close":"Close menu","nav":"Main menu","crumbs":"Breadcrumb","home":"Home","more_faq":"All questions","more_daddy":"More about sugar daddies","more_baby":"More about sugar babies","more_how":"See how it works","foot_nav":"Sitemap"},
+}
+BURGER = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path class="b1" d="M4 8h16"/><path class="b2" d="M4 16h16"/></svg>'
+
+def rootfor(slug): return "../" * slug.count("/")
+def href(root, slug): return (root + slug) or "./"
+def home_slug(lang): return "" if lang == "nl" else "en/"
+def su_slug(lang): return "aanmelden/" if lang == "nl" else "en/signup/"
+
+def header(c, root, hrefs, cur=""):
+    lang = c["lang"]; u = UI[lang]
+    nav = "".join(f'<li><a href="{href(root,s)}"{" aria-current=\"page\"" if cur==s else ""}>{t}</a></li>' for t, s in NAV[lang])
+    su = href(root, su_slug(lang))
+    return f'''<a class="skip" href="#inhoud">{c["skip"]}</a>
+  <header class="top"><div class="top-in">
+    {brand(root, href(root, home_slug(lang)))}
+    <nav class="dnav" aria-label="{u["nav"]}"><ul>{nav}</ul></nav>
+    <div class="top-right">{langmenu(c, hrefs)}<a class="btn btn-ghost btn-sm top-cta" href="{su}">{c["cta_top"]}</a>
+      <button type="button" class="nav-btn" aria-expanded="false" aria-controls="mnav" aria-label="{u["menu"]}" data-open="{u["menu"]}" data-close="{u["close"]}">{BURGER}</button></div>
+  </div></header>
+  <div class="mnav" id="mnav" hidden><nav aria-label="{u["nav"]}"><ul class="mnav-list">{nav}</ul></nav>
+    <div class="mnav-cta">{roles(c, su)}</div></div>'''
+
+def footer(c, root, hrefs):
+    lang = c["lang"]
+    cols = "".join(f'<div class="hub-col"><h2 class="hub-h">{h}</h2><ul>' + "".join(f'<li><a href="{href(root,s)}">{t}</a></li>' for t, s in items) + '</ul></div>' for h, items in HUB[lang])
+    legal = "".join(f'<li><a href="{h}">{t}</a></li>' for t, h in LEGAL_LINKS[lang])
+    return f'''<footer class="foot"><div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">{brand(root, href(root, home_slug(lang)))}<p>{c["f_about"]}</p></div>
+      <nav class="hub" aria-label="{UI[lang]["foot_nav"]}">{cols}</nav>
+    </div>
+    <div class="foot-bottom"><div><ul class="foot-links">{legal}</ul><p>{c["f_legal"]}</p></div>{langline(c, hrefs)}</div>
+  </div></footer>'''
+
+NAV_JS = """<script>(function(){var b=document.querySelector('.nav-btn'),p=document.getElementById('mnav');if(!b||!p)return;
+function set(o){b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?b.dataset.close:b.dataset.open);p.hidden=!o;document.documentElement.classList.toggle('menu-open',o);}
+b.addEventListener('click',function(){set(b.getAttribute('aria-expanded')!=='true');});
+p.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!p.hidden){set(false);b.focus();}});
+matchMedia('(min-width:1024px)').addEventListener('change',function(m){if(m.matches)set(false);});})();</script>"""
+
+def org_ld():
+    return [
+     {"@type":"Organization","@id":BASE+"#org","name":"SugarDates","url":BASE,"logo":BASE+"assets/logo.svg",
+      "legalName":"Forest Road B.V.","vatID":"NL868303550B01",
+      "address":{"@type":"PostalAddress","streetAddress":"Herengracht 449A","postalCode":"1017 BR","addressLocality":"Amsterdam","addressCountry":"NL"}},
+     {"@type":"WebSite","@id":BASE+"#site","name":"SugarDates","url":BASE,"inLanguage":["nl-NL","en-US"],"publisher":{"@id":BASE+"#org"}},
+    ]
+
+def crumbs_ld(lang, crumbs):
+    items = [("Home", home_slug(lang))] + list(crumbs)
+    return {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":i+1,"name":n,"item":BASE+s} for i,(n,s) in enumerate(items)]}
+
+def faq_ld(qas):
+    return {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in qas]}
+
+def faq_html(qas):
+    return "".join(f'<details><summary>{q}<span class="pm" aria-hidden="true"></span></summary><div class="ans">{a}</div></details>' for q,a in qas)
+
+# ---------------------------------------------------------------- landing
 def landing(c):
-    nl = c["lang"]=="nl"
-    root = "" if nl else "../"
-    su = c["signup"]
-    canon = BASE + c["path"]
-    LH = {"nl":"./","en":"en/"} if nl else {"nl":"../","en":"./"}
+    nl = c["lang"]=="nl"; lang = c["lang"]; u = UI[lang]
+    slug = home_slug(lang); root = rootfor(slug)
+    su = href(root, su_slug(lang))
+    canon = BASE + slug
+    LH = {"nl": href(root, ""), "en": href(root, "en/")}
     hid = "hoe" if nl else "how"
     how = "".join(f'<li><span class="n">0{i+1}</span><h3>{t}</h3><p>{p}</p></li>' for i,(t,p) in enumerate(c["how"]))
     pr = "".join(f'<li><h3>{t}</h3><p>{p}</p></li>' for t,p in c["pr"])
-    faq = "".join(f'<details><summary>{q}<span class="pm" aria-hidden="true"></span></summary><div class="ans">{a}</div></details>' for q,a in c["faq"])
-    links = "".join(f'<li><a href="{h}">{t}</a></li>' for t,h in c["f_links"])
+    more = {"daddy": "sugardaddy/" if nl else "en/sugar-daddy/", "baby": "sugarbaby/" if nl else "en/sugar-baby/"}
     def feature(k, img, rev=False):
         lst = "".join(f"<li>{x}</li>" for x in c[f"{k}_list"])
         return f'''<section class="feature{' rev' if rev else ''}"><div class="feature-img">{pic(root,img,c[k+"_alt"])}</div>
       <div class="feature-copy"><p class="kicker">{c[k+"_k"]}</p><h2>{c[k+"_h"]}</h2><p class="body">{c[k+"_p"]}</p><ul class="lines">{lst}</ul>
-      <a class="link-cta" href="{su}?rol={k}">{c[k+"_cta"]} {ARR}</a></div></section>'''
+      <div class="cta-row"><a class="link-cta" href="{su}?rol={k}">{c[k+"_cta"]} {ARR}</a><a class="link-sub" href="{href(root, more[k])}">{u["more_"+k]}</a></div></div></section>'''
+    faq_slug = "faq/" if nl else "en/faq/"
+    how_slug = "hoe-het-werkt/" if nl else "en/how-it-works/"
     body = f'''<body>
-  <a class="skip" href="#inhoud">{c["skip"]}</a>
-  <header class="top"><div class="top-in">
-    {brand(root, "./")}
-    <div class="top-right">{langmenu(c, LH)}<a class="btn btn-ghost btn-sm top-cta" href="{su}">{c["cta_top"]}</a></div>
-  </div></header>
+  {header(c, root, LH, slug)}
   <main id="inhoud">
   <section class="hero">
     <div class="hero-copy"><div class="hero-copy-in">
@@ -246,6 +339,7 @@ def landing(c):
   <section class="how" id="{hid}"><div class="wrap">
     <div class="head-row"><p class="kicker">{c["how_kicker"]}</p><h2>{c["how_h2"]}</h2></div>
     <ol class="how-list">{how}</ol>
+    <a class="link-sub" href="{href(root, how_slug)}">{u["more_how"]} {ARR}</a>
   </div></section>
 
   <div class="features">
@@ -259,29 +353,96 @@ def landing(c):
   </div></section>
 
   <section class="faq-sec" id="faq"><div class="wrap faq-grid">
-    <div><p class="kicker">{c["faq_kicker"]}</p><h2>{c["faq_h2"]}</h2></div>
-    <div class="faq">{faq}</div>
+    <div><p class="kicker">{c["faq_kicker"]}</p><h2>{c["faq_h2"]}</h2><a class="link-sub" href="{href(root, faq_slug)}">{u["more_faq"]} {ARR}</a></div>
+    <div class="faq">{faq_html(c["faq"])}</div>
   </div></section>
 
-  <section class="band">{pic(root,"terrace",c["band_alt"],1280,720)}</section>
+  <section class="band">{pic(root,"terrace",c["band_alt"],1280,720,sizes="100vw")}</section>
 
   <section class="close"><div class="wrap">
     <h2>{c["close_h2"]}</h2><p>{c["close_lead"]}</p>{roles(c, su)}
   </div></section>
   </main>
-
-  <footer class="foot"><div class="wrap">
-    <div class="foot-top">
-      <div class="foot-brand">{brand(root, "./")}<p>{c["f_about"]}</p></div>
-      <ul class="foot-links">{links}</ul>
-    </div>
-    <div class="foot-bottom"><p>{c["f_legal"]}</p>{langline(c, LH)}</div>
-  </div></footer>
+  {footer(c, root, LH)}
   {LM_JS}
+  {NAV_JS}
 </body>
 </html>
 '''
-    return head(c, c["title"], c["desc"], canon, root, BASE, BASE+"en/") + body
+    ld = {"@context":"https://schema.org","@graph": org_ld() + [faq_ld(c["faq"])]}
+    return head(c, c["title"], c["desc"], canon, root, {"nl-NL":BASE, "en-US":BASE+"en/"},
+                preload=("walk","(min-width:1024px) 50vw, 100vw"), ld=ld) + body
+
+# ---------------------------------------------------------------- subpages
+import re
+def inline(root, s):
+    return re.sub(r"\[\[([^|\]]+)\|([^\]]+)\]\]", lambda m: f'<a href="{href(root, m.group(1))}">{m.group(2)}</a>', s)
+
+def blocks_html(root, blocks):
+    out = []; faqs = []
+    for b in blocks:
+        k = b[0]
+        if k == "h2": out.append(f"<h2>{b[1]}</h2>")
+        elif k == "p": out.append(f"<p>{inline(root, b[1])}</p>")
+        elif k in ("ul", "ol"):
+            cls = "steps" if k == "ol" else "lines"
+            out.append(f'<{k} class="{cls}">' + "".join(f"<li>{inline(root, x)}</li>" for x in b[1]) + f"</{k}>")
+        elif k == "faq":
+            faqs += b[1]; out.append(f'<div class="faq">{faq_html(b[1])}</div>')
+        elif k == "links":
+            out.append(f'<section class="related"><h2>{b[1]}</h2><ul class="rel-list">' +
+                       "".join(f'<li><a href="{href(root, s)}"><span>{t}</span>{ARR}</a></li>' for t, s in b[2]) + "</ul></section>")
+    return "\n      ".join(out), faqs
+
+def page(p, all_pages):
+    c = COPY[p["lang"]]; lang = p["lang"]; u = UI[lang]
+    slug = p["slug"]; root = rootfor(slug)
+    su = href(root, su_slug(lang))
+    canon = BASE + slug
+    other = "en" if lang == "nl" else "nl"
+    alt = p.get("alt")
+    hrefs = {lang: "./", other: href(root, alt if alt else home_slug(other))}
+    alts = None
+    if alt:
+        alts = {"nl-NL": BASE + (slug if lang=="nl" else alt), "en-US": BASE + (slug if lang=="en" else alt)}
+    crumbs = p["crumbs"]
+    cr = f'<li><a href="{href(root, home_slug(lang))}">{u["home"]}</a></li>'
+    for i, (n, s) in enumerate(crumbs):
+        cr += f'<li aria-current="page">{n}</li>' if i == len(crumbs)-1 else f'<li><a href="{href(root, s)}">{n}</a></li>'
+    content, faqs = blocks_html(root, p["blocks"])
+    img = p.get("img")
+    media = f'<div class="pg-media">{pic(root, img[0], img[1], lazy=False, sizes="(min-width:1024px) 40vw, 100vw")}</div>' if img else ""
+    navcur = next((s for t, s in NAV[lang] if slug.startswith(s)), slug)
+    body = f'''<body>
+  {header(c, root, hrefs, navcur)}
+  <main id="inhoud" class="pg">
+    <div class="wrap pg-head{" has-media" if img else ""}">
+      <div class="pg-intro">
+        <nav class="crumbs" aria-label="{u["crumbs"]}"><ol>{cr}</ol></nav>
+        <h1>{p["h1"]}</h1>
+        <p class="lead">{p["lead"]}</p>
+        {roles(c, su, p.get("role","baby"))}
+      </div>
+      {media}
+    </div>
+    <div class="wrap"><article class="prose">
+      {content}
+    </article></div>
+    <section class="close"><div class="wrap">
+      <h2>{c["close_h2"]}</h2><p>{c["close_lead"]}</p>{roles(c, su, p.get("role","baby"))}
+    </div></section>
+  </main>
+  {footer(c, root, hrefs)}
+  {LM_JS}
+  {NAV_JS}
+</body>
+</html>
+'''
+    graph = org_ld() + [crumbs_ld(lang, crumbs),
+             {"@type":"WebPage","@id":canon,"url":canon,"name":p["title"],"description":p["desc"],"inLanguage":c["hreflang"],"isPartOf":{"@id":BASE+"#site"}}]
+    if faqs: graph.append(faq_ld(faqs))
+    pre = (img[0], "(min-width:1024px) 40vw, 100vw") if img else None
+    return head(c, p["title"], p["desc"], canon, root, alts, preload=pre, ld={"@context":"https://schema.org","@graph":graph}) + body
 
 
 SU = {
@@ -376,18 +537,37 @@ def signup(c):
   </div>
   <noscript><p style="padding:1rem;text-align:center">JavaScript is required.</p></noscript>
   <script>window.SD={json.dumps(s, ensure_ascii=False)};</script>
-  <script src="{root}assets/signup.js?v=10"></script>
+  <script src="{root}assets/signup.js?v={CSSV}"></script>
   {LM_JS}
 </body>
 </html>
 '''
-    return head(c, c["su_title"], c["desc"], canon, root, BASE+"aanmelden/", BASE+"en/signup/", robots="noindex,follow") + body
+    return head(c, c["su_title"], c["desc"], canon, root, {"nl-NL":BASE+"aanmelden/","en-US":BASE+"en/signup/"}, robots="noindex,follow", preload=("walk","(min-width:1024px) 50vw, 100vw")) + body
 
 def write(rel, txt):
     p = os.path.join(HERE, rel); os.makedirs(os.path.dirname(p), exist_ok=True)
     open(p, "w", encoding="utf-8").write(txt); print("wrote", rel, len(txt))
 
+from pages import PAGES
 write("index.html", landing(COPY["nl"]))
 write("en/index.html", landing(COPY["en"]))
 write("aanmelden/index.html", signup(COPY["nl"]))
 write("en/signup/index.html", signup(COPY["en"]))
+for pg in PAGES:
+    write(pg["slug"] + "index.html", page(pg, PAGES))
+
+# sitemap + robots
+urls = [("", "en/"), ("en/", "")] + [(pg["slug"], pg.get("alt")) for pg in PAGES]
+sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+for s, alt in urls:
+    sm.append(f"  <url><loc>{BASE}{s}</loc>")
+    if alt is not None:
+        nl_s, en_s = (s, alt) if not s.startswith("en/") else (alt, s)
+        sm.append(f'    <xhtml:link rel="alternate" hreflang="nl-NL" href="{BASE}{nl_s}"/>')
+        sm.append(f'    <xhtml:link rel="alternate" hreflang="en-US" href="{BASE}{en_s}"/>')
+        sm.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{BASE}{nl_s}"/>')
+    sm.append("  </url>")
+sm.append("</urlset>")
+write("sitemap.xml", "\n".join(sm) + "\n")
+write("robots.txt", f"# Note: crawlers only read robots.txt at the domain root; copy this there at launch.\nUser-agent: *\nAllow: /\nSitemap: {BASE}sitemap.xml\n")
