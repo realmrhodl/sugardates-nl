@@ -6,7 +6,7 @@
   var KEY = T.storage || "sugardates-v5";
   var YEAR_MAX = new Date().getFullYear() - (T.minAge || 18), YEAR_MIN = YEAR_MAX - 70;
   var STEPS = ["role","about","looking","bio","account"];
-  var IMG = T.imgs || {baby:"woman", daddy:"man"};
+  var IMG = T.imgs || {baby:"woman2", daddy:"man2"};
   var state = {role:"",displayName:"",location:"",birthYear:"",who:"",what:[],bio:"",email:"",done:false};
   var i = 0;
   var panel = document.getElementById("panel"), back = document.getElementById("back-btn"),
