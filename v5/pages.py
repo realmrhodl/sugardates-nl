@@ -57,7 +57,7 @@ def nl_city(slug, name, intro, places, practical, extra_h2=None, extra_p=None):
         title=f"Sugardating in {where} – sugardaddy of sugarbaby vinden | SugarDates",
         desc=f"Sugardating in {where}: zo leer je iemand kennen met duidelijke afspraken, goede plekken voor een eerste date en tips om veilig en discreet af te spreken.",
         h1=f"Sugardating in {where}",
-        lead=f"Een sugardaddy, sugarmama of sugarbaby vinden in {where}, met duidelijke afspraken en zonder gedoe.",
+        lead=f"Een sugardaddy of sugarbaby vinden in {where}, met duidelijke afspraken en zonder gedoe.",
         crumbs=[("Sugardating per stad","sugardating/"),(where, f"sugardating/{slug}/")], blocks=blocks)
 
 def us_city(slug, name, intro, places, practical):
@@ -78,7 +78,7 @@ def us_city(slug, name, intro, places, practical):
         title=f"Sugar Dating in {name} – Find a Sugar Daddy or Sugar Baby | SugarDates",
         desc=f"Sugar dating in {name}: how to meet someone with clear expectations, good places for a first date and tips for meeting safely and discreetly.",
         h1=f"Sugar dating in {name}",
-        lead=f"Find a sugar daddy, sugar mommy or sugar baby in {name}, with clear expectations from the start.",
+        lead=f"Find a sugar daddy or sugar baby in {name}, with clear expectations from the start.",
         crumbs=[("Sugar dating by city","en/sugar-dating/"),(name, f"en/sugar-dating/{slug}/")], blocks=blocks)
 
 PAGES = [
@@ -100,7 +100,7 @@ dict(slug="sugardaddy/", lang="nl", alt="en/sugar-daddy/", role="daddy",
   ("h2","Goede afspraken maken"),
   ("p","Een regeling werkt als beide kanten weten waar ze aan toe zijn: hoe vaak je elkaar ziet, wat je samen doet en wat jullie van elkaar verwachten. Houd het respectvol en laat ruimte om het later bij te stellen. SugarDates is een datingsite; seks tegen betaling hoort hier niet thuis."),
   ("p","Lees ook onze tips over [[veiligheid/|veiligheid en privacy]] en [[kosten/|wat SugarDates kost]]."),
-  ("links","Lees verder",[("Sugarbaby worden","sugarbaby/"),("Sugarmama","sugarmama/"),("Hoe het werkt","hoe-het-werkt/"),("Sugardating in Amsterdam","sugardating/amsterdam/")]),
+  ("links","Lees verder",[("Sugarbaby worden","sugarbaby/"),("Hoe het werkt","hoe-het-werkt/"),("Sugardating in Amsterdam","sugardating/amsterdam/")]),
  ]),
 dict(slug="sugarbaby/", lang="nl", alt="en/sugar-baby/", role="baby",
  title="Sugarbaby worden: zo werkt het | SugarDates",
@@ -119,24 +119,7 @@ dict(slug="sugarbaby/", lang="nl", alt="en/sugar-baby/", role="baby",
   ("h2","Veilig afspreken"),
   SAFE_NL,
   ("p","Meer lees je op [[veiligheid/|Veiligheid en privacy]]."),
-  ("links","Lees verder",[("Sugardaddy vinden","sugardaddy/"),("Sugarmama","sugarmama/"),("Wat kost het?","kosten/"),("Veelgestelde vragen","faq/")]),
- ]),
-dict(slug="sugarmama/", lang="nl", role="daddy",
- title="Sugarmama worden of vinden | SugarDates",
- desc="Wat is een sugarmama en hoe werkt sugardating voor succesvolle vrouwen? Uitleg, tips voor een goed profiel en duidelijke afspraken.",
- h1="Sugarmama",
- lead="Voor succesvolle vrouwen die weten wat ze zoeken, en daar graag open over zijn.",
- crumbs=[("Sugarmama","sugarmama/")], img=("mama","Sfeerbeeld: vrouw bij het raam van een galerie, geen echte leden"),
- blocks=[
-  ("h2","Wat is een sugarmama?"),
-  ("p","Een sugarmama is een gevestigde vrouw, vaak met een drukke carrière of een eigen bedrijf, die gezelschap zoekt van een jongere partner. Net als bij een sugardaddy draait het om openheid: je zegt vooraf wat je zoekt en wat je kunt bieden."),
-  ("h2","Waarom vrouwen voor sugardating kiezen"),
-  ("ul",["Geen tijd of zin in eindeloos swipen","Duidelijkheid vooraf in plaats van raden","Gezelschap voor reizen, diners en evenementen","Ruimte om iemand te begeleiden of verder te helpen"]),
-  ("h2","Op SugarDates"),
-  ("p","Bij het aanmelden kies je de rol sugardaddy / sugarmama en geef je aan wie je zoekt. Je kiest zelf een gebruikersnaam en bepaalt wat je deelt. Hoe dat precies gaat, lees je in [[hoe-het-werkt/|Hoe het werkt]]."),
-  ("h2","Tips voor een eerste afspraak"),
-  SAFE_NL,
-  ("links","Lees verder",[("Sugardaddy","sugardaddy/"),("Sugarbaby","sugarbaby/"),("Wat is sugardating?","wat-is-sugardating/"),("Veiligheid","veiligheid/")]),
+  ("links","Lees verder",[("Sugardaddy vinden","sugardaddy/"),("Wat kost het?","kosten/"),("Veelgestelde vragen","faq/")]),
  ]),
 # ------------------------------------------------------------------ NL guides
 dict(slug="wat-is-sugardating/", lang="nl", alt="en/what-is-sugar-dating/",
@@ -147,7 +130,7 @@ dict(slug="wat-is-sugardating/", lang="nl", alt="en/what-is-sugar-dating/",
  crumbs=[("Wat is sugardating?","wat-is-sugardating/")],
  blocks=[
   ("h2","De korte versie"),
-  ("p","Sugardating is daten waarbij twee volwassenen vooraf open bespreken wat ze van elkaar verwachten. Meestal gaat het om een gevestigde, oudere partner (de [[sugardaddy/|sugardaddy]] of [[sugarmama/|sugarmama]]) en een jongere partner (de [[sugarbaby/|sugarbaby]]). De een biedt tijd, ervaring en ruimhartigheid; de ander gezelschap, energie en een frisse blik."),
+  ("p","Sugardating is daten waarbij twee volwassenen vooraf open bespreken wat ze van elkaar verwachten. Meestal gaat het om een gevestigde, oudere partner (de [[sugardaddy/|sugardaddy]]) en een jongere partner (de [[sugarbaby/|sugarbaby]]). De een biedt tijd, ervaring en ruimhartigheid; de ander gezelschap, energie en een frisse blik."),
   ("h2","Hoe het werkt"),
   ("p","Je maakt een profiel, zegt wat je zoekt en leert iemand kennen in de chat. Als het klikt, spreek je af. Het verschil met gewoon daten is dat verwachtingen niet impliciet blijven. Lees stap voor stap hoe dat op SugarDates gaat in [[hoe-het-werkt/|Hoe het werkt]]."),
   ("h2","Wat is een regeling?"),
@@ -159,7 +142,7 @@ dict(slug="wat-is-sugardating/", lang="nl", alt="en/what-is-sugar-dating/",
   ("p","Bij escort betaal je voor een dienst, per uur of per afspraak. Sugardating is een relatie tussen twee mensen die elkaar leren kennen en samen afspraken maken. SugarDates is een datingsite: seks aanbieden of vragen tegen betaling is niet toegestaan, en profielen die dat doen worden verwijderd."),
   ("h2","Is sugardating iets voor mij?"),
   ("p","Als je houdt van duidelijkheid, weet wat je zoekt en respect hebt voor de grenzen van een ander, dan past het waarschijnlijk. Twijfel je over kosten of privacy? Kijk bij [[kosten/|Kosten]] en de [[faq/|veelgestelde vragen]]."),
-  ("links","Lees verder",[("Sugardaddy","sugardaddy/"),("Sugarbaby","sugarbaby/"),("Sugarmama","sugarmama/"),("Sugardating per stad","sugardating/")]),
+  ("links","Lees verder",[("Sugardaddy","sugardaddy/"),("Sugarbaby","sugarbaby/"),("Sugardating per stad","sugardating/")]),
  ]),
 dict(slug="hoe-het-werkt/", lang="nl", alt="en/how-it-works/",
  title="Hoe werkt SugarDates? In vier stappen | SugarDates",
@@ -169,7 +152,7 @@ dict(slug="hoe-het-werkt/", lang="nl", alt="en/how-it-works/",
  crumbs=[("Hoe het werkt","hoe-het-werkt/")],
  blocks=[
   ("h2","1. Meld je aan"),
-  ("p","Kies je rol (sugarbaby of sugardaddy / sugarmama), een gebruikersnaam, je stad of provincie en je geboortejaar. Daarna een e-mailadres en een wachtwoord. Een bijnaam is prima."),
+  ("p","Kies je rol (sugarbaby of sugardaddy), een gebruikersnaam, je stad of provincie en je geboortejaar. Daarna een e-mailadres en een wachtwoord. Een bijnaam is prima."),
   ("h2","2. Maak je profiel af"),
   ("p","Geef aan wie je zoekt en waarvoor: een vaste regeling, af en toe afspreken, begeleiding of samen reizen. Schrijf een korte profieltekst. Hoe concreter, hoe beter de match."),
   ("h2","3. Bekijk profielen in je regio"),
@@ -225,7 +208,7 @@ dict(slug="faq/", lang="nl", alt="en/faq/",
  blocks=[
   ("faq",[
    ("Wat is sugardating?","Daten waarbij je vooraf eerlijk bespreekt wat je van elkaar verwacht, zoals gezelschap, begeleiding of steun. Wat jullie afspreken, bepalen jullie samen."),
-   ("Wat is het verschil tussen een sugardaddy en een sugarbaby?","Een sugardaddy of sugarmama is de gevestigde partner die tijd, ervaring en ruimhartigheid biedt. Een sugarbaby is de jongere partner die gezelschap en energie meebrengt."),
+   ("Wat is het verschil tussen een sugardaddy en een sugarbaby?","Een sugardaddy is de gevestigde partner die tijd, ervaring en ruimhartigheid biedt. Een sugarbaby is de jongere partner die gezelschap en energie meebrengt."),
    ("Wat kost SugarDates?","Een account aanmaken en je profiel invullen is gratis. Voor sommige functies, zoals berichten sturen, gebruik je credits. Geen abonnement."),
    ("Moet ik mijn echte naam gebruiken?","Nee. Je kiest zelf een gebruikersnaam. Je e-mailadres is niet zichtbaar voor andere leden."),
    ("Wordt mijn woonplaats getoond?","Alleen je stad of regio, nooit je adres."),
@@ -320,7 +303,7 @@ dict(slug="en/what-is-sugar-dating/", lang="en", alt="wat-is-sugardating/",
  crumbs=[("What is sugar dating?","en/what-is-sugar-dating/")],
  blocks=[
   ("h2","The short version"),
-  ("p","Sugar dating is dating where two adults openly discuss what they expect from each other up front. Usually it's an established, older partner (the [[en/sugar-daddy/|sugar daddy]] or sugar mommy) and a younger partner (the [[en/sugar-baby/|sugar baby]]). One brings time, experience and generosity; the other brings company, energy and a fresh perspective."),
+  ("p","Sugar dating is dating where two adults openly discuss what they expect from each other up front. Usually it's an established, older partner (the [[en/sugar-daddy/|sugar daddy]]) and a younger partner (the [[en/sugar-baby/|sugar baby]]). One brings time, experience and generosity; the other brings company, energy and a fresh perspective."),
   ("h2","How it works"),
   ("p","You create a profile, say what you're looking for and get to know someone in chat. If it clicks, you meet. The difference with regular dating is that expectations don't stay unspoken. See step by step in [[en/how-it-works/|How it works]]."),
   ("h2","What is an arrangement?"),
@@ -340,7 +323,7 @@ dict(slug="en/how-it-works/", lang="en", alt="hoe-het-werkt/",
  crumbs=[("How it works","en/how-it-works/")],
  blocks=[
   ("h2","1. Sign up"),
-  ("p","Choose your role (sugar baby or sugar daddy / mommy), a username, your state and your birth year. Then an email and a password. A nickname is fine."),
+  ("p","Choose your role (sugar baby or sugar daddy), a username, your state and your birth year. Then an email and a password. A nickname is fine."),
   ("h2","2. Finish your profile"),
   ("p","Say who you're looking for and what for: an ongoing arrangement, meeting now and then, mentoring or travel. Write a short intro. The more specific, the better the match."),
   ("h2","3. Browse profiles near you"),
@@ -379,7 +362,7 @@ dict(slug="en/faq/", lang="en", alt="faq/",
  blocks=[
   ("faq",[
    ("What is sugar dating?","Dating where you're upfront about what you expect from each other, such as companionship, mentoring or support. What you agree on is up to the two of you."),
-   ("What's the difference between a sugar daddy and a sugar baby?","A sugar daddy or sugar mommy is the established partner who offers time, experience and generosity. A sugar baby is the younger partner who brings company and energy."),
+   ("What's the difference between a sugar daddy and a sugar baby?","A sugar daddy is the established partner who offers time, experience and generosity. A sugar baby is the younger partner who brings company and energy."),
    ("What does SugarDates cost?","Creating an account and filling in your profile is free. Some features, like sending messages, use credits. No subscription."),
    ("Do I have to use my real name?","No. You choose a username. Your email isn't shown to other members."),
    ("Is my location shown?","Only your city or state, never your address."),
@@ -524,7 +507,7 @@ ip("oudere-man-jongere-vrouw/","nl","Oudere man, jongere vrouw: daten met leefti
  ("ul",["Gezelschap bij diners, evenementen en op reis","Iemand met wie hij zijn ervaring en netwerk kan delen","Duidelijkheid in plaats van spelletjes"]),
  ("h2","Wat zij vaak zoekt"),
  ("ul",["Een volwassen gesprekspartner of mentor","Nieuwe plekken en ervaringen","Iemand die haar grenzen en tempo respecteert"]),
- ("p","Meer over de rollen lees je bij [[sugardaddy/|Sugardaddy]] en [[sugarbaby/|Sugarbaby]]. Het werkt ook andersom: zie [[sugarmama/|Sugarmama]]."),
+ ("p","Meer over de rollen lees je bij [[sugardaddy/|Sugardaddy]] en [[sugarbaby/|Sugarbaby]]."),
  ("faq",[("Is een groot leeftijdsverschil een probleem?","Niet als jullie allebei volwassen zijn, weten wat je zoekt en elkaars grenzen respecteren."),
          ("Hoe vind ik een oudere man of jongere vrouw?","Maak een profiel, geef aan wie je zoekt en bekijk profielen in je regio.")]),
  rel_nl("oudere-man-jongere-vrouw/")], alt="en/older-man-younger-woman/", img=("walk","Sfeerbeeld: oudere man en jongere vrouw arm in arm in een Amsterdamse winkelstraat, geen echte leden")),
@@ -551,20 +534,20 @@ ip("sugardaddy-gezocht/","nl","Sugardaddy gezocht? Zo vind je er een | SugarDate
  ("p","Gezelschap, eerlijkheid en duidelijkheid. Een sugardaddy waardeert iemand die weet wat ze wil en dat ook zegt. Lees meer bij [[sugarbaby/|Sugarbaby worden]]."),
  ("h2","In vier stappen"),
  ("ol",["Meld je aan als sugarbaby","Geef aan wie je zoekt en waarvoor","Bekijk profielen in je regio","Leer elkaar kennen in de chat en spreek pas af als het goed voelt"]),
- ("faq",[("Hoe vind ik een sugardaddy?","Meld je aan als sugarbaby, kies bij 'Ik zoek' een sugardaddy of sugarmama en bekijk profielen in je regio."),
+ ("faq",[("Hoe vind ik een sugardaddy?","Meld je aan als sugarbaby, kies bij 'Ik zoek' een sugardaddy en bekijk profielen in je regio."),
          ("Moet ik iets betalen?","Een account aanmaken is gratis. Voor sommige functies gebruik je credits; zie Kosten.")]),
  rel_nl("sugardaddy-gezocht/")], img=("woman2","Sfeerbeeld: vrouw met designertas en shoppingtas in een Amsterdamse winkelstraat, geen echte leden")),
 
 ip("sugarbaby-gezocht/","nl","Sugarbaby gezocht? Zo vind je er een | SugarDates",
  "Op zoek naar een sugarbaby? Zo vind je iemand die past bij wat jij zoekt: gezelschap, energie en duidelijke afspraken, discreet en in je eigen tempo.",
- "Sugarbaby gezocht","Voor gevestigde mannen en vrouwen die weten wat ze zoeken.","Sugarbaby gezocht",[
+ "Sugarbaby gezocht","Voor gevestigde mannen die weten wat ze zoeken.","Sugarbaby gezocht",[
  ("h2","Wat een sugarbaby zoekt"),
- ("ul",["Aandacht en een goede gesprekspartner","Mentorschap en een netwerk","Nieuwe plekken en ervaringen","Iemand die haar of zijn tempo respecteert"]),
+ ("ul",["Aandacht en een goede gesprekspartner","Mentorschap en een netwerk","Nieuwe plekken en ervaringen","Iemand die haar tempo respecteert"]),
  ("h2","Wat jij biedt"),
  ("p","Tijd, ervaring en ruimhartigheid, op een manier die jullie samen afspreken. Wees concreet: dat werkt beter dan grote beloftes. Lees meer bij [[sugardaddy/|Sugardaddy worden]]."),
  ("h2","Discreet"),
  PRIV_NL,
- ("faq",[("Hoe vind ik een sugarbaby?","Meld je aan als sugardaddy of sugarmama, geef aan wat je zoekt en bekijk profielen in je regio."),
+ ("faq",[("Hoe vind ik een sugarbaby?","Meld je aan als sugardaddy, geef aan wat je zoekt en bekijk profielen in je regio."),
          ("Is het discreet?","Je gebruikt een gebruikersnaam, kiest zelf welke foto's je laat zien en andere leden zien je e-mailadres niet.")]),
  rel_nl("sugarbaby-gezocht/")], role="daddy"),
 
@@ -674,8 +657,6 @@ for _p in PAGES:
         _p["blocks"][-1][2].append(("Arrangement dating","en/arrangement-dating/"))
     if _p["slug"] == "en/safety/":
         _p["blocks"][-1][2].append(("Discreet dating","en/discreet-dating/"))
-    if _p["slug"] == "sugarmama/":
-        _p["img"] = ("mama","Sfeerbeeld: vrouw en jongere man met champagne aan de bar van een hotel, geen echte leden")
     if _p["slug"] in ("sugardaddy/",):
         _p["img"] = ("man2","Sfeerbeeld: man in pak in een hotellobby, geen echte leden")
     if _p["slug"] == "en/sugar-daddy/":

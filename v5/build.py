@@ -14,7 +14,7 @@ import json, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://realmrhodl.github.io/sugardates-nl/v5/"
 MIN_AGE = 18
-CSSV = 13
+CSSV = 14
 CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.5l4 4 8-9"/></svg></span>'
 
 COPY = {
@@ -23,23 +23,23 @@ COPY = {
   "title":"SugarDates – sugardating in Nederland en Europa",
   "desc":"Sugardating zonder omwegen. Maak een profiel, wees open over wat je zoekt en ontmoet iemand die daarbij past. Discreet en in je eigen tempo.",
   "skip":"Naar de inhoud", "cta_top":"Aanmelden",
-  "hero_h1":"Sugardating, zonder omwegen.",
-  "hero_sub":"Voor wie weet wat hij zoekt. Wees open over je verwachtingen en ontmoet iemand die daarbij past.",
-  "role_baby":"Ik ben sugarbaby", "role_daddy":"Ik ben sugardaddy / sugarmama",
+  "hero_h1":"Sugardaddy dating, zonder omwegen.",
+  "hero_sub":"Voor wie een gevestigde sugardaddy zoekt, en voor de man die weet wat hij wil. Open over verwachtingen, discreet in alles.",
+  "role_baby":"Ik zoek een sugardaddy", "role_daddy":"Ik ben sugardaddy",
   "hero_alt":"Sfeerbeeld: oudere man en jongere vrouw lopen arm in arm door een winkelstraat in Amsterdam, geen echte leden",
-  "intro":"SugarDates brengt sugardaddy's, sugarmama's en sugarbaby's samen die eerlijk willen zijn over wat ze zoeken. Discreet, duidelijk en in je eigen tempo.",
+  "intro":"SugarDates brengt sugardaddy's en sugarbaby's samen die eerlijk willen zijn over wat ze zoeken. Een gevestigde man, iemand die weet wat ze wil, en duidelijke afspraken. Discreet en in je eigen tempo.",
   "how_kicker":"Hoe het werkt", "how_h2":"Drie stappen.",
   "how":[("Maak een profiel","Kies je rol, een gebruikersnaam en je regio. Een bijnaam is prima."),
          ("Zeg wat je zoekt","Gezelschap, begeleiding, samen reizen. Duidelijk vooraf, zodat niemand hoeft te raden."),
          ("Leer elkaar kennen","Stuur berichten en spreek af wanneer het voor jullie allebei goed voelt.")],
-  "daddy_k":"Sugardaddy / sugarmama", "daddy_h":"Voor wie graag geeft en weet wat hij zoekt.",
+  "daddy_k":"Sugardaddy", "daddy_h":"Voor de man die graag geeft en weet wat hij zoekt.",
   "daddy_p":"Je bent gevestigd, je hebt het druk en je waardeert goed gezelschap. Je bent open over wat je zoekt en wat je kunt bieden.",
   "daddy_list":["Gezelschap voor diners, reizen en evenementen","Iemand steunen of begeleiden","Duidelijke afspraken in plaats van verwachtingen"],
-  "daddy_cta":"Aanmelden als sugardaddy / sugarmama", "daddy_alt":"Sfeerbeeld: man in pak in een hotellobby, geen echte leden",
+  "daddy_cta":"Aanmelden als sugardaddy", "daddy_alt":"Sfeerbeeld: man in pak in een hotellobby, geen echte leden",
   "baby_k":"Sugarbaby", "baby_h":"Voor wie ambitieus is en eigen grenzen stelt.",
   "baby_p":"Je bent zelfstandig en weet wat je wilt. Je zoekt iemand met ervaring die ruimhartig is en jouw tempo respecteert.",
   "baby_list":["Een ervaren gesprekspartner of mentor","Nieuwe plekken en ervaringen","Steun die past bij jullie afspraken"],
-  "baby_cta":"Aanmelden als sugarbaby", "baby_alt":"Sfeerbeeld: vrouw met designertas en shoppingtas in een Amsterdamse winkelstraat, geen echte leden",
+  "baby_cta":"Vind je sugardaddy", "baby_alt":"Sfeerbeeld: vrouw met designertas en shoppingtas in een Amsterdamse winkelstraat, geen echte leden",
   "pr_kicker":"Privacy", "pr_h2":"Discreet als uitgangspunt.",
   "pr":[("Bijnaam mag","Je hoeft je echte naam niet te gebruiken."),
         ("Jij kiest wat je deelt","Je woonplaats is een stad of regio, nooit een adres."),
@@ -64,23 +64,23 @@ COPY = {
   "title":"SugarDates – sugar dating, without the guesswork",
   "desc":"Sugar dating without the guesswork. Create a profile, be upfront about what you want and meet someone who fits. Discreet and at your own pace.",
   "skip":"Skip to content", "cta_top":"Join",
-  "hero_h1":"Sugar dating, without the guesswork.",
-  "hero_sub":"For people who know what they want. Be upfront about your expectations and meet someone who fits.",
-  "role_baby":"I'm a sugar baby", "role_daddy":"I'm a sugar daddy / mommy",
+  "hero_h1":"Sugar daddy dating, without the guesswork.",
+  "hero_sub":"For anyone looking for an established sugar daddy, and for the man who knows what he wants. Upfront about expectations, discreet about everything.",
+  "role_baby":"I'm looking for a sugar daddy", "role_daddy":"I'm a sugar daddy",
   "hero_alt":"Mood image: older man and younger woman walking arm in arm on a shopping street, not real members",
-  "intro":"SugarDates brings together sugar daddies, sugar mommies and sugar babies who want to be honest about what they're looking for. Discreet, clear and at your own pace.",
+  "intro":"SugarDates brings together sugar daddies and sugar babies who want to be honest about what they're looking for. An established man, someone who knows what she wants, and clear expectations. Discreet and at your own pace.",
   "how_kicker":"How it works", "how_h2":"Three steps.",
   "how":[("Create a profile","Choose your role, a username and your area. A nickname is fine."),
          ("Say what you want","Companionship, mentoring, travel. Clear from the start, so nobody has to guess."),
          ("Get to know each other","Send messages and meet when it feels right for both of you.")],
-  "daddy_k":"Sugar daddy / mommy", "daddy_h":"For people who like to give and know what they want.",
+  "daddy_k":"Sugar daddy", "daddy_h":"For the man who likes to give and knows what he wants.",
   "daddy_p":"You're established, busy and you value good company. You're open about what you're looking for and what you can offer.",
   "daddy_list":["Company for dinners, travel and events","Supporting or mentoring someone","Clear agreements instead of assumptions"],
-  "daddy_cta":"Join as a sugar daddy / mommy", "daddy_alt":"Mood image: man in a suit in a hotel lobby, not real members",
+  "daddy_cta":"Join as a sugar daddy", "daddy_alt":"Mood image: man in a suit in a hotel lobby, not real members",
   "baby_k":"Sugar baby", "baby_h":"For people who are ambitious and set their own boundaries.",
   "baby_p":"You're independent and know what you want. You're looking for someone experienced and generous who respects your pace.",
   "baby_list":["An experienced mentor to talk to","New places and experiences","Support that fits what you agree on"],
-  "baby_cta":"Join as a sugar baby", "baby_alt":"Mood image: woman with a designer bag and shopping bag on a city street, not real members",
+  "baby_cta":"Find your sugar daddy", "baby_alt":"Mood image: woman with a designer bag and shopping bag on a city street, not real members",
   "pr_kicker":"Privacy", "pr_h2":"Discreet by design.",
   "pr":[("Nicknames welcome","You don't have to use your real name."),
         ("You choose what to share","Your location is a city or state, never an address."),
@@ -205,8 +205,8 @@ document.addEventListener('click',function(e){if(!m.contains(e.target))set(false
 m.addEventListener('focusout',function(e){if(e.relatedTarget&&!m.contains(e.relatedTarget))set(false);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!l.hidden){set(false);b.focus();}});});})();</script>"""
 
-SMALL = {"walk":480, "man2":480, "woman2":480, "mama":480, "terrace":768, "car":768}
-FULLW = {"walk":864, "man2":864, "woman2":864, "mama":864, "terrace":1280, "car":1280}
+SMALL = {"walk":480, "man2":480, "woman2":480, "terrace":768, "car":768}
+FULLW = {"walk":864, "man2":864, "woman2":864, "terrace":1280, "car":1280}
 def srcset(root, name):
     s = f"{root}img/{name}.webp {FULLW.get(name,864)}w"
     if name in SMALL: s = f"{root}img/{name}-sm.webp {SMALL[name]}w, " + s
@@ -235,7 +235,7 @@ NAV = {
 }
 HUB = {
  "nl": [("SugarDates",[("Hoe het werkt","hoe-het-werkt/"),("Kosten","kosten/"),("Veiligheid","veiligheid/"),("Veelgestelde vragen","faq/")]),
-        ("Voor wie",[("Sugardaddy","sugardaddy/"),("Sugarbaby","sugarbaby/"),("Sugarmama","sugarmama/"),("Wat is sugardating?","wat-is-sugardating/")]),
+        ("Voor wie",[("Sugardaddy","sugardaddy/"),("Sugarbaby","sugarbaby/"),("Wat is sugardating?","wat-is-sugardating/")]),
         ("Populair",[("Dating zonder relatie","dating-zonder-relatie/"),("Discreet daten","discreet-daten/"),("Daten als je getrouwd bent","daten-als-je-getrouwd-bent/"),("No strings attached","no-strings-attached/"),("Arrangement dating","arrangement-dating/"),("Sugardaddy gezocht","sugardaddy-gezocht/"),("Sugarbaby gezocht","sugarbaby-gezocht/")]),
         ("Steden",[("Amsterdam","sugardating/amsterdam/"),("Rotterdam","sugardating/rotterdam/"),("Den Haag","sugardating/den-haag/"),("Utrecht","sugardating/utrecht/"),("Eindhoven","sugardating/eindhoven/"),("België","sugardating/belgie/")])],
  "en": [("SugarDates",[("How it works","en/how-it-works/"),("Safety","en/safety/"),("FAQ","en/faq/")]),
@@ -310,11 +310,11 @@ def faq_html(qas):
 OFFER = {
  "nl":{"k":"Vraag en aanbod","h":"Wat zoek je, wat bied je?",
   "cols":[("Wat sugarbaby's zoeken",["Mentorschap en een netwerk","Aandacht en goede gesprekken","Luxe ervaringen: diners, hotels, uitjes","Samen reizen","Financiële ondersteuning, als jullie dat samen afspreken"],("Sugardaddy gezocht","sugardaddy-gezocht/")),
-          ("Wat sugardaddy's en sugarmama's zoeken",["Tijd en gezelschap","Discretie","Duidelijkheid vooraf","Iemand om mee uit te gaan en te reizen","Geen verwachtingen die niet zijn uitgesproken"],("Sugarbaby gezocht","sugarbaby-gezocht/"))],
+          ("Wat sugardaddy's zoeken",["Tijd en gezelschap","Discretie","Duidelijkheid vooraf","Iemand om mee uit te gaan en te reizen","Geen verwachtingen die niet zijn uitgesproken"],("Sugarbaby gezocht","sugarbaby-gezocht/"))],
   "pop":"Populair"},
  "en":{"k":"What people look for","h":"What you want, what you offer.",
   "cols":[("What sugar babies look for",["Mentoring and a network","Attention and good conversation","Luxury experiences: dinners, hotels, outings","Travel together","Financial support, if you agree on it together"],("Become a sugar baby","en/sugar-baby/")),
-          ("What sugar daddies and mommies look for",["Time and company","Discretion","Clarity up front","Someone to go out and travel with","No unspoken expectations"],("Become a sugar daddy","en/sugar-daddy/"))],
+          ("What sugar daddies look for",["Time and company","Discretion","Clarity up front","Someone to go out and travel with","No unspoken expectations"],("Become a sugar daddy","en/sugar-daddy/"))],
   "pop":"Popular"},
 }
 CITY = {
@@ -468,7 +468,7 @@ def page(p, all_pages):
     body = f'''<body>
   {header(c, root, hrefs, navcur)}
   <main id="inhoud" class="pg">
-    <div class="wrap pg-head{" has-media" if img else ""}">
+    <div class="pg-hero"><div class="wrap pg-head{" has-media" if img else ""}">
       <div class="pg-intro">
         <nav class="crumbs" aria-label="{u["crumbs"]}"><ol>{cr}</ol></nav>
         <h1>{p["h1"]}</h1>
@@ -476,7 +476,7 @@ def page(p, all_pages):
         {roles(c, su, p.get("role","baby"))}
       </div>
       {media}
-    </div>
+    </div></div>
     <div class="wrap"><article class="prose">
       {content}
     </article></div>
@@ -502,14 +502,14 @@ SU = {
   "steps":{"role":"Rol","about":"Over jou","looking":"Wat zoek je","bio":"Profiel","account":"Account"},
   "stepOf":"Stap {n} van {t}","left1":"Laatste stap","done":"Klaar","back":"Terug","next":"Verder","skip":"Overslaan",
   "role_h":"Wie ben je?","role_p":"Kies wat bij je past. Je kunt dit later wijzigen.",
-  "role_baby_k":"Je zoekt een sugardaddy of sugarmama","role_baby_t":"Ik ben sugarbaby","role_daddy_k":"Je zoekt een sugarbaby","role_daddy_t":"Ik ben sugardaddy / sugarmama",
-  "lead_baby":"Aanmelden als sugarbaby","lead_daddy":"Aanmelden als sugardaddy / sugarmama",
+  "role_baby_k":"Je zoekt een sugardaddy","role_baby_t":"Ik ben sugarbaby","role_daddy_k":"Je zoekt een sugarbaby","role_daddy_t":"Ik ben sugardaddy",
+  "lead_baby":"Aanmelden als sugarbaby","lead_daddy":"Aanmelden als sugardaddy",
   "about_h":"Over jou","about_p":"Alleen de basis. Een bijnaam mag.",
   "f_name":"Gebruikersnaam","f_loc":"Stad of provincie","f_loc_ph":"Kies een stad of provincie","f_year":"Geboortejaar","f_year_ph":"Kies je geboortejaar",
   "grp_cities":"Grote steden","grp_regions":"Provincies","other":"Ergens anders in Nederland",
   "about_micro":"We tonen alleen je stad of provincie, nooit je adres. Je moet 18 jaar of ouder zijn.",
   "looking_h":"Wat zoek je?","looking_p":"Zo weten we welke profielen we je straks laten zien.","grp_who":"Ik zoek","grp_what":"Waarvoor? (meerdere mogelijk)",
-  "who":[["sugardaddy","Een sugardaddy"],["sugarmama","Een sugarmama"],["sugarbaby","Een sugarbaby"],["any","Maakt niet uit"]],
+  "who":[["sugardaddy","Een sugardaddy"],["sugarbaby","Een sugarbaby"],["any","Maakt niet uit"]],
   "what":[["langdurig","Een vaste regeling"],["afentoe","Af en toe afspreken"],["mentor","Begeleiding / mentor"],["reizen","Samen reizen"],["chatten","Eerst online kennismaken"]],
   "bio_h":"Korte profieltekst","bio_p":"Eén zin over jezelf. Je kunt dit ook later doen.","f_bio":"Profieltekst (optioneel)","bio_micro":"Maximaal 120 tekens. Geen telefoonnummer of andere contactgegevens.",
   "acc_h":"Account aanmaken","acc_p":"SugarDates is nog niet live. Je komt op de wachtlijst en we mailen je bij de livegang.",
@@ -520,7 +520,7 @@ SU = {
   "e_age":"Bevestig dat je 18 jaar of ouder bent.","e_terms":"Ga akkoord met de voorwaarden en het privacybeleid.",
   "ok_h":"Je staat op de wachtlijst, {name}","ok_p":"Bij de livegang sturen we een e-mail naar {email}.",
   "s_role":"Rol","s_name":"Gebruikersnaam","s_loc":"Regio","s_year":"Geboortejaar","s_who":"Zoekt","s_what":"Waarvoor","s_bio":"Profieltekst","s_email":"E-mail",
-  "r_baby":"Sugarbaby","r_daddy":"Sugardaddy / sugarmama",
+  "r_baby":"Sugarbaby","r_daddy":"Sugardaddy",
   "ok_next":"Bij de livegang bevestig je je e-mailadres en maak je je profiel af.",
   "home":"Naar de homepage","reset":"Opnieuw beginnen",
   "trust":["Alleen 18+","Gratis aanmelden","Nog niet live: je komt op de wachtlijst"],
@@ -531,14 +531,14 @@ SU = {
   "steps":{"role":"Role","about":"About you","looking":"Looking for","bio":"Profile","account":"Account"},
   "stepOf":"Step {n} of {t}","left1":"Last step","done":"Done","back":"Back","next":"Continue","skip":"Skip",
   "role_h":"Who are you?","role_p":"Choose what fits. You can change this later.",
-  "role_baby_k":"You're looking for a sugar daddy or mommy","role_baby_t":"I'm a sugar baby","role_daddy_k":"You're looking for a sugar baby","role_daddy_t":"I'm a sugar daddy / mommy",
-  "lead_baby":"Joining as a sugar baby","lead_daddy":"Joining as a sugar daddy / mommy",
+  "role_baby_k":"You're looking for a sugar daddy","role_baby_t":"I'm a sugar baby","role_daddy_k":"You're looking for a sugar baby","role_daddy_t":"I'm a sugar daddy",
+  "lead_baby":"Joining as a sugar baby","lead_daddy":"Joining as a sugar daddy",
   "about_h":"About you","about_p":"Just the basics. A nickname is fine.",
   "f_name":"Username","f_loc":"State","f_loc_ph":"Choose your state","f_year":"Birth year","f_year_ph":"Choose your birth year",
   "grp_cities":"States","grp_regions":"","other":"Outside the US",
   "about_micro":"We only show your state or city, never your address. You must be 18 or older.",
   "looking_h":"What are you looking for?","looking_p":"So we know which profiles to show you.","grp_who":"I'm looking for","grp_what":"For what? (choose any)",
-  "who":[["sugardaddy","A sugar daddy"],["sugarmama","A sugar mommy"],["sugarbaby","A sugar baby"],["any","No preference"]],
+  "who":[["sugardaddy","A sugar daddy"],["sugarbaby","A sugar baby"],["any","No preference"]],
   "what":[["langdurig","An ongoing arrangement"],["afentoe","Meeting now and then"],["mentor","Mentoring"],["reizen","Traveling together"],["chatten","Chatting online first"]],
   "bio_h":"Short profile text","bio_p":"One line about yourself. You can also do this later.","f_bio":"Profile text (optional)","bio_micro":"Up to 120 characters. No phone numbers or other contact details.",
   "acc_h":"Create your account","acc_p":"SugarDates isn't live yet. You'll join the waitlist and we'll email you at launch.",
@@ -549,7 +549,7 @@ SU = {
   "e_age":"Confirm that you're 18 or older.","e_terms":"Please agree to the Terms and Privacy Policy.",
   "ok_h":"You're on the waitlist, {name}","ok_p":"We'll email {email} when we launch.",
   "s_role":"Role","s_name":"Username","s_loc":"Location","s_year":"Birth year","s_who":"Looking for","s_what":"For","s_bio":"Profile text","s_email":"Email",
-  "r_baby":"Sugar baby","r_daddy":"Sugar daddy / mommy",
+  "r_baby":"Sugar baby","r_daddy":"Sugar daddy",
   "ok_next":"At launch you'll confirm your email and finish your profile.",
   "home":"Back to the homepage","reset":"Start over",
   "trust":["18+ only","Free to sign up","Not live yet: you'll join the waitlist"],
