@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Aanmelden – SugarDates</title>
+  <meta name="description" content="SugarDates is binnenkort live. Laat je e-mail achter en je hoort het als je je kunt aanmelden. Voor sugardaddy’s, sugarmama’s en sugarbaby’s in Nederland. Alleen 21+.">
+  <meta name="theme-color" content="#6849ad">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://realmrhodl.github.io/sugardates-nl/v4/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="SugarDates">
+  <meta property="og:title" content="Aanmelden – SugarDates">
+  <meta property="og:description" content="SugarDates is binnenkort live. Laat je e-mail achter en je hoort het als je je kunt aanmelden. Alleen 21+.">
+  <meta property="og:url" content="https://realmrhodl.github.io/sugardates-nl/v4/">
+  <meta property="og:image" content="https://realmrhodl.github.io/sugardates-nl/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SugarDates – sugardating in Nederland">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aanmelden – SugarDates">
+  <meta name="twitter:description" content="SugarDates is binnenkort live. Laat je e-mail achter en je hoort het als je je kunt aanmelden. Alleen 21+.">
+  <meta name="twitter:image" content="https://realmrhodl.github.io/sugardates-nl/assets/og.png">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {theme:{extend:{
+      colors:{
+        pd:{DEFAULT:'#7351c0',header:'#6849ad',dark:'#5b3ba3',darker:'#462d7e',light:'#a089d4',lighter:'#cdc1e9',op:'rgba(115,81,192,.75)'},
+        body:{DEFAULT:'#edf0f7',light:'#f8f9fc'},
+        ink:{DEFAULT:'#343a40',muted:'#5d738d',soft:'#a1aebd'},
+        line:'#dfe4f1', gold:'#EEBD22'
+      },
+      fontFamily:{sans:['Poppins','sans-serif']},
+      borderRadius:{pill:'1.125rem'},
+      boxShadow:{block:'0 1px 3px rgba(214,221,237,.5),0 1px 2px rgba(214,221,237,.5)',pill:'0 0 .875rem 0 #e3e4e5'}
+    }}};
+  </script>
+  <link rel="stylesheet" href="../assets/app.css">
+  <style>
+    .chk{accent-color:#7351c0;width:1.15rem;height:1.15rem;flex-shrink:0;margin-top:.15rem}
+    .v4-shell{min-height:100svh;display:flex;flex-direction:column}
+    .v4-main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:1.5rem 0 2rem}
+  </style>
+</head>
+<body class="font-sans antialiased v4-shell">
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+
+  <header class="bg-pd-header text-white">
+    <div class="max-w-[720px] mx-auto px-3 sm:px-6 h-14 flex items-center">
+      <a href="#top" class="flex items-center gap-1.5 sm:gap-2 shrink-0 min-w-0" id="top" aria-label="SugarDates">
+        <img src="../assets/logo.png" alt="" class="h-7 sm:h-8 w-auto">
+        <span class="text-[17px] sm:text-[19px] font-bold tracking-tight">SugarDates</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="inhoud" class="v4-main">
+    <div class="max-w-[28rem] mx-auto w-full px-3 sm:px-6">
+      <h1 class="text-[26px] sm:text-[30px] font-bold text-[#212529] leading-tight text-center">Sugardating in Nederland</h1>
+      <p class="text-[14px] sm:text-[15px] text-ink-muted leading-relaxed mt-2 text-center font-normal">Binnenkort live. Laat je e-mail achter, dan hoor je het als je je kunt aanmelden.</p>
+
+      <div class="block p-5 sm:p-6 mt-5">
+        <form id="early-access-form" novalidate>
+          <div>
+            <label class="lbl" for="email">E-mailadres</label>
+            <input id="email" name="email" type="email" class="inp" autocomplete="email" inputmode="email" required placeholder="jij@email.nl" aria-describedby="form-error">
+          </div>
+          <div class="mt-3">
+            <label class="lbl" for="rol">Ik ben <span class="font-normal text-ink-muted">(niet verplicht)</span></label>
+            <select id="rol" name="rol" class="inp">
+              <option value="">Maak een keuze</option>
+              <option value="sugardaddy">Sugardaddy</option>
+              <option value="sugarmama">Sugarmama</option>
+              <option value="sugarbaby">Sugarbaby</option>
+            </select>
+          </div>
+          <div class="mt-4">
+            <label class="flex items-start gap-2.5 text-[14px] text-ink font-medium leading-snug cursor-pointer">
+              <input id="age" name="age" type="checkbox" class="chk" required aria-describedby="form-error">
+              <span>Ik ben 21 jaar of ouder</span>
+            </label>
+          </div>
+          <p id="form-error" class="text-[13px] text-red-600 mt-3 hidden" role="alert"></p>
+          <button class="btn btn-pd w-full mt-4" type="submit">Houd me op de hoogte</button>
+        </form>
+        <div id="form-thanks" class="hidden" role="status">
+          <p class="text-[14px] text-ink font-normal m-0 leading-relaxed"><strong class="font-semibold">Bedankt.</strong> We sturen je een bericht als SugarDates live gaat en je je kunt aanmelden.</p>
+        </div>
+      </div>
+
+      <p class="text-center text-[12px] text-ink-muted mt-4 font-normal">Alleen voor 21 jaar en ouder.</p>
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-line text-[12px] text-ink-muted">
+    <div class="max-w-[720px] mx-auto px-3 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+      <div class="font-normal leading-relaxed">
+        <strong class="font-semibold text-ink">Forest Road B.V.</strong> · Herengracht 449A, 1017 BR Amsterdam<br>
+        KvK 97957232 · BTW NL868303550B01
+      </div>
+      <div class="flex flex-col sm:items-end gap-1.5 font-normal">
+        <p class="m-0">Een site van Forest Road B.V. · ook op <a href="https://paydates.nl" class="text-pd font-semibold hover:text-pd-darker">Paydates.nl</a></p>
+        <ul class="flex flex-wrap gap-x-3 gap-y-1">
+          <li><a href="#" class="hover:text-pd">Privacy</a></li>
+          <li><a href="#" class="hover:text-pd">Voorwaarden</a></li>
+          <li><a href="#" class="hover:text-pd">Contact</a></li>
+        </ul>
+        <p class="m-0">© 2026 Forest Road B.V.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // Placeholder only: there is no backend yet.
+      // On submit we show a thank-you message and may remember the address
+      // (and optional role) in localStorage for this front-end demo.
+      // Nothing is sent to a server. Do not treat this as a real waitlist.
+      var STORAGE_KEY = "sugardates-v4-early-access-demo";
+      var form = document.getElementById("early-access-form");
+      var thanks = document.getElementById("form-thanks");
+      var errorEl = document.getElementById("form-error");
+      var emailEl = document.getElementById("email");
+      var roleEl = document.getElementById("rol");
+      var ageEl = document.getElementById("age");
+
+      function validEmail(value) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      }
+
+      function showError(message, focusEl) {
+        errorEl.textContent = message;
+        errorEl.classList.remove("hidden");
+        if (focusEl) {
+          focusEl.setAttribute("aria-invalid", "true");
+          focusEl.focus();
+        }
+      }
+
+      function clearErrors() {
+        errorEl.classList.add("hidden");
+        errorEl.textContent = "";
+        emailEl.removeAttribute("aria-invalid");
+        ageEl.removeAttribute("aria-invalid");
+      }
+
+      function showThanks() {
+        form.style.display = "none";
+        thanks.classList.remove("hidden");
+      }
+
+      try {
+        if (window.localStorage && localStorage.getItem(STORAGE_KEY)) {
+          showThanks();
+        }
+      } catch (e) {}
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        clearErrors();
+        var email = (emailEl.value || "").trim();
+        var role = (roleEl.value || "").trim();
+        if (!validEmail(email)) {
+          showError("Vul een geldig e-mailadres in.", emailEl);
+          return;
+        }
+        if (!ageEl.checked) {
+          showError("Bevestig dat je 21 jaar of ouder bent.", ageEl);
+          return;
+        }
+        try {
+          // Demo only: stores a small flag + the typed values locally in this browser.
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            email: email,
+            role: role || null,
+            ageConfirmed: true,
+            at: Date.now()
+          }));
+        } catch (e) {}
+        showThanks();
+      });
+    })();
+  </script>
+</body>
+</html>
