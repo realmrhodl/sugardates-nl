@@ -2,10 +2,10 @@
 <html lang="nl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>SugarDates – sugardating in Nederland</title>
   <meta name="description" content="SugarDates is voor sugardaddy’s, sugarmama’s en sugarbaby’s in Nederland. Binnenkort live. Laat je e-mail achter en je hoort het als je je kunt aanmelden. Alleen 21+.">
-  <meta name="theme-color" content="#11090b">
+  <meta name="theme-color" content="#6849ad">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://realmrhodl.github.io/sugardates-nl/">
   <meta property="og:type" content="website">
@@ -26,658 +26,221 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Cormorant+SC:wght@500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #11090b;
-      --bg-elev: #1b1113;
-      --bg-elev-2: #241618;
-      --ivory: #f4ebd8;
-      --ivory-dim: #cdbca6;
-      --ivory-mute: #a39480;
-      --gold: #d4b37a;
-      --gold-bright: #e8d3a8;
-      --oxblood: #6e1b24;
-      --oxblood-deep: #4a1018;
-      --line: rgba(212, 179, 122, 0.28);
-      --line-soft: rgba(244, 235, 216, 0.09);
-      --focus: #e8d3a8;
-      --ok: #c9d4b8;
-      --error: #e8b4b4;
-      --serif: "Cormorant Garamond", "Times New Roman", Times, serif;
-      --sc: "Cormorant SC", "Cormorant Garamond", "Times New Roman", serif;
-      --sans: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
-      --max: 72rem;
-      --gutter: clamp(1.15rem, 4vw, 2.25rem);
-      --header-h: 4.15rem;
-    }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ivory); }
-    body {
-      font-family: var(--sans);
-      font-weight: 400;
-      font-size: 1.0625rem;
-      line-height: 1.65;
-      letter-spacing: 0.01em;
-      min-height: 100%;
-      overflow-x: hidden;
-    }
-    img, svg { display: block; max-width: 100%; }
-    a { color: var(--gold); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
-    a:hover { color: var(--gold-bright); }
-    :focus-visible {
-      outline: 2px solid var(--focus);
-      outline-offset: 3px;
-    }
-    .skip {
-      position: absolute;
-      left: 0.75rem;
-      top: -4rem;
-      z-index: 100;
-      background: var(--gold-bright);
-      color: var(--bg);
-      padding: 0.5rem 0.85rem;
-      font-weight: 500;
-      text-decoration: none;
-    }
-    .skip:focus { top: 0.75rem; }
-
-    /* Subtle wine glow + grain, no photos */
-    .atmosphere {
-      pointer-events: none;
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      background:
-        radial-gradient(ellipse 80% 55% at 50% -10%, rgba(110, 27, 36, 0.55), transparent 60%),
-        radial-gradient(ellipse 40% 30% at 100% 20%, rgba(74, 16, 24, 0.35), transparent 50%),
-        radial-gradient(ellipse 45% 35% at 0% 80%, rgba(74, 16, 24, 0.25), transparent 55%);
-    }
-    .atmosphere::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: 0.045;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    }
-    .page { position: relative; z-index: 1; }
-
-    .agebar {
-      background: var(--oxblood-deep);
-      color: var(--ivory-dim);
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-align: center;
-      padding: 0.45rem var(--gutter);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(14px);
-      background: rgba(17, 9, 11, 0.82);
-      border-bottom: 1px solid var(--line-soft);
-    }
-    .header-inner, .wrap {
-      width: min(var(--max), calc(100% - (var(--gutter) * 2)));
-      margin-inline: auto;
-    }
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      min-height: var(--header-h);
-    }
-    .wordmark {
-      font-family: var(--sc);
-      font-weight: 500;
-      font-size: clamp(1.05rem, 2.6vw, 1.25rem);
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--ivory);
-      text-decoration: none;
-      line-height: 1;
-      padding: 0.25rem 0;
-      white-space: nowrap;
-    }
-    .wordmark:hover { color: var(--gold-bright); }
-    .wordmark span { letter-spacing: 0.28em; }
-    nav.primary {
-      display: none;
-      align-items: center;
-      gap: 1.35rem;
-    }
-    nav.primary a {
-      color: var(--ivory-dim);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 400;
-    }
-    nav.primary a:hover { color: var(--ivory); }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      border: 1px solid transparent;
-      cursor: pointer;
-      font-family: var(--sans);
-      font-weight: 500;
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      padding: 0.7rem 1.15rem;
-      line-height: 1.2;
-      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
-    }
-    .btn-gold {
-      background: var(--gold-bright);
-      color: #1a0a0c;
-    }
-    .btn-gold:hover { background: #f2e4c4; color: #1a0a0c; }
-    .btn-ghost {
-      background: transparent;
-      color: var(--ivory);
-      border-color: var(--line);
-    }
-    .btn-ghost:hover { border-color: var(--gold); color: var(--gold-bright); }
-    .btn-sm { padding: 0.55rem 0.95rem; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; }
-
-    .hero {
-      padding: clamp(2.75rem, 8vw, 6.5rem) 0 clamp(3.5rem, 9vw, 7rem);
-      text-align: center;
-    }
-    .eyebrow {
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin: 0 0 1.15rem;
-    }
-    .hero h1 {
-      font-family: var(--serif);
-      font-weight: 500;
-      font-style: italic;
-      font-size: clamp(2.55rem, 11vw, 6.15rem);
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-      margin: 0;
-      color: var(--ivory);
-    }
-    .hero h1 em {
-      font-style: normal;
-      font-weight: 500;
-      display: block;
-      margin-top: 0.12em;
-      font-size: 0.52em;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-family: var(--sc);
-      color: var(--ivory-dim);
-    }
-    .rule {
-      width: 4.5rem;
-      height: 1px;
-      background: var(--gold);
-      margin: 1.6rem auto 1.5rem;
-      border: 0;
-    }
-    .lead {
-      margin: 0 auto 2rem;
-      max-width: 36rem;
-      color: var(--ivory-dim);
-      font-size: clamp(1.02rem, 2vw, 1.15rem);
-      font-weight: 300;
-    }
-
-    .signup {
-      width: min(34rem, 100%);
-      margin: 0 auto;
-    }
-    .signup-row {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-    .field { text-align: left; flex: 1; }
-    .field label {
-      display: block;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ivory-mute);
-      margin-bottom: 0.4rem;
-    }
-    .field input[type="email"] {
-      width: 100%;
-      background: rgba(244, 235, 216, 0.04);
-      border: 1px solid var(--line);
-      color: var(--ivory);
-      font-family: var(--sans);
-      font-size: 1rem;
-      padding: 0.78rem 0.95rem;
-      border-radius: 0;
-    }
-    .field input::placeholder { color: var(--ivory-mute); }
-    .field input:hover { border-color: rgba(212, 179, 122, 0.5); }
-    .signup .btn { width: 100%; min-height: 3.05rem; }
-    .form-note, .form-error, .form-thanks p {
-      font-size: 0.88rem;
-      color: var(--ivory-mute);
-      margin: 0.7rem 0 0;
-    }
-    .form-error { color: var(--error); display: none; }
-    .form-error.is-on { display: block; }
-    .form-thanks {
-      display: none;
-      border: 1px solid var(--line);
-      background: rgba(244, 235, 216, 0.04);
-      padding: 1.25rem 1.15rem;
-    }
-    .form-thanks.is-on { display: block; }
-    .form-thanks p { color: var(--ivory-dim); margin: 0; }
-    .form-thanks strong { color: var(--ivory); font-weight: 500; }
-    .alt-link {
-      margin-top: 1.25rem;
-      font-size: 0.92rem;
-      color: var(--ivory-mute);
-    }
-    .alt-link a { color: var(--gold); }
-
-    section { padding: clamp(3rem, 7vw, 5.25rem) 0; }
-    .section-head { text-align: center; max-width: 36rem; margin: 0 auto 2.5rem; }
-    .section-head h2 {
-      font-family: var(--serif);
-      font-weight: 500;
-      font-size: clamp(1.85rem, 4.5vw, 2.7rem);
-      line-height: 1.15;
-      margin: 0 0 0.7rem;
-    }
-    .section-head p { margin: 0; color: var(--ivory-dim); font-weight: 300; }
-
-    .steps {
-      display: grid;
-      gap: 1rem;
-    }
-    .step {
-      background: var(--bg-elev);
-      border: 1px solid var(--line-soft);
-      padding: 1.4rem 1.25rem 1.5rem;
-      text-align: left;
-    }
-    .step-num {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 1.65rem;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 0.7rem;
-    }
-    .step h3 {
-      font-family: var(--serif);
-      font-weight: 600;
-      font-size: 1.45rem;
-      margin: 0 0 0.45rem;
-    }
-    .step p { margin: 0; color: var(--ivory-dim); font-weight: 300; }
-
-    .split { display: grid; gap: 1rem; }
-    .card {
-      background: var(--bg-elev);
-      border: 1px solid var(--line-soft);
-      padding: 1.6rem 1.3rem 1.7rem;
-    }
-    .card h3 {
-      font-family: var(--serif);
-      font-weight: 600;
-      font-size: 1.55rem;
-      margin: 0 0 0.65rem;
-    }
-    .card p { margin: 0; color: var(--ivory-dim); font-weight: 300; }
-    .card .tag {
-      font-size: 0.7rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.55rem;
-    }
-
-    .safety { background: linear-gradient(180deg, transparent, rgba(74, 16, 24, 0.28), transparent); }
-    .points {
-      display: grid;
-      gap: 1rem;
-    }
-    .point {
-      border-top: 1px solid var(--line);
-      padding-top: 1rem;
-    }
-    .point h3 {
-      font-family: var(--sc);
-      font-weight: 500;
-      font-size: 0.95rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin: 0 0 0.4rem;
-    }
-    .point p { margin: 0; color: var(--ivory-dim); font-weight: 300; }
-
-    .faq-list { max-width: 42rem; margin: 0 auto; }
-    details.faq {
-      border-bottom: 1px solid var(--line-soft);
-      padding: 0.15rem 0;
-    }
-    details.faq summary {
-      cursor: pointer;
-      list-style: none;
-      font-family: var(--serif);
-      font-size: 1.25rem;
-      font-weight: 600;
-      padding: 1rem 1.8rem 1rem 0;
-      position: relative;
-    }
-    details.faq summary::-webkit-details-marker { display: none; }
-    details.faq summary::after {
-      content: "";
-      position: absolute;
-      right: 0.1rem;
-      top: 50%;
-      width: 0.6rem;
-      height: 0.6rem;
-      border-right: 1px solid var(--gold);
-      border-bottom: 1px solid var(--gold);
-      transform: translateY(-70%) rotate(45deg);
-      transition: transform 0.15s ease;
-    }
-    details.faq[open] summary::after { transform: translateY(-20%) rotate(225deg); }
-    details.faq .answer {
-      color: var(--ivory-dim);
-      font-weight: 300;
-      padding: 0 0 1.15rem;
-      margin: 0;
-    }
-
-    .cta-band {
-      text-align: center;
-      padding-top: 0;
-    }
-    .cta-band .panel {
-      border: 1px solid var(--line);
-      background: var(--bg-elev);
-      padding: clamp(1.75rem, 5vw, 2.75rem) var(--gutter);
-    }
-    .cta-band h2 {
-      font-family: var(--serif);
-      font-weight: 500;
-      font-size: clamp(1.7rem, 4vw, 2.35rem);
-      margin: 0 0 0.5rem;
-    }
-    .cta-band .panel > p { color: var(--ivory-dim); font-weight: 300; margin: 0 0 1.4rem; }
-
-    footer.site {
-      border-top: 1px solid var(--line);
-      padding: 2.5rem 0 2rem;
-      font-size: 0.9rem;
-      color: var(--ivory-dim);
-    }
-    .foot-grid {
-      display: grid;
-      gap: 1.75rem;
-    }
-    .foot-brand .wordmark { display: inline-block; margin-bottom: 0.7rem; letter-spacing: 0.28em; }
-    .kicker {
-      color: var(--ivory-mute);
-      margin: 0;
-      font-weight: 300;
-    }
-    .kicker a { color: var(--ivory-dim); }
-    address {
-      font-style: normal;
-      font-weight: 300;
-      line-height: 1.7;
-      color: var(--ivory-dim);
-    }
-    address strong { font-weight: 500; color: var(--ivory); }
-    .foot-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem 1.15rem;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-    .foot-links a { color: var(--ivory-dim); text-decoration: none; }
-    .foot-links a:hover { color: var(--gold-bright); }
-    .legal {
-      margin-top: 2rem;
-      padding-top: 1.15rem;
-      border-top: 1px solid var(--line-soft);
-      color: var(--ivory-mute);
-      font-size: 0.8rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    @media (min-width: 640px) {
-      .signup-row { flex-direction: row; align-items: flex-end; }
-      .signup .btn { width: auto; white-space: nowrap; padding-inline: 1.25rem; }
-      .steps { grid-template-columns: repeat(3, 1fr); gap: 1.15rem; }
-      .split { grid-template-columns: 1fr 1fr; gap: 1.15rem; }
-      .points { grid-template-columns: 1fr 1fr; gap: 1.5rem 2rem; }
-      .foot-grid { grid-template-columns: 1.3fr 1fr 1fr; align-items: start; }
-      .legal { flex-direction: row; justify-content: space-between; gap: 1rem; }
-    }
-    @media (min-width: 880px) {
-      nav.primary { display: flex; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .btn, details.faq summary::after { transition: none; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {theme:{extend:{
+      colors:{
+        pd:{DEFAULT:'#7351c0',header:'#6849ad',dark:'#5b3ba3',darker:'#462d7e',light:'#a089d4',lighter:'#cdc1e9',op:'rgba(115,81,192,.75)'},
+        body:{DEFAULT:'#edf0f7',light:'#f8f9fc'},
+        ink:{DEFAULT:'#343a40',muted:'#5d738d',soft:'#a1aebd'},
+        line:'#dfe4f1', gold:'#EEBD22'
+      },
+      fontFamily:{sans:['Poppins','sans-serif']},
+      borderRadius:{pill:'1.125rem'},
+      boxShadow:{block:'0 1px 3px rgba(214,221,237,.5),0 1px 2px rgba(214,221,237,.5)',pill:'0 0 .875rem 0 #e3e4e5'}
+    }}};
+  </script>
+  <link rel="stylesheet" href="assets/app.css">
 </head>
-<body>
+<body class="font-sans antialiased" id="top">
   <a class="skip" href="#inhoud">Naar de inhoud</a>
-  <div class="atmosphere" aria-hidden="true"></div>
-  <div class="page">
-    <div class="agebar">Alleen voor bezoekers van 21 jaar en ouder</div>
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="wordmark" href="#top" aria-label="SugarDates, naar boven">Sugardates</a>
-        <nav class="primary" aria-label="Hoofdmenu">
-          <a href="#hoe">Hoe het werkt</a>
-          <a href="#voor-wie">Voor wie</a>
-          <a href="#veilig">Veiligheid</a>
-          <a href="#faq">Vragen</a>
-        </nav>
-        <a class="btn btn-gold btn-sm" href="#aanmelden">Aanmelden</a>
-      </div>
-    </header>
 
-    <main id="inhoud">
-      <section class="hero" id="top">
-        <div class="wrap">
-          <p class="eyebrow">Binnenkort live · Nederland · 21+</p>
-          <h1>Sugardating<em>in Nederland</em></h1>
-          <hr class="rule">
-          <p class="lead">SugarDates is een plek voor sugardaddy’s, sugarmama’s en sugarbaby’s die open willen zijn over wat ze zoeken. Je maakt een profiel, je chat online, en jullie maken afspraken op jullie eigen voorwaarden.</p>
-          <div id="aanmelden" class="signup">
-            <form id="early-access-form" novalidate>
-              <div class="signup-row">
-                <div class="field">
-                  <label for="email">E-mailadres</label>
-                  <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="jij@email.nl" aria-describedby="form-note form-error">
-                </div>
-                <button class="btn btn-gold" type="submit">Houd me op de hoogte</button>
+  <div class="bg-pd-darker text-white text-center text-[11px] font-semibold tracking-wide px-3 py-1.5">Alleen voor bezoekers van 21 jaar en ouder</div>
+
+  <header class="sticky top-0 z-40 bg-pd-header text-white">
+    <div class="max-w-[1200px] mx-auto px-3 lg:px-6 h-14 flex items-center gap-3">
+      <a href="#top" class="flex items-center gap-1.5 sm:gap-2 shrink-0 min-w-0" aria-label="SugarDates, naar boven">
+        <img src="assets/logo.png" alt="" class="h-7 sm:h-8 w-auto">
+        <span class="text-[17px] sm:text-[19px] font-bold tracking-tight">SugarDates</span>
+      </a>
+      <a href="#aanmelden" class="pd-cta ml-auto">Aanmelden</a>
+    </div>
+  </header>
+
+  <div class="bg-white border-b border-line relative z-30">
+    <nav aria-label="Hoofdmenu" class="max-w-[1200px] mx-auto px-3 lg:px-6 flex items-center text-[13px] overflow-x-auto scrollbar-none whitespace-nowrap">
+      <a href="#hoe" class="navlink">Hoe het werkt</a>
+      <a href="#voor-wie" class="navlink">Voor wie</a>
+      <a href="#veilig" class="navlink">Veiligheid</a>
+      <a href="#faq" class="navlink">Vragen</a>
+    </nav>
+  </div>
+
+  <main id="inhoud">
+    <section class="hero-bg text-white">
+      <div class="max-w-[720px] mx-auto px-3 lg:px-6 py-10 sm:py-14 text-center">
+        <p class="text-[11px] font-bold uppercase tracking-[.14em] text-white/80">Binnenkort live · Nederland · 21+</p>
+        <h1 class="text-[32px] sm:text-[42px] font-bold leading-tight mt-2">Sugardating<br class="sm:hidden"> in Nederland</h1>
+        <p class="text-[15px] text-white/90 leading-relaxed mt-4 font-normal">SugarDates is een plek voor sugardaddy’s, sugarmama’s en sugarbaby’s die open willen zijn over wat ze zoeken. Je maakt een profiel, je chat online, en jullie maken afspraken op jullie eigen voorwaarden.</p>
+        <div id="aanmelden" class="bg-white rounded-[24px] p-4 sm:p-5 shadow-lg mt-6 text-left text-ink">
+          <form id="early-access-form" novalidate>
+            <div class="flex flex-col sm:flex-row gap-3 sm:items-end">
+              <div class="flex-1">
+                <label class="lbl" for="email">E-mailadres</label>
+                <input id="email" name="email" type="email" class="inp" autocomplete="email" inputmode="email" required placeholder="jij@email.nl" aria-describedby="form-note form-error">
               </div>
-              <p id="form-error" class="form-error" role="alert">Vul een geldig e-mailadres in.</p>
-              <p id="form-note" class="form-note">Alleen een seintje als we live gaan. Geen reeks mails tussendoor.</p>
-            </form>
-            <div id="form-thanks" class="form-thanks" role="status">
-              <p><strong>Bedankt.</strong> We sturen je een bericht als SugarDates live gaat en je je kunt aanmelden.</p>
+              <button class="btn btn-pd w-full sm:w-auto shrink-0" type="submit">Houd me op de hoogte</button>
             </div>
-            <p class="alt-link">Kijk tot die tijd ook op <a href="https://paydates.nl">Paydates.nl</a>.</p>
+            <p id="form-error" class="text-[13px] text-red-600 mt-2 hidden" role="alert">Vul een geldig e-mailadres in.</p>
+            <p id="form-note" class="text-[12px] text-ink-muted mt-2 font-normal">Alleen een seintje als we live gaan. Geen reeks mails tussendoor.</p>
+          </form>
+          <div id="form-thanks" class="hidden rounded-lg bg-body-light border border-line p-4" role="status">
+            <p class="text-[14px] text-ink font-normal m-0"><strong class="font-semibold">Bedankt.</strong> We sturen je een bericht als SugarDates live gaat en je je kunt aanmelden.</p>
           </div>
         </div>
-      </section>
+        <p class="text-[13px] text-white/85 mt-4 font-normal">Kijk tot die tijd ook op <a href="https://paydates.nl" class="text-white font-semibold underline underline-offset-2 hover:text-white">Paydates.nl</a>.</p>
+      </div>
+    </section>
 
-      <section id="hoe">
-        <div class="wrap">
-          <div class="section-head">
-            <h2>Hoe het werkt</h2>
-            <p>Drie stappen, zonder poespas. De site zelf is nog niet live; zo is het bedoeld als we open gaan.</p>
-          </div>
-          <div class="steps">
-            <article class="step">
-              <div class="step-num">01</div>
-              <h3>Maak een profiel</h3>
-              <p>Vertel wie je bent en wat je zoekt, in je eigen woorden. Jij bepaalt wat je deelt.</p>
-            </article>
-            <article class="step">
-              <div class="step-num">02</div>
-              <h3>Matchen en chatten</h3>
-              <p>Bekijk profielen en start een gesprek. Online, in je eigen tempo.</p>
-            </article>
-            <article class="step">
-              <div class="step-num">03</div>
-              <h3>Spreek af op jullie voorwaarden</h3>
-              <p>Wat jullie afspreken, spreken jullie samen af. Niets is verplicht.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+    <section id="hoe" class="max-w-[1200px] mx-auto px-3 lg:px-6 py-8 sm:py-10">
+      <div class="text-center max-w-[36rem] mx-auto mb-5">
+        <h2 class="text-[22px] sm:text-[26px] font-bold text-[#212529] leading-tight">Hoe het werkt</h2>
+        <p class="text-[14px] text-ink-muted leading-relaxed mt-2 font-normal">Drie stappen, zonder poespas. De site zelf is nog niet live; zo is het bedoeld als we open gaan.</p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-3 sm:gap-4">
+        <article class="block p-5">
+          <div class="sd-n mb-3">01</div>
+          <h3 class="font-bold text-[16px] text-[#212529]">Maak een profiel</h3>
+          <p class="text-[14px] text-ink-muted leading-relaxed mt-1.5 font-normal">Vertel wie je bent en wat je zoekt, in je eigen woorden. Jij bepaalt wat je deelt.</p>
+        </article>
+        <article class="block p-5">
+          <div class="sd-n mb-3">02</div>
+          <h3 class="font-bold text-[16px] text-[#212529]">Matchen en chatten</h3>
+          <p class="text-[14px] text-ink-muted leading-relaxed mt-1.5 font-normal">Bekijk profielen en start een gesprek. Online, in je eigen tempo.</p>
+        </article>
+        <article class="block p-5">
+          <div class="sd-n mb-3">03</div>
+          <h3 class="font-bold text-[16px] text-[#212529]">Spreek af op jullie voorwaarden</h3>
+          <p class="text-[14px] text-ink-muted leading-relaxed mt-1.5 font-normal">Wat jullie afspreken, spreken jullie samen af. Niets is verplicht.</p>
+        </article>
+      </div>
+    </section>
 
-      <section id="voor-wie">
-        <div class="wrap">
-          <div class="section-head">
-            <h2>Voor wie</h2>
-            <p>Voor volwassenen in Nederland die sugardating serieus en open willen aanpakken.</p>
-          </div>
-          <div class="split">
-            <article class="card">
-              <div class="tag">Sugardaddy’s en sugarmama’s</div>
-              <h3>Open over wat je zoekt</h3>
-              <p>Je zoekt gezelschap en een klik, en je wilt daar gewoon open over kunnen zijn. Geen verborgen verwachtingen, wel duidelijke afspraken.</p>
-            </article>
-            <article class="card">
-              <div class="tag">Sugarbaby’s</div>
-              <h3>Jij bepaalt je grenzen</h3>
-              <p>Je zoekt iemand die ruimhartig is en duidelijk communiceert. Jij geeft aan wat je wel en niet wilt. Daar blijft het bij, tot jij anders besluit.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+    <section id="voor-wie" class="max-w-[1200px] mx-auto px-3 lg:px-6 pb-8 sm:pb-10">
+      <div class="text-center max-w-[36rem] mx-auto mb-5">
+        <h2 class="text-[22px] sm:text-[26px] font-bold text-[#212529] leading-tight">Voor wie</h2>
+        <p class="text-[14px] text-ink-muted leading-relaxed mt-2 font-normal">Voor volwassenen in Nederland die sugardating serieus en open willen aanpakken.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-3 sm:gap-4">
+        <article class="block p-5 sm:p-6">
+          <div class="text-[11px] font-bold uppercase tracking-[.14em] text-pd">Sugardaddy’s en sugarmama’s</div>
+          <h3 class="font-bold text-[18px] text-[#212529] mt-1">Open over wat je zoekt</h3>
+          <p class="text-[14px] text-ink-muted leading-relaxed mt-2 font-normal">Je zoekt gezelschap en een klik, en je wilt daar gewoon open over kunnen zijn. Geen verborgen verwachtingen, wel duidelijke afspraken.</p>
+        </article>
+        <article class="block p-5 sm:p-6">
+          <div class="text-[11px] font-bold uppercase tracking-[.14em] text-pd">Sugarbaby’s</div>
+          <h3 class="font-bold text-[18px] text-[#212529] mt-1">Jij bepaalt je grenzen</h3>
+          <p class="text-[14px] text-ink-muted leading-relaxed mt-2 font-normal">Je zoekt iemand die ruimhartig is en duidelijk communiceert. Jij geeft aan wat je wel en niet wilt. Daar blijft het bij, tot jij anders besluit.</p>
+        </article>
+      </div>
+    </section>
 
-      <section id="veilig" class="safety">
-        <div class="wrap">
-          <div class="section-head">
-            <h2>Veilig en discreet</h2>
-            <p>Sugardating vraagt om duidelijkheid en voorzichtigheid. Dat nemen we als uitgangspunt.</p>
-          </div>
-          <div class="points">
-            <article class="point">
-              <h3>Discreet</h3>
-              <p>De site is bedoeld voor discreet gebruik. Je bepaalt zelf wat er in je profiel staat en wat je deelt in een gesprek.</p>
-            </article>
-            <article class="point">
-              <h3>Verificatie</h3>
-              <p>We werken aan verificatie van profielen, zodat je beter weet met wie je praat. Hoe dat precies werkt, maken we bekend bij de lancering.</p>
-            </article>
-            <article class="point">
-              <h3>Melden</h3>
-              <p>Als iets niet klopt of onveilig voelt, kun je een profiel of gesprek melden. Die meldingen pakken we serieus op.</p>
-            </article>
-            <article class="point">
-              <h3>Geen dwang</h3>
-              <p>Niemand hoeft iets te doen of te beloven. Jullie voorwaarden zijn van jullie. Voelt het niet goed, dan stop je.</p>
-            </article>
-          </div>
+    <section id="veilig" class="max-w-[1200px] mx-auto px-3 lg:px-6 pb-8 sm:pb-10">
+      <div class="block p-5 sm:p-8">
+        <div class="text-center max-w-[36rem] mx-auto mb-5">
+          <h2 class="text-[22px] sm:text-[26px] font-bold text-[#212529] leading-tight">Veilig en discreet</h2>
+          <p class="text-[14px] text-ink-muted leading-relaxed mt-2 font-normal">Sugardating vraagt om duidelijkheid en voorzichtigheid. Dat nemen we als uitgangspunt.</p>
         </div>
-      </section>
+        <div class="grid sm:grid-cols-2 gap-x-8 gap-y-5">
+          <article>
+            <h3 class="font-bold text-[15px] text-[#212529]">Discreet</h3>
+            <p class="text-[14px] text-ink-muted leading-relaxed mt-1 font-normal">De site is bedoeld voor discreet gebruik. Je bepaalt zelf wat er in je profiel staat en wat je deelt in een gesprek.</p>
+          </article>
+          <article>
+            <h3 class="font-bold text-[15px] text-[#212529]">Verificatie</h3>
+            <p class="text-[14px] text-ink-muted leading-relaxed mt-1 font-normal">We werken aan verificatie van profielen, zodat je beter weet met wie je praat. Hoe dat precies werkt, maken we bekend bij de lancering.</p>
+          </article>
+          <article>
+            <h3 class="font-bold text-[15px] text-[#212529]">Melden</h3>
+            <p class="text-[14px] text-ink-muted leading-relaxed mt-1 font-normal">Als iets niet klopt of onveilig voelt, kun je een profiel of gesprek melden. Die meldingen pakken we serieus op.</p>
+          </article>
+          <article>
+            <h3 class="font-bold text-[15px] text-[#212529]">Geen dwang</h3>
+            <p class="text-[14px] text-ink-muted leading-relaxed mt-1 font-normal">Niemand hoeft iets te doen of te beloven. Jullie voorwaarden zijn van jullie. Voelt het niet goed, dan stop je.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <section id="faq">
-        <div class="wrap">
-          <div class="section-head">
-            <h2>Veelgestelde vragen</h2>
-            <p>Kort en zonder omwegen. Meer volgt als de site live is.</p>
-          </div>
-          <div class="faq-list">
-            <details class="faq">
-              <summary>Wat is sugardating?</summary>
-              <p class="answer">Sugardating is daten waarbij je open bent over wat je zoekt: tijd, aandacht, gezelschap en vaak ook financiële of praktische ondersteuning. Hoe dat eruitziet, bepalen de betrokkenen zelf. Het is geen vast contract en geen verplichting.</p>
-            </details>
-            <details class="faq">
-              <summary>Is SugarDates al live?</summary>
-              <p class="answer">Nog niet. We bouwen de site. Laat je e-mailadres achter, dan laten we weten wanneer je je kunt aanmelden.</p>
-            </details>
-            <details class="faq">
-              <summary>Wat kost het?</summary>
-              <p class="answer">Dat maken we bekend bij de lancering. Op deze pagina vragen we alleen je e-mail voor een seintje.</p>
-            </details>
-            <details class="faq">
-              <summary>Hoe zit het met privacy?</summary>
-              <p class="answer">We bouwen de site met discreet gebruik als uitgangspunt. Je bepaalt zelf wat je deelt. Het privacybeleid en de voorwaarden publiceren we bij de lancering. Het formulier op deze pagina is een vooraanmelding; er is nog geen account of volledige dienst.</p>
-            </details>
-            <details class="faq">
-              <summary>Voor wie is de site?</summary>
-              <p class="answer">Voor volwassenen van 21 jaar of ouder in Nederland: sugardaddy’s, sugarmama’s en sugarbaby’s.</p>
-            </details>
-            <details class="faq">
-              <summary>Wat is het verschil met Paydates.nl?</summary>
-              <p class="answer">Paydates.nl is een Nederlandse sekswebsite met advertenties en chat, waar sugardating ook groeit. SugarDates richt zich specifiek op sugardating. Beide zijn sites van Forest Road B.V.</p>
-            </details>
-          </div>
-        </div>
-      </section>
+    <section id="faq" class="max-w-[1200px] mx-auto px-3 lg:px-6 pb-8 sm:pb-10">
+      <div class="text-center max-w-[36rem] mx-auto mb-5">
+        <h2 class="text-[22px] sm:text-[26px] font-bold text-[#212529] leading-tight">Veelgestelde vragen</h2>
+        <p class="text-[14px] text-ink-muted leading-relaxed mt-2 font-normal">Kort en zonder omwegen. Meer volgt als de site live is.</p>
+      </div>
+      <div class="block p-5 sm:px-8 sm:py-2 max-w-[42rem] mx-auto">
+        <details class="faq-item">
+          <summary>Wat is sugardating?</summary>
+          <p class="answer">Sugardating is daten waarbij je open bent over wat je zoekt: tijd, aandacht, gezelschap en vaak ook financiële of praktische ondersteuning. Hoe dat eruitziet, bepalen de betrokkenen zelf. Het is geen vast contract en geen verplichting.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is SugarDates al live?</summary>
+          <p class="answer">Nog niet. We bouwen de site. Laat je e-mailadres achter, dan laten we weten wanneer je je kunt aanmelden.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wat kost het?</summary>
+          <p class="answer">Dat maken we bekend bij de lancering. Op deze pagina vragen we alleen je e-mail voor een seintje.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Hoe zit het met privacy?</summary>
+          <p class="answer">We bouwen de site met discreet gebruik als uitgangspunt. Je bepaalt zelf wat je deelt. Het privacybeleid en de voorwaarden publiceren we bij de lancering. Het formulier op deze pagina is een vooraanmelding; er is nog geen account of volledige dienst.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Voor wie is de site?</summary>
+          <p class="answer">Voor volwassenen van 21 jaar of ouder in Nederland: sugardaddy’s, sugarmama’s en sugarbaby’s.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wat is het verschil met Paydates.nl?</summary>
+          <p class="answer">Paydates.nl is een Nederlandse sekswebsite met advertenties en chat, waar sugardating ook groeit. SugarDates richt zich specifiek op sugardating. Beide zijn sites van Forest Road B.V.</p>
+        </details>
+      </div>
+    </section>
 
-      <section class="cta-band" aria-labelledby="cta-title">
-        <div class="wrap">
-          <div class="panel">
-            <h2 id="cta-title">Blijf op de hoogte</h2>
-            <p>Geen account, geen belofte. Alleen een bericht als je je kunt aanmelden.</p>
-            <a class="btn btn-gold" href="#aanmelden">Naar het aanmeldformulier</a>
-          </div>
-        </div>
-      </section>
-    </main>
+    <section class="max-w-[1200px] mx-auto px-3 lg:px-6 pb-8 sm:pb-10" aria-labelledby="cta-title">
+      <div class="rounded-lg bg-pd text-white p-6 sm:p-8 text-center">
+        <h2 id="cta-title" class="text-[22px] sm:text-[26px] font-bold leading-tight">Blijf op de hoogte</h2>
+        <p class="text-[14px] text-white/85 mt-2 font-normal">Geen account, geen belofte. Alleen een bericht als je je kunt aanmelden.</p>
+        <a class="btn btn-light mt-5" href="#aanmelden">Naar het aanmeldformulier</a>
+      </div>
+    </section>
+  </main>
 
-    <footer class="site">
-      <div class="wrap">
-        <div class="foot-grid">
-          <div class="foot-brand">
-            <a class="wordmark" href="#top">Sugardates</a>
-            <p class="kicker">Een site van Forest Road B.V. · ook op <a href="https://paydates.nl">Paydates.nl</a></p>
-          </div>
-          <address>
-            <strong>Forest Road B.V.</strong><br>
-            Herengracht 449A<br>
-            1017 BR Amsterdam<br>
-            KvK 97957232<br>
-            BTW NL868303550B01
-          </address>
-          <div>
-            <p style="margin:0 0 0.7rem;color:var(--ivory);font-weight:500;">Alleen 21+</p>
-            <ul class="foot-links">
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Voorwaarden</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="legal">
-          <span>© 2026 Forest Road B.V.</span>
+  <footer class="bg-white border-t border-line text-[13px]">
+    <div class="max-w-[1200px] mx-auto px-3 lg:px-6 py-10 grid sm:grid-cols-3 gap-8">
+      <div>
+        <a href="#top" class="flex items-center gap-2" aria-label="SugarDates">
+          <img src="assets/logo.png" alt="" class="h-7 w-7 rounded">
+          <span class="text-[18px] font-bold text-pd-header">SugarDates</span>
+        </a>
+        <p class="text-ink-muted text-[12px] mt-3 max-w-sm leading-relaxed font-normal">Een site van Forest Road B.V. · ook op <a href="https://paydates.nl" class="text-pd font-semibold hover:text-pd-darker">Paydates.nl</a></p>
+      </div>
+      <address class="not-italic text-ink-muted font-normal leading-relaxed">
+        <strong class="font-semibold text-ink">Forest Road B.V.</strong><br>
+        Herengracht 449A<br>
+        1017 BR Amsterdam<br>
+        KvK 97957232<br>
+        BTW NL868303550B01
+      </address>
+      <div>
+        <div class="font-semibold mb-3 text-[#212529]">Alleen 21+</div>
+        <ul class="space-y-1.5 text-ink-muted">
+          <li><a href="#" class="hover:text-pd">Privacy</a></li>
+          <li><a href="#" class="hover:text-pd">Voorwaarden</a></li>
+          <li><a href="#" class="hover:text-pd">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-line bg-body-light">
+      <div class="max-w-[1200px] mx-auto px-3 lg:px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-[11px] text-ink-muted">
+        <div>© 2026 Forest Road B.V.</div>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+          <span class="inline-flex items-center gap-1 font-bold text-ink"><span class="bg-ink text-white rounded px-1.5 py-0.5 text-[10px]">21+</span> Alleen voor volwassenen</span>
           <span>Sugardating voor Nederland. De site is in opbouw.</span>
         </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
+
   <script>
     (function () {
       // Placeholder only: there is no backend yet.
@@ -696,7 +259,7 @@
 
       function showThanks() {
         form.style.display = "none";
-        thanks.classList.add("is-on");
+        thanks.classList.remove("hidden");
       }
 
       try {
@@ -709,19 +272,18 @@
         event.preventDefault();
         var value = (emailEl.value || "").trim();
         if (!validEmail(value)) {
-          errorEl.classList.add("is-on");
+          errorEl.classList.remove("hidden");
           emailEl.setAttribute("aria-invalid", "true");
           emailEl.focus();
           return;
         }
-        errorEl.classList.remove("is-on");
+        errorEl.classList.add("hidden");
         emailEl.removeAttribute("aria-invalid");
         try {
           // Demo only: stores a small flag + the typed address locally in this browser.
           localStorage.setItem(STORAGE_KEY, JSON.stringify({ email: value, at: Date.now() }));
         } catch (e) {}
         showThanks();
-        thanks.focus && thanks.focus();
       });
     })();
   </script>
