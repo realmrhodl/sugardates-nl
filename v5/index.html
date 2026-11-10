@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SugarDates – sugardating in Nederland, aanmelden</title>
+  <meta name="description" content="Meld je aan bij SugarDates: sugardating voor sugardaddy’s, sugarmama’s en sugarbaby’s in Nederland. Open over verwachtingen, discreet in gebruik. Alleen 21+.">
+  <meta name="theme-color" content="#6849ad">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://realmrhodl.github.io/sugardates-nl/v5/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="SugarDates">
+  <meta property="og:title" content="SugarDates – sugardating in Nederland, aanmelden">
+  <meta property="og:description" content="Een plek voor sugardaddy’s, sugarmama’s en sugarbaby’s in Nederland. Meld je aan; de site gaat binnenkort live. Alleen 21+.">
+  <meta property="og:url" content="https://realmrhodl.github.io/sugardates-nl/v5/">
+  <meta property="og:image" content="https://realmrhodl.github.io/sugardates-nl/v5/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SugarDates – sugardating in Nederland">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SugarDates – sugardating in Nederland, aanmelden">
+  <meta name="twitter:description" content="Meld je aan bij SugarDates. Binnenkort live. Alleen 21+.">
+  <meta name="twitter:image" content="https://realmrhodl.github.io/sugardates-nl/v5/img/og.jpg">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pd:#7351c0;
+      --pd-header:#6849ad;
+      --pd-dark:#5b3ba3;
+      --pd-darker:#462d7e;
+      --pd-deep:#24143c;
+      --pd-mid:#3d2a68;
+      --pd-light:#a089d4;
+      --pd-lighter:#cdc1e9;
+      --pd-soft:#f4f0fb;
+      --body:#edf0f7;
+      --body-light:#f8f9fc;
+      --ink:#343a40;
+      --ink-dark:#212529;
+      --muted:#5d738d;
+      --soft:#a1aebd;
+      --line:#dfe4f1;
+      --gold:#eebd22;
+      --white:#fff;
+      --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+      --sans:"Poppins",sans-serif;
+      --radius:1.25rem;
+      --shadow-lg:0 24px 60px rgba(36,18,84,.28);
+      --shadow-card:0 1px 3px rgba(214,221,237,.5),0 1px 2px rgba(214,221,237,.5);
+      --shadow-raise:0 14px 40px rgba(70,45,126,.16);
+      --header-h:3.5rem;
+      --notice-h:1.85rem;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;max-width:100%}
+    html,body{margin:0;padding:0;overflow-x:hidden}
+    @supports (overflow:clip){html,body{overflow-x:clip}}
+    body{font-family:var(--sans);font-size:15px;font-weight:400;color:var(--ink);background:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    img,svg,picture{display:block;max-width:100%;height:auto}
+    button,input,select,textarea{font:inherit}
+    a{color:var(--pd);text-decoration:none}
+    a:hover{color:var(--pd-darker)}
+    h1,h2,h3{color:var(--ink-dark);line-height:1.2;margin:0}
+    p{margin:0}
+    :focus-visible{outline:2px solid var(--pd);outline-offset:2px}
+    .skip{position:absolute;left:.75rem;top:-4rem;z-index:100;background:var(--pd);color:#fff;padding:.5rem .85rem;font-weight:600;border-radius:.4rem}
+    .skip:focus{top:.75rem}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    .notice{background:var(--pd-darker);color:#fff;text-align:center;font-size:11px;font-weight:600;letter-spacing:.06em;padding:.4rem .75rem;line-height:1.35}
+    header.site{position:sticky;top:0;z-index:50;background:var(--pd-header);color:#fff;box-shadow:0 1px 0 rgba(0,0,0,.12)}
+    .header-inner{max-width:1160px;margin:0 auto;padding:0 1rem;height:var(--header-h);display:flex;align-items:center;gap:.75rem}
+    .brand{display:flex;align-items:center;gap:.5rem;color:#fff;font-weight:700;font-size:18px;letter-spacing:-.02em;min-width:0}
+    .brand:hover{color:#fff}
+    .brand img{height:32px;width:32px;border-radius:8px}
+    .nav-cta{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;background:#fff;color:var(--pd);font-weight:700;font-size:13px;line-height:1;padding:.48rem 1.05rem;border-radius:999px;box-shadow:0 4px 14px rgba(36,18,84,.28);border:0;cursor:pointer;text-decoration:none}
+    .nav-cta:hover{background:#f4f0fc;color:var(--pd-darker)}
+    .subnav{background:#fff;border-bottom:1px solid var(--line)}
+    .subnav-inner{max-width:1160px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;gap:.15rem;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;white-space:nowrap}
+    .subnav-inner::-webkit-scrollbar{display:none}
+    .subnav a{padding:.75rem .7rem;color:var(--ink);font-weight:500;font-size:13px;border-bottom:2px solid transparent;display:inline-flex}
+    .subnav a:hover{color:var(--pd);border-bottom-color:var(--pd)}
+    body.is-signup .subnav,
+    body.is-signup footer.site,
+    body.is-signup .nav-cta{display:none}
+    body.is-signup header.site{box-shadow:none}
+
+    .hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(24rem,1fr);min-height:calc(100svh - var(--notice-h) - var(--header-h) - 2.7rem);background:var(--pd-deep);color:#fff;position:relative}
+    .hero-photo{position:relative;min-height:28rem;overflow:hidden}
+    .hero-photo picture,.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;max-width:none}
+    .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(36,20,60,.05) 40%,rgba(36,20,60,.55) 85%,var(--pd-deep) 100%),linear-gradient(180deg,rgba(36,20,60,.15) 0%,transparent 30%,rgba(36,20,60,.35) 100%);pointer-events:none}
+    .hero-panel{position:relative;display:flex;flex-direction:column;justify-content:center;padding:2.75rem 2.25rem 2.75rem 1.5rem;background:linear-gradient(180deg,#2d1b4e 0%,var(--pd-deep) 100%)}
+    .kicker{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72);margin:0 0 .85rem}
+    .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,4vw,3.15rem);line-height:1.12;color:#fff;letter-spacing:-.02em}
+    .hero .lead{margin-top:1rem;font-size:15px;line-height:1.7;color:rgba(255,255,255,.86);max-width:34rem;font-weight:400}
+    .signup-card{margin-top:1.6rem;background:#fff;color:var(--ink);border-radius:1.35rem;padding:1.25rem 1.25rem 1.15rem;box-shadow:var(--shadow-lg)}
+    .signup-card h2{font-size:1.05rem;font-weight:700}
+    .signup-card .hint{margin-top:.25rem;font-size:13px;color:var(--muted);font-weight:400}
+    .role-grid{display:grid;gap:.55rem;margin-top:1rem}
+    .role-btn{appearance:none;width:100%;text-align:left;background:var(--body-light);border:1.5px solid var(--line);border-radius:.9rem;padding:.85rem 1rem;cursor:pointer;display:flex;align-items:center;gap:.85rem;transition:border-color .15s,box-shadow .15s,transform .15s,background .15s;color:var(--ink-dark)}
+    .role-btn:hover,.role-btn:focus-visible{border-color:var(--pd);box-shadow:0 8px 20px rgba(115,81,192,.14);background:#fff;transform:translateY(-1px)}
+    .role-btn .who{display:block;font-weight:700;font-size:15px;line-height:1.25}
+    .role-btn .what{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:.15rem}
+    .role-btn .copy{flex:1;min-width:0}
+    .role-go{flex:none;color:var(--pd);opacity:.55;width:1.1rem;height:1.1rem;transition:opacity .15s,transform .15s}
+    .role-btn:hover .role-go,.role-btn:focus-visible .role-go{opacity:1;transform:translateX(2px)}
+    .fine{margin-top:.85rem;font-size:12px;color:var(--muted);font-weight:400}
+
+    .wrap{max-width:1160px;margin:0 auto;padding:0 1rem}
+    .section{padding:3.75rem 0}
+    .section-head{max-width:36rem;margin:0 auto 2rem;text-align:center}
+    .section-head h2,.split-copy h2,.cta-band h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.7rem,3vw,2.35rem);letter-spacing:-.02em}
+    .section-head p,.split-copy .intro{margin-top:.75rem;color:var(--muted);font-size:15px;line-height:1.7}
+
+    .pillars{background:var(--body);position:relative;z-index:2;padding:0 0 .25rem}
+    .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:-1.85rem}
+    .pillar{padding:1.35rem 1.25rem 1.3rem;background:#fff;border-radius:1.15rem;box-shadow:var(--shadow-raise)}
+    .pillar-ico{width:2.6rem;height:2.6rem;margin:0 0 .75rem;border-radius:50%;background:var(--pd-soft);color:var(--pd);display:grid;place-items:center}
+    .pillar-ico svg{width:1.25rem;height:1.25rem}
+    .pillar h3{font-size:1.05rem;font-weight:700}
+    .pillar p{margin-top:.4rem;color:var(--muted);font-size:14px;line-height:1.65}
+
+    .how{background:var(--body-light)}
+    .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3.5rem;align-items:center}
+    .split.reverse{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+    .split.reverse .split-copy{order:1}
+    .split.reverse .frame{order:2}
+    .frame{position:relative;border-radius:1.4rem;overflow:hidden;box-shadow:var(--shadow-raise);aspect-ratio:4/5;background:#1c1230}
+    .frame img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;max-width:none}
+    .steps{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;gap:1.1rem}
+    .steps li{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start}
+    .num{width:2rem;height:2rem;border-radius:50%;background:var(--pd);color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center;margin-top:.1rem}
+    .steps h3{font-size:1rem;font-weight:700}
+    .steps p{margin-top:.2rem;color:var(--muted);font-size:14px;line-height:1.65}
+
+    .audience{background:#fff}
+    .audience + .audience{padding-top:0}
+    .audience .split{padding-bottom:1rem}
+    .bullets{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;gap:.7rem}
+    .bullets li{display:grid;grid-template-columns:auto 1fr;gap:.65rem;align-items:start;font-size:14px;line-height:1.6;color:var(--ink)}
+    .tick{flex:none;width:1.25rem;height:1.25rem;margin-top:.15rem;border-radius:50%;background:var(--pd-soft);color:var(--pd);display:grid;place-items:center}
+    .tick svg{width:.7rem;height:.7rem}
+    .eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pd);margin-bottom:.45rem}
+
+    .band{position:relative;min-height:22rem;display:grid;place-items:center;color:#fff;overflow:hidden;background:var(--pd-deep)}
+    .band picture,.band .band-img{position:absolute;inset:0;width:100%;height:100%}
+    .band img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;max-width:none}
+    .band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,20,60,.45),rgba(36,20,60,.72) 50%,rgba(36,20,60,.8))}
+    .band-inner{position:relative;z-index:1;max-width:38rem;padding:4rem 1.25rem;text-align:center}
+    .band blockquote{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.55rem,3.2vw,2.15rem);line-height:1.35;color:#fff;margin:0}
+    .band p{margin-top:1rem;color:rgba(255,255,255,.82);font-size:15px}
+
+    .trust{background:var(--body)}
+    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .trust-card{background:#fff;border-radius:1rem;padding:1.35rem 1.2rem 1.3rem;box-shadow:var(--shadow-card)}
+    .trust-card h3{font-size:.98rem;font-weight:700;margin-top:.7rem}
+    .trust-card p{margin-top:.4rem;color:var(--muted);font-size:13.5px;line-height:1.65}
+    .trust-ico{width:2.4rem;height:2.4rem;border-radius:.75rem;background:var(--pd-soft);color:var(--pd);display:grid;place-items:center}
+    .trust-ico svg{width:1.15rem;height:1.15rem}
+
+    .faq{background:#fff}
+    .faq-list{max-width:42rem;margin:0 auto;background:var(--body-light);border-radius:1.1rem;padding:.35rem 1.4rem;box-shadow:var(--shadow-card)}
+    .faq-item{border-bottom:1px solid var(--line)}
+    .faq-item:last-child{border-bottom:0}
+    .faq-item summary{cursor:pointer;list-style:none;padding:1.05rem 1.75rem 1.05rem 0;font-weight:700;font-size:15px;color:var(--ink-dark);position:relative}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary::after{content:"";position:absolute;right:.15rem;top:50%;width:.45rem;height:.45rem;border-right:2px solid var(--pd);border-bottom:2px solid var(--pd);transform:translateY(-70%) rotate(45deg)}
+    .faq-item[open] summary::after{transform:translateY(-20%) rotate(225deg)}
+    .faq-item .answer{margin:0;padding:0 0 1.05rem;color:var(--muted);font-size:14px;line-height:1.7}
+
+    .cta-band{background:linear-gradient(135deg,var(--pd) 0%,var(--pd-darker) 100%);color:#fff;text-align:center}
+    .cta-band h2{color:#fff}
+    .cta-band .intro{color:rgba(255,255,255,.86);margin:.75rem auto 0;max-width:32rem}
+    .cta-roles{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-top:1.5rem}
+    .cta-roles button{appearance:none;border:0;cursor:pointer;background:#fff;color:var(--pd-darker);font-weight:700;font-size:14px;padding:.85rem 1.2rem;border-radius:999px;min-height:48px;box-shadow:0 8px 24px rgba(20,8,40,.2)}
+    .cta-roles button:hover{background:#f4f0fc}
+
+    footer.site{background:#fff;border-top:1px solid var(--line);font-size:13px}
+    .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2rem;padding:2.75rem 0}
+    .foot-brand{display:flex;align-items:center;gap:.5rem;color:var(--pd-header);font-weight:700;font-size:18px}
+    .foot-brand img{height:28px;width:28px;border-radius:7px}
+    .foot-grid p,.foot-grid address{color:var(--muted);font-style:normal;font-weight:400;line-height:1.7;margin-top:.75rem}
+    .foot-grid h3{font-size:13px;font-weight:700;margin-bottom:.5rem}
+    .foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem}
+    .foot-grid li a{color:var(--muted)}
+    .foot-grid li a:hover{color:var(--pd)}
+    .legal{border-top:1px solid var(--line);background:var(--body-light);padding:1rem 0 1.2rem;color:var(--muted);font-size:11px}
+    .legal-inner{display:flex;flex-wrap:wrap;gap:.6rem 1.25rem;justify-content:space-between;align-items:center}
+    .badge-21{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;color:var(--ink)}
+    .badge-21 span{background:var(--ink-dark);color:#fff;border-radius:.3rem;padding:.1rem .35rem;font-size:10px;letter-spacing:.04em}
+
+    /* Signup view */
+    #signup{display:none;background:var(--body);min-height:calc(100svh - var(--notice-h) - var(--header-h))}
+    body.is-signup #landing{display:none}
+    body.is-signup #signup{display:block}
+    .signup-shell{display:grid;grid-template-columns:minmax(0,.95fr) minmax(22rem,1fr);min-height:calc(100svh - var(--notice-h) - var(--header-h))}
+    .signup-visual{position:relative;overflow:hidden;background:var(--pd-deep);min-height:100%}
+    .signup-visual picture,.signup-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;max-width:none}
+    .signup-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,20,60,.15),rgba(36,20,60,.55) 80%,rgba(36,20,60,.7))}
+    .signup-visual .caption{position:absolute;left:1.25rem;right:1.25rem;bottom:1.25rem;z-index:1;color:rgba(255,255,255,.8);font-size:12px;font-weight:400}
+    .signup-col{display:flex;flex-direction:column;background:var(--body-light);padding:1.15rem 1.5rem 2rem}
+    .progress{height:4px;background:var(--line);border-radius:99px;overflow:hidden;margin:0 0 1rem}
+    .progress span{display:block;height:100%;width:0;background:var(--pd);border-radius:99px;transition:width .3s ease}
+    .step-bar{display:flex;align-items:center;gap:.75rem;min-height:2rem;margin-bottom:.35rem}
+    .back-btn{appearance:none;background:none;border:0;color:var(--pd);font-weight:600;font-size:13px;cursor:pointer;padding:.25rem 0;display:inline-flex;align-items:center;gap:.3rem}
+    .back-btn[hidden]{display:none}
+    .step-count{margin-left:auto;font-size:12px;font-weight:500;color:var(--muted)}
+    .signup-panel{max-width:30rem;width:100%;margin:0 auto;flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding:.35rem 0 1rem}
+    .signup-card-form{background:#fff;border-radius:1.25rem;box-shadow:var(--shadow-card);padding:1.5rem 1.4rem 1.4rem}
+    .signup-panel h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.6rem,3vw,2.05rem)}
+    .signup-panel .lead{margin-top:.65rem;color:var(--muted);font-size:14.5px;line-height:1.65}
+    .field{margin-top:1.1rem}
+    .lbl{display:block;font-size:12px;font-weight:600;color:var(--ink-dark);margin-bottom:.35rem}
+    .inp,.sel{width:100%;border:1px solid var(--line);border-radius:.5rem;background:#fff;padding:.8rem .85rem;font-size:16px;outline:none;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+    .inp:focus,.sel:focus{border-color:var(--pd);box-shadow:0 0 0 3px rgba(115,81,192,.16)}
+    .help{margin-top:.4rem;font-size:12px;color:var(--muted);line-height:1.5}
+    .err{margin-top:.4rem;font-size:13px;color:#b42318;display:none}
+    .err.show{display:block}
+    .chips{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:1.05rem}
+    .chip{appearance:none;background:#fff;color:var(--ink);font-weight:600;font-size:13px;border-radius:999px;border:2px solid var(--line);padding:.55rem .95rem;min-height:44px;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+    .chip:hover,.chip:focus-visible{border-color:var(--pd);color:var(--pd)}
+    .chip.is-on{border-color:var(--pd);background:var(--pd);color:#fff}
+    .actions{margin-top:1.35rem;display:flex;flex-wrap:wrap;gap:.6rem}
+    .btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;border-radius:999px;font-weight:700;padding:.8rem 1.3rem;border:0;cursor:pointer;line-height:1.2;min-height:48px;min-width:8.5rem}
+    .btn-pd{background:var(--pd);color:#fff}
+    .btn-pd:hover{background:var(--pd-dark)}
+    .btn-pd:disabled{opacity:.5;cursor:not-allowed}
+    .check{display:grid;grid-template-columns:auto 1fr;gap:.65rem;align-items:start;margin-top:1rem;font-size:13px;line-height:1.55;color:var(--ink)}
+    .check input{width:1.15rem;height:1.15rem;margin-top:.15rem;accent-color:var(--pd);flex:none}
+    .check span{min-width:0}
+    .summary{list-style:none;margin:1.1rem 0 0;padding:0;background:#fff;border-radius:1rem;box-shadow:var(--shadow-card);overflow:hidden}
+    .summary li{display:flex;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line);font-size:13.5px}
+    .summary li:first-child{border-top:0}
+    .summary .k{flex:0 0 8rem;color:var(--muted);font-weight:500}
+    .summary .v{color:var(--ink-dark);font-weight:600}
+    .next-list{list-style:none;margin:1.15rem 0 0;padding:0;display:grid;gap:.65rem}
+    .next-list li{display:grid;grid-template-columns:auto 1fr;gap:.7rem;align-items:start;font-size:13.5px;color:var(--muted);line-height:1.55}
+    .n{width:1.4rem;height:1.4rem;border-radius:50%;background:var(--pd-soft);color:var(--pd);font-size:11px;font-weight:700;display:grid;place-items:center;margin-top:1px}
+    .success-mark{width:3.25rem;height:3.25rem;border-radius:50%;background:var(--pd-soft);color:var(--pd);display:grid;place-items:center;margin-bottom:.9rem}
+    .success-mark svg{width:1.6rem;height:1.6rem}
+
+    @media (max-width:900px){
+      .trust-grid{grid-template-columns:1fr 1fr}
+      .foot-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (min-width:768px){
+      .signup-panel{justify-content:center}
+    }
+    @media (max-width:767px){
+      .hero{grid-template-columns:1fr;min-height:0}
+      .hero-photo{min-height:0;height:min(56vw,19rem);max-height:20rem}
+      .hero-photo img{object-position:50% 28%}
+      .hero-photo::after{background:linear-gradient(180deg,rgba(36,20,60,.08),transparent 30%,rgba(36,20,60,.88) 100%)}
+      .hero-panel{padding:0 1rem 1.35rem;margin-top:-3.6rem;background:transparent}
+      .hero h1{font-size:1.75rem}
+      .hero .lead{font-size:13.5px;line-height:1.6;margin-top:.75rem}
+      .role-btn{padding:.7rem .9rem}
+      .signup-card{padding:1.1rem 1rem 1rem}
+      .pillar-grid{grid-template-columns:1fr;gap:.7rem;margin-top:-1.2rem}
+      .pillar{text-align:left;display:grid;grid-template-columns:auto 1fr;gap:.15rem .85rem;padding:1rem 1rem}
+      .pillar-ico{margin:0;grid-row:span 2}
+      .split,.split.reverse{grid-template-columns:1fr;gap:1.5rem}
+      .split.reverse .split-copy,.split.reverse .frame{order:unset}
+      .frame{aspect-ratio:4/3;max-height:22rem}
+      .section{padding:2.75rem 0}
+      .trust-grid{grid-template-columns:1fr;gap:.75rem}
+      .foot-grid{grid-template-columns:1fr;gap:1.5rem;padding:2rem 0}
+      .signup-shell{grid-template-columns:1fr;grid-template-rows:9.5rem 1fr}
+      .signup-visual{display:block;min-height:9.5rem;height:9.5rem}
+      .signup-visual .caption{display:none}
+      .signup-col{padding:.85rem 1rem 1.5rem;min-height:0}
+      .signup-card-form{padding:1.2rem 1rem 1.15rem}
+      .cta-roles button{flex:1 1 100%}
+      body.is-signup-tall .signup-visual{display:none}
+      body.is-signup-tall .signup-shell{grid-template-rows:1fr}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .progress span,.role-btn,.chip,.btn,.nav-cta{transition:none}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+  <div class="notice">Alleen voor bezoekers van 21 jaar en ouder</div>
+
+  <header class="site">
+    <div class="header-inner">
+      <a class="brand" href="#top" id="brand-link" aria-label="SugarDates, naar boven">
+        <img src="../assets/logo.png" alt="">
+        <span>SugarDates</span>
+      </a>
+      <button type="button" class="nav-cta" id="nav-cta">Aanmelden</button>
+    </div>
+  </header>
+  <div class="subnav" id="subnav">
+    <nav class="subnav-inner" aria-label="Hoofdmenu">
+      <a href="#hoe">Hoe het werkt</a>
+      <a href="#voor-wie">Voor wie</a>
+      <a href="#veilig">Veiligheid</a>
+      <a href="#faq">Vragen</a>
+    </nav>
+  </div>
+
+  <div id="landing">
+    <main id="inhoud">
+      <section class="hero" id="top">
+        <div class="hero-photo" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="img/dinner.webp">
+            <img src="img/dinner.jpg" alt="" width="864" height="1152">
+          </picture>
+        </div>
+        <div class="hero-panel">
+          <p class="kicker">Binnenkort live · Nederland · 21+</p>
+          <h1>Sugardating voor heel Nederland</h1>
+          <p class="lead">SugarDates is voor sugardaddy’s, sugarmama’s en sugarbaby’s die open willen zijn over wat ze zoeken. Je maakt een profiel, je praat eerst online, en jullie spreken af op jullie eigen voorwaarden.</p>
+          <div class="signup-card" id="aanmelden">
+            <h2>Begin hier</h2>
+            <p class="hint">Kies wat bij je past. Daarna volgen een paar korte vragen.</p>
+            <div class="role-grid">
+              <button type="button" class="role-btn" data-role="baby">
+                <span class="copy"><span class="who">Ik ben sugarbaby</span><span class="what">Ik zoek iemand die ruimhartig en duidelijk is</span></span>
+                <svg class="role-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <button type="button" class="role-btn" data-role="daddy">
+                <span class="copy"><span class="who">Ik ben sugardaddy</span><span class="what">Ik zoek gezelschap en een eerlijke klik</span></span>
+                <svg class="role-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <button type="button" class="role-btn" data-role="mama">
+                <span class="copy"><span class="who">Ik ben sugarmama</span><span class="what">Ik zoek gezelschap, open en op mijn voorwaarden</span></span>
+                <svg class="role-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+            <p class="fine">Alleen 21+. Je bepaalt zelf wat je deelt.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="pillars" aria-label="In het kort">
+        <div class="wrap pillar-grid">
+          <article class="pillar">
+            <div class="pillar-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg>
+            </div>
+            <h3>Profiel</h3>
+            <p>Laat in je eigen woorden zien wie je bent en wat je zoekt. Jij bepaalt wat erin staat.</p>
+          </article>
+          <article class="pillar">
+            <div class="pillar-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 16.5V7.5A2.5 2.5 0 0 1 7.5 5h9A2.5 2.5 0 0 1 19 7.5v6A2.5 2.5 0 0 1 16.5 16H9l-4 3.5z"/></svg>
+            </div>
+            <h3>Gesprek</h3>
+            <p>Praat eerst online. Wees open over verwachtingen en over wat je niet wilt.</p>
+          </article>
+          <article class="pillar">
+            <div class="pillar-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 4v4M16 4v4M4 11h16"/></svg>
+            </div>
+            <h3>Afspreken</h3>
+            <p>Als het klikt, maken jullie een afspraak op jullie eigen voorwaarden. Niets is verplicht.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="how section" id="hoe">
+        <div class="wrap split">
+          <div class="frame" aria-hidden="true">
+            <picture>
+              <source type="image/webp" srcset="img/canal.webp">
+              <img src="img/canal.jpg" alt="" width="864" height="1152">
+            </picture>
+          </div>
+          <div class="split-copy">
+            <p class="eyebrow">Drie stappen</p>
+            <h2>Hoe het werkt</h2>
+            <p class="intro">Zo is het bedoeld als de site live gaat. Deze aanmelding is de eerste stap; chatten en profielen volgen bij livegang.</p>
+            <ol class="steps">
+              <li>
+                <span class="num">1</span>
+                <div>
+                  <h3>Meld je aan</h3>
+                  <p>Een paar vragen over wie je bent en wat je zoekt. Profielfoto’s en verificatie komen erbij bij livegang.</p>
+                </div>
+              </li>
+              <li>
+                <span class="num">2</span>
+                <div>
+                  <h3>Bekijk profielen</h3>
+                  <p>Zoek in Nederlandse steden naar mensen die bij je passen. Dat kan zodra de site open gaat.</p>
+                </div>
+              </li>
+              <li>
+                <span class="num">3</span>
+                <div>
+                  <h3>Start een gesprek</h3>
+                  <p>Chatten kan bij livegang. Tot die tijd bewaren we je aanmelding en laten we het je weten.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="audience section" id="voor-wie">
+        <div class="wrap split reverse">
+          <div class="split-copy">
+            <p class="eyebrow">Sugardaddy’s en sugarmama’s</p>
+            <h2>Open over wat je zoekt</h2>
+            <p class="intro">Je zoekt gezelschap en een klik, en je wilt daar gewoon voor uitkomen. Geen verborgen agenda, wel afspraken die voor allebei kloppen.</p>
+            <ul class="bullets">
+              <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.2 4.7 9 10 3"/></svg></span>Iemand die tijd en aandacht met je deelt</li>
+              <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.2 4.7 9 10 3"/></svg></span>Een open gesprek over wat jullie allebei zoeken</li>
+              <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.2 4.7 9 10 3"/></svg></span>Discretie als vanzelfsprekend uitgangspunt</li>
+              <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.2 4.7 9 10 3"/></svg></span>In jullie tempo, zonder druk van de site</li>
+            </ul>
+          </div>
+          <div class="frame" aria-hidden="true">
+            <picture>
+              <source type="image/webp" srcset="img/dinner.webp">
+              <img src="img/dinner.jpg" alt="" width="864" height="1152">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="audience section">
+        <div class="wrap split">
+          <div class="frame" aria-hidden="true">
+            <picture>
+              <source type="image/webp" srcset="img/rooftop.webp">
+              <img src="img/rooftop.jpg" alt="" width="864" height="1152">
+            </picture>
+          </div>
+          <div class="split-copy">
+            <p class="eyebrow">Sugarbaby’s</p>
+            <h2>Jij geeft je grenzen aan</h2>
+            <p class="intro">Je zoekt iemand die ruimhartig is en helder communiceert. Jij bepaalt wat je deelt, wat je wilt, en wanneer je verdergaat.</p>
+            <ul class="bullets">
+              <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.2 4.7 9 10 3"/></svg></span>Een gesprek op een gelijkwaardige toon</li>
+              <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.2 4.7 9 10 3"/></svg></span>Ruimte voor steun, tijd en nieuwe ervaringen</li>
+              <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.2 4.7 9 10 3"/></svg></span>Jij houdt de regie over je grenzen</li>
+              <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6.2 4.7 9 10 3"/></svg></span>Eerst online kennismaken; afspreken alleen als jij dat wilt</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" aria-labelledby="band-title">
+        <picture>
+          <source type="image/webp" srcset="img/canal.webp">
+          <img class="band-img" src="img/canal.jpg" alt="" width="864" height="1152">
+        </picture>
+        <div class="band-inner">
+          <blockquote id="band-title">Een regeling werkt als beide kanten ervan kloppen.</blockquote>
+          <p>Het is een samenwerking: allebei hebben jullie er iets aan, en allebei mogen jullie stoppen.</p>
+        </div>
+      </section>
+
+      <section class="trust section" id="veilig">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Veilig en discreet</h2>
+            <p>Sugardating vraagt om duidelijkheid en voorzichtigheid. Dat nemen we als uitgangspunt, ook terwijl de site nog in opbouw is.</p>
+          </div>
+          <div class="trust-grid">
+            <article class="trust-card">
+              <div class="trust-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5 19 7v5.2c0 4.2-2.9 7.4-7 8.8-4.1-1.4-7-4.6-7-8.8V7l7-3.5z"/><path d="M9 12.2 11.1 14.3 15.2 10"/></svg></div>
+              <h3>Verificatie</h3>
+              <p>We werken aan verificatie van profielen, zodat je beter weet met wie je praat. Hoe dat werkt, maken we bekend bij livegang.</p>
+            </article>
+            <article class="trust-card">
+              <div class="trust-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="5" y="11" width="14" height="9" rx="2"/></svg></div>
+              <h3>Discreet profiel</h3>
+              <p>Jij bepaalt wat er in je profiel staat en wat je in een gesprek deelt. De site is bedoeld voor discreet gebruik.</p>
+            </article>
+            <article class="trust-card">
+              <div class="trust-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 14.5 10 5h4l4 9.5M8 14.5h8"/><path d="M7 19h10"/></svg></div>
+              <h3>Melden</h3>
+              <p>Als iets niet klopt of onveilig voelt, kun je een profiel of gesprek melden. Die meldingen pakken we serieus op.</p>
+            </article>
+            <article class="trust-card">
+              <div class="trust-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2"/></svg></div>
+              <h3>Alleen 21+</h3>
+              <p>SugarDates is alleen voor volwassenen van 21 jaar en ouder. Niemand hoeft iets te doen of te beloven wat niet goed voelt.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section" id="faq">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Veelgestelde vragen</h2>
+            <p>Kort en zonder omwegen. Meer volgt als de site live is.</p>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Wat is sugardating?</summary>
+              <p class="answer">Sugardating is daten waarbij je open bent over wat je zoekt: tijd, aandacht, gezelschap en vaak ook financiële of praktische ondersteuning. Hoe dat eruitziet, bepalen de betrokkenen zelf. Het is geen vast contract en geen verplichting.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Is SugarDates al live?</summary>
+              <p class="answer">Nog niet. We bouwen de site. Met deze aanmelding bewaren we je gegevens lokaal in deze demo en laten we weten wanneer je verder kunt, zodra er een echte backend is. Verificatie, chat en profielfoto’s komen bij livegang.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Wat kost het?</summary>
+              <p class="answer">Dat maken we bekend bij de lancering. Deze pagina is een vooraanmelding; er wordt nu niets in rekening gebracht.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Hoe zit het met privacy?</summary>
+              <p class="answer">We bouwen de site met discreet gebruik als uitgangspunt. Je bepaalt zelf wat je deelt. Het privacybeleid en de voorwaarden publiceren we bij de lancering. In deze test wordt je e-mail alleen in je eigen browser bewaard; je wachtwoord wordt nergens opgeslagen.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Voor wie is de site?</summary>
+              <p class="answer">Voor volwassenen van 21 jaar of ouder in Nederland: sugardaddy’s, sugarmama’s en sugarbaby’s.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Wat is het verschil met Paydates.nl?</summary>
+              <p class="answer">Paydates.nl is een Nederlandse sekswebsite met advertenties en chat, waar sugardating ook groeit. SugarDates richt zich specifiek op sugardating. Beide zijn sites van Forest Road B.V.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band section" aria-labelledby="cta-title">
+        <div class="wrap">
+          <h2 id="cta-title">Klaar om je aan te melden?</h2>
+          <p class="intro">De site is nog in opbouw. Je aanmelding bewaren we tot we live gaan. Kies wat bij je past.</p>
+          <div class="cta-roles">
+            <button type="button" data-role="baby">Ik ben sugarbaby</button>
+            <button type="button" data-role="daddy">Ik ben sugardaddy</button>
+            <button type="button" data-role="mama">Ik ben sugarmama</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="signup" aria-labelledby="signup-title">
+    <div class="signup-shell">
+      <aside class="signup-visual" aria-hidden="true">
+        <picture id="signup-picture">
+          <source id="signup-webp" type="image/webp" srcset="img/dinner.webp">
+          <img id="signup-img" src="img/dinner.jpg" alt="" width="864" height="1152">
+        </picture>
+        <p class="caption">Sfeerbeeld, geen echte leden.</p>
+      </aside>
+      <div class="signup-col">
+        <div class="progress" aria-hidden="true"><span id="progress-fill"></span></div>
+        <div class="step-bar">
+          <button type="button" class="back-btn" id="back-btn">Terug</button>
+          <p class="step-count" id="step-count"></p>
+        </div>
+        <p class="sr-only" id="step-live" aria-live="polite"></p>
+        <div class="signup-panel" id="signup-panel"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="foot-brand" href="#top" id="foot-brand">
+          <img src="../assets/logo.png" alt="">
+          SugarDates
+        </a>
+        <p>Een site van Forest Road B.V. · ook op <a href="https://paydates.nl">Paydates.nl</a>. De foto’s op deze pagina zijn sfeerbeelden, geen echte leden.</p>
+      </div>
+      <address>
+        <strong>Forest Road B.V.</strong><br>
+        Herengracht 449A<br>
+        1017 BR Amsterdam<br>
+        KvK 97957232<br>
+        BTW NL868303550B01
+      </address>
+      <div>
+        <h3>Alleen 21+</h3>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Voorwaarden</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <div class="wrap legal-inner">
+        <div>© 2026 Forest Road B.V.</div>
+        <div class="badge-21"><span>21+</span> Alleen voor volwassenen. Sugardating voor Nederland. De site is in opbouw.</div>
+      </div>
+    </div>
+  </footer>
+
+  <noscript>
+    <p style="text-align:center;padding:1rem;font-size:14px">Voor de aanmelding is JavaScript nodig.</p>
+  </noscript>
+
+  <script>
+  (function () {
+    // Front-end placeholder only. Nothing is sent to a server.
+    // E-mail and non-sensitive answers may be saved in localStorage for this demo.
+    // The password is NEVER written to localStorage, sessionStorage, cookies, or the network.
+    var STORAGE_KEY = "sugardates-v5-signup-demo";
+    var YEAR_MAX = 2005; // 21+ in 2026
+    var YEAR_MIN = 1946;
+    var STEPS = ["looking", "values", "location", "age", "name", "account"];
+    var LOOKING = [
+      {id:"sugardaddy", label:"Een sugardaddy"},
+      {id:"sugarmama", label:"Een sugarmama"},
+      {id:"sugarbaby", label:"Een sugarbaby"},
+      {id:"any", label:"Maakt me niet uit"}
+    ];
+    var VALUES = [
+      {id:"discretie", label:"Discretie"},
+      {id:"chemie", label:"Chemie"},
+      {id:"afspraken", label:"Duidelijke afspraken"},
+      {id:"grenzen", label:"Respect voor grenzen"},
+      {id:"eerlijk", label:"Eerlijkheid"}
+    ];
+    var CITIES = ["Amsterdam","Rotterdam","Den Haag","Utrecht","Eindhoven","Groningen","Almere","Tilburg","Breda","Nijmegen","Arnhem","Apeldoorn","Haarlem","Haarlemmermeer","Zaanstad","Amersfoort","Enschede","Den Bosch","Zwolle","Zoetermeer","Leiden","Leeuwarden","Maastricht","Ede","Dordrecht","Westland","Alphen aan den Rijn","Alkmaar","Delft","Emmen","Deventer","Venlo"];
+    var ROLE_LABEL = {baby:"sugarbaby", daddy:"sugardaddy", mama:"sugarmama"};
+    var ROLE_IMG = {baby:"rooftop", daddy:"dinner", mama:"canal"};
+
+    var state = {role:"", lookingFor:"", values:[], location:"", birthYear:"", displayName:"", email:"", completed:false};
+    var stepIndex = 0;
+    var onSuccess = false;
+
+    var panel = document.getElementById("signup-panel");
+    var backBtn = document.getElementById("back-btn");
+    var stepCount = document.getElementById("step-count");
+    var progressFill = document.getElementById("progress-fill");
+    var live = document.getElementById("step-live");
+
+    function escapeHtml(str) {
+      return String(str == null ? "" : str)
+        .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+    }
+    function labelOf(list, id) {
+      for (var i=0;i<list.length;i++) if (list[i].id===id) return list[i].label;
+      return id || "";
+    }
+    function labelsOf(list, ids) {
+      return (ids||[]).map(function(id){ return labelOf(list,id); }).join(", ");
+    }
+    function validEmail(value) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+    function roleName() { return ROLE_LABEL[state.role] || ""; }
+
+    function persist() {
+      try {
+        var payload = {
+          role: state.role,
+          lookingFor: state.lookingFor,
+          values: state.values,
+          location: state.location,
+          birthYear: state.birthYear,
+          displayName: state.displayName,
+          email: state.email,
+          completed: state.completed,
+          at: Date.now()
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      } catch (e) {}
+    }
+
+    function setVisual() {
+      var key = ROLE_IMG[state.role] || "dinner";
+      document.getElementById("signup-webp").srcset = "img/" + key + ".webp";
+      document.getElementById("signup-img").src = "img/" + key + ".jpg";
+    }
+
+    function openSignup(role) {
+      if (role) state.role = role;
+      if (!state.role) {
+        document.getElementById("aanmelden").scrollIntoView({behavior:"smooth", block:"center"});
+        return;
+      }
+      onSuccess = !!state.completed;
+      stepIndex = 0;
+      setVisual();
+      document.body.classList.add("is-signup");
+      window.scrollTo(0, 0);
+      render();
+      var heading = document.getElementById("signup-title");
+      if (heading) heading.focus();
+    }
+
+    function closeSignup() {
+      document.body.classList.remove("is-signup", "is-signup-tall");
+      window.scrollTo(0, 0);
+      history.replaceState(null, "", " ");
+    }
+
+    function goBack() {
+      if (onSuccess) {
+        onSuccess = false;
+        stepIndex = STEPS.length - 1;
+        render();
+        return;
+      }
+      if (stepIndex <= 0) {
+        closeSignup();
+        return;
+      }
+      stepIndex -= 1;
+      render();
+    }
+
+    function render() {
+      var kind = onSuccess ? "success" : STEPS[stepIndex];
+      document.body.classList.toggle("is-signup-tall", kind === "account" || kind === "success");
+      var total = STEPS.length + 1; // role already chosen counts as step 1
+      var current = onSuccess ? total : stepIndex + 2;
+      var pct = Math.round((current / total) * 100);
+      progressFill.style.width = pct + "%";
+      stepCount.textContent = onSuccess ? "Aanmelding ontvangen" : ("Stap " + current + " van " + total);
+      backBtn.hidden = false;
+      backBtn.textContent = (stepIndex === 0 && !onSuccess) ? "Terug naar de pagina" : "Terug";
+
+      if (onSuccess) {
+        live.textContent = "Aanmelding ontvangen.";
+        panel.innerHTML = '<div class="signup-card-form">'+successHtml()+'</div>';
+        bindStep();
+        var hs = document.getElementById("signup-title");
+        if (hs) hs.setAttribute("tabindex", "-1");
+        return;
+      }
+
+      var step = STEPS[stepIndex];
+      live.textContent = "Stap " + current + " van " + total;
+      var html;
+      if (step === "looking") html = lookingHtml();
+      else if (step === "values") html = valuesHtml();
+      else if (step === "location") html = locationHtml();
+      else if (step === "age") html = ageHtml();
+      else if (step === "name") html = nameHtml();
+      else html = accountHtml();
+      panel.innerHTML = '<div class="signup-card-form">'+html+'</div>';
+      bindStep();
+      var h = document.getElementById("signup-title");
+      if (h) h.setAttribute("tabindex", "-1");
+    }
+
+    function lookingHtml() {
+      var lead = "Je meldt je aan als " + escapeHtml(roleName()) + ". Wie zoek je?";
+      var buttons = LOOKING.map(function(item){
+        var on = state.lookingFor === item.id ? " is-on" : "";
+        return '<button type="button" class="chip'+on+'" data-looking="'+item.id+'">'+escapeHtml(item.label)+'</button>';
+      }).join("");
+      return '<form id="step-form" novalidate>' +
+        '<h1 id="signup-title">Wie zoek je?</h1>' +
+        '<p class="lead">'+lead+'</p>' +
+        '<div class="chips" role="group" aria-label="Wie zoek je?">'+buttons+'</div>' +
+        '<p class="err" id="form-error">Kies een van de opties om verder te gaan.</p>' +
+        '<div class="actions"><button class="btn btn-pd" type="submit">Verder</button></div>' +
+        '</form>';
+    }
+
+    function valuesHtml() {
+      var buttons = VALUES.map(function(item){
+        var on = state.values.indexOf(item.id) >= 0 ? " is-on" : "";
+        return '<button type="button" class="chip'+on+'" data-value="'+item.id+'" aria-pressed="'+(on?"true":"false")+'">'+escapeHtml(item.label)+'</button>';
+      }).join("");
+      return '<form id="step-form" novalidate>' +
+        '<h1 id="signup-title">Wat is belangrijk?</h1>' +
+        '<p class="lead">Kies wat voor jou in een regeling telt. Je mag er meerdere aankruisen.</p>' +
+        '<div class="chips" role="group" aria-label="Wat is belangrijk?">'+buttons+'</div>' +
+        '<p class="err" id="form-error">Kies minstens één punt.</p>' +
+        '<div class="actions"><button class="btn btn-pd" type="submit">Verder</button></div>' +
+        '</form>';
+    }
+
+    function locationHtml() {
+      var opts = CITIES.map(function(c){ return '<option value="'+escapeHtml(c)+'">'; }).join("");
+      return '<form id="step-form" novalidate>' +
+        '<h1 id="signup-title">Waar woon je?</h1>' +
+        '<p class="lead">Een stad is genoeg. Bij livegang gebruiken we dit om mensen in de buurt te tonen. Geen huisadres.</p>' +
+        '<div class="field"><label class="lbl" for="location">Stad of plaats</label>' +
+        '<input class="inp" id="location" name="location" type="text" list="city-list" autocomplete="address-level2" placeholder="Bijvoorbeeld Amsterdam" value="'+escapeHtml(state.location)+'">' +
+        '<datalist id="city-list">'+opts+'</datalist></div>' +
+        '<p class="err" id="form-error">Vul een stad of plaats in.</p>' +
+        '<div class="actions"><button class="btn btn-pd" type="submit">Verder</button></div>' +
+        '</form>';
+    }
+
+    function ageHtml() {
+      var opts = '<option value="">Kies een jaar</option>';
+      for (var y = YEAR_MAX; y >= YEAR_MIN; y--) {
+        opts += '<option value="'+y+'"'+(String(state.birthYear)===String(y)?' selected':'')+'>'+y+'</option>';
+      }
+      return '<form id="step-form" novalidate>' +
+        '<h1 id="signup-title">In welk jaar ben je geboren?</h1>' +
+        '<p class="lead">SugarDates is alleen voor 21 jaar en ouder. Dat bevestig je later nog een keer.</p>' +
+        '<div class="field"><label class="lbl" for="birthYear">Geboortejaar</label>' +
+        '<select class="sel" id="birthYear" name="birthYear">'+opts+'</select></div>' +
+        '<p class="err" id="form-error">Kies je geboortejaar. Je moet 21 jaar of ouder zijn.</p>' +
+        '<div class="actions"><button class="btn btn-pd" type="submit">Verder</button></div>' +
+        '</form>';
+    }
+
+    function nameHtml() {
+      return '<form id="step-form" novalidate>' +
+        '<h1 id="signup-title">Hoe mogen anderen je noemen?</h1>' +
+        '<p class="lead">Dit is je weergavenaam, geen officiële naam. Een bijnaam is prima.</p>' +
+        '<div class="field"><label class="lbl" for="displayName">Weergavenaam</label>' +
+        '<input class="inp" id="displayName" name="displayName" type="text" maxlength="32" autocomplete="nickname" placeholder="Bijvoorbeeld Sam" value="'+escapeHtml(state.displayName)+'"></div>' +
+        '<p class="help">Tussen de 2 en 32 tekens. Dit hoeft niet je echte naam te zijn.</p>' +
+        '<p class="err" id="form-error">Kies een weergavenaam van minstens 2 tekens.</p>' +
+        '<div class="actions"><button class="btn btn-pd" type="submit">Verder</button></div>' +
+        '</form>';
+    }
+
+    function accountHtml() {
+      return '<form id="step-form" novalidate>' +
+        '<h1 id="signup-title">Maak je aanmelding af</h1>' +
+        '<p class="lead">We gebruiken je e-mail voor een seintje als SugarDates live gaat. In deze vooraanmelding wordt je wachtwoord niet opgeslagen.</p>' +
+        '<div class="field"><label class="lbl" for="email">E-mailadres</label>' +
+        '<input class="inp" id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="jij@email.nl" value="'+escapeHtml(state.email)+'"></div>' +
+        '<div class="field"><label class="lbl" for="password">Wachtwoord</label>' +
+        '<input class="inp" id="password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="Minimaal 8 tekens"></div>' +
+        '<p class="help">Kies een wachtwoord voor later. Het wordt in deze test nergens bewaard, ook niet in je browser.</p>' +
+        '<label class="check"><input type="checkbox" id="age-ok" name="age-ok"><span>Ik bevestig dat ik 21 jaar of ouder ben.</span></label>' +
+        '<label class="check"><input type="checkbox" id="terms-ok" name="terms-ok"><span>Ik ga akkoord met de <a href="#">voorwaarden</a> en het <a href="#">privacybeleid</a> (volledige teksten volgen bij livegang).</span></label>' +
+        '<p class="err" id="form-error">Vul een geldig e-mailadres en een wachtwoord van minstens 8 tekens in, en vink beide vakjes aan.</p>' +
+        '<div class="actions"><button class="btn btn-pd" type="submit">Aanmelden</button></div>' +
+        '</form>';
+    }
+
+    function successHtml() {
+      var rows = [
+        ["Rol", roleName()],
+        ["Op zoek naar", labelOf(LOOKING, state.lookingFor)],
+        ["Belangrijk", labelsOf(VALUES, state.values)],
+        ["Plaats", state.location],
+        ["Geboortejaar", state.birthYear],
+        ["Weergavenaam", state.displayName],
+        ["E-mail", state.email]
+      ].map(function(r){
+        return '<li><span class="k">'+escapeHtml(r[0])+'</span><span class="v">'+escapeHtml(r[1]||"—")+'</span></li>';
+      }).join("");
+      return '<div>' +
+        '<div class="success-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.5 10 17.5 19 7"/></svg></div>' +
+        '<h1 id="signup-title">Je staat op de lijst</h1>' +
+        '<p class="lead">Als SugarDates live gaat, hoor je van ons op het opgegeven e-mailadres. Hieronder staat wat je hebt ingevuld.</p>' +
+        '<ul class="summary">'+rows+'</ul>' +
+        '<div class="actions"><button type="button" class="btn btn-pd" id="back-home">Terug naar de pagina</button></div>' +
+        '<ul class="next-list">' +
+          '<li><span class="n">1</span><span>Verificatie van je profiel komt bij livegang.</span></li>' +
+          '<li><span class="n">2</span><span>Profielfoto’s kun je dan toevoegen.</span></li>' +
+          '<li><span class="n">3</span><span>Chatten met anderen kan zodra de site open gaat.</span></li>' +
+        '</ul>' +
+        '</div>';
+    }
+
+    function showError(on) {
+      var el = document.getElementById("form-error");
+      if (el) el.classList.toggle("show", !!on);
+    }
+
+    function bindStep() {
+      var form = document.getElementById("step-form");
+      if (!form) {
+        var home = document.getElementById("back-home");
+        if (home) home.addEventListener("click", closeSignup);
+        return;
+      }
+      form.querySelectorAll("[data-looking]").forEach(function(btn){
+        btn.addEventListener("click", function(){
+          state.lookingFor = btn.getAttribute("data-looking");
+          form.querySelectorAll("[data-looking]").forEach(function(b){ b.classList.toggle("is-on", b===btn); });
+          showError(false);
+        });
+      });
+      form.querySelectorAll("[data-value]").forEach(function(btn){
+        btn.addEventListener("click", function(){
+          var id = btn.getAttribute("data-value");
+          var i = state.values.indexOf(id);
+          if (i>=0) state.values.splice(i,1); else state.values.push(id);
+          btn.classList.toggle("is-on", state.values.indexOf(id)>=0);
+          btn.setAttribute("aria-pressed", state.values.indexOf(id)>=0 ? "true" : "false");
+          showError(false);
+        });
+      });
+      form.addEventListener("submit", function(ev){
+        ev.preventDefault();
+        if (!validate()) { showError(true); return; }
+        showError(false);
+        persist();
+        if (stepIndex >= STEPS.length - 1) {
+          state.completed = true;
+          onSuccess = true;
+          persist();
+          render();
+          var heading = document.getElementById("signup-title");
+          if (heading) heading.focus();
+          return;
+        }
+        stepIndex += 1;
+        render();
+      });
+    }
+
+    function validate() {
+      var step = STEPS[stepIndex];
+      if (step === "looking") return !!state.lookingFor;
+      if (step === "values") return state.values.length > 0;
+      if (step === "location") {
+        var loc = document.getElementById("location");
+        state.location = (loc && loc.value || "").trim();
+        return state.location.length >= 2;
+      }
+      if (step === "age") {
+        var year = document.getElementById("birthYear");
+        state.birthYear = year ? year.value : "";
+        var n = parseInt(state.birthYear, 10);
+        return n >= YEAR_MIN && n <= YEAR_MAX;
+      }
+      if (step === "name") {
+        var name = document.getElementById("displayName");
+        state.displayName = (name && name.value || "").trim();
+        return state.displayName.length >= 2 && state.displayName.length <= 32;
+      }
+      if (step === "account") {
+        var email = document.getElementById("email");
+        var password = document.getElementById("password");
+        var ageOk = document.getElementById("age-ok");
+        var termsOk = document.getElementById("terms-ok");
+        state.email = (email && email.value || "").trim();
+        var pw = password ? String(password.value || "") : "";
+        var ok = validEmail(state.email) && pw.length >= 8 && ageOk && ageOk.checked && termsOk && termsOk.checked;
+        // On success, discard the password immediately. It is never persisted, logged, or sent.
+        if (ok && password) password.value = "";
+        pw = "";
+        return ok;
+      }
+      return false;
+    }
+
+    backBtn.addEventListener("click", goBack);
+    document.getElementById("nav-cta").addEventListener("click", function(){
+      if (document.body.classList.contains("is-signup")) return;
+      document.getElementById("aanmelden").scrollIntoView({behavior:"smooth", block:"center"});
+    });
+    document.getElementById("brand-link").addEventListener("click", function(ev){
+      ev.preventDefault();
+      closeSignup();
+    });
+    document.getElementById("foot-brand").addEventListener("click", function(ev){
+      ev.preventDefault();
+      closeSignup();
+    });
+    document.querySelectorAll("[data-role]").forEach(function(btn){
+      btn.addEventListener("click", function(){ openSignup(btn.getAttribute("data-role")); });
+    });
+    document.querySelectorAll("#subnav a").forEach(function(a){
+      a.addEventListener("click", function(){
+        if (document.body.classList.contains("is-signup")) closeSignup();
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
