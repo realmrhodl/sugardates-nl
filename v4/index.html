@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Aanmelden – SugarDates</title>
   <meta name="description" content="Meld je aan voor SugarDates, sugardating in Nederland. Binnenkort live. Alleen 21+.">
-  <meta name="theme-color" content="#2a1848">
+  <meta name="theme-color" content="#0d0a11">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://realmrhodl.github.io/sugardates-nl/v4/">
   <meta property="og:type" content="website">
@@ -22,187 +22,197 @@
   <meta name="twitter:title" content="Aanmelden – SugarDates">
   <meta name="twitter:description" content="Meld je aan voor SugarDates, sugardating in Nederland. Binnenkort live. Alleen 21+.">
   <meta name="twitter:image" content="https://realmrhodl.github.io/sugardates-nl/assets/og.png">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="monogram.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- v4-immersive-20261110 -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- v4-noir-20261110 -->
   <style>
     :root{
-      --pd:#7351c0; --pd-dark:#5b3ba3; --pd-deeper:#2a1848; --pd-ink:#1a1228;
-      --gold:#d9b76b; --ivory:#fbf8f3; --muted:#5c5270; --line:rgba(115,81,192,.18);
-      --sans:"Poppins",system-ui,sans-serif; --serif:"Cormorant Garamond",Georgia,serif;
-      --r:22px; --shadow:0 24px 60px -20px rgba(42,24,72,.35),0 8px 24px -12px rgba(42,24,72,.2);
+      color-scheme:dark;
+      --bg:#0d0a11; --bg2:#141019; --ink:#f2ece3; --ink2:rgba(242,236,227,.74); --muted:rgba(242,236,227,.6);
+      --faint:rgba(242,236,227,.42); --line:rgba(242,236,227,.13); --line2:rgba(242,236,227,.22);
+      --gold:#c8a86b; --gold2:#e4cf9f; --gold-ink:#1b1410; --pd:#7351c0;
+      --sans:"Inter",system-ui,-apple-system,sans-serif; --serif:"Cormorant Garamond","Cormorant",Georgia,serif;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;min-height:100%;background:#140b24;color:var(--pd-ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    html,body{margin:0;padding:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
     html,body{overflow-x:hidden}
-    a{color:var(--pd);text-decoration-thickness:1px;text-underline-offset:2px}
-    a:hover{color:var(--pd-dark)}
-    :focus-visible{outline:2px solid var(--pd);outline-offset:3px}
-    .skip{position:absolute;left:.75rem;top:-4rem;z-index:80;background:var(--pd);color:#fff;padding:.5rem .85rem;font-weight:600;text-decoration:none;border-radius:.4rem}
+    a{color:var(--gold2);text-decoration:underline;text-decoration-color:rgba(228,207,159,.4);text-decoration-thickness:1px;text-underline-offset:3px}
+    a:hover{color:#fff}
+    :focus-visible{outline:1px solid var(--gold2);outline-offset:4px}
+    .skip{position:absolute;left:.75rem;top:-4rem;z-index:80;background:var(--gold2);color:var(--gold-ink);padding:.5rem .85rem;font-weight:500;text-decoration:none}
     .skip:focus{top:.75rem}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .caps{font-size:10.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
 
-    .shell{min-height:100svh;display:flex;flex-direction:column}
-    .visual{position:relative;height:30vh;min-height:210px;max-height:280px;overflow:hidden;background:#1a1028;flex:none}
+    .shell{min-height:100svh;display:flex;flex-direction:column;background:var(--bg)}
+    .visual{position:relative;height:50svh;min-height:340px;max-height:470px;overflow:hidden;background:#120d16;flex:none}
+    .visual{transition:height .5s ease}
+    .shell.is-deep .visual{height:38svh;min-height:270px}
     .slides,.slide{position:absolute;inset:0}
-    .slide{opacity:0;transition:opacity 1s ease}
+    .slide{opacity:0;transition:opacity 1.2s ease}
     .slide.is-on{opacity:1;z-index:1}
-    .slide img{width:100%;height:100%;object-fit:cover;display:block}
-    .slide[data-img="dinner"] img{object-position:50% 28%}
-    .slide[data-img="rooftop"] img{object-position:35% 18%}
-    .slide[data-img="canal"] img{object-position:50% 42%}
+    .slide img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9) contrast(1.02)}
+    .slide[data-img="dinner"] img{object-position:55% 30%}
+    .slide[data-img="rooftop"] img{object-position:40% 22%}
+    .slide[data-img="canal"] img{object-position:50% 40%}
     .visual-overlay{position:absolute;inset:0;z-index:2;pointer-events:none;background:
-      linear-gradient(180deg, rgba(16,8,30,.7) 0%, rgba(16,8,30,.2) 42%, rgba(26,12,46,.15) 68%, rgba(20,10,32,.35) 100%),
-      linear-gradient(90deg, rgba(80,40,130,.22), transparent 60%)}
-    .visual-brand{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;padding:1rem 1.15rem;color:#fff;pointer-events:none;gap:.35rem}
-    .brand{display:inline-flex;align-items:center;gap:.55rem;color:#fff;text-decoration:none;pointer-events:auto;width:max-content}
-    .brand img{height:28px;width:28px;border-radius:7px}
-    .brand span{font-weight:700;font-size:1.05rem;letter-spacing:-.02em}
-    .tagline{margin:0;font-family:var(--serif);font-style:italic;font-size:.98rem;font-weight:500;color:rgba(255,255,255,.95);text-shadow:0 2px 14px rgba(0,0,0,.6)}
-    .tagline:before{display:none}
+      linear-gradient(180deg, rgba(13,10,17,.72) 0%, rgba(13,10,17,.08) 26%, rgba(13,10,17,0) 46%, rgba(13,10,17,.55) 74%, var(--bg) 100%)}
+    .visual-brand{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding:calc(env(safe-area-inset-top) + 1.15rem) 1.5rem 1.5rem;color:#fff;pointer-events:none}
+    .brand{display:inline-flex;align-items:center;gap:.7rem;color:var(--ink);text-decoration:none;pointer-events:auto;width:max-content}
+    .brand:hover{color:var(--ink)}
+    .mono{width:30px;height:30px;flex:none;display:block}
+    .wordmark{font-family:var(--sans);font-weight:400;font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--ink)}
+    .tagline{display:none;margin:0;font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ink)}
 
-    .funnel{flex:1;display:flex;flex-direction:column;position:relative;z-index:4;margin-top:-1.75rem;background:
-      radial-gradient(1200px 400px at 80% -10%, rgba(115,81,192,.2), transparent 55%),
-      linear-gradient(180deg,#f7f3fb 0%,#efe8f6 100%);
-      border-radius:28px 28px 0 0;min-height:0}
-    .funnel-glow{display:none}
-    .funnel-inner{flex:1;width:100%;max-width:34rem;margin:0 auto;padding:1rem 1.15rem 1.25rem;display:flex;flex-direction:column;min-width:0}
-    .funnel-card{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:1.25rem 1.15rem 1.35rem;border:1px solid rgba(255,255,255,.8);position:relative}
-    .funnel-card:before{content:"";position:absolute;left:1.4rem;right:1.4rem;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.7}
+    .funnel{flex:1;display:flex;flex-direction:column;position:relative;z-index:4;margin-top:-6.5rem;background:transparent;min-height:0}
+    .funnel-inner{flex:1;width:100%;max-width:31rem;margin:0 auto;padding:0 1.5rem;display:flex;flex-direction:column;min-width:0}
+    .funnel-card{position:relative}
 
-    .progress-wrap{display:flex;align-items:center;gap:.75rem;margin:0 0 .85rem}
-    .progress-track{flex:1;height:3px;background:#e4dcf2;border-radius:99px;overflow:hidden}
-    .progress-fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#8a66d4,var(--pd),var(--gold));transition:width .4s ease}
-    .dots{display:flex;gap:4px;flex:none}
-    .dot{width:6px;height:6px;border-radius:50%;background:#d7cce8;display:block}
-    .dot.is-done{background:var(--pd)}
-    .dot.is-now{background:var(--gold);transform:scale(1.25)}
-
-    .step-meta{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:.85rem;min-height:1.2rem}
-    .back-btn{background:none;border:0;padding:0;color:var(--pd);font-weight:600;font-size:13px;font-family:var(--sans);cursor:pointer;display:inline-flex;align-items:center;gap:.3rem}
-    .back-btn:hover{color:var(--pd-dark)}
+    .step-meta{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:1.4rem}
+    .back-btn{background:none;border:0;padding:.35rem 0;color:var(--ink2);font:500 10.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;cursor:pointer;display:inline-flex;align-items:center;gap:.45rem}
+    .back-btn:hover{color:var(--gold2)}
     .back-btn[hidden]{display:none}
-    .step-count{margin:0;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.02em}
+    .step-count{margin:0 0 0 auto;font:500 10.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ink2)}
+    .step-count b{font-weight:500;color:var(--gold2)}
+    .progress-track{height:1px;background:var(--line2);margin:.8rem 0 1.9rem;overflow:hidden}
+    .progress-fill{height:100%;width:0;background:linear-gradient(90deg,rgba(200,168,107,.55),var(--gold2));transition:width .6s cubic-bezier(.2,.7,.2,1)}
 
-    .title{font-family:var(--sans);font-weight:700;font-size:clamp(1.75rem,4.6vw,2.65rem);line-height:1.12;letter-spacing:-.035em;color:var(--pd-ink);margin:0}
-    .title em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--pd-dark);letter-spacing:0}
+    .title{font-family:var(--serif);font-weight:400;font-size:clamp(2.35rem,10vw,3.1rem);line-height:1.02;letter-spacing:-.012em;color:var(--ink);margin:0}
+    .title em{font-style:italic;font-weight:400;color:var(--gold2)}
     #panel h1:focus{outline:none}
-    .lead{color:var(--muted);font-weight:400;font-size:15px;line-height:1.55;margin:.55rem 0 0}
-    .micro{color:var(--muted);font-weight:400;font-size:12.5px;line-height:1.55;margin:.8rem 0 0}
-    .personal{color:var(--pd-dark);font-weight:500;font-size:13px;line-height:1.5;margin:0 0 .4rem}
-    .err{color:#9b1c2c;font-size:13px;font-weight:500;margin:.75rem 0 0}
+    .lead{color:var(--ink2);font-weight:300;font-size:15px;line-height:1.65;margin:.9rem 0 0;max-width:30rem}
+    .micro{color:var(--muted);font-weight:300;font-size:12.5px;line-height:1.6;margin:1rem 0 0}
+    .personal{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--muted);font-size:1.12rem;line-height:1.4;margin:0 0 .7rem}
+    .err{color:#f0a8a8;font-size:13px;font-weight:400;margin:.9rem 0 0}
     .err[hidden]{display:none}
 
-    .role-grid{display:grid;gap:.75rem;margin-top:1.15rem}
-    .role-card{position:relative;display:block;width:100%;padding:0;border:2px solid transparent;border-radius:18px;overflow:hidden;cursor:pointer;background:#1a1028;font-family:var(--sans);text-align:left;color:#fff;min-height:148px;box-shadow:0 10px 24px -12px rgba(26,16,40,.45);transition:transform .2s,box-shadow .2s,border-color .2s}
-    .role-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .role-card[data-role="daddy"] img{object-position:50% 30%}
-    .role-card[data-role="baby"] img{object-position:30% 15%}
-    .role-card .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,8,28,.1) 20%,rgba(16,8,28,.82) 100%)}
-    .role-copy{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;min-height:148px;padding:1rem 1rem 1.05rem}
-    .role-kicker{display:block;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.28rem}
-    .role-title{display:block;font-size:1.05rem;font-weight:700;line-height:1.25}
-    .role-text{display:block;margin-top:.28rem;font-size:12.5px;font-weight:400;color:rgba(255,255,255,.86);line-height:1.45}
-    .role-check{position:absolute;top:.7rem;right:.7rem;z-index:2;width:26px;height:26px;border-radius:50%;background:var(--pd);color:#fff;display:none;align-items:center;justify-content:center;box-shadow:0 0 0 3px rgba(217,183,107,.35)}
-    .role-card:hover,.role-card:focus-visible{transform:translateY(-2px);border-color:rgba(217,183,107,.7);box-shadow:0 16px 32px -12px rgba(26,16,40,.5)}
-    .role-card.is-on{border-color:var(--pd);box-shadow:0 0 0 3px rgba(115,81,192,.28),0 16px 32px -12px rgba(26,16,40,.5)}
-    .role-card.is-on .role-check{display:flex}
+    .role-grid{display:grid;gap:.75rem;margin-top:1.6rem}
+    .role-card{position:relative;display:block;width:100%;padding:0;border:1px solid var(--line2);border-radius:2px;overflow:hidden;cursor:pointer;background:#120d16;font-family:var(--sans);text-align:left;color:var(--ink);min-height:178px;transition:border-color .3s}
+    .role-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease,filter .4s}
+    .role-card[data-role="daddy"] img{object-position:62% 32%}
+    .role-card[data-role="baby"] img{object-position:30% 18%}
+    .role-card .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,10,17,.92) 0%,rgba(13,10,17,.66) 48%,rgba(13,10,17,.12) 100%)}
+    .role-copy{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;min-height:178px;padding:1.2rem 1.25rem;max-width:78%}
+    .role-kicker{display:block;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:.45rem}
+    .role-title{display:block;font-family:var(--serif);font-size:1.55rem;font-weight:400;line-height:1.08}
+    .role-text{display:block;margin-top:.45rem;font-size:12.5px;font-weight:300;color:var(--ink2);line-height:1.5}
+    .role-check{position:absolute;top:.9rem;right:.9rem;z-index:2;width:24px;height:24px;border-radius:50%;border:1px solid rgba(242,236,227,.5);display:flex;align-items:center;justify-content:center;transition:.25s}
+    .role-check svg{opacity:0;transition:opacity .2s}
+    .role-card:hover{border-color:rgba(228,207,159,.55)}
+    .role-card:hover img{transform:scale(1.03)}
+    .role-card.is-on{border-color:var(--gold2)}
+    .role-card.is-on .role-check{background:var(--gold2);border-color:var(--gold2)}
+    .role-card.is-on .role-check svg{opacity:1}
 
-    .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.15rem}
-    .chip{appearance:none;display:inline-flex;align-items:center;gap:.45rem;background:#fff;color:var(--pd-ink);font-weight:600;font-size:13px;font-family:var(--sans);border-radius:999px;border:1.5px solid #e3d8f0;padding:.62rem 1rem;min-height:46px;cursor:pointer;transition:background .15s,color .15s,border-color .15s,box-shadow .15s,transform .15s}
-    .chip .ico{width:16px;height:16px;flex:none}
-    .chip:hover,.chip:focus-visible{border-color:var(--pd);color:var(--pd-dark)}
-    button.chip.is-on{border-color:var(--pd);background:var(--pd);color:#fff;box-shadow:0 6px 18px rgba(115,81,192,.38);transform:translateY(-1px)}
+    .opts{display:grid;gap:.55rem;margin-top:1.6rem}
+    .opt{appearance:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;width:100%;text-align:left;background:rgba(242,236,227,.025);color:var(--ink);font:300 15.5px/1.35 var(--sans);letter-spacing:.005em;border:1px solid var(--line2);border-radius:2px;padding:1rem 1.1rem;min-height:54px;cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+    .opt:hover{border-color:rgba(242,236,227,.4);background:rgba(242,236,227,.045)}
+    .opt .tick{flex:none;width:20px;height:20px;border-radius:50%;border:1px solid rgba(242,236,227,.38);display:flex;align-items:center;justify-content:center;transition:.2s}
+    .opt .tick svg{opacity:0;transition:opacity .15s}
+    .opt.is-on{border-color:var(--gold);background:linear-gradient(90deg,rgba(200,168,107,.1),rgba(200,168,107,.03));color:#fff}
+    .opt.is-on .tick{background:var(--gold2);border-color:var(--gold2)}
+    .opt.is-on .tick svg{opacity:1}
+    .opt:active{transform:scale(.995)}
 
-    .actions{margin-top:1.15rem;display:flex;flex-wrap:wrap;gap:.55rem}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;border-radius:999px;font-weight:700;padding:.9rem 1.35rem;min-height:52px;transition:.15s;border:0;cursor:pointer;font-family:var(--sans);text-decoration:none;line-height:1.2;font-size:15px}
-    .btn-pd{background:var(--pd);color:#fff;box-shadow:0 10px 22px -8px rgba(115,81,192,.7)}
-    .btn-pd:hover{background:var(--pd-dark);color:#fff}
-    .btn-ghost{background:transparent;color:var(--pd);border:1.5px solid #d5c7ea}
-    .btn-ghost:hover{background:#f4eefb}
+    .actions{margin-top:1.75rem;display:flex;flex-direction:column;gap:.6rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;border-radius:2px;font:500 12px/1.2 var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:1rem 1.4rem;min-height:56px;transition:background .25s,filter .25s,transform .1s,border-color .25s,color .25s;border:0;cursor:pointer;text-decoration:none}
+    .btn-pd{background:linear-gradient(180deg,#ead8ad 0%,#cdb07a 100%);color:var(--gold-ink);box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+    .btn-pd:hover{filter:brightness(1.06);color:var(--gold-ink)}
+    .btn-pd:active{transform:translateY(1px);filter:brightness(.96)}
+    .btn-pd .arr{transition:transform .25s}
+    .btn-pd:hover .arr{transform:translateX(3px)}
+    .btn-ghost{background:transparent;color:var(--ink2);border:1px solid var(--line2)}
+    .btn-ghost:hover{border-color:rgba(242,236,227,.45);color:var(--ink)}
     .btn-block{width:100%}
 
-    .field{position:relative;margin-top:1.15rem}
-    .inp, select.inp, textarea.inp{width:100%;border:1.5px solid #e3d8f0;border-radius:14px;background:#fff;font-size:16px;font-family:var(--sans);color:var(--pd-ink);outline:none;transition:border-color .15s,box-shadow .15s}
-    input.inp, select.inp{height:56px;padding:1.2rem 1rem .45rem}
-    textarea.inp{min-height:112px;padding:1.35rem 1rem .7rem;resize:vertical;line-height:1.5}
-    .field label{position:absolute;left:1rem;top:1.05rem;color:#8a7ea0;font-size:15px;font-weight:500;pointer-events:none;transition:all .15s}
+    .field{position:relative;margin-top:1.4rem}
+    .inp, select.inp, textarea.inp{width:100%;border:1px solid var(--line2);border-radius:2px;background:rgba(242,236,227,.03);font-size:16px;font-weight:300;font-family:var(--sans);color:var(--ink);outline:none;transition:border-color .2s,background .2s;-webkit-appearance:none;appearance:none}
+    input.inp, select.inp{height:60px;padding:1.45rem 1.1rem .5rem}
+    select.inp{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23e4cf9f' stroke-width='1.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1.1rem center;padding-right:2.6rem}
+    select.inp option, select.inp optgroup{background:#1a141f;color:var(--ink)}
+    textarea.inp{min-height:120px;padding:1.65rem 1.1rem .8rem;resize:vertical;line-height:1.55}
+    .field label{position:absolute;left:1.1rem;top:1.2rem;color:var(--muted);font-size:15px;font-weight:300;pointer-events:none;transition:all .18s}
     .field.is-select label,.field.is-area label,
     .field .inp:focus + label,
-    .field .inp:not(:placeholder-shown) + label{top:.42rem;font-size:11px;font-weight:600;color:var(--pd);letter-spacing:.04em;text-transform:uppercase}
-    .inp:focus{border-color:var(--pd);box-shadow:0 0 0 4px rgba(115,81,192,.16)}
+    .field .inp:not(:placeholder-shown) + label{top:.6rem;font-size:9.5px;font-weight:500;color:var(--gold2);letter-spacing:.22em;text-transform:uppercase}
+    .inp:focus{border-color:var(--gold);background:rgba(242,236,227,.05)}
+    input:-webkit-autofill{-webkit-text-fill-color:var(--ink);-webkit-box-shadow:0 0 0 60px #1a141f inset;caret-color:var(--ink)}
 
-    .chk-row{display:flex;align-items:flex-start;gap:.7rem;margin-top:1rem;font-size:14px;font-weight:500;line-height:1.45;cursor:pointer;color:var(--pd-ink)}
-    .chk{accent-color:var(--pd);width:1.2rem;height:1.2rem;flex-shrink:0;margin-top:.15rem}
+    .chk-row{display:flex;align-items:flex-start;gap:.8rem;margin-top:1.05rem;font-size:14px;font-weight:300;line-height:1.5;cursor:pointer;color:var(--ink2)}
+    .chk{appearance:none;-webkit-appearance:none;width:18px;height:18px;flex-shrink:0;margin:.12rem 0 0;border:1px solid rgba(242,236,227,.45);border-radius:2px;background:transparent;cursor:pointer;display:grid;place-content:center}
+    .chk:checked{background:var(--gold2);border-color:var(--gold2)}
+    .chk:checked:after{content:"";width:9px;height:5px;border-left:1.5px solid var(--gold-ink);border-bottom:1.5px solid var(--gold-ink);transform:rotate(-45deg) translate(1px,-1px)}
 
-    .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:.3rem .75rem;margin-top:.95rem;color:var(--muted);font-size:11px;font-weight:500;letter-spacing:.01em}
-    .trust span{display:inline-flex;align-items:center;gap:.28rem}
-    .trust .ico{width:13px;height:13px}
+    .trust{display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1rem;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--line);color:var(--muted);font-size:9.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-align:center}
     .trust[hidden]{display:none}
 
-    .ok{width:52px;height:52px;margin:0 auto .4rem;display:block;border-radius:50%;background:radial-gradient(circle,rgba(115,81,192,.12),transparent 68%)}
-    .ok circle{fill:none;stroke:var(--pd);stroke-width:2;stroke-dasharray:150;stroke-dashoffset:150}
-    .ok path{fill:none;stroke:var(--pd);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:40;stroke-dashoffset:40}
-    .ok.is-in circle{animation:draw .6s ease forwards}
-    .ok.is-in path{animation:draw .45s ease .35s forwards}
+    .ok{width:56px;height:56px;margin:0 0 1.2rem;display:block}
+    .ok circle{fill:none;stroke:var(--gold2);stroke-width:1;stroke-dasharray:160;stroke-dashoffset:160}
+    .ok path{fill:none;stroke:var(--gold2);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:40;stroke-dashoffset:40}
+    .ok.is-in circle{animation:draw .8s ease forwards}
+    .ok.is-in path{animation:draw .5s ease .45s forwards}
     @keyframes draw{to{stroke-dashoffset:0}}
 
-    .summary-chips{display:flex;flex-wrap:wrap;gap:.28rem;margin:.6rem 0 0}
-    .tag{display:inline-flex;align-items:center;gap:.3rem;background:#f4eefb;color:var(--pd-deeper);border-radius:999px;padding:.28rem .62rem;font-size:11.5px;font-weight:600}
-    .tag b{font-weight:500;color:var(--muted);margin-right:.15rem}
-    .next-list{margin:.5rem 0 0;padding:0;list-style:none;display:grid;gap:.42rem}
-    .next-list li{display:flex;gap:.6rem;align-items:flex-start;font-size:13px;font-weight:400;color:var(--muted);line-height:1.5}
-    .n{flex:none;width:24px;height:24px;border-radius:50%;background:#7351c01a;color:var(--pd);font-size:11px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+    .summary{margin:1.6rem 0 0;border-top:1px solid var(--line)}
+    .summary div{display:flex;justify-content:space-between;gap:1.2rem;padding:.75rem 0;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.45}
+    .summary dt{flex:none;font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+    .summary dd{margin:0;text-align:right;color:var(--ink);font-weight:300;overflow-wrap:anywhere}
+    .h-next{font-family:var(--sans)!important;font-size:10.5px!important;font-weight:500!important;letter-spacing:.22em!important;text-transform:uppercase;color:var(--gold2)!important;margin:2rem 0 0!important;line-height:1.2!important}
+    .next-list{margin:1rem 0 0;padding:0;list-style:none;display:grid;gap:.85rem}
+    .next-list li{display:flex;gap:1rem;align-items:baseline;font-size:14px;font-weight:300;color:var(--ink2);line-height:1.55}
+    .n{flex:none;font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--gold2);width:1.4rem}
 
-    .foot{margin-top:.55rem;padding:.35rem 0 .2rem;color:#9a92a8;font-size:10px;line-height:1.45;font-weight:400}
+    .foot{margin-top:auto;padding:2.2rem 0 calc(env(safe-area-inset-bottom) + 2.75rem);color:var(--faint);font-size:11px;line-height:1.7;font-weight:300;text-align:center}
     .foot p{margin:0}
-    .foot p + p{margin-top:.2rem}
-    .foot a{color:#6d6280}
-
-    .grain{pointer-events:none;position:absolute;inset:0;z-index:5;opacity:.04;border-radius:inherit;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    .foot p + p{margin-top:.35rem}
+    .foot a{color:var(--muted);text-decoration-color:rgba(242,236,227,.25)}
+    .funnel-card{padding-bottom:.5rem}
 
     @media (min-width:640px){
+      .visual{height:52svh;max-height:540px}
+      .shell.is-deep .visual{height:42svh}
+      .funnel-inner{max-width:34rem}
       .role-grid{grid-template-columns:1fr 1fr;gap:.85rem}
-      .role-card,.role-copy{min-height:220px}
-      .funnel-card{padding:1.6rem 1.7rem 1.7rem}
-      .visual{height:38vh;max-height:360px;min-height:260px}
+      .role-card,.role-copy{min-height:250px}
+      .role-copy{max-width:none}
+      .role-card .shade{background:linear-gradient(180deg,rgba(13,10,17,.05) 25%,rgba(13,10,17,.9) 100%)}
     }
     @media (min-width:960px){
       .shell{flex-direction:row;height:100svh;overflow:hidden}
-      .visual{width:50%;height:auto;max-height:none;min-height:100svh;flex:none}
+      .visual,.shell.is-deep .visual{width:52%;height:auto;max-height:none;min-height:100svh;flex:none}
       .visual-overlay{background:
-        linear-gradient(180deg, rgba(16,8,30,.58) 0%, rgba(16,8,30,.1) 38%, rgba(26,12,46,.22) 64%, rgba(16,8,30,.78) 100%),
-        linear-gradient(90deg, rgba(80,40,130,.3), transparent 55%)}
-      .visual-brand{justify-content:space-between;padding:2rem 2.1rem 2.2rem}
-      .brand span{font-size:1.2rem}
-      .brand img{height:32px;width:32px}
-      .tagline{font-size:1.85rem;color:#fff;text-shadow:0 8px 24px rgba(0,0,0,.35)}
-      .tagline:before{content:"";display:block;width:2.2rem;height:1px;background:var(--gold);margin-bottom:.5rem}
-      .funnel{margin-top:0;border-radius:0;width:50%;height:100svh;overflow:auto;
-        background:
-          radial-gradient(700px 480px at 10% 0%, rgba(115,81,192,.22), transparent 60%),
-          radial-gradient(600px 400px at 110% 80%, rgba(217,183,107,.14), transparent 55%),
-          linear-gradient(165deg,#f8f4fb 0%,#eee7f6 100%)}
-      .funnel-inner{max-width:36rem;padding:1.15rem 2.15rem .7rem;justify-content:flex-start}
-      .funnel-card{padding:1.55rem 1.9rem 1.3rem;margin-top:auto;margin-bottom:auto;
-        box-shadow:0 28px 70px -22px rgba(42,24,72,.4),0 8px 24px -12px rgba(42,24,72,.18),0 0 90px -24px rgba(115,81,192,.45)}
-      .foot{margin-top:0;padding:.45rem 0 .15rem}
-      .title{font-size:clamp(1.85rem,2.5vw,2.65rem)}
-      .actions.is-split{display:grid;grid-template-columns:1fr 1fr;margin-top:.85rem}
-      .actions.is-split .btn{min-height:48px;font-size:13.5px;padding:.65rem .85rem;white-space:nowrap}
-      .h-next{margin-top:.75rem!important}
-      .step-meta{margin-bottom:.6rem}
+        linear-gradient(180deg, rgba(13,10,17,.6) 0%, rgba(13,10,17,0) 22%, rgba(13,10,17,0) 55%, rgba(13,10,17,.82) 100%),
+        linear-gradient(90deg, rgba(13,10,17,0) 70%, var(--bg) 100%)}
+      .visual-brand{padding:2.4rem 3rem 3rem}
+      .mono{width:34px;height:34px}
+      .wordmark{font-size:12.5px}
+      .tagline{display:block;font-size:2.6rem;line-height:1.05;max-width:22rem}
+      .tagline:before{content:"";display:block;width:2.5rem;height:1px;background:var(--gold2);margin-bottom:1.1rem}
+      .funnel{margin-top:0;width:48%;height:100svh;overflow:auto;background:
+        radial-gradient(760px 520px at 105% -5%, rgba(115,81,192,.13), transparent 62%),
+        var(--bg)}
+      .funnel-inner{max-width:35rem;padding:3.2rem 3.5rem 0}
+      .role-grid{grid-template-columns:1fr;gap:.75rem}
+      .role-card,.role-copy{min-height:168px}
+      .role-copy{max-width:72%}
+      .role-card .shade{background:linear-gradient(90deg,rgba(13,10,17,.92) 0%,rgba(13,10,17,.62) 52%,rgba(13,10,17,.08) 100%)}
+      .lead{font-size:15.5px}
+      .funnel-card{margin:auto 0}
+      .title{font-size:clamp(2.8rem,3.5vw,3.6rem)}
+      .foot{padding:2rem 0 1.6rem;text-align:left}
+      .trust{grid-template-columns:auto auto auto;justify-content:start;gap:.7rem 2rem;text-align:left}
+      .actions.is-split{display:grid;grid-template-columns:1fr 1fr}
+      .actions.is-split .btn{letter-spacing:.16em;font-size:11px;padding:.8rem}
     }
     @media (prefers-reduced-motion:reduce){
-      .slide,.progress-fill,.role-card,.chip,.btn,.panel-anim{transition:none!important}
+      .slide,.progress-fill,.role-card,.role-card img,.opt,.btn,.panel-anim{transition:none!important}
       .ok circle,.ok path{stroke-dashoffset:0;animation:none}
-      .role-card.is-on,.chip.is-on{transform:none}
     }
-    .panel-anim{transition:opacity .22s ease, transform .22s ease}
-    .panel-anim.is-leave{opacity:0;transform:translateY(8px)}
+    .panel-anim{transition:opacity .28s ease, transform .28s ease}
+    .panel-anim.is-leave{opacity:0;transform:translateY(6px)}
   </style>
 </head>
 <body>
@@ -232,8 +242,8 @@
       <div class="visual-overlay"></div>
       <div class="visual-brand">
         <a class="brand" href="#top" id="top" aria-label="SugarDates">
-          <img src="../assets/logo.png" alt="">
-          <span>SugarDates</span>
+          <svg class="mono" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19.25" fill="none" stroke="#e4cf9f" stroke-width=".9"/><text x="20" y="27.2" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-size="22" fill="#e4cf9f">S</text></svg>
+          <span class="wordmark">SugarDates</span>
         </a>
         <p class="tagline">Dating op jullie voorwaarden.</p>
       </div>
@@ -241,28 +251,24 @@
 
     <section class="funnel">
       <div class="funnel-inner">
-        <div class="progress-wrap">
-          <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
-          <div class="dots" id="dots" aria-hidden="true"></div>
-        </div>
         <div class="funnel-card">
-          <span class="grain"></span>
-          <div class="step-meta">
+                    <div class="step-meta">
             <button type="button" class="back-btn" id="back-btn" hidden>
-              <svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 19l-7-7 7-7"/></svg>
+              <svg width="14" height="10" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M19 6H1M6 1L1 6l5 5"/></svg>
               Terug
             </button>
             <p class="step-count" id="step-count"></p>
           </div>
+          <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
           <p class="sr-only" id="step-live" aria-live="polite"></p>
           <main id="inhoud">
             <div id="panel" class="panel-anim"></div>
           </main>
           <div class="trust" id="trust">
-            <span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Discreet</span>
-            <span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 19c1.2-3.2 3.7-5 7-5s5.8 1.8 7 5"/></svg>Pseudoniem welkom</span>
-            <span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>21+</span>
-            <span><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l7 4v6c0 4.2-2.9 7.2-7 8-4.1-.8-7-3.8-7-8V7l7-4z"/></svg>Jij bepaalt wat je deelt</span>
+            <span>Discreet</span>
+            <span>Pseudoniem welkom</span>
+            <span>21+</span>
+            <span>Jij bepaalt wat je deelt</span>
           </div>
         </div>
         <footer class="foot">
@@ -284,7 +290,7 @@
     var YEAR_MAX = 2005;
     var YEAR_MIN = 1946;
     var STEPS = ["role","looking","intent","values","arrangement","location","age","name","bio","account"];
-    var VISUAL = {role:"dinner",looking:"rooftop",intent:"canal",values:"dinner",arrangement:"canal",location:"canal",age:"rooftop",name:"dinner",bio:"rooftop",account:"dinner",success:"canal"};
+    var VISUAL = {role:"canal",looking:"rooftop",intent:"canal",values:"dinner",arrangement:"canal",location:"canal",age:"rooftop",name:"dinner",bio:"rooftop",account:"dinner",success:"canal"};
 
     var ICO = {
       sugardaddy:'<path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4z"/><path d="M4 20c1.3-3.5 4-5 8-5s6.7 1.5 8 5"/>',
@@ -351,7 +357,6 @@
     var progressFill = document.getElementById("progress-fill");
     var live = document.getElementById("step-live");
     var trust = document.getElementById("trust");
-    var dots = document.getElementById("dots");
 
     function reduceMotion(){ return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; }
     function escapeHtml(str){ return String(str==null?"":str).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;"); }
@@ -366,14 +371,14 @@
     function personalLead(){
       var who = lookingLabel();
       if (who){
-        var extra = "";
-        if (state.intents.indexOf("langdurig")>=0) extra = " die past bij een langdurige regeling";
-        else if (state.intents.indexOf("chatten")>=0) extra = ", en dat je eerst wilt chatten";
-        else if (state.intents.indexOf("mentor")>=0) extra = ", met ruimte voor mentorschap";
-        return "Fijn dat je "+who+" zoekt"+extra+".";
+        if (state.intents.indexOf("langdurig")>=0) return "Je zoekt "+who+", voor iets van langere duur.";
+        if (state.intents.indexOf("chatten")>=0) return "Je zoekt "+who+", en begint graag met een gesprek.";
+        if (state.intents.indexOf("mentor")>=0) return "Je zoekt "+who+", met ruimte voor mentorschap.";
+        if (state.intents.indexOf("reizen")>=0) return "Je zoekt "+who+", om samen te reizen.";
+        return "Je zoekt "+who+".";
       }
-      if (state.role==="baby") return "Fijn dat je je als sugarbaby aanmeldt.";
-      if (state.role==="daddy") return "Fijn dat je je als sugardaddy of sugarmama aanmeldt.";
+      if (state.role==="baby") return "Je meldt je aan als sugarbaby.";
+      if (state.role==="daddy") return "Je meldt je aan als sugardaddy of sugarmama.";
       return "";
     }
     function remainingText(){
@@ -408,24 +413,15 @@
       var name = VISUAL[key] || "dinner";
       document.querySelectorAll(".slide").forEach(function(s){ s.classList.toggle("is-on", s.getAttribute("data-img")===name); });
     }
-    function updateDots(){
-      var total = STEPS.length, current = onSuccess ? total : stepIndex+1, html="";
-      for (var i=1;i<=total;i++){
-        var cls = "dot";
-        if (i<current) cls += " is-done";
-        else if (i===current) cls += " is-now";
-        html += '<span class="'+cls+'"></span>';
-      }
-      dots.innerHTML = html;
-    }
     function updateChrome(){
       var total = STEPS.length, current = onSuccess ? total : stepIndex+1;
       progressFill.style.width = Math.round((current/total)*100)+"%";
       backBtn.hidden = onSuccess || stepIndex===0;
-      stepCount.textContent = onSuccess ? "Aanmelding ontvangen" : ("Stap "+current+" van "+total+" · "+remainingText());
+      function pad(n){ return (n<10?"0":"")+n; }
+      stepCount.innerHTML = onSuccess ? "Aanmelding ontvangen" : ("<b>"+pad(current)+"</b> / "+pad(total)+' <span aria-hidden=\"true\">&nbsp;·&nbsp;</span> '+remainingText());
       trust.hidden = !!onSuccess;
+      document.querySelector(".shell").classList.toggle("is-deep", onSuccess || stepIndex>0);
       updateVisual();
-      updateDots();
     }
     function announce(title){
       live.textContent = onSuccess ? title : ("Stap "+(stepIndex+1)+" van "+STEPS.length+": "+title);
@@ -439,9 +435,9 @@
     function toggleIn(arr,id){ var i=arr.indexOf(id); if(i>=0) arr.splice(i,1); else arr.push(id); return arr; }
 
     function chipsHtml(list, selected){
-      return '<div class="chips" role="group">'+list.map(function(item){
+      return '<div class="opts" role="group">'+list.map(function(item){
         var on = selected.indexOf(item.id)>=0;
-        return '<button type="button" class="chip'+(on?" is-on":"")+'" data-chip="'+item.id+'" aria-pressed="'+(on?"true":"false")+'">'+ico(item.id)+escapeHtml(item.label)+"</button>";
+        return '<button type="button" class="opt'+(on?" is-on":"")+'" data-chip="'+item.id+'" aria-pressed="'+(on?"true":"false")+'"><span>'+escapeHtml(item.label)+'</span><span class="tick" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1b1410" stroke-width="3"><path d="M5 12.5l5 5 9-10"/></svg></span></button>';
       }).join("")+"</div>";
     }
     function optionsHtml(values, current, placeholder){
@@ -460,6 +456,11 @@
       var html = onSuccess ? renderSuccess() : renderStep(STEPS[stepIndex]);
       function paint(){
         panel.innerHTML = html;
+        var meta = document.querySelector(".step-meta");
+        if (!firstRender && meta && window.innerWidth<960){
+          var top = meta.getBoundingClientRect().top + window.scrollY - 24;
+          if (window.scrollY > top) window.scrollTo({top:top, behavior: reduceMotion()?"auto":"smooth"});
+        }
         panel.classList.remove("is-leave");
         bindStep();
         focusHeading();
@@ -469,6 +470,7 @@
         var h = panel.querySelector("h1");
         if (h) announce(h.textContent);
       }
+      var firstRender = firstPaint;
       if (reduceMotion() || firstPaint){ firstPaint=false; paint(); return; }
       panel.classList.add("is-leave");
       window.setTimeout(paint, 160);
@@ -485,13 +487,13 @@
             '<button type="button" class="role-card'+(state.role==="daddy"?" is-on":"")+'" data-role="daddy">'+
               pic("dinner")+
               '<span class="shade"></span>'+
-              '<span class="role-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M5 12.5l5 5 9-10"/></svg></span>'+
+              '<span class="role-check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1b1410" stroke-width="2.6"><path d="M5 12.5l5 5 9-10"/></svg></span>'+
               '<span class="role-copy"><span class="role-kicker">Genereus</span><span class="role-title">Ik ben sugardaddy of sugarmama</span><span class="role-text">Je zoekt gezelschap en wilt daar open over zijn, met duidelijke afspraken.</span></span>'+
             "</button>"+
             '<button type="button" class="role-card'+(state.role==="baby"?" is-on":"")+'" data-role="baby">'+
               pic("rooftop")+
               '<span class="shade"></span>'+
-              '<span class="role-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M5 12.5l5 5 9-10"/></svg></span>'+
+              '<span class="role-check" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1b1410" stroke-width="2.6"><path d="M5 12.5l5 5 9-10"/></svg></span>'+
               '<span class="role-copy"><span class="role-kicker">Op jouw voorwaarden</span><span class="role-title">Ik ben sugarbaby</span><span class="role-text">Je zoekt iemand die ruimhartig is en duidelijk communiceert. Jij bepaalt je grenzen.</span></span>'+
             "</button>"+
           "</div>"+
@@ -503,23 +505,23 @@
         return leadHtml+'<h1 class="title">Wie <em>zoek</em> je?</h1><p class="lead">Dan stemmen we de volgende vragen daarop af.</p>'+
           chipsHtml(LOOKING, state.lookingFor?[state.lookingFor]:[])+
           '<p class="micro">Je kunt dit later nog wijzigen.</p><p class="err" id="err" hidden></p>'+
-          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
+          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder <svg class="arr" width="16" height="10" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M1 6h18M14 1l5 5-5 5"/></svg></button></div>';
       }
       if (id==="intent"){
         return leadHtml+'<h1 class="title">Wat <em>zoek</em> je?</h1><p class="lead">Kies wat bij je past. Meerdere antwoorden mag.</p>'+
           chipsHtml(INTENTS, state.intents)+
-          '<p class="err" id="err" hidden></p><div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
+          '<p class="err" id="err" hidden></p><div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder <svg class="arr" width="16" height="10" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M1 6h18M14 1l5 5-5 5"/></svg></button></div>';
       }
       if (id==="values"){
         return leadHtml+'<h1 class="title">Wat is <em>belangrijk</em> voor jou?</h1><p class="lead">Dit helpt om verwachtingen helder te krijgen. Kies gerust meer dan één.</p>'+
           chipsHtml(VALUES, state.values)+
-          '<p class="err" id="err" hidden></p><div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
+          '<p class="err" id="err" hidden></p><div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder <svg class="arr" width="16" height="10" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M1 6h18M14 1l5 5-5 5"/></svg></button></div>';
       }
       if (id==="arrangement"){
         return leadHtml+'<h1 class="title">Wat voor <em>regeling</em> past bij jou?</h1><p class="lead">Hoe wil je het liefst beginnen? Jullie spreken samen af hoe het verder gaat.</p>'+
           chipsHtml(ARRANGEMENTS, state.arrangements)+
           '<p class="micro">Niets is verplicht. Een regeling is wat jullie zelf overeenkomen.</p><p class="err" id="err" hidden></p>'+
-          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
+          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder <svg class="arr" width="16" height="10" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M1 6h18M14 1l5 5-5 5"/></svg></button></div>';
       }
       if (id==="location"){
         return leadHtml+'<h1 class="title">Waar <em>woon</em> je?</h1><p class="lead">Een stad of provincie is genoeg. Geen adres.</p>'+
@@ -530,26 +532,26 @@
             '<optgroup label="Anders"><option value="Ergens anders in Nederland"'+(state.location==="Ergens anders in Nederland"?" selected":"")+">Ergens anders in Nederland</option></optgroup>"+
           '</select><label for="location">Stad of provincie</label></div>'+
           '<p class="micro">We gebruiken dit alleen om je aanmelding te plaatsen, niet om je te achterhalen.</p><p class="err" id="err" hidden></p>'+
-          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
+          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder <svg class="arr" width="16" height="10" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M1 6h18M14 1l5 5-5 5"/></svg></button></div>';
       }
       if (id==="age"){
         var years=[]; for (var y=YEAR_MAX;y>=YEAR_MIN;y--) years.push(String(y));
         return leadHtml+'<h1 class="title">Wat is je <em>geboortejaar</em>?</h1><p class="lead">SugarDates is alleen voor mensen van 21 jaar of ouder.</p>'+
           '<div class="field is-select"><select id="birthYear" class="inp" required>'+optionsHtml(years,state.birthYear,"Kies je geboortejaar")+'</select><label for="birthYear">Geboortejaar</label></div>'+
           '<p class="micro">Je bevestigt je leeftijd later nog een keer, bij het afronden.</p><p class="err" id="err" hidden></p>'+
-          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
+          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder <svg class="arr" width="16" height="10" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M1 6h18M14 1l5 5-5 5"/></svg></button></div>';
       }
       if (id==="name"){
         return leadHtml+'<h1 class="title">Hoe mogen we je <em>noemen</em>?</h1><p class="lead">Een pseudoniem is welkom. Je echte naam is niet nodig.</p>'+
           '<div class="field"><input id="displayName" class="inp" name="displayName" type="text" maxlength="32" autocomplete="nickname" required placeholder=" " value="'+escapeHtml(state.displayName)+'"><label for="displayName">Weergavenaam</label></div>'+
           '<p class="micro">Je bepaalt zelf wat je deelt. Dit is voor je profiel als de site live gaat, niet voor een paspoort.</p><p class="err" id="err" hidden></p>'+
-          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button></div>';
+          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder <svg class="arr" width="16" height="10" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M1 6h18M14 1l5 5-5 5"/></svg></button></div>';
       }
       if (id==="bio"){
         return leadHtml+'<h1 class="title">Waar ben je naar op <em>zoek</em>?</h1><p class="lead">Kort, in je eigen woorden. Dit mag je overslaan.</p>'+
           '<div class="field is-area"><textarea id="oneLiner" class="inp" name="oneLiner" rows="3" maxlength="140" placeholder=" ">'+escapeHtml(state.oneLiner)+'</textarea><label for="oneLiner">Korte omschrijving (niet verplicht)</label></div>'+
           '<p class="micro">Maximaal 140 tekens. Je kunt dit later nog aanpassen.</p><p class="err" id="err" hidden></p>'+
-          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder</button><button type="button" class="btn btn-ghost btn-block" data-skip>Overslaan</button></div>';
+          '<div class="actions"><button type="button" class="btn btn-pd btn-block" data-next>Verder <svg class="arr" width="16" height="10" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M1 6h18M14 1l5 5-5 5"/></svg></button><button type="button" class="btn btn-ghost btn-block" data-skip>Overslaan</button></div>';
       }
       if (id==="account"){
         return leadHtml+'<h1 class="title">Rond je <em>aanmelding</em> af</h1>'+
@@ -561,7 +563,7 @@
             '<label class="chk-row"><input id="age" name="age" type="checkbox" class="chk" required><span>Ik ben 21 jaar of ouder</span></label>'+
             '<label class="chk-row"><input id="terms" name="terms" type="checkbox" class="chk" required><span>Ik ga akkoord met de <a href="#">voorwaarden</a> en het <a href="#">privacybeleid</a></span></label>'+
             '<p class="err" id="err" hidden></p>'+
-            '<div class="actions"><button type="submit" class="btn btn-pd btn-block">Zet me op de lijst</button></div>'+
+            '<div class="actions"><button type="submit" class="btn btn-pd btn-block">Zet me op de lijst <svg class="arr" width="16" height="10" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M1 6h18M14 1l5 5-5 5"/></svg></button></div>'+
           "</form>";
       }
       return "";
@@ -571,7 +573,7 @@
       var name = state.displayName || "je";
       var chips = [];
       chips.push(["Rol", state.role==="baby"?"Sugarbaby":"Sugardaddy of sugarmama"]);
-      if (lookingLabel()) chips.push(["Op zoek naar", lookingLabel()]);
+      if (lookingLabel()) chips.push(["Op zoek naar", labelOf(LOOKING,state.lookingFor)]);
       labelsOf(INTENTS,state.intents).forEach(function(v){ chips.push(["Zoekt", v]); });
       labelsOf(VALUES,state.values).forEach(function(v){ chips.push(["Belangrijk", v]); });
       labelsOf(ARRANGEMENTS,state.arrangements).forEach(function(v){ chips.push(["Regeling", v]); });
@@ -580,20 +582,22 @@
       if (state.displayName) chips.push(["Naam", state.displayName]);
       if (state.oneLiner) chips.push(["In eigen woorden", state.oneLiner]);
       if (state.email) chips.push(["E-mail", state.email]);
-      var tags = chips.map(function(row){ return '<span class="tag"><b>'+escapeHtml(row[0])+'</b> '+escapeHtml(row[1])+"</span>"; }).join("");
+      var merged = [], idx = {};
+      chips.forEach(function(r){ if (idx[r[0]]===undefined){ idx[r[0]]=merged.length; merged.push([r[0],[r[1]]]); } else merged[idx[r[0]]][1].push(r[1]); });
+      var tags = merged.map(function(row){ return '<div><dt>'+escapeHtml(row[0])+'</dt><dd>'+escapeHtml(row[1].join(", "))+"</dd></div>"; }).join("");
       return (
         '<svg class="ok" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27.2l7.2 7.2 15-16"/></svg>'+
         '<h1 class="title">Je staat op de <em>lijst</em>, '+escapeHtml(name)+'.</h1>'+
         '<p class="lead">Bedankt. Als SugarDates live gaat, hoor je van ons op '+escapeHtml(state.email||"je e-mailadres")+".</p>"+
-        '<div class="summary-chips">'+tags+"</div>"+
-        '<h2 class="title h-next" style="font-size:1.15rem;margin-top:1.1rem">Wat er nu gebeurt</h2>'+
+        '<dl class="summary">'+tags+"</dl>"+
+        '<h2 class="h-next">Wat er nu gebeurt</h2>'+
         '<ul class="next-list">'+
-          '<li><span class="n">1</span><span>Je staat op de early-accesslijst. Er is nog geen live account.</span></li>'+
-          '<li><span class="n">2</span><span>Bij livegang vragen we je je e-mail te bevestigen.</span></li>'+
-          '<li><span class="n">3</span><span>Verificatie van profielen en online chatten komen er bij de livegang bij. Melden van profielen ook. Je bepaalt zelf wat je deelt.</span></li>'+
+          '<li><span class="n">I</span><span>Je staat op de early-accesslijst. Er is nog geen live account.</span></li>'+
+          '<li><span class="n">II</span><span>Bij livegang vragen we je je e-mail te bevestigen.</span></li>'+
+          '<li><span class="n">III</span><span>Verificatie van profielen en online chatten komen er bij de livegang bij. Melden van profielen ook. Je bepaalt zelf wat je deelt.</span></li>'+
         "</ul>"+
         '<div class="actions is-split">'+
-          '<button type="button" class="btn btn-pd btn-block" id="share-btn">Deel met een vriend of vriendin</button>'+
+          '<button type="button" class="btn btn-pd btn-block" id="share-btn">Deel de link</button>'+
           '<button type="button" class="btn btn-ghost btn-block" id="reset-btn">Nieuwe aanmelding</button>'+
         "</div>"+
         '<p class="micro" id="share-status" hidden></p>'
