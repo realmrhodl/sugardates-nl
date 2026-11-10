@@ -26,10 +26,25 @@ p{margin:0}
 .brand:hover{color:var(--ink)}
 .brand img{width:30px;height:30px}
 .top-right{display:flex;align-items:center;gap:.75rem}
-.lang{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;font-size:13px;font-weight:600}
-.lang a,.lang span{padding:.35rem .6rem;text-decoration:none;color:var(--muted)}
-.lang [aria-current]{background:var(--brand-l);color:var(--brand)}
-.lang a:hover{color:var(--ink)}
+/* language / region menu */
+.lm{position:relative}
+.lm-btn{display:inline-flex;align-items:center;gap:.35rem;height:38px;min-width:38px;justify-content:center;padding:0 .5rem;border:0;border-radius:8px;background:transparent;color:var(--ink2);font:600 14px/1 var(--sans);cursor:pointer}
+.lm-btn:hover,.lm-btn[aria-expanded=true]{background:var(--soft);color:var(--ink)}
+.lm-btn .chev{transition:transform .15s}
+.lm-btn[aria-expanded=true] .chev{transform:rotate(180deg)}
+.lm-code,.lm-btn .chev{display:none}
+.lm-list{position:absolute;right:0;top:calc(100% + 6px);z-index:50;min-width:236px;margin:0;padding:.35rem;list-style:none;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(31,29,36,.12)}
+.lm-list[hidden]{display:none}
+.lm-item{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem .75rem;border-radius:8px;text-decoration:none;color:var(--ink)}
+.lm-item:hover,.lm-item:focus-visible{background:var(--soft);color:var(--ink);outline:none}
+.lm-item > span{display:flex;flex-direction:column}
+.lm-name{font-size:15px;font-weight:600;line-height:1.3}
+.lm-dom{font-size:13px;color:var(--muted);line-height:1.3}
+.lm-tick{flex:none;color:var(--brand)}
+.foot-lang{margin-top:1rem;font-size:13px;color:var(--muted)}
+.foot-lang a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+.foot-lang [aria-current]{color:var(--ink2)}
+@media (min-width:640px){.lm-code,.lm-btn .chev{display:inline-block}.lm-btn{padding:0 .6rem}}
 .top-cta{display:none!important}
 
 /* buttons */
@@ -141,6 +156,7 @@ html[lang^=en] .steps li:before{content:"Step " counter(s)}
   .promise li{flex-direction:column;gap:.75rem}
   .trust-grid,.types{grid-template-columns:1fr 1fr}
   .foot-grid{grid-template-columns:2fr 1fr 1fr}
+  .foot-grid-2{grid-template-columns:2fr 1fr}
   .close-box{padding:3.5rem 2rem}
 }
 @media (min-width:960px){

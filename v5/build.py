@@ -19,8 +19,8 @@ CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox
 COPY = {
 "nl": {
   "lang":"nl", "locale":"nl_NL", "hreflang":"nl-NL", "path":"", "signup":"aanmelden/",
-  "title":"SugarDates – sugardating in Nederland (18+)",
-  "desc":"Sugardating in Nederland. Maak een profiel, zeg eerlijk wat je zoekt en spreek af op jullie voorwaarden. Alleen 18+. Meld je nu aan voor de wachtlijst.",
+  "title":"SugarDates – sugardating in Nederland",
+  "desc":"Sugardating in Nederland. Maak een profiel, zeg eerlijk wat je zoekt en spreek af op jullie voorwaarden. Meld je gratis aan.",
   "skip":"Naar de inhoud", "cta_top":"Aanmelden",
   "hero_h1":"Sugardating in Nederland",
   "hero_sub":"Voor sugardaddy's, sugarmama's en sugarbaby's die eerlijk willen zijn over wat ze zoeken. Maak een profiel, leer elkaar kennen en maak duidelijke afspraken.",
@@ -33,16 +33,13 @@ COPY = {
   "how_kicker":"Hoe het werkt", "how_h2":"In drie stappen begonnen",
   "how_lead":"Aanmelden duurt een paar minuten. De rest vul je aan wanneer het jou uitkomt.",
   "how":[("Meld je aan","Kies je rol, een gebruikersnaam en je regio. Daarna je e-mailadres en een wachtwoord."),
-         ("Maak je profiel af","Schrijf een korte tekst en geef aan wat je zoekt. Foto's voeg je toe zodra de site live is."),
-         ("Stuur berichten","Na de livegang bekijk je profielen in je regio en stuur je berichten.")],
+         ("Maak je profiel af","Schrijf een korte tekst en geef aan wat je zoekt."),
+         ("Stuur berichten","Bekijk profielen in je regio en stuur berichten.")],
   "trust_kicker":"Veiligheid en privacy", "trust_h2":"Waarom SugarDates",
   "trust_lead":"",
-  "trust":[("Bijnaam mag","Je hoeft je echte naam niet te gebruiken.",""),
-           ("Jij kiest wat je deelt","Je woonplaats is een stad of provincie, nooit een adres.",""),
-           ("Alleen voor leden","Profielen zijn niet zichtbaar voor bezoekers die niet zijn ingelogd.","bij livegang"),
-           ("Profielverificatie","Leden kunnen hun profiel laten verifiëren.","bij livegang"),
-           ("Melden en blokkeren","Je kunt elk profiel melden of blokkeren.","bij livegang"),
-           ("Alleen 18+","SugarDates is alleen voor volwassenen van 18 jaar en ouder.","")],
+  "trust":[("Bijnaam mag","Je hoeft je echte naam niet te gebruiken."),
+           ("Jij kiest wat je deelt","Je woonplaats is een stad of provincie, nooit een adres."),
+           ("E-mailadres blijft privé","Andere leden zien je e-mailadres niet.")],
   "web_kicker":"Op elk apparaat", "web_h2":"Geen app nodig",
   "web_lead":"SugarDates werkt in de browser op je telefoon, tablet en computer. Je hoeft niets te installeren.",
   "web_list":["iPhone, Android en desktop","Geen app-icoon op je telefoon","Inloggen met e-mail en wachtwoord"],
@@ -59,30 +56,28 @@ COPY = {
   "cr_kicker":"Kosten", "cr_h2":"Hoe betalen werkt",
   "cr_lead":"SugarDates werkt met credits. Je betaalt alleen voor wat je gebruikt, zonder abonnement.",
   "credits":[("Gratis aanmelden","Een account en profiel aanmaken is gratis."),
-             ("Credits voor contact","Voor sommige functies, zoals berichten sturen, gebruik je credits. Welke dat zijn, maken we bij de livegang bekend."),
-             ("Prijzen vooraf bekend","We publiceren de prijzen voor de livegang. Je ziet altijd eerst wat iets kost.")],
+             ("Credits voor contact","Voor sommige functies, zoals berichten sturen, gebruik je credits."),
+             ("Prijzen vooraf bekend","Je ziet altijd eerst wat iets kost.")],
   "faq_kicker":"Vragen", "faq_h2":"Veelgestelde vragen",
   "faq":[("Wat is sugardating?","Daten waarbij je vooraf eerlijk bespreekt wat je van elkaar verwacht, zoals gezelschap, begeleiding of steun. Wat jullie afspreken, bepalen jullie samen."),
-         ("Is SugarDates al live?","Nog niet. Je kunt je nu aanmelden voor de wachtlijst. Bij de livegang sturen we je een e-mail."),
-         ("Vanaf welke leeftijd mag ik me aanmelden?","Vanaf 18 jaar. We vragen je geboortejaar en je bevestigt dat je 18 of ouder bent."),
          ("Moet ik mijn echte naam gebruiken?","Nee. Je kiest zelf een gebruikersnaam. Je e-mailadres is niet zichtbaar voor andere leden."),
-         ("Wat kost het?","Aanmelden is gratis. Voor sommige functies gebruik je credits. De prijzen maken we voor de livegang bekend."),
+         ("Wat kost het?","Een account aanmaken is gratis. Voor sommige functies gebruik je credits."),
          ("Wat gebeurt er met mijn gegevens?","We maken je gegevens niet openbaar. Je kunt je aanmelding altijd laten verwijderen. Zie ons privacybeleid."),
          ("Is dit een escortsite?","Nee. SugarDates is een datingsite. Seks aanbieden of vragen tegen betaling is niet toegestaan.")],
   "close_h2":"Meld je aan voor SugarDates",
-  "close_lead":"Zet je naam op de wachtlijst. Het duurt een paar minuten.",
+  "close_lead":"Aanmelden duurt een paar minuten.",
   "hero_alt":"Sfeerbeeld: man en vrouw op een terras aan de gracht, geen echte leden",
   "f_about":"Sugardating voor Nederland en Europa. Een site van Forest Road B.V., het bedrijf achter Paydates.nl.",
   "f_site":"SugarDates", "f_links":[("Hoe het werkt","#hoe"),("Veelgestelde vragen","#faq"),("Privacy","#"),("Voorwaarden","#"),("Contact","#")],
   "f_region":"Land", "region_here":"SugarDates.nl · Nederland/EU", "region_other":"SugarDates.net · USA", "region_soon":"binnenkort",
-  "f_legal":"Alleen voor 18 jaar en ouder. Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam · KvK 97957232 · BTW NL868303550B01 · © 2026",
+  "f_legal":"Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam · KvK 97957232 · BTW NL868303550B01 · © 2026",
   "su_title":"Aanmelden – SugarDates",
   "su_alt":"Sfeerbeeld: man en vrouw op een terras, geen echte leden",
 },
 "en": {
   "lang":"en", "locale":"en_US", "hreflang":"en-US", "path":"en/", "signup":"signup/",
-  "title":"SugarDates – sugar dating (18+)",
-  "desc":"Sugar dating made simple. Create a profile, be upfront about what you want and meet on your own terms. 18+ only. Join the waitlist.",
+  "title":"SugarDates – sugar dating",
+  "desc":"Sugar dating made simple. Create a profile, be upfront about what you want and meet on your own terms. Sign up for free.",
   "skip":"Skip to content", "cta_top":"Join",
   "hero_h1":"Sugar dating, made simple",
   "hero_sub":"For sugar daddies, sugar mommies and sugar babies who want to be upfront about what they're looking for. Create a profile, get to know each other and agree on what works.",
@@ -95,16 +90,13 @@ COPY = {
   "how_kicker":"How it works", "how_h2":"Get started in three steps",
   "how_lead":"Signing up takes a few minutes. Fill in the rest whenever you like.",
   "how":[("Sign up","Choose your role, a username and your state. Then your email and a password."),
-         ("Finish your profile","Write a short intro and say what you're looking for. You can add photos once the site is live."),
-         ("Send messages","After launch, browse profiles near you and send messages.")],
+         ("Finish your profile","Write a short intro and say what you're looking for."),
+         ("Send messages","Browse profiles near you and send messages.")],
   "trust_kicker":"Safety and privacy", "trust_h2":"Why SugarDates",
   "trust_lead":"",
-  "trust":[("Nicknames welcome","You don't have to use your real name.",""),
-           ("You choose what to share","Your location is a city or state, never an address.",""),
-           ("Members only","Profiles aren't visible to visitors who aren't signed in.","at launch"),
-           ("Profile verification","Members can get their profile verified.","at launch"),
-           ("Report and block","You can report or block any profile.","at launch"),
-           ("18+ only","SugarDates is for adults 18 and over.","")],
+  "trust":[("Nicknames welcome","You don't have to use your real name."),
+           ("You choose what to share","Your location is a city or state, never an address."),
+           ("Your email stays private","Other members can't see your email address.")],
   "web_kicker":"On any device", "web_h2":"No app needed",
   "web_lead":"SugarDates works in the browser on your phone, tablet and computer. Nothing to install.",
   "web_list":["iPhone, Android and desktop","No app icon on your phone","Sign in with email and password"],
@@ -121,23 +113,21 @@ COPY = {
   "cr_kicker":"Pricing", "cr_h2":"How payment works",
   "cr_lead":"SugarDates uses credits. You only pay for what you use, with no subscription.",
   "credits":[("Free to join","Creating an account and profile is free."),
-             ("Credits for contact","Some features, like sending messages, use credits. We'll confirm which ones at launch."),
-             ("Prices shown up front","We'll publish prices before launch. You'll always see the cost first.")],
+             ("Credits for contact","Some features, like sending messages, use credits."),
+             ("Prices shown up front","You'll always see the cost first.")],
   "faq_kicker":"Questions", "faq_h2":"Frequently asked questions",
   "faq":[("What is sugar dating?","Dating where you're upfront about what you expect from each other, such as companionship, mentoring or support. What you agree on is up to the two of you."),
-         ("Is SugarDates live yet?","Not yet. You can join the waitlist now, and we'll email you at launch."),
-         ("How old do I have to be?","You must be 18 or older. We ask for your birth year and you confirm you're 18+."),
          ("Do I have to use my real name?","No. You choose a username. Your email isn't shown to other members."),
-         ("What does it cost?","Joining is free. Some features use credits. We'll publish prices before launch."),
+         ("What does it cost?","Creating an account is free. Some features use credits."),
          ("What happens to my data?","We don't make your data public. You can ask us to delete your signup at any time. See our privacy policy."),
          ("Is this an escort site?","No. SugarDates is a dating site. Offering or asking for sex for money isn't allowed.")],
   "close_h2":"Join SugarDates",
-  "close_lead":"Put your name on the waitlist. It takes a few minutes.",
+  "close_lead":"Signing up takes a few minutes.",
   "hero_alt":"Mood image: a man and woman at a canal-side café, not real members",
   "f_about":"SugarDates.net is the US site of SugarDates, on the same platform as SugarDates.nl. Operated by Forest Road B.V.",
   "f_site":"SugarDates", "f_links":[("How it works","#how"),("FAQ","#faq"),("Privacy","#"),("Terms","#"),("Contact","#")],
   "f_region":"Country", "region_here":"SugarDates.net · USA", "region_other":"SugarDates.nl · Netherlands/EU", "region_soon":"",
-  "f_legal":"For adults 18 and over only. Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam, the Netherlands · Chamber of Commerce 97957232 · VAT NL868303550B01 · © 2026",
+  "f_legal":"Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam, the Netherlands · Chamber of Commerce 97957232 · VAT NL868303550B01 · © 2026",
   "su_title":"Join – SugarDates",
   "su_alt":"Mood image: a man and woman at a café, not real members",
 },
@@ -171,14 +161,45 @@ def head(c, title, desc, canon, root, alt_nl, alt_en, robots="index,follow"):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{root}assets/site.css?v=6">
+  <link rel="stylesheet" href="{root}assets/site.css?v=7">
 </head>
 '''
 
-def langswitch(c, nl_href, en_href):
-    if c["lang"]=="nl":
-        return f'<nav class="lang" aria-label="Taal / Language"><span aria-current="true" lang="nl">NL</span><a href="{en_href}" hreflang="en-US" lang="en">EN</a></nav>'
-    return f'<nav class="lang" aria-label="Language / Taal"><a href="{nl_href}" hreflang="nl-NL" lang="nl">NL</a><span aria-current="true" lang="en">EN</span></nav>'
+GLOBE = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15.4 0 18M12 3c-2.6 2.6-2.6 15.4 0 18"/></svg>'
+CHEV = '<svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
+TICKSVG = '<svg class="lm-tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
+LOCALES = [("nl","nl-NL","Nederlands","SugarDates.nl"),("en","en-US","English (US)","SugarDates.net")]
+
+def langmenu(c, hrefs):
+    """hrefs: {'nl': url, 'en': url} relative to the current page."""
+    cur = c["lang"]
+    label = "Taal en land" if cur=="nl" else "Language and region"
+    items = ""
+    for code, hl, name, dom in LOCALES:
+        on = code==cur
+        attrs = ' aria-current="true"' if on else f' hreflang="{hl}" lang="{code}"'
+        items += f'<li><a class="lm-item{" is-on" if on else ""}" href="{hrefs[code]}"{attrs}><span><span class="lm-name">{name}</span><span class="lm-dom">{dom}</span></span>{TICKSVG if on else ""}</a></li>'
+    return (f'<div class="lm" data-lm><button type="button" class="lm-btn" aria-expanded="false" aria-controls="lm-list" aria-label="{label}: {dict((l[0],l[2]) for l in LOCALES)[cur]}">'
+            f'{GLOBE}<span class="lm-code">{cur.upper()}</span>{CHEV}</button>'
+            f'<ul class="lm-list" id="lm-list" hidden>{items}</ul></div>')
+
+def langline(c, hrefs):
+    out=[]
+    for code, hl, name, dom in LOCALES:
+        if code==c["lang"]: out.append(f'<span aria-current="true">{name}</span>')
+        else: out.append(f'<a href="{hrefs[code]}" hreflang="{hl}" lang="{code}">{name}</a>')
+    return '<p class="foot-lang">'+" / ".join(out)+'</p>'
+
+LM_JS = """<script>(function(){document.querySelectorAll('[data-lm]').forEach(function(m){var b=m.querySelector('.lm-btn'),l=m.querySelector('.lm-list');
+function set(o,f){b.setAttribute('aria-expanded',o);l.hidden=!o;if(o&&f){var a=l.querySelector('a');a&&a.focus();}}
+b.addEventListener('click',function(e){set(b.getAttribute('aria-expanded')!=='true',e.detail===0);});
+b.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();set(true,true);}});
+l.addEventListener('keydown',function(e){var a=[].slice.call(l.querySelectorAll('a')),i=a.indexOf(document.activeElement);
+if(e.key==='ArrowDown'){e.preventDefault();a[(i+1)%a.length].focus();}if(e.key==='ArrowUp'){e.preventDefault();a[(i-1+a.length)%a.length].focus();}
+if(e.key==='Escape'){set(false);b.focus();}});
+document.addEventListener('click',function(e){if(!m.contains(e.target))set(false);});
+m.addEventListener('focusout',function(e){if(e.relatedTarget&&!m.contains(e.relatedTarget))set(false);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!l.hidden){set(false);b.focus();}});});})();</script>"""
 
 def pic(root, name, alt, w=1152, h=864, lazy=True):
     ld = ' loading="lazy" decoding="async"' if lazy else ' fetchpriority="high"'
@@ -197,13 +218,14 @@ def landing(c):
     root = "" if nl else "../"
     su = c["signup"]
     canon = BASE + c["path"]
+    LH = {"nl":"./","en":"en/"} if nl else {"nl":"../","en":"./"}
     hdr = f'''<header class="top"><div class="wrap top-in">
     {brand(root, "./")}
-    <div class="top-right">{langswitch(c, "../", "en/")}<a class="btn btn-primary btn-sm top-cta" href="{su}">{c["cta_top"]}</a></div>
+    <div class="top-right">{langmenu(c, LH)}<a class="btn btn-primary btn-sm top-cta" href="{su}">{c["cta_top"]}</a></div>
   </div></header>'''
     promise = "".join(f'<li><span class="num">{i+1}</span><div><h3>{t}</h3><p>{p}</p></div></li>' for i,(t,p) in enumerate(c["promise"]))
     how = "".join(f'<li><h3>{t}</h3><p>{p}</p></li>' for t,p in c["how"])
-    trust = "".join(f'<div>{CHECK}<div><h3>{t}{f" <span class=tag>{tag}</span>" if tag else ""}</h3><p>{p}</p></div></div>' for t,p,tag in c["trust"])
+    trust = "".join(f'<div>{CHECK}<div><h3>{t}</h3><p>{p}</p></div></div>' for t,p in c["trust"])
     weblist = "".join(f"<li>{x}</li>" for x in c["web_list"])
     def typ(k, img, alt):
         lst = "".join(f"<li>{x}</li>" for x in c[f"type_{k}_list"])
@@ -214,8 +236,6 @@ def landing(c):
     credits = "".join(f'<div class="credit"><h3>{t}</h3><p>{p}</p></div>' for t,p in c["credits"])
     faq = "".join(f'<details><summary>{q}</summary><div class="ans">{a}</div></details>' for q,a in c["faq"])
     links = "".join(f'<li><a href="{h}">{t}</a></li>' for t,h in c["f_links"])
-    other_href = "en/" if nl else "../"
-    soon = f' <span class="soon">({c["region_soon"]})</span>' if c["region_soon"] else ""
     hid = "hoe" if nl else "how"
     body = f'''<body>
   <a class="skip" href="#inhoud">{c["skip"]}</a>
@@ -227,7 +247,6 @@ def landing(c):
       <h1>{c["hero_h1"]}</h1>
       <p class="sub">{c["hero_sub"]}</p>
       {roles(c, su)}
-      <p class="hero-note">{c["hero_note"]}</p>
     </div>
   </div></section>
 
@@ -272,13 +291,14 @@ def landing(c):
   </main>
 
   <footer class="foot"><div class="wrap">
-    <div class="foot-grid">
+    <div class="foot-grid foot-grid-2">
       <div>{brand(root, "./")}<p style="margin-top:.8rem;max-width:26rem">{c["f_about"]}</p></div>
       <div><h4>{c["f_site"]}</h4><ul>{links}</ul></div>
-      <div><h4>{c["f_region"]}</h4><ul class="region"><li><span class="here" aria-current="true">{c["region_here"]}</span></li><li><a href="{other_href}">{c["region_other"]}</a>{soon}</li></ul></div>
     </div>
-    <div class="foot-legal"><span class="age">18+</span><p>{c["f_legal"]}</p></div>
+    <div class="foot-legal"><p>{c["f_legal"]}</p></div>
+    {langline(c, LH)}
   </div></footer>
+  {LM_JS}
 </body>
 </html>
 '''
@@ -310,7 +330,7 @@ SU = {
   "r_baby":"Sugarbaby","r_daddy":"Sugardaddy / sugarmama",
   "ok_next":"Bij de livegang bevestig je je e-mailadres en maak je je profiel af.",
   "home":"Naar de homepage","reset":"Opnieuw beginnen",
-  "trust":["Gratis aanmelden","Bijnaam mag","Alleen 18+"],
+  "trust":["Alleen 18+","Gratis aanmelden","Nog niet live: je komt op de wachtlijst"],
   "cities":["Amsterdam","Rotterdam","Den Haag","Utrecht","Eindhoven","Groningen","Almere","Tilburg","Breda","Nijmegen","Arnhem","Haarlem","Amersfoort","Enschede","Den Bosch","Zwolle","Leiden","Maastricht","Delft","Alkmaar"],
   "regions":["Drenthe","Flevoland","Friesland","Gelderland","Groningen","Limburg","Noord-Brabant","Noord-Holland","Overijssel","Utrecht","Zeeland","Zuid-Holland"],
 },
@@ -339,7 +359,7 @@ SU = {
   "r_baby":"Sugar baby","r_daddy":"Sugar daddy / mommy",
   "ok_next":"At launch you'll confirm your email and finish your profile.",
   "home":"Back to the homepage","reset":"Start over",
-  "trust":["Free to join","Nicknames welcome","18+ only"],
+  "trust":["18+ only","Free to sign up","Not live yet: you'll join the waitlist"],
   "cities":["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","District of Columbia","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"],
   "regions":[],
 },
@@ -351,7 +371,8 @@ def signup(c):
     canon = BASE + c["path"] + c["signup"]
     s = dict(SU[c["lang"]]); s["lang"]=c["lang"]; s["storage"]="sugardates-v5-"+c["lang"]; s["root"]=root; s["minAge"]=MIN_AGE
     s["imgs"]={"baby":"woman","daddy":"man"}
-    lang = langswitch(c, "../../aanmelden/", "../en/signup/")
+    SH = {"nl":"./","en":"../en/signup/"} if nl else {"nl":"../../aanmelden/","en":"./"}
+    lang = langmenu(c, SH)
     body = f'''<body>
   <a class="skip" href="#inhoud">{c["skip"]}</a>
   <div class="su-page">
@@ -369,13 +390,14 @@ def signup(c):
           <main id="inhoud"><div id="panel" class="panel-anim"></div></main>
         </div>
         <div class="su-trust" id="trust">{"".join(f"<span>{t}</span>" for t in s["trust"])}</div>
-        <footer class="su-foot"><p>{c["f_legal"]}</p><p style="margin-top:.4rem">{c["region_here"]} · <a href="{('../en/' if nl else '../../')}">{c["region_other"]}</a></p></footer>
+        <footer class="su-foot"><p>{c["f_legal"]}</p>{langline(c, SH)}</footer>
       </section>
     </div>
   </div>
   <noscript><p style="padding:1rem;text-align:center">JavaScript is required.</p></noscript>
   <script>window.SD={json.dumps(s, ensure_ascii=False)};</script>
-  <script src="{root}assets/signup.js?v=6"></script>
+  <script src="{root}assets/signup.js?v=7"></script>
+  {LM_JS}
 </body>
 </html>
 '''
