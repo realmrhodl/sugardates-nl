@@ -14,7 +14,7 @@ import json, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://realmrhodl.github.io/sugardates-nl/v5/"
 MIN_AGE = 18
-CSSV = 11
+CSSV = 13
 CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.5l4 4 8-9"/></svg></span>'
 
 COPY = {
@@ -26,7 +26,7 @@ COPY = {
   "hero_h1":"Sugardating, zonder omwegen.",
   "hero_sub":"Voor wie weet wat hij zoekt. Wees open over je verwachtingen en ontmoet iemand die daarbij past.",
   "role_baby":"Ik ben sugarbaby", "role_daddy":"Ik ben sugardaddy / sugarmama",
-  "hero_alt":"Sfeerbeeld: man en vrouw wandelen langs een Amsterdamse gracht, geen echte leden",
+  "hero_alt":"Sfeerbeeld: oudere man en jongere vrouw lopen arm in arm door een winkelstraat in Amsterdam, geen echte leden",
   "intro":"SugarDates brengt sugardaddy's, sugarmama's en sugarbaby's samen die eerlijk willen zijn over wat ze zoeken. Discreet, duidelijk en in je eigen tempo.",
   "how_kicker":"Hoe het werkt", "how_h2":"Drie stappen.",
   "how":[("Maak een profiel","Kies je rol, een gebruikersnaam en je regio. Een bijnaam is prima."),
@@ -35,11 +35,11 @@ COPY = {
   "daddy_k":"Sugardaddy / sugarmama", "daddy_h":"Voor wie graag geeft en weet wat hij zoekt.",
   "daddy_p":"Je bent gevestigd, je hebt het druk en je waardeert goed gezelschap. Je bent open over wat je zoekt en wat je kunt bieden.",
   "daddy_list":["Gezelschap voor diners, reizen en evenementen","Iemand steunen of begeleiden","Duidelijke afspraken in plaats van verwachtingen"],
-  "daddy_cta":"Aanmelden als sugardaddy / sugarmama", "daddy_alt":"Sfeerbeeld: man in een hotellounge in Amsterdam, geen echte leden",
+  "daddy_cta":"Aanmelden als sugardaddy / sugarmama", "daddy_alt":"Sfeerbeeld: man in pak in een hotellobby, geen echte leden",
   "baby_k":"Sugarbaby", "baby_h":"Voor wie ambitieus is en eigen grenzen stelt.",
   "baby_p":"Je bent zelfstandig en weet wat je wilt. Je zoekt iemand met ervaring die ruimhartig is en jouw tempo respecteert.",
   "baby_list":["Een ervaren gesprekspartner of mentor","Nieuwe plekken en ervaringen","Steun die past bij jullie afspraken"],
-  "baby_cta":"Aanmelden als sugarbaby", "baby_alt":"Sfeerbeeld: vrouw met koffie op de stoep van een grachtenpand, geen echte leden",
+  "baby_cta":"Aanmelden als sugarbaby", "baby_alt":"Sfeerbeeld: vrouw met designertas en shoppingtas in een Amsterdamse winkelstraat, geen echte leden",
   "pr_kicker":"Privacy", "pr_h2":"Discreet als uitgangspunt.",
   "pr":[("Bijnaam mag","Je hoeft je echte naam niet te gebruiken."),
         ("Jij kiest wat je deelt","Je woonplaats is een stad of regio, nooit een adres."),
@@ -51,13 +51,13 @@ COPY = {
          ("Moet ik mijn echte naam gebruiken?","Nee. Je kiest zelf een gebruikersnaam. Je e-mailadres is niet zichtbaar voor andere leden."),
          ("Wat gebeurt er met mijn gegevens?","We maken je gegevens niet openbaar. Je kunt je account altijd laten verwijderen. Zie ons privacybeleid."),
          ("Is dit een escortsite?","Nee. SugarDates is een datingsite. Seks aanbieden of vragen tegen betaling is niet toegestaan.")],
-  "band_alt":"Sfeerbeeld: man en vrouw op een terras aan de gracht, geen echte leden",
+  "band_alt":"Sfeerbeeld: man en vrouw toosten met champagne op een terras aan de gracht, geen echte leden",
   "close_h2":"Begin met een profiel.", "close_lead":"Aanmelden duurt een paar minuten.",
   "f_about":"Sugardating voor Nederland en Europa. Een site van Forest Road B.V., het bedrijf achter Paydates.nl.",
   "f_links":[("Hoe het werkt","#hoe"),("Vragen","#faq"),("Privacy","#"),("Voorwaarden","#"),("Contact","#")],
   "f_legal":"Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam · KvK 97957232 · BTW NL868303550B01 · © 2026",
   "su_title":"Aanmelden – SugarDates",
-  "su_alt":"Sfeerbeeld: man en vrouw wandelen langs een gracht, geen echte leden",
+  "su_alt":"Sfeerbeeld: oudere man en jongere vrouw lopen arm in arm door een winkelstraat, geen echte leden",
 },
 "en": {
   "lang":"en", "locale":"en_US", "hreflang":"en-US", "path":"en/", "signup":"signup/",
@@ -67,7 +67,7 @@ COPY = {
   "hero_h1":"Sugar dating, without the guesswork.",
   "hero_sub":"For people who know what they want. Be upfront about your expectations and meet someone who fits.",
   "role_baby":"I'm a sugar baby", "role_daddy":"I'm a sugar daddy / mommy",
-  "hero_alt":"Mood image: a man and woman walking along an Amsterdam canal, not real members",
+  "hero_alt":"Mood image: older man and younger woman walking arm in arm on a shopping street, not real members",
   "intro":"SugarDates brings together sugar daddies, sugar mommies and sugar babies who want to be honest about what they're looking for. Discreet, clear and at your own pace.",
   "how_kicker":"How it works", "how_h2":"Three steps.",
   "how":[("Create a profile","Choose your role, a username and your area. A nickname is fine."),
@@ -76,11 +76,11 @@ COPY = {
   "daddy_k":"Sugar daddy / mommy", "daddy_h":"For people who like to give and know what they want.",
   "daddy_p":"You're established, busy and you value good company. You're open about what you're looking for and what you can offer.",
   "daddy_list":["Company for dinners, travel and events","Supporting or mentoring someone","Clear agreements instead of assumptions"],
-  "daddy_cta":"Join as a sugar daddy / mommy", "daddy_alt":"Mood image: man in a hotel lounge, not real members",
+  "daddy_cta":"Join as a sugar daddy / mommy", "daddy_alt":"Mood image: man in a suit in a hotel lobby, not real members",
   "baby_k":"Sugar baby", "baby_h":"For people who are ambitious and set their own boundaries.",
   "baby_p":"You're independent and know what you want. You're looking for someone experienced and generous who respects your pace.",
   "baby_list":["An experienced mentor to talk to","New places and experiences","Support that fits what you agree on"],
-  "baby_cta":"Join as a sugar baby", "baby_alt":"Mood image: woman with coffee on the steps of a canal house, not real members",
+  "baby_cta":"Join as a sugar baby", "baby_alt":"Mood image: woman with a designer bag and shopping bag on a city street, not real members",
   "pr_kicker":"Privacy", "pr_h2":"Discreet by design.",
   "pr":[("Nicknames welcome","You don't have to use your real name."),
         ("You choose what to share","Your location is a city or state, never an address."),
@@ -92,13 +92,13 @@ COPY = {
          ("Do I have to use my real name?","No. You choose a username. Your email isn't shown to other members."),
          ("What happens to my data?","We don't make your data public. You can ask us to delete your account at any time. See our privacy policy."),
          ("Is this an escort site?","No. SugarDates is a dating site. Offering or asking for sex for money isn't allowed.")],
-  "band_alt":"Mood image: a man and woman at a canal-side café, not real members",
+  "band_alt":"Mood image: man and woman toasting with champagne at a canal-side terrace, not real members",
   "close_h2":"Start with a profile.", "close_lead":"Signing up takes a few minutes.",
   "f_about":"SugarDates.net is the US site of SugarDates, on the same platform as SugarDates.nl. Operated by Forest Road B.V.",
   "f_links":[("How it works","#how"),("FAQ","#faq"),("Privacy","#"),("Terms","#"),("Contact","#")],
   "f_legal":"Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam, the Netherlands · Chamber of Commerce 97957232 · VAT NL868303550B01 · © 2026",
   "su_title":"Join – SugarDates",
-  "su_alt":"Mood image: a man and woman walking along a canal, not real members",
+  "su_alt":"Mood image: older man and younger woman walking arm in arm on a shopping street, not real members",
 },
 }
 
@@ -205,8 +205,8 @@ document.addEventListener('click',function(e){if(!m.contains(e.target))set(false
 m.addEventListener('focusout',function(e){if(e.relatedTarget&&!m.contains(e.relatedTarget))set(false);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!l.hidden){set(false);b.focus();}});});})();</script>"""
 
-SMALL = {"walk":480, "man2":480, "woman2":480, "mama":480, "terrace":768}
-FULLW = {"walk":864, "man2":864, "woman2":864, "mama":864, "terrace":1280}
+SMALL = {"walk":480, "man2":480, "woman2":480, "mama":480, "terrace":768, "car":768}
+FULLW = {"walk":864, "man2":864, "woman2":864, "mama":864, "terrace":1280, "car":1280}
 def srcset(root, name):
     s = f"{root}img/{name}.webp {FULLW.get(name,864)}w"
     if name in SMALL: s = f"{root}img/{name}-sm.webp {SMALL[name]}w, " + s
@@ -236,9 +236,11 @@ NAV = {
 HUB = {
  "nl": [("SugarDates",[("Hoe het werkt","hoe-het-werkt/"),("Kosten","kosten/"),("Veiligheid","veiligheid/"),("Veelgestelde vragen","faq/")]),
         ("Voor wie",[("Sugardaddy","sugardaddy/"),("Sugarbaby","sugarbaby/"),("Sugarmama","sugarmama/"),("Wat is sugardating?","wat-is-sugardating/")]),
+        ("Populair",[("Dating zonder relatie","dating-zonder-relatie/"),("Discreet daten","discreet-daten/"),("Daten als je getrouwd bent","daten-als-je-getrouwd-bent/"),("No strings attached","no-strings-attached/"),("Arrangement dating","arrangement-dating/"),("Sugardaddy gezocht","sugardaddy-gezocht/"),("Sugarbaby gezocht","sugarbaby-gezocht/")]),
         ("Steden",[("Amsterdam","sugardating/amsterdam/"),("Rotterdam","sugardating/rotterdam/"),("Den Haag","sugardating/den-haag/"),("Utrecht","sugardating/utrecht/"),("Eindhoven","sugardating/eindhoven/"),("België","sugardating/belgie/")])],
  "en": [("SugarDates",[("How it works","en/how-it-works/"),("Safety","en/safety/"),("FAQ","en/faq/")]),
         ("Guides",[("Sugar daddy","en/sugar-daddy/"),("Sugar baby","en/sugar-baby/"),("What is sugar dating?","en/what-is-sugar-dating/")]),
+        ("Popular",[("Discreet dating","en/discreet-dating/"),("No strings attached","en/no-strings-attached/"),("Dating while married","en/dating-while-married/"),("Older man, younger woman","en/older-man-younger-woman/"),("Arrangement dating","en/arrangement-dating/")]),
         ("Cities",[("New York","en/sugar-dating/new-york/"),("Los Angeles","en/sugar-dating/los-angeles/"),("Miami","en/sugar-dating/miami/"),("Chicago","en/sugar-dating/chicago/"),("Las Vegas","en/sugar-dating/las-vegas/")])],
 }
 LEGAL_LINKS = {"nl":[("Privacy","#"),("Voorwaarden","#"),("Contact","#")], "en":[("Privacy","#"),("Terms","#"),("Contact","#")]}
@@ -304,6 +306,52 @@ def faq_ld(qas):
 def faq_html(qas):
     return "".join(f'<details><summary>{q}<span class="pm" aria-hidden="true"></span></summary><div class="ans">{a}</div></details>' for q,a in qas)
 
+# ---------------------------------------------------------------- landing extras
+OFFER = {
+ "nl":{"k":"Vraag en aanbod","h":"Wat zoek je, wat bied je?",
+  "cols":[("Wat sugarbaby's zoeken",["Mentorschap en een netwerk","Aandacht en goede gesprekken","Luxe ervaringen: diners, hotels, uitjes","Samen reizen","Financiële ondersteuning, als jullie dat samen afspreken"],("Sugardaddy gezocht","sugardaddy-gezocht/")),
+          ("Wat sugardaddy's en sugarmama's zoeken",["Tijd en gezelschap","Discretie","Duidelijkheid vooraf","Iemand om mee uit te gaan en te reizen","Geen verwachtingen die niet zijn uitgesproken"],("Sugarbaby gezocht","sugarbaby-gezocht/"))],
+  "pop":"Populair"},
+ "en":{"k":"What people look for","h":"What you want, what you offer.",
+  "cols":[("What sugar babies look for",["Mentoring and a network","Attention and good conversation","Luxury experiences: dinners, hotels, outings","Travel together","Financial support, if you agree on it together"],("Become a sugar baby","en/sugar-baby/")),
+          ("What sugar daddies and mommies look for",["Time and company","Discretion","Clarity up front","Someone to go out and travel with","No unspoken expectations"],("Become a sugar daddy","en/sugar-daddy/"))],
+  "pop":"Popular"},
+}
+CITY = {
+ "nl":{"k":"Amsterdam","h":"Sugardating in Amsterdam.",
+  "p":"Van een lunch in de Negen Straatjes tot een diner in Oud-Zuid: Amsterdam is internationaal en tegelijk klein genoeg om discreet af te spreken. Lees welke buurten goed werken voor een eerste ontmoeting.",
+  "cta":("Sugardating in Amsterdam","sugardating/amsterdam/"),
+  "img":("car","Sfeerbeeld: man helpt een jonge vrouw uit een auto aan een Amsterdamse gracht, geen echte leden"),
+  "more":"Andere steden","cities":[("Rotterdam","sugardating/rotterdam/"),("Den Haag","sugardating/den-haag/"),("Utrecht","sugardating/utrecht/"),("Eindhoven","sugardating/eindhoven/"),("België","sugardating/belgie/")]},
+ "en":{"k":"New York · Miami","h":"Sugar dating in your city.",
+  "p":"From a West Village wine bar to a Brickell rooftop: local tips on neighborhoods that work well for a first date, plus how to meet safely.",
+  "cta":("Sugar dating in New York","en/sugar-dating/new-york/"),
+  "img":None,
+  "more":"More cities","cities":[("Miami","en/sugar-dating/miami/"),("Los Angeles","en/sugar-dating/los-angeles/"),("Chicago","en/sugar-dating/chicago/"),("Las Vegas","en/sugar-dating/las-vegas/")]},
+}
+def chips(root, items):
+    return '<ul class="chips">' + "".join(f'<li><a href="{href(root,s)}">{t}</a></li>' for t, s in items) + '</ul>'
+
+def offer(c, root):
+    from pages import POP_NL, POP_EN
+    o = OFFER[c["lang"]]; pop = POP_NL if c["lang"]=="nl" else POP_EN
+    cols = "".join(f'<div class="offer-col"><h3>{h}</h3><ul class="lines">' + "".join(f"<li>{x}</li>" for x in items) +
+                   f'</ul><a class="link-sub" href="{href(root, l[1])}">{l[0]} {ARR}</a></div>' for h, items, l in o["cols"])
+    return f'''<section class="offer"><div class="wrap">
+    <div class="head-row"><p class="kicker">{o["k"]}</p><h2>{o["h"]}</h2></div>
+    <div class="offer-grid">{cols}</div>
+    <div class="pop"><p class="kicker">{o["pop"]}</p>{chips(root, pop)}</div>
+  </div></section>'''
+
+def city(c, root):
+    o = CITY[c["lang"]]
+    copy = (f'<div class="feature-copy"><p class="kicker">{o["k"]}</p><h2>{o["h"]}</h2><p class="body">{o["p"]}</p>'
+            f'<div class="cta-row"><a class="link-cta" href="{href(root, o["cta"][1])}">{o["cta"][0]} {ARR}</a></div>'
+            f'<p class="kicker city-more">{o["more"]}</p>{chips(root, o["cities"])}</div>')
+    if o["img"]:
+        return f'<section class="feature city-sec"><div class="feature-img">{pic(root, o["img"][0], o["img"][1], 1280, 720, sizes="(min-width:1024px) 50vw, 100vw")}</div>{copy}</section>'
+    return f'<section class="feature city-sec no-img">{copy}</section>'
+
 # ---------------------------------------------------------------- landing
 def landing(c):
     nl = c["lang"]=="nl"; lang = c["lang"]; u = UI[lang]
@@ -347,6 +395,8 @@ def landing(c):
   {feature("baby","woman2", rev=True)}
   </div>
 
+  {offer(c, root)}
+
   <section class="privacy"><div class="wrap">
     <div class="head-row"><p class="kicker">{c["pr_kicker"]}</p><h2>{c["pr_h2"]}</h2></div>
     <ul class="pr-list">{pr}</ul>
@@ -356,6 +406,8 @@ def landing(c):
     <div><p class="kicker">{c["faq_kicker"]}</p><h2>{c["faq_h2"]}</h2><a class="link-sub" href="{href(root, faq_slug)}">{u["more_faq"]} {ARR}</a></div>
     <div class="faq">{faq_html(c["faq"])}</div>
   </div></section>
+
+  {city(c, root)}
 
   <section class="band">{pic(root,"terrace",c["band_alt"],1280,720,sizes="100vw")}</section>
 

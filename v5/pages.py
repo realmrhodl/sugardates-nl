@@ -424,3 +424,263 @@ us_city("las-vegas","Las Vegas",
  ["Summerlin: calm, upscale and away from the crowds","The Arts District: independent restaurants and coffee shops","Off-Strip hotel lounges: discreet and easy to find","Red Rock Canyon area: a daytime outing if you both like the outdoors"],
  "Distances are short by car, and rideshare is everywhere. Summer days are very hot; plan outdoor activities early in the morning."),
 ]
+
+# ====================================================================== intent pages
+POP_NL = [("Dating zonder relatie","dating-zonder-relatie/"),("Discreet daten","discreet-daten/"),("Daten als je getrouwd bent","daten-als-je-getrouwd-bent/"),
+          ("No strings attached","no-strings-attached/"),("Oudere man, jongere vrouw","oudere-man-jongere-vrouw/"),("Rijke man ontmoeten","rijke-man-ontmoeten/"),
+          ("Sugardaddy gezocht","sugardaddy-gezocht/"),("Sugarbaby gezocht","sugarbaby-gezocht/"),("Arrangement dating","arrangement-dating/"),("Sugardating voor studenten","sugardating-studenten/")]
+POP_EN = [("Discreet dating","en/discreet-dating/"),("No strings attached","en/no-strings-attached/"),("Dating while married","en/dating-while-married/"),
+          ("Older man, younger woman","en/older-man-younger-woman/"),("Arrangement dating","en/arrangement-dating/")]
+
+PRIV_NL = ("ul", ["Je kiest een gebruikersnaam; je echte naam is niet nodig",
+                  "Je bepaalt zelf welke foto's je laat zien",
+                  "Je woonplaats verschijnt als stad of regio, nooit als adres",
+                  "Andere leden zien je e-mailadres niet",
+                  "Geen app nodig: het werkt in de browser",
+                  "Je kunt je account altijd laten verwijderen"])
+PRIV_EN = ("ul", ["You choose a username; your real name isn't needed",
+                  "You decide which photos to show",
+                  "Your location shows as a city or state, never an address",
+                  "Other members can't see your email",
+                  "No app needed: it works in your browser",
+                  "You can delete your account at any time"])
+NOT_ESCORT_NL = "SugarDates is een datingsite. Seks aanbieden of vragen tegen betaling is niet toegestaan, en profielen die dat doen worden verwijderd."
+NOT_ESCORT_EN = "SugarDates is a dating site. Offering or asking for sex for money isn't allowed, and profiles that do are removed."
+
+def rel_nl(slug, extra=()):
+    return ("links", "Lees verder", [x for x in POP_NL if x[1] != slug][:5] + list(extra))
+def rel_en(slug, extra=()):
+    return ("links", "Keep reading", [x for x in POP_EN if x[1] != slug] + list(extra))
+
+def ip(slug, lang, title, desc, h1, lead, crumb, blocks, alt=None, img=None, role="baby"):
+    d = dict(slug=slug, lang=lang, title=title, desc=desc, h1=h1, lead=lead, crumbs=[(crumb, slug)], blocks=blocks, role=role)
+    if alt: d["alt"] = alt
+    if img: d["img"] = img
+    return d
+
+PAGES += [
+ip("dating-zonder-relatie/","nl","Dating zonder relatie: duidelijke afspraken | SugarDates",
+ "Daten zonder op zoek te zijn naar een relatie? Op SugarDates zeg je vooraf wat je wel en niet zoekt. Zo werkt daten met duidelijke afspraken.",
+ "Dating zonder relatie","Niet op zoek naar een vaste partner? Dan is het fijn als je dat gewoon vooraf kunt zeggen.","Dating zonder relatie",[
+ ("h2","Wat bedoelen we met daten zonder relatie?"),
+ ("p","Veel mensen willen wel gezelschap, aandacht en mooie avonden, maar geen relatie met alles wat daarbij hoort. Op een gewone datingsite is dat lastig: verwachtingen blijven onuitgesproken. Bij [[wat-is-sugardating/|sugardating]] bespreek je juist vooraf wat je zoekt."),
+ ("h2","Hoe pak je het aan?"),
+ ("ol",["Zeg in je profiel eerlijk dat je geen relatie zoekt","Geef aan wat je wel zoekt: gezelschap, uitjes, reizen of iemand om mee te praten","Bespreek in de chat hoe vaak je elkaar wilt zien","Evalueer na een paar afspraken of het nog klopt voor jullie allebei"]),
+ ("h2","Duidelijkheid werkt in twee richtingen"),
+ ("p","Geen relatie willen betekent niet dat alles mag. Respecteer de grenzen van de ander, kom afspraken na en zeg het eerlijk als je wilt stoppen. Lees ook [[arrangement-dating/|wat een arrangement is]] en [[no-strings-attached/|no strings attached]]."),
+ ("faq",[("Kan ik op SugarDates daten zonder relatie?","Ja. Bij het aanmelden geef je aan wat je zoekt, bijvoorbeeld af en toe afspreken of eerst online kennismaken. Je hoeft geen relatie te willen."),
+         ("Is dit hetzelfde als escort?","Nee. "+NOT_ESCORT_NL),
+         ("Wat als de ander toch meer wil?","Bespreek het. Verwachtingen kunnen veranderen; dan beslissen jullie samen of je doorgaat.")]),
+ rel_nl("dating-zonder-relatie/")]),
+
+ip("discreet-daten/","nl","Discreet daten | SugarDates",
+ "Discreet daten: zo werkt privacy op SugarDates. Een gebruikersnaam in plaats van je naam, zelf bepalen wat je deelt, je e-mail blijft privé en je hebt geen app nodig.",
+ "Discreet daten","Wat je deelt, bepaal je zelf. Zo werkt privacy op SugarDates.","Discreet daten",[
+ ("h2","Wat SugarDates doet"),
+ PRIV_NL,
+ ("h2","Wat je zelf kunt doen"),
+ ("ul",["Gebruik foto's die je niet ook op social media hebt staan","Noem geen werkgever, straat of herkenbare details","Houd het gesprek op SugarDates tot je iemand vertrouwt","Deel je telefoonnummer pas als je daar klaar voor bent"]),
+ ("h2","Betalen"),
+ ("p","Een account aanmaken is gratis. Voor sommige functies gebruik je credits, die je per pakket koopt, zonder abonnement. Hoe betalingen op je afschrift verschijnen, staat straks bij de tarieven op [[kosten/|Kosten]]."),
+ ("p","Meer tips over veilig afspreken lees je op [[veiligheid/|Veiligheid en privacy]]."),
+ ("faq",[("Is SugarDates discreet?","Je gebruikt een gebruikersnaam, kiest zelf welke foto's je laat zien en je woonplaats verschijnt alleen als stad of regio. Andere leden zien je e-mailadres niet."),
+         ("Moet ik een app installeren?","Nee. SugarDates werkt in de browser, dus er staat geen app-icoon op je telefoon."),
+         ("Kan ik mijn account verwijderen?","Ja, je kunt je account altijd laten verwijderen.")]),
+ rel_nl("discreet-daten/")], alt="en/discreet-dating/", role="daddy"),
+
+ip("daten-als-je-getrouwd-bent/","nl","Daten als je getrouwd bent: is het discreet? | SugarDates",
+ "Kun je op SugarDates daten als je getrouwd bent, en is het discreet? Een feitelijk antwoord over privacy: gebruikersnaam, eigen foto-keuze en een privé e-mailadres.",
+ "Daten als je getrouwd bent","Een vraag die we vaak krijgen: is het discreet? Een feitelijk antwoord.","Daten als je getrouwd bent",[
+ ("h2","Kan dat op SugarDates?"),
+ ("p","SugarDates is er voor volwassenen die weten wat ze zoeken. Wat je thuissituatie is en hoe je daarmee omgaat, is aan jou. Wij vragen wel om eerlijkheid naar de mensen die je hier ontmoet: zeg in je profiel of in de chat wat je situatie is, zodat de ander een eigen keuze kan maken."),
+ ("h2","Hoe discreet is het?"),
+ PRIV_NL,
+ ("p","Discretie werkt het best als je ook zelf voorzichtig bent met foto's en herkenbare details. Zie [[discreet-daten/|Discreet daten]] voor praktische tips."),
+ ("h2","Wat we niet beloven"),
+ ("p","Geen enkele site kan garanderen dat niemand je herkent. Iemand die je kent, kan je profiel tegenkomen. Houd daar rekening mee bij wat je deelt."),
+ ("faq",[("Kan ik daten als ik getrouwd ben?","SugarDates is een datingsite voor volwassenen. Wij vragen niet naar je burgerlijke staat, maar wel om eerlijkheid naar de mensen die je hier ontmoet."),
+         ("Is SugarDates discreet?","Je gebruikt een gebruikersnaam, bepaalt zelf welke foto's je laat zien, je woonplaats verschijnt alleen als stad of regio en je e-mailadres is niet zichtbaar voor andere leden."),
+         ("Ziet iemand dat ik lid ben?","Andere leden zien alleen wat je in je profiel zet. Kies daarom foto's en details die je niet herkenbaar maken.")]),
+ rel_nl("daten-als-je-getrouwd-bent/")], alt="en/dating-while-married/", role="daddy"),
+
+ip("no-strings-attached/","nl","No strings attached: daten zonder verplichtingen | SugarDates",
+ "No strings attached (NSA) betekent daten zonder verplichtingen. Zo bespreek je wat je zoekt en houd je het respectvol en duidelijk.",
+ "No strings attached","Daten zonder verplichtingen, met afspraken die voor jullie allebei kloppen.","No strings attached",[
+ ("h2","Wat betekent no strings attached?"),
+ ("p","No strings attached, of NSA, betekent dat je samen tijd doorbrengt zonder verplichtingen voor de toekomst. Geen verwachtingen over een relatie, wel duidelijke afspraken over wat jullie nu willen."),
+ ("h2","Zo houd je het helder"),
+ ("ul",["Zeg vooraf dat je geen verplichtingen zoekt","Spreek af hoe vaak en hoe jullie contact houden","Respecteer elkaars agenda en grenzen","Wees eerlijk als je gevoelens of wensen veranderen"]),
+ ("p","Lees ook [[dating-zonder-relatie/|Dating zonder relatie]] en [[arrangement-dating/|Arrangement dating]]. "+NOT_ESCORT_NL),
+ ("faq",[("Wat is NSA dating?","Daten zonder verplichtingen voor de toekomst, met duidelijke afspraken over wat jullie nu van elkaar willen."),
+         ("Kan ik op SugarDates aangeven dat ik geen relatie zoek?","Ja. Bij het aanmelden kies je wat je zoekt, zoals af en toe afspreken of eerst online kennismaken.")]),
+ rel_nl("no-strings-attached/")], alt="en/no-strings-attached/"),
+
+ip("oudere-man-jongere-vrouw/","nl","Oudere man, jongere vrouw: daten met leeftijdsverschil | SugarDates",
+ "Daten met een leeftijdsverschil: een oudere man en een jongere vrouw. Waarom het werkt, wat beide kanten zoeken en hoe je goede afspraken maakt.",
+ "Oudere man, jongere vrouw","Daten met een leeftijdsverschil werkt het best als je open bent over wat je zoekt.","Oudere man, jongere vrouw",[
+ ("h2","Waarom leeftijdsverschil goed kan werken"),
+ ("p","Een oudere man brengt vaak rust, ervaring en ruimte in zijn agenda en budget mee. Een jongere vrouw brengt energie, nieuwsgierigheid en een frisse blik. Als je beide eerlijk bent over wat je zoekt, vullen die verschillen elkaar aan."),
+ ("h2","Wat hij vaak zoekt"),
+ ("ul",["Gezelschap bij diners, evenementen en op reis","Iemand met wie hij zijn ervaring en netwerk kan delen","Duidelijkheid in plaats van spelletjes"]),
+ ("h2","Wat zij vaak zoekt"),
+ ("ul",["Een volwassen gesprekspartner of mentor","Nieuwe plekken en ervaringen","Iemand die haar grenzen en tempo respecteert"]),
+ ("p","Meer over de rollen lees je bij [[sugardaddy/|Sugardaddy]] en [[sugarbaby/|Sugarbaby]]. Het werkt ook andersom: zie [[sugarmama/|Sugarmama]]."),
+ ("faq",[("Is een groot leeftijdsverschil een probleem?","Niet als jullie allebei volwassen zijn, weten wat je zoekt en elkaars grenzen respecteren."),
+         ("Hoe vind ik een oudere man of jongere vrouw?","Maak een profiel, geef aan wie je zoekt en bekijk profielen in je regio.")]),
+ rel_nl("oudere-man-jongere-vrouw/")], alt="en/older-man-younger-woman/", img=("walk","Sfeerbeeld: oudere man en jongere vrouw arm in arm in een Amsterdamse winkelstraat, geen echte leden")),
+
+ip("rijke-man-ontmoeten/","nl","Rijke man ontmoeten: succesvolle mannen daten | SugarDates",
+ "Een rijke of succesvolle man ontmoeten? Zo werkt sugardating: eerlijk over wat je zoekt, een sterk profiel en veilig afspreken.",
+ "Een succesvolle man ontmoeten","Voor wie een gevestigde man zoekt die ruimhartig is met zijn tijd en aandacht.","Rijke man ontmoeten",[
+ ("h2","Waar ontmoet je een succesvolle man?"),
+ ("p","Succesvolle mannen hebben vaak weinig tijd en weinig zin in eindeloos swipen. Op SugarDates zeggen ze vooraf wat ze zoeken, en dat scheelt jullie allebei tijd. Je ziet profielen van mannen in je regio die zoeken wat jij biedt."),
+ ("h2","Zo maak je een sterk profiel"),
+ ("ul",["Schrijf wie je bent en wat je zoekt, in een paar zinnen","Wees duidelijk over je grenzen","Kies recente foto's die bij je passen","Reageer persoonlijk, niet met een standaardbericht"]),
+ ("h2","Let op"),
+ ("p","Iemand die meteen grote beloftes doet, of juist om geld of gegevens vraagt, is niet wie hij zegt. Lees [[veiligheid/|Veiligheid en privacy]] voor tips."),
+ ("faq",[("Hoe ontmoet ik een rijke man?","Maak een profiel als sugarbaby, geef aan wat je zoekt en leer iemand eerst in de chat kennen voordat je afspreekt."),
+         ("Wat kost het?","Een account aanmaken is gratis. Voor sommige functies gebruik je credits; zie de pagina Kosten.")]),
+ rel_nl("rijke-man-ontmoeten/",[("Sugarbaby worden","sugarbaby/")])], img=("man2","Sfeerbeeld: man in pak in een hotellobby, geen echte leden")),
+
+ip("sugardaddy-gezocht/","nl","Sugardaddy gezocht? Zo vind je er een | SugarDates",
+ "Op zoek naar een sugardaddy? Zo vind je een gevestigde man die past bij wat jij zoekt: aandacht, mentorschap, ervaringen en duidelijke afspraken.",
+ "Sugardaddy gezocht","Je weet wat je zoekt. Zo vind je een sugardaddy die daarbij past.","Sugardaddy gezocht",[
+ ("h2","Wat een sugardaddy kan bieden"),
+ ("ul",["Aandacht en goede gesprekken","Mentorschap en een netwerk","Luxe ervaringen: diners, hotels, uitjes","Samen reizen","Financiële ondersteuning, als jullie dat samen afspreken"]),
+ ("h2","Wat hij van jou verwacht"),
+ ("p","Gezelschap, eerlijkheid en duidelijkheid. Een sugardaddy waardeert iemand die weet wat ze wil en dat ook zegt. Lees meer bij [[sugarbaby/|Sugarbaby worden]]."),
+ ("h2","In vier stappen"),
+ ("ol",["Meld je aan als sugarbaby","Geef aan wie je zoekt en waarvoor","Bekijk profielen in je regio","Leer elkaar kennen in de chat en spreek pas af als het goed voelt"]),
+ ("faq",[("Hoe vind ik een sugardaddy?","Meld je aan als sugarbaby, kies bij 'Ik zoek' een sugardaddy of sugarmama en bekijk profielen in je regio."),
+         ("Moet ik iets betalen?","Een account aanmaken is gratis. Voor sommige functies gebruik je credits; zie Kosten.")]),
+ rel_nl("sugardaddy-gezocht/")], img=("woman2","Sfeerbeeld: vrouw met designertas en shoppingtas in een Amsterdamse winkelstraat, geen echte leden")),
+
+ip("sugarbaby-gezocht/","nl","Sugarbaby gezocht? Zo vind je er een | SugarDates",
+ "Op zoek naar een sugarbaby? Zo vind je iemand die past bij wat jij zoekt: gezelschap, energie en duidelijke afspraken, discreet en in je eigen tempo.",
+ "Sugarbaby gezocht","Voor gevestigde mannen en vrouwen die weten wat ze zoeken.","Sugarbaby gezocht",[
+ ("h2","Wat een sugarbaby zoekt"),
+ ("ul",["Aandacht en een goede gesprekspartner","Mentorschap en een netwerk","Nieuwe plekken en ervaringen","Iemand die haar of zijn tempo respecteert"]),
+ ("h2","Wat jij biedt"),
+ ("p","Tijd, ervaring en ruimhartigheid, op een manier die jullie samen afspreken. Wees concreet: dat werkt beter dan grote beloftes. Lees meer bij [[sugardaddy/|Sugardaddy worden]]."),
+ ("h2","Discreet"),
+ PRIV_NL,
+ ("faq",[("Hoe vind ik een sugarbaby?","Meld je aan als sugardaddy of sugarmama, geef aan wat je zoekt en bekijk profielen in je regio."),
+         ("Is het discreet?","Je gebruikt een gebruikersnaam, kiest zelf welke foto's je laat zien en andere leden zien je e-mailadres niet.")]),
+ rel_nl("sugarbaby-gezocht/")], role="daddy"),
+
+ip("arrangement-dating/","nl","Arrangement dating: wat is een arrangement? | SugarDates",
+ "Wat is een arrangement bij sugardating? Uitleg over afspraken, ondersteuning per maand of per date, en wat wel en niet kan. Helder en zonder omwegen.",
+ "Arrangement dating","Wat een arrangement is, en hoe je er samen een goede afspraak van maakt.","Arrangement dating",[
+ ("h2","Wat is een arrangement?"),
+ ("p","Een arrangement is de afspraak die twee mensen samen maken over hun relatie: hoe vaak je elkaar ziet, wat je samen doet en wat je voor elkaar betekent. Dat kan gaan over tijd en aandacht, over uitjes en reizen, en soms over ondersteuning."),
+ ("h2","Vormen van ondersteuning"),
+ ("p","Sommige mensen spreken af dat de ene partner de ander ondersteunt, bijvoorbeeld met een vaste bijdrage per maand, per afspraak, of in de vorm van cadeaus en ervaringen. Wat jullie afspreken, bepalen jullie samen. Belangrijk: ondersteuning hoort bij een relatie tussen twee mensen, niet bij een dienst. "+NOT_ESCORT_NL),
+ ("h2","Een goed arrangement"),
+ ("ul",["Is concreet: frequentie, activiteiten, verwachtingen","Wordt vooraf besproken, niet achteraf","Laat ruimte om bij te stellen","Kan door iedereen op elk moment worden beëindigd"]),
+ ("p","Meer achtergrond lees je in [[wat-is-sugardating/|Wat is sugardating]]."),
+ ("faq",[("Wat is een arrangement?","De afspraak die jullie samen maken over hoe vaak je elkaar ziet, wat je samen doet en wat je van elkaar verwacht."),
+         ("Is ondersteuning per maand of per date beter?","Dat hangt af van jullie wensen. Een vaste afspraak geeft rust; per date is flexibeler. Bespreek het open."),
+         ("Is een arrangement hetzelfde als escort?","Nee. "+NOT_ESCORT_NL)]),
+ rel_nl("arrangement-dating/")], alt="en/arrangement-dating/"),
+
+ip("sugardating-studenten/","nl","Sugardating voor studenten | SugarDates",
+ "Sugardating als student: wat het is, wat je kunt verwachten, hoe je je grenzen bewaakt en veilig afspreekt. Eerlijk uitgelegd.",
+ "Sugardating voor studenten","Een mentor, een netwerk en nieuwe ervaringen, op jouw voorwaarden.","Sugardating voor studenten",[
+ ("h2","Waarom studenten voor sugardating kiezen"),
+ ("p","Studeren is druk en vaak krap. Sommige studenten zoeken iemand met ervaring die meedenkt over studie en carrière, deuren opent of zorgt voor een mooi uitje. Sugardating is iets tussen volwassenen; jij bepaalt wat je wilt en wat niet."),
+ ("h2","Wat je eruit kunt halen"),
+ ("ul",["Een mentor die meedenkt over je studie of eerste baan","Een netwerk in een vakgebied dat je interesseert","Nieuwe plekken en ervaringen","Ondersteuning, als jullie dat samen afspreken"]),
+ ("h2","Bewaak je grenzen"),
+ ("ul",["Je bent nergens toe verplicht, ook niet na een eerste afspraak","Vraagt iemand vooraf om geld of gegevens? Stop het contact","Spreek altijd eerst af op een openbare plek","Houd je studie en je privéleven gescheiden van je profiel"]),
+ ("p","Lees ook [[sugarbaby/|Sugarbaby worden]] en [[veiligheid/|Veiligheid en privacy]]."),
+ ("faq",[("Kan ik als student sugarbaby worden?","Ja. Je meldt je aan als sugarbaby en geeft aan wat je zoekt, bijvoorbeeld begeleiding of eerst online kennismaken."),
+         ("Ziet mijn omgeving dat ik lid ben?","Je gebruikt een gebruikersnaam en bepaalt zelf welke foto's je laat zien. Kies niets wat je herkenbaar maakt.")]),
+ rel_nl("sugardating-studenten/")]),
+
+# ---------------- EN intent
+ip("en/discreet-dating/","en","Discreet Dating | SugarDates",
+ "Discreet dating on SugarDates: use a username, choose which photos to show, keep your email private and skip the app. Here's how privacy works.",
+ "Discreet dating","You decide what you share. Here's how privacy works on SugarDates.","Discreet dating",[
+ ("h2","What SugarDates does"), PRIV_EN,
+ ("h2","What you can do"),
+ ("ul",["Use photos you don't also post on social media","Don't mention your employer, street or identifying details","Keep the conversation on SugarDates until you trust someone","Share your number only when you're ready"]),
+ ("h2","Payments"),
+ ("p","Creating an account is free. Some features use credits, bought in packs with no subscription. See the [[en/faq/|FAQ]] for more."),
+ ("faq",[("Is SugarDates discreet?","You use a username, choose which photos to show and your location only shows as a city or state. Other members can't see your email."),
+         ("Do I need an app?","No. SugarDates works in your browser, so there's no app icon on your phone.")]),
+ rel_en("en/discreet-dating/",[("Safety","en/safety/")])], alt="discreet-daten/", role="daddy"),
+
+ip("en/no-strings-attached/","en","No Strings Attached Dating | SugarDates",
+ "No strings attached (NSA) dating means no obligations for the future. Here's how to be clear about what you want and keep it respectful.",
+ "No strings attached","Dating without obligations, with expectations that work for both of you.","No strings attached",[
+ ("h2","What does no strings attached mean?"),
+ ("p","No strings attached, or NSA, means spending time together without obligations for the future. No expectations of a relationship, but clear agreements about what you both want now."),
+ ("h2","Keeping it clear"),
+ ("ul",["Say up front that you're not looking for commitment","Agree on how often you'll meet and stay in touch","Respect each other's schedule and boundaries","Be honest if what you want changes"]),
+ ("p","See also [[en/arrangement-dating/|Arrangement dating]]. "+NOT_ESCORT_EN),
+ ("faq",[("What is NSA dating?","Dating without obligations for the future, with clear agreements about what you want from each other now."),
+         ("Can I say I'm not looking for a relationship?","Yes. When you sign up you choose what you're looking for, such as meeting now and then or chatting online first.")]),
+ rel_en("en/no-strings-attached/")], alt="no-strings-attached/"),
+
+ip("en/dating-while-married/","en","Dating While Married: Is It Discreet? | SugarDates",
+ "Can you use SugarDates if you're married, and is it discreet? A factual answer about privacy: usernames, your own photo choices and a private email.",
+ "Dating while married","A question we hear often: is it discreet? A factual answer.","Dating while married",[
+ ("h2","Can I use SugarDates?"),
+ ("p","SugarDates is for adults who know what they want. Your situation at home, and how you handle it, is up to you. We do ask for honesty toward the people you meet here: share your situation in your profile or in chat so they can make their own choice."),
+ ("h2","How discreet is it?"), PRIV_EN,
+ ("h2","What we don't promise"),
+ ("p","No site can guarantee nobody will recognize you. Someone you know could come across your profile, so keep that in mind when choosing what to share. See [[en/discreet-dating/|Discreet dating]] for tips."),
+ ("faq",[("Can I date if I'm married?","SugarDates is a dating site for adults. We don't ask about your marital status, but we do ask for honesty toward the people you meet here."),
+         ("Is SugarDates discreet?","You use a username, choose which photos to show, your location only shows as a city or state and other members can't see your email.")]),
+ rel_en("en/dating-while-married/")], alt="daten-als-je-getrouwd-bent/", role="daddy"),
+
+ip("en/older-man-younger-woman/","en","Older Man, Younger Woman: Age-Gap Dating | SugarDates",
+ "Age-gap dating between an older man and a younger woman: why it works, what each side looks for and how to set clear expectations.",
+ "Older man, younger woman","Age-gap dating works best when you're upfront about what you want.","Older man, younger woman",[
+ ("h2","Why an age gap can work"),
+ ("p","An older man often brings calm, experience and room in his schedule and budget. A younger woman brings energy, curiosity and a fresh perspective. When both are honest about what they want, those differences complement each other."),
+ ("h2","What he often looks for"),
+ ("ul",["Company for dinners, events and travel","Someone to share his experience and network with","Clarity instead of games"]),
+ ("h2","What she often looks for"),
+ ("ul",["A grown-up conversation partner or mentor","New places and experiences","Someone who respects her boundaries and pace"]),
+ ("p","More on the roles: [[en/sugar-daddy/|Sugar daddy]] and [[en/sugar-baby/|Sugar baby]]."),
+ ("faq",[("Is a big age gap a problem?","Not if you're both adults, know what you want and respect each other's boundaries."),
+         ("How do I meet an older man or younger woman?","Create a profile, say who you're looking for and browse profiles near you.")]),
+ rel_en("en/older-man-younger-woman/")], alt="oudere-man-jongere-vrouw/", img=("walk","Mood image: older man and younger woman walking arm in arm on a shopping street, not real members")),
+
+ip("en/arrangement-dating/","en","Arrangement Dating: What Is an Arrangement? | SugarDates",
+ "What is an arrangement in sugar dating? How agreements work, monthly support versus per date, and what is and isn't allowed. Clear and straightforward.",
+ "Arrangement dating","What an arrangement is, and how to make it a good one together.","Arrangement dating",[
+ ("h2","What is an arrangement?"),
+ ("p","An arrangement is the agreement two people make about their relationship: how often you meet, what you do together and what you mean to each other. It can be about time and attention, outings and travel, and sometimes support."),
+ ("h2","Forms of support"),
+ ("p","Some people agree that one partner supports the other, for example with a monthly allowance, per date, or through gifts and experiences. What you agree on is up to the two of you. Importantly, support is part of a relationship between two people, not a service. "+NOT_ESCORT_EN),
+ ("h2","A good arrangement"),
+ ("ul",["Is specific: frequency, activities, expectations","Is discussed up front, not afterward","Leaves room to adjust","Can be ended by anyone at any time"]),
+ ("p","More background in [[en/what-is-sugar-dating/|What is sugar dating]]."),
+ ("faq",[("What is an arrangement?","The agreement you make together about how often you meet, what you do and what you expect from each other."),
+         ("Monthly support or per date?","It depends on what you both want. A fixed arrangement gives stability; per date is more flexible. Talk about it openly."),
+         ("Is an arrangement the same as escorting?","No. "+NOT_ESCORT_EN)]),
+ rel_en("en/arrangement-dating/")], alt="arrangement-dating/"),
+]
+
+# extra internal links on existing guides
+for _p in PAGES:
+    if _p["slug"] == "wat-is-sugardating/":
+        _p["blocks"][-1][2].extend([("Arrangement dating","arrangement-dating/"),("Dating zonder relatie","dating-zonder-relatie/")])
+    if _p["slug"] == "veiligheid/":
+        _p["blocks"][-1][2].append(("Discreet daten","discreet-daten/"))
+    if _p["slug"] == "en/what-is-sugar-dating/":
+        _p["blocks"][-1][2].append(("Arrangement dating","en/arrangement-dating/"))
+    if _p["slug"] == "en/safety/":
+        _p["blocks"][-1][2].append(("Discreet dating","en/discreet-dating/"))
+    if _p["slug"] == "sugarmama/":
+        _p["img"] = ("mama","Sfeerbeeld: vrouw en jongere man met champagne aan de bar van een hotel, geen echte leden")
+    if _p["slug"] in ("sugardaddy/",):
+        _p["img"] = ("man2","Sfeerbeeld: man in pak in een hotellobby, geen echte leden")
+    if _p["slug"] == "en/sugar-daddy/":
+        _p["img"] = ("man2","Mood image: man in a suit in a hotel lobby, not real members")
+    if _p["slug"] == "sugarbaby/":
+        _p["img"] = ("woman2","Sfeerbeeld: vrouw met designertas en shoppingtas in een Amsterdamse winkelstraat, geen echte leden")
+    if _p["slug"] == "en/sugar-baby/":
+        _p["img"] = ("woman2","Mood image: woman with a designer bag and shopping bag on a city street, not real members")
