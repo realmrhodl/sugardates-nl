@@ -148,26 +148,18 @@ TICKSVG = '<svg class="lm-tick" width="16" height="16" viewBox="0 0 24 24" fill=
 LOCALES = [("nl","nl-NL","Europa · Nederlands","SugarDates.nl"),("en","en-US","United States · English","SugarDates.net")]
 SHORT = {"nl":"Europa (NL)","en":"United States (EN)"}
 
-def _eu_flag():
-    import math
-    stars = ""
-    for k in range(12):
-        a = math.radians(k*30 - 90)
-        cx, cy = 15 + 6*math.cos(a), 10 + 6*math.sin(a)
-        pts = []
-        for j in range(10):
-            r = 1.05 if j%2==0 else .42
-            b = math.radians(j*36 - 90)
-            pts.append(f"{cx + r*math.cos(b):.2f},{cy + r*math.sin(b):.2f}")
-        stars += f'<polygon points="{" ".join(pts)}"/>'
-    return f'<rect width="30" height="20" fill="#003399"/><g fill="#ffcc00">{stars}</g>'
+def _nl_flag():
+    # Official Netherlands tricolour: bright vermilion, white, cobalt blue.
+    return ('<rect width="30" height="20" fill="#FFFFFF"/>'
+            '<rect width="30" height="6.667" fill="#AE1C28"/>'
+            '<rect y="13.333" width="30" height="6.667" fill="#21468B"/>')
 
 def _us_flag():
     stripes = "".join(f'<rect y="{i*20/13:.3f}" width="30" height="{20/13:.3f}" fill="#b22234"/>' for i in range(0,13,2))
     dots = "".join(f'<circle cx="{1.3+x*2.2+(1.1 if y%2 else 0):.2f}" cy="{1.2+y*1.7:.2f}" r=".42"/>' for y in range(6) for x in range(6 if y%2==0 else 5))
     return f'<rect width="30" height="20" fill="#fff"/>{stripes}<rect width="13.6" height="{20*7/13:.3f}" fill="#3c3b6e"/><g fill="#fff">{dots}</g>'
 
-FLAGS = {"nl":_eu_flag(), "en":_us_flag()}
+FLAGS = {"nl":_nl_flag(), "en":_us_flag()}
 def flag(code, w=20):
     h = round(w*2/3, 2)
     return f'<svg class="flag" width="{w}" height="{h}" viewBox="0 0 30 20" aria-hidden="true" focusable="false">{FLAGS[code]}</svg>'

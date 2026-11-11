@@ -18,7 +18,7 @@ Status: concept. Only the v5 preview pages exist. Neither domain runs on this pl
 
 ## Domain, region and locale
 - The request host sets the region: `sugardates.nl` serves the **whole EU** (`eu` region, EUR, default locale `nl-NL`), and `sugardates.net` serves the **US** (`us`, USD, `en-US`). EU users outside the Netherlands also sign up on .nl, with their own country and city in the profile; more EU languages can be added as locales on .nl later.
-- The site switcher shows the region with a flag: the EU flag for SugarDates.nl and the US flag for SugarDates.net.
+- The site switcher shows the region with a flag: the Netherlands flag for SugarDates.nl and the US flag for SugarDates.net.
 - The UI language can be switched on either domain (NL/EN). This switch changes the language only. It does **not** change the region, currency or legal entity of the site.
 - Each domain has its own legal pages, pricing page, payment providers, VAT and sales-tax handling, and support address.
 

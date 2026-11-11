@@ -9,7 +9,7 @@
 ## Structure (v5 is the chosen concept)
 - `v5/build.py` – generator. Run `python3 v5/build.py` from repo root. Contains:
   - `COPY` (landing copy nl/en), `SU` (signup strings nl/en), `OFFER` (vraag-en-aanbod), `CITY` (homepage city section)
-  - `NAV`, `HUB` (footer link hub), `header()/footer()` shared on all pages, mobile menu (`NAV_JS`), language/region dropdown with SVG flags (`langmenu`, `LM_JS`)
+  - `NAV`, `HUB` (footer link hub), `header()/footer()` shared on all pages, mobile menu (`NAV_JS`), language/region dropdown with SVG flags (`langmenu`, `LM_JS`; Netherlands flag for SugarDates.nl, US flag for SugarDates.net)
   - `landing()`, `page()` (generic subpage renderer: breadcrumbs, H1, lead, optional image, content blocks, CTA), `signup()`
   - JSON-LD (Organization, WebSite, WebPage, BreadcrumbList, FAQPage), canonical, hreflang pairs, OG
   - writes `sitemap.xml` (with xhtml alternates) and `robots.txt` (only effective at a domain root; copy there at launch)
