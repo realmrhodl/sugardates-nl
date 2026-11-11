@@ -1,11 +1,11 @@
-/* SugarDates v5 signup – front-end demo only.
-   Nothing is sent to a server. Answers + email may be kept in localStorage as a waitlist placeholder.
-   The password is NEVER stored (not in localStorage, sessionStorage, cookies or the network). */
+/* SugarDates v5 signup – front-end waitlist only.
+   Nothing is sent to a server. Role, basics and email may be kept in localStorage as a waitlist placeholder.
+   No password is collected. */
 (function(){
   var T = window.SD || {};
   var KEY = T.storage || "sugardates-v5";
   var YEAR_MAX = new Date().getFullYear() - (T.minAge || 18), YEAR_MIN = YEAR_MAX - 70;
-  var STEPS = ["role","about","looking","bio","account"];
+  var STEPS = ["role","about","account"];
   var IMG = T.imgs || {baby:"woman2", daddy:"man2"};
   var state = {role:"",displayName:"",location:"",birthYear:"",who:"",what:[],bio:"",email:"",done:false};
   var i = 0;
@@ -52,7 +52,6 @@
       '<p class="micro">'+T.bio_micro+'</p><p class="err" id="err" hidden></p>'+nextBtn('<button type="button" class="btn btn-outline btn-block" data-skip>'+T.skip+'</button>');
     if(id==="account") return lead()+'<h1 class="title">'+T.acc_h+'</h1><p class="lead2">'+T.acc_p+'</p><form id="acc" novalidate>'+
       '<div class="field"><label for="email">'+T.f_email+'</label><input id="email" class="inp" type="email" autocomplete="email" inputmode="email" value="'+esc(state.email)+'"></div>'+
-      '<div class="field"><label for="password">'+T.f_pass+'</label><input id="password" class="inp" type="password" autocomplete="new-password" minlength="8"></div>'+
       '<p class="micro">'+T.acc_micro+'</p>'+
       '<label class="chk-row"><input id="age" type="checkbox" class="chk"><span>'+T.chk_age+'</span></label>'+
       '<label class="chk-row"><input id="terms" type="checkbox" class="chk"><span>'+T.chk_terms+'</span></label>'+
@@ -60,8 +59,7 @@
     return "";
   }
   function success(){
-    var rows=[[T.s_role, state.role==="baby"?T.r_baby:T.r_daddy],[T.s_name,state.displayName],[T.s_loc,state.location],[T.s_year,state.birthYear],
-      [T.s_who,label(T.who,state.who)],[T.s_what,state.what.map(function(w){return label(T.what,w);}).join(", ")],[T.s_bio,state.bio],[T.s_email,state.email]];
+    var rows=[[T.s_role, state.role==="baby"?T.r_baby:T.r_daddy],[T.s_name,state.displayName],[T.s_loc,state.location],[T.s_year,state.birthYear],[T.s_email,state.email]];
     return '<svg class="ok" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#faf8f7"/><path d="M16 27l7 7 13-15" fill="none" stroke="#b3122e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'+
       '<h1 class="title">'+fmt(T.ok_h,{name:esc(state.displayName)})+'</h1><p class="lead2">'+fmt(esc(T.ok_p),{email:esc(state.email)})+'</p>'+
       '<dl class="summary">'+rows.filter(function(r){return r[1];}).map(function(r){return '<div><dt>'+esc(r[0])+'</dt><dd>'+esc(r[1])+'</dd></div>';}).join("")+'</dl>'+
@@ -118,13 +116,11 @@
   }
   function submit(ev){
     ev.preventDefault();
-    var em=document.getElementById("email"), pw=document.getElementById("password");
+    var em=document.getElementById("email");
     var email=em.value.trim();
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return err(T.e_email,em);
-    if(pw.value.length<8) return err(T.e_pass,pw);
     if(!document.getElementById("age").checked) return err(T.e_age,document.getElementById("age"));
     if(!document.getElementById("terms").checked) return err(T.e_terms,document.getElementById("terms"));
-    pw.value=""; // never stored
     state.email=email; state.done=true; save(); render();
   }
   back.addEventListener("click",function(){ go(-1); });

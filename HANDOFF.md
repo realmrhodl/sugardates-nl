@@ -1,4 +1,4 @@
-# SugarDates – handoff (status 10 Nov 2026)
+# SugarDates – handoff (status 10 Nov 2026, founder pass)
 
 ## Repo & hosting
 - GitHub: `realmrhodl/sugardates-nl` (branch `main`), local clone `/workspace/sugardates-nl`
@@ -22,8 +22,9 @@
 - **Domains:** SugarDates.nl = Netherlands + rest of EU (nl-NL, EUR); SugarDates.net = USA (en-US, USD). One platform, shared database and accounts (`home_region`, `country`, `locale`).
 - **Sugardaddy focus:** roles are only *sugardaddy* and *sugarbaby* (sugarmama removed everywhere). Hero/CTAs lead with "Ik zoek een sugardaddy" / "Ik ben sugardaddy".
 - **Age:** 18+ everywhere, but shown **only on signup** (checkbox, birth-year validation, one trust line). No 18+, "niet live", "wachtlijst", "bij livegang" on landing/content pages. Don't claim the site is live.
+- **Signup (waitlist):** 3 steps only — role, basics (username, city/region, birth year), email + 18+ + terms. No password (none is stored or collected). Submit CTA is "Plaats me op de wachtlijst" / "Join the waitlist". Looking-for and bio are deferred until launch.
 - **Copy:** Dutch primary, EN mirror; no personal names, fake stats, testimonials, timers or invented features; "Online" never "Virtueel"; not an escort site (no sex for money) stated where relevant; privacy claims limited to: username/pseudonym, own photo choice, city/region only, email private, no app, account deletion.
-- **Design:** light premium editorial (Inter Tight 500 headlines, Inter body, hairlines, pill buttons) with a clean white and red palette: white `#ffffff` backgrounds, off-white `#faf8f7` alternating sections, near-black `#1a1a1a` / grey `#5f5f5f` text, deep red `#b3122e` (hover `#8f0e24`) for primary buttons, links, kickers, the wordmark dot and small details, hairlines `#ececec`, footer near-black `#141414` with white text. No purple, plum, champagne, blush or lavender. No dark/gold/ornate "AI" look. Text wordmark "SugarDates" + red dot.
+- **Design:** light premium editorial (Inter Tight 500 headlines, Inter body, hairlines, pill buttons) with a clean white and red palette: white `#ffffff` backgrounds, off-white `#faf8f7` alternating sections, near-black `#1a1a1a` / grey `#5f5f5f` text, deep red `#b3122e` (hover `#8f0e24`) for primary buttons, links, kickers, the wordmark dot and small details, hairlines `#ececec`, footer near-black `#141414` with white text. No purple, plum, champagne, blush or lavender. No dark/gold/ornate "AI" look. Text wordmark "SugarDates" + red dot. Header "Aanmelden" is a small primary button (visible on mobile too). Homepage hero states the value prop in the H1, with a true trust line under the role CTAs ("Discreet · Geen app nodig · Aanmelden is gratis"). Mobile hero image is 3:2 so both role CTAs fit above the fold.
 - **Photos:** AI-generated but realistic candid style (35mm/Portra, natural light, real backgrounds); older distinguished man + attractive young adult woman, luxury cues (designer-style bag with a **generic rosette pattern – never LV or any real logo/letters**, champagne, hotel lobby, shopping bags, car). No real hotel/brand names visible. Alt text always "Sfeerbeeld …, geen echte leden" / "Mood image …, not real members".
 - **SEO/perf:** unique title/meta/H1 per page; Lighthouse mobile ≥ 90 (last run: 99/100/100/100 on home and intent pages).
 
@@ -34,7 +35,7 @@
 - **Neutral billing descriptor** on bank statements (discreet-daten page only promises that the statement wording will be shown with the rates – don't claim more until confirmed).
 
 ## Open items
-- Confirm KvK number 97957232 (footer: Forest Road B.V., Herengracht 449A, 1017 BR Amsterdam, BTW NL868303550B01).
+- KvK number 97957232 confirmed by Stefan (10 Nov 2026). Footer: Forest Road B.V., Herengracht 449A, 1017 BR Amsterdam, BTW NL868303550B01.
 - Confirm "zonder abonnement / geen abonnement" wording (matches credits model).
 - Footer line "het bedrijf achter Paydates.nl" – keep or remove?
 - Privacy/Voorwaarden/Contact pages are `#` placeholders.
