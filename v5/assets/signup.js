@@ -62,7 +62,7 @@
   function success(){
     var rows=[[T.s_role, state.role==="baby"?T.r_baby:T.r_daddy],[T.s_name,state.displayName],[T.s_loc,state.location],[T.s_year,state.birthYear],
       [T.s_who,label(T.who,state.who)],[T.s_what,state.what.map(function(w){return label(T.what,w);}).join(", ")],[T.s_bio,state.bio],[T.s_email,state.email]];
-    return '<svg class="ok" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#f1ecfb"/><path d="M16 27l7 7 13-15" fill="none" stroke="#7351c0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'+
+    return '<svg class="ok" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="26" fill="#faf8f7"/><path d="M16 27l7 7 13-15" fill="none" stroke="#b3122e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'+
       '<h1 class="title">'+fmt(T.ok_h,{name:esc(state.displayName)})+'</h1><p class="lead2">'+fmt(esc(T.ok_p),{email:esc(state.email)})+'</p>'+
       '<dl class="summary">'+rows.filter(function(r){return r[1];}).map(function(r){return '<div><dt>'+esc(r[0])+'</dt><dd>'+esc(r[1])+'</dd></div>';}).join("")+'</dl>'+
       '<p class="micro">'+T.ok_next+'</p><div class="actions"><a class="btn btn-primary btn-block" href="../">'+T.home+'</a><button type="button" class="btn btn-outline btn-block" id="reset">'+T.reset+'</button></div>';
