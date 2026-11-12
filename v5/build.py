@@ -14,7 +14,7 @@ import json, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://realmrhodl.github.io/sugardates-nl/v5/"
 MIN_AGE = 18
-CSSV = 22
+CSSV = 23
 CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.5l4 4 8-9"/></svg></span>'
 
 COPY = {
@@ -526,17 +526,19 @@ def page(p, all_pages):
     if p.get("aff"): pgclass += " pg-aff"
     if p.get("sis"): pgclass += " pg-sis"
     if p.get("hc"): pgclass += " pg-hc"
+    if p.get("pd"): pgclass += " pg-pd"
+    bp = "pd" if p.get("pd") else "hc"  # sister-brand class prefix (HighClass default)
     h1_html = p.get("h1_html", p["h1"])
-    kicker = f'<p class="hc-kicker">{p["kicker"]}</p>' if p.get("kicker") else ""
+    kicker = f'<p class="{bp}-kicker">{p["kicker"]}</p>' if p.get("kicker") else ""
     hero_cta = ""
     if p.get("hero_cta"):
         hl, hu = p["hero_cta"]
         hx = ' target="_blank" rel="noopener noreferrer"' if hu.startswith("http") else ""
-        hero_cta = f'<p class="hc-cta"><a class="btn btn-hc" href="{hu}"{hx}>{hl}{EXT}</a></p>'
+        hero_cta = f'<p class="{bp}-cta"><a class="btn btn-{bp}" href="{hu}"{hx}>{hl}{EXT}</a></p>'
     if p.get("hero_points"):
-        media = '<ul class="hc-points">' + "".join(f'<li><strong>{t}</strong><span>{d}</span></li>' for t, d in p["hero_points"]) + '</ul>'
-    if p.get("hc") and close_cta:
-        cta_html = cta_html.replace('class="btn btn-primary"', 'class="btn btn-hc"').replace(f'>{clabel}</a>', f'>{clabel}{EXT}</a>')
+        media = f'<ul class="{bp}-points">' + "".join(f'<li><strong>{t}</strong><span>{d}</span></li>' for t, d in p["hero_points"]) + '</ul>'
+    if (p.get("hc") or p.get("pd")) and close_cta:
+        cta_html = cta_html.replace('class="btn btn-primary"', f'class="btn btn-{bp}"').replace(f'>{clabel}</a>', f'>{clabel}{EXT}</a>')
     body = f'''<body>
   {header(c, root, hrefs, navcur)}
   <main id="inhoud" class="{pgclass}">
