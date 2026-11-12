@@ -37,7 +37,6 @@ SAFE_EN = ("ul", [
 
 def nl_city(slug, name, intro, places, practical, extra_h2=None, extra_p=None):
     blocks = [
-        ("h2", f"Sugardating in {name}"),
         ("p", intro),
         ("h2", "Goede plekken voor een eerste afspraak"),
         ("p", "Kies voor een eerste ontmoeting een rustige, openbare plek waar je makkelijk kunt praten. Een paar buurten die daarvoor goed werken:"),
@@ -62,7 +61,6 @@ def nl_city(slug, name, intro, places, practical, extra_h2=None, extra_p=None):
 
 def us_city(slug, name, intro, places, practical):
     blocks = [
-        ("h2", f"Sugar dating in {name}"),
         ("p", intro),
         ("h2", "Good spots for a first date"),
         ("p", "For a first meeting, pick a calm public place where you can actually talk. A few neighborhoods that work well:"),
@@ -139,7 +137,7 @@ dict(slug="wat-is-sugardating/", lang="nl", alt="en/what-is-sugar-dating/",
   ("h2","Veiligheid"),
   ("p","Spreek de eerste keer af op een openbare plek, regel je eigen vervoer en deel persoonlijke gegevens pas als je daar klaar voor bent. Meer tips staan op [[veiligheid/|Veiligheid en privacy]]."),
   ("h2","Het verschil met escort"),
-  ("p","Bij escort betaal je voor een dienst, per uur of per afspraak. Sugardating is een relatie tussen twee mensen die elkaar leren kennen en samen afspraken maken. SugarDates is een datingsite: seks aanbieden of vragen tegen betaling is niet toegestaan, en profielen die dat doen worden verwijderd."),
+  ("p","Bij escort betaal je voor een dienst, per uur of per afspraak. Sugardating is een relatie tussen twee mensen die elkaar leren kennen en samen afspraken maken. SugarDates is een datingsite: seks aanbieden of vragen tegen betaling is niet toegestaan, en profielen die dat doen worden verwijderd. Forest Road B.V. heeft daarvoor aparte sites: [[paydates/|Paydates.nl]] voor escort- en paydate-advertenties in Nederland, en [[highclass/|HighClass.nl]] voor high class escorts in Europa."),
   ("h2","Is sugardating iets voor mij?"),
   ("p","Als je houdt van duidelijkheid, weet wat je zoekt en respect hebt voor de grenzen van een ander, dan past het waarschijnlijk. Twijfel je over kosten of privacy? Kijk bij [[kosten/|Kosten]] en de [[faq/|veelgestelde vragen]]."),
   ("links","Lees verder",[("Sugardaddy","sugardaddy/"),("Sugarbaby","sugarbaby/"),("Sugardating per stad","sugardating/")]),
@@ -182,7 +180,7 @@ dict(slug="veiligheid/", lang="nl", alt="en/safety/",
   ("p","We maken je gegevens niet openbaar en andere leden zien je e-mailadres niet. Je kunt je account altijd laten verwijderen. SugarDates is een datingsite; seks tegen betaling is niet toegestaan. Lees ook de [[faq/|veelgestelde vragen]]."),
   ("links","Lees verder",[("Wat is sugardating?","wat-is-sugardating/"),("Hoe het werkt","hoe-het-werkt/"),("Sugarbaby worden","sugarbaby/"),("Sugardaddy","sugardaddy/")]),
  ]),
-dict(slug="kosten/", lang="nl",
+dict(slug="kosten/", lang="nl", alt="en/cost/",
  title="Wat kost SugarDates? Credits uitgelegd | SugarDates",
  desc="Wat kost SugarDates? Een account aanmaken is gratis. Voor sommige functies gebruik je credits, zonder abonnement. Zo werkt het.",
  h1="Kosten en credits",
@@ -214,7 +212,7 @@ dict(slug="faq/", lang="nl", alt="en/faq/",
    ("Wordt mijn woonplaats getoond?","Alleen je stad of regio, nooit je adres."),
    ("Heb ik een app nodig?","Nee. SugarDates werkt in de browser op je telefoon, tablet en computer."),
    ("Hoe spreek ik veilig af?","Spreek de eerste keer af op een openbare plek, regel je eigen vervoer en laat iemand weten waar je bent."),
-   ("Is SugarDates een escortsite?","Nee. SugarDates is een datingsite. Seks aanbieden of vragen tegen betaling is niet toegestaan."),
+   ("Is SugarDates een escortsite?","Nee. SugarDates is een datingsite. Seks aanbieden of vragen tegen betaling is niet toegestaan. Forest Road B.V. heeft daarvoor [[paydates/|Paydates.nl]] (escort- en paydate-advertenties in Nederland) en [[highclass/|HighClass.nl]] (high class escorts in Europa)."),
    ("Kan ik mijn account verwijderen?","Ja, je kunt je account altijd laten verwijderen."),
    ("In welke landen werkt SugarDates?","SugarDates.nl is voor Nederland en de rest van Europa. Voor de Verenigde Staten is er SugarDates.net."),
   ]),
@@ -312,7 +310,7 @@ dict(slug="en/what-is-sugar-dating/", lang="en", alt="wat-is-sugardating/",
   ("h2","Safety"),
   ("p","Meet in public the first time, arrange your own ride and share personal details only when you're ready. More tips on our [[en/safety/|safety page]]."),
   ("h2","How it differs from escorting"),
-  ("p","With escorting, you pay for a service, by the hour or per appointment. Sugar dating is a relationship between two people who get to know each other and make agreements together. SugarDates is a dating site: offering or asking for sex for money isn't allowed, and profiles that do are removed."),
+  ("p","With escorting, you pay for a service, by the hour or per appointment. Sugar dating is a relationship between two people who get to know each other and make agreements together. SugarDates is a dating site: offering or asking for sex for money isn't allowed, and profiles that do are removed. Forest Road B.V. also runs [[en/paydates/|Paydates.nl]] for escort and paydate advertisements in the Netherlands, and [[en/highclass/|HighClass.nl]] for high class escorts across Europe."),
   ("links","Keep reading",[("Sugar daddy","en/sugar-daddy/"),("Sugar baby","en/sugar-baby/"),("Sugar dating by city","en/sugar-dating/")]),
  ]),
 dict(slug="en/how-it-works/", lang="en", alt="hoe-het-werkt/",
@@ -368,7 +366,7 @@ dict(slug="en/faq/", lang="en", alt="faq/",
    ("Is my location shown?","Only your city or state, never your address."),
    ("Do I need an app?","No. SugarDates works in the browser on your phone, tablet and computer."),
    ("How do I meet safely?","Meet in a public place the first time, arrange your own ride and tell someone where you are."),
-   ("Is SugarDates an escort site?","No. SugarDates is a dating site. Offering or asking for sex for money isn't allowed."),
+   ("Is SugarDates an escort site?","No. SugarDates is a dating site. Offering or asking for sex for money isn't allowed. Forest Road B.V. also runs [[en/paydates/|Paydates.nl]] (escort and paydate advertisements in the Netherlands) and [[en/highclass/|HighClass.nl]] (high class escorts across Europe)."),
    ("Can I delete my account?","Yes, you can delete your account at any time."),
    ("Which countries does SugarDates cover?","SugarDates.net is for the United States. SugarDates.nl covers the Netherlands and the rest of Europe."),
   ]),
@@ -771,14 +769,148 @@ dict(slug="en/affiliate-program/", lang="en", alt="affiliate-programma/",
  ]),
 ]
 
+
+# EN cost (mirror of kosten/)
+PAGES += [
+dict(slug="en/cost/", lang="en", alt="kosten/",
+ title="What does SugarDates cost? Credits explained | SugarDates",
+ desc="What does SugarDates cost? Creating an account is free. Some features use credits, with no subscription. Here's how it works.",
+ h1="Cost and credits",
+ lead="Creating an account is free. You only pay for what you use.",
+ crumbs=[("Cost","en/cost/")],
+ blocks=[
+  ("h2","Free"),
+  ("ul",["Creating an account","Filling in your profile","Browsing profiles"]),
+  ("h2","With credits"),
+  ("p","Some features, such as sending messages, use credits. You buy a credit pack when you want one. No subscription that quietly renews."),
+  ("h2","Rates"),
+  ("p","Rates and packs will follow. You'll always see the cost first, before you use any credits."),
+  ("h2","Why credits?"),
+  ("p","With credits you pay for what you actually use. If you send few messages, you pay little. And you're not locked in."),
+  ("links","Keep reading",[("How it works","en/how-it-works/"),("FAQ","en/faq/"),("Safety","en/safety/")]),
+ ]),
+]
+
+# Sister sites of Forest Road B.V. (Paydates.nl and HighClass.nl)
+PAGES += [
+dict(slug="paydates/", lang="nl", alt="en/paydates/",
+ title="Paydates.nl – escort- en paydate-advertenties van Forest Road | SugarDates",
+ desc="Paydates.nl is de escort- en paydate-advertentiesite van Forest Road B.V., hetzelfde bedrijf als SugarDates. SugarDates zelf is een datingsite: seks tegen betaling is daar niet toegestaan.",
+ h1="Paydates.nl",
+ lead="De escort- en paydate-advertentiesite van Forest Road B.V., hetzelfde bedrijf als SugarDates.",
+ crumbs=[("Paydates.nl","paydates/")],
+ roles=False, sis=True,
+ close_h2="Naar Paydates.nl",
+ close_lead="Paydates.nl is een zelfstandige website van Forest Road B.V.",
+ close_cta=("Open Paydates.nl","https://paydates.nl/"),
+ blocks=[
+  ("h2","Twee sites, één bedrijf"),
+  ("p","SugarDates en Paydates.nl zijn allebei van Forest Road B.V. in Amsterdam. Het zijn verschillende producten, voor verschillende dingen."),
+  ("brands",[
+    ("SugarDates","", "Sugardating: een datingsite, geen escort.", False),
+    ("Paydates.nl","paydates/", "Escort- en paydate-advertenties in Nederland.", True),
+    ("HighClass.nl","highclass/", "High class escorts en companions in Europa.", False),
+  ]),
+  ("h2","Wat is Paydates?"),
+  ("p","Paydates.nl is een advertentieplatform voor escorts en paydates in Nederland. Volwassenen plaatsen er hun eigen advertenties. Afspraken regel je rechtstreeks, niet via SugarDates."),
+  ("h2","Het verschil met SugarDates"),
+  ("p","SugarDates is een datingsite voor sugardating: twee mensen die elkaar leren kennen en zelf afspraken maken. Seks aanbieden of vragen tegen betaling is op SugarDates niet toegestaan, en profielen die dat doen worden verwijderd. Zoek je escort- of paydate-advertenties, dan is dat Paydates.nl."),
+  ("h2","Ook van Forest Road: HighClass"),
+  ("p","Forest Road B.V. heeft ook [[highclass/|HighClass.nl]], de directory voor high class escorts en companions in heel Europa."),
+  ("links","Lees verder",[("HighClass.nl","highclass/"),("Wat is sugardating?","wat-is-sugardating/"),("Veelgestelde vragen","faq/")]),
+ ]),
+dict(slug="highclass/", lang="nl", alt="en/highclass/",
+ title="HighClass.nl – high class escorts van Forest Road | SugarDates",
+ desc="HighClass.nl is de directory voor high class escorts en companions in heel Europa, van Forest Road B.V., hetzelfde bedrijf als SugarDates.",
+ h1="HighClass.nl",
+ lead="De directory voor high class escorts en companions in heel Europa, van Forest Road B.V.",
+ crumbs=[("HighClass.nl","highclass/")],
+ roles=False, sis=True,
+ close_h2="Naar HighClass.nl",
+ close_lead="HighClass.nl is een zelfstandige website van Forest Road B.V.",
+ close_cta=("Open HighClass.nl","https://highclass.nl/"),
+ blocks=[
+  ("h2","Twee merken, één bedrijf"),
+  ("p","HighClass.nl en SugarDates zijn allebei van Forest Road B.V. in Amsterdam. HighClass is een advertentieplatform voor escorts en companions. SugarDates is een datingsite voor sugardating."),
+  ("brands",[
+    ("SugarDates","", "Sugardating: een datingsite, geen escort.", False),
+    ("Paydates.nl","paydates/", "Escort- en paydate-advertenties in Nederland.", False),
+    ("HighClass.nl","highclass/", "High class escorts en companions in Europa.", True),
+  ]),
+  ("h2","Wat is HighClass?"),
+  ("p","HighClass is de directory voor high class escorts en companions in heel Europa. Het is een advertentieplatform, geen bureau: geen bemiddeling en geen commissie. Afspraken maak je rechtstreeks met de escort. Companions die buiten Europa wonen, bijvoorbeeld in Dubai of Singapore, kunnen via Fly Me To You naar een gast in Europa reizen."),
+  ("h2","Het verschil met SugarDates"),
+  ("p","SugarDates is een datingsite. Seks aanbieden of vragen tegen betaling is daar niet toegestaan, en profielen die dat doen worden verwijderd. Zoek je high class escorts of companions, dan is dat HighClass.nl."),
+  ("h2","Ook van Forest Road: Paydates"),
+  ("p","Voor escort- en paydate-advertenties in Nederland is er ook [[paydates/|Paydates.nl]], eveneens van Forest Road B.V."),
+  ("links","Lees verder",[("Paydates.nl","paydates/"),("Wat is sugardating?","wat-is-sugardating/"),("Veelgestelde vragen","faq/")]),
+ ]),
+dict(slug="en/paydates/", lang="en", alt="paydates/",
+ title="Paydates.nl – escort and paydate ads from Forest Road | SugarDates",
+ desc="Paydates.nl is the escort and paydate advertising site run by Forest Road B.V., the same company as SugarDates. SugarDates itself is a dating site: offering sex for money is not allowed there.",
+ h1="Paydates.nl",
+ lead="The escort and paydate advertising site run by Forest Road B.V., the same company as SugarDates.",
+ crumbs=[("Paydates.nl","en/paydates/")],
+ roles=False, sis=True,
+ close_h2="Go to Paydates.nl",
+ close_lead="Paydates.nl is a separate website from Forest Road B.V.",
+ close_cta=("Open Paydates.nl","https://paydates.nl/"),
+ blocks=[
+  ("h2","Two sites, one company"),
+  ("p","SugarDates and Paydates.nl are both run by Forest Road B.V. in Amsterdam. They are different products, for different things."),
+  ("brands",[
+    ("SugarDates","en/", "Sugar dating: a dating site, not escorting.", False),
+    ("Paydates.nl","en/paydates/", "Escort and paydate advertisements in the Netherlands.", True),
+    ("HighClass.nl","en/highclass/", "High class escorts and companions across Europe.", False),
+  ]),
+  ("h2","What is Paydates?"),
+  ("p","Paydates.nl is an advertising platform for escorts and paydates in the Netherlands. Adults place their own advertisements there. You arrange meetings directly, not through SugarDates."),
+  ("h2","How it differs from SugarDates"),
+  ("p","SugarDates is a dating site for sugar dating: two people who get to know each other and make their own agreements. Offering or asking for sex for money is not allowed on SugarDates, and profiles that do so are removed. If you're looking for escort or paydate advertisements, that's Paydates.nl."),
+  ("h2","Also from Forest Road: HighClass"),
+  ("p","Forest Road B.V. also runs [[en/highclass/|HighClass.nl]], the directory for high class escorts and companions across Europe."),
+  ("links","Keep reading",[("HighClass.nl","en/highclass/"),("What is sugar dating?","en/what-is-sugar-dating/"),("FAQ","en/faq/")]),
+ ]),
+dict(slug="en/highclass/", lang="en", alt="highclass/",
+ title="HighClass.nl – high class escorts from Forest Road | SugarDates",
+ desc="HighClass.nl is the directory for high class escorts and companions across Europe, from Forest Road B.V., the same company as SugarDates.",
+ h1="HighClass.nl",
+ lead="The directory for high class escorts and companions across Europe, from Forest Road B.V.",
+ crumbs=[("HighClass.nl","en/highclass/")],
+ roles=False, sis=True,
+ close_h2="Go to HighClass.nl",
+ close_lead="HighClass.nl is a separate website from Forest Road B.V.",
+ close_cta=("Open HighClass.nl","https://highclass.nl/"),
+ blocks=[
+  ("h2","Two brands, one company"),
+  ("p","HighClass.nl and SugarDates are both run by Forest Road B.V. in Amsterdam. HighClass is an advertising platform for escorts and companions. SugarDates is a dating site for sugar dating."),
+  ("brands",[
+    ("SugarDates","en/", "Sugar dating: a dating site, not escorting.", False),
+    ("Paydates.nl","en/paydates/", "Escort and paydate advertisements in the Netherlands.", False),
+    ("HighClass.nl","en/highclass/", "High class escorts and companions across Europe.", True),
+  ]),
+  ("h2","What is HighClass?"),
+  ("p","HighClass is the directory for high class escorts and companions across Europe. It is an advertising platform, not an agency: no brokerage and no commission. You arrange meetings directly with the escort. Companions who live outside Europe, for example in Dubai or Singapore, can travel to a guest in Europe through Fly Me To You."),
+  ("h2","How it differs from SugarDates"),
+  ("p","SugarDates is a dating site. Offering or asking for sex for money is not allowed there, and profiles that do so are removed. If you're looking for high class escorts or companions, that's HighClass.nl."),
+  ("h2","Also from Forest Road: Paydates"),
+  ("p","For escort and paydate advertisements in the Netherlands there is also [[en/paydates/|Paydates.nl]], likewise from Forest Road B.V."),
+  ("links","Keep reading",[("Paydates.nl","en/paydates/"),("What is sugar dating?","en/what-is-sugar-dating/"),("FAQ","en/faq/")]),
+ ]),
+]
+
 # extra internal links on existing guides
 for _p in PAGES:
     if _p["slug"] == "wat-is-sugardating/":
-        _p["blocks"][-1][2].extend([("Arrangement dating","arrangement-dating/"),("Dating zonder relatie","dating-zonder-relatie/")])
+        _p["blocks"][-1][2].extend([("Arrangement dating","arrangement-dating/"),("Dating zonder relatie","dating-zonder-relatie/"),("Paydates.nl","paydates/"),("HighClass.nl","highclass/")])
+    if _p["slug"] == "faq/":
+        _p["blocks"][-1][2].extend([("Paydates.nl","paydates/"),("HighClass.nl","highclass/")])
+    if _p["slug"] == "en/faq/":
+        _p["blocks"][-1][2].extend([("Paydates.nl","en/paydates/"),("HighClass.nl","en/highclass/")])
     if _p["slug"] == "veiligheid/":
         _p["blocks"][-1][2].append(("Discreet daten","discreet-daten/"))
     if _p["slug"] == "en/what-is-sugar-dating/":
-        _p["blocks"][-1][2].append(("Arrangement dating","en/arrangement-dating/"))
+        _p["blocks"][-1][2].extend([("Arrangement dating","en/arrangement-dating/"),("Paydates.nl","en/paydates/"),("HighClass.nl","en/highclass/")])
     if _p["slug"] == "en/safety/":
         _p["blocks"][-1][2].append(("Discreet dating","en/discreet-dating/"))
     if _p["slug"] in ("sugardaddy/",):

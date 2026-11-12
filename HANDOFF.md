@@ -13,8 +13,8 @@
   - `landing()`, `page()` (generic subpage renderer: breadcrumbs, H1, lead, optional image, content blocks, CTA), `signup()`
   - JSON-LD (Organization, WebSite, WebPage, BreadcrumbList, FAQPage), canonical, hreflang pairs, OG
   - writes `sitemap.xml` (with xhtml alternates) and `robots.txt` (only effective at a domain root; copy there at launch)
-  - `CSSV` = cache-bust version for `assets/site.css` / `assets/signup.js` – bump on CSS/JS changes
-- `v5/pages.py` – all subpage content (NL + EN): role pages, guides, kosten, FAQ, city hubs (NL: Amsterdam, Rotterdam, Den Haag, Utrecht, Eindhoven, België; US: New York, Los Angeles, Miami, Chicago, Las Vegas), intent pages (dating-zonder-relatie, discreet-daten, daten-als-je-getrouwd-bent, no-strings-attached, oudere-man-jongere-vrouw, rijke-man-ontmoeten, sugardaddy-gezocht, sugarbaby-gezocht, arrangement-dating, sugardating-studenten + EN mirrors). Inline links: `[[slug|label]]`; `alt` = slug of the other-language twin (hreflang).
+  - `CSSV` = 20 (cache-bust for `assets/site.css` / `assets/signup.js` – bump on CSS/JS changes)
+- `v5/pages.py` – all subpage content (NL + EN): role pages, guides, kosten, FAQ, city hubs (NL: Amsterdam, Rotterdam, Den Haag, Utrecht, Eindhoven, België; US: New York, Los Angeles, Miami, Chicago, Las Vegas), intent pages (dating-zonder-relatie, discreet-daten, daten-als-je-getrouwd-bent, no-strings-attached, oudere-man-jongere-vrouw, rijke-man-ontmoeten, sugardaddy-gezocht, sugarbaby-gezocht, arrangement-dating, sugardating-studenten + EN mirrors), EN cost page (`en/cost/`), and Forest Road sister-site pages (`paydates/`, `highclass/` + EN). Inline links: `[[slug|label]]`; `alt` = slug of the other-language twin (hreflang).
 - `v5/assets/site.css` – mobile-first theme; `v5/assets/signup.js` – 3-step waitlist signup (localStorage placeholder, no password collected); `v5/img/` – webp + jpg + `-sm.webp` (480w / 768w) variants, sizes 864×1152 (portrait) and 1280×720 (wide), `og.jpg` 1200×630.
 - `PLATFORM.md` – platform notes (one DB/accounts for both domains).
 
@@ -40,10 +40,16 @@
 - **Terms on `affiliate-programma/` and `en/affiliate-program/`:** 75% of the purchase amount excluding VAT, on every paid purchase in the first 12 months after that member's first purchase; **45% thereafter**. Commission is **capped at what SugarDates keeps** after payment-provider fees and chargebacks (required at 75%: 75% of a VAT-inclusive price plus high-risk PSP fees can otherwise lose money). Payout within 60 days, worldwide, EUR or USD matching the purchase domain. Minimum €50 (or dollar equivalent); no maximum. 60-day click attribution, then ongoing for that member. Refunds/chargebacks clawed back. No CPL, no flat CPA. Adult traffic only; no self-referrals, incentivized sign-ups, spam, or brand bidding.
 - The earnings table is a **labelled example** (Voorbeeld / Example), not real results. Partner sign-up form is not built yet. No dating-role CTAs on this page. Linked from the footer. Page uses `pg-aff` for a tighter, wider layout.
 
+
+## Sister sites (updated 12 Nov 2026)
+- Stefan asked for footer links to Paydates.nl and HighClass.nl, plus separate subpages stating these are also Forest Road B.V. websites. Done.
+- Footer brand line links **externally** to https://paydates.nl/ and https://highclass.nl/. A footer row "Ook van Forest Road B.V." / "Also from Forest Road B.V." links to the **subpages** `paydates/` and `highclass/` (EN: `en/paydates/`, `en/highclass/`). Those pages explain the difference and have a CTA that opens the live site in a new tab.
+- **Positioning:** SugarDates remains a dating site; sex for money is not allowed. Paydates.nl is the escort- and paydate-advertising platform for the Netherlands. HighClass.nl is the directory for high class escorts and companions across Europe (advertising platform, not an agency). Do not imply SugarDates offers escort listings. Do not put HighClass "lancering 2027" or 18+/21+ on SugarDates content pages.
+- FAQ (home + faq pages) and "verschil met escort" on wat-is-sugardating (and EN twins) point to these subpages. Subpage layout uses `pg-sis`; all other subpages were tightened (less vertical padding, slightly wider prose) on 12 Nov 2026.
+
 ## Open items
 - KvK number 97957232 confirmed by Stefan (10 Nov 2026). Footer: Forest Road B.V., Herengracht 449A, 1017 BR Amsterdam, BTW NL868303550B01.
 - Confirm "zonder abonnement / geen abonnement" wording (matches credits model).
-- Footer line "het bedrijf achter Paydates.nl" – keep or remove?
 - Privacy/Voorwaarden/Contact pages are `#` placeholders.
 - Real backend (accounts, credits, payments, moderation, age verification) – front-end only so far.
 - Move robots.txt/sitemap to the real domain roots at launch; canonicals currently point at the GitHub Pages preview (`BASE` in build.py).

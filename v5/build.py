@@ -14,7 +14,7 @@ import json, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://realmrhodl.github.io/sugardates-nl/v5/"
 MIN_AGE = 18
-CSSV = 19
+CSSV = 20
 CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.5l4 4 8-9"/></svg></span>'
 
 COPY = {
@@ -51,10 +51,10 @@ COPY = {
          ("Wat kost het?","Een account aanmaken is gratis. Voor sommige functies, zoals berichten sturen, gebruik je credits. Geen abonnement, en je ziet altijd vooraf wat iets kost."),
          ("Moet ik mijn echte naam gebruiken?","Nee. Je kiest zelf een gebruikersnaam. Je e-mailadres is niet zichtbaar voor andere leden."),
          ("Wat gebeurt er met mijn gegevens?","We maken je gegevens niet openbaar. Je kunt je account altijd laten verwijderen. Zie ons privacybeleid."),
-         ("Is dit een escortsite?","Nee. SugarDates is een datingsite. Seks aanbieden of vragen tegen betaling is niet toegestaan.")],
+         ("Is dit een escortsite?","Nee. SugarDates is een datingsite. Seks aanbieden of vragen tegen betaling is niet toegestaan. Forest Road B.V. heeft daarvoor [[paydates/|Paydates.nl]] (escort- en paydate-advertenties in Nederland) en [[highclass/|HighClass.nl]] (high class escorts in Europa).")],
   "band_alt":"Sfeerbeeld: man en vrouw toosten met champagne op een terras aan de gracht, geen echte leden",
   "close_h2":"Kies je rol.", "close_lead":"Aanmelden duurt een paar minuten. Een bijnaam is genoeg.",
-  "f_about":"Sugardating voor Nederland en Europa. Een site van Forest Road B.V., het bedrijf achter Paydates.nl.",
+  "f_about":"Sugardating voor Nederland en Europa. Een site van Forest Road B.V., het bedrijf achter <a href=\"https://paydates.nl/\" rel=\"noopener noreferrer\" target=\"_blank\">Paydates.nl</a> en <a href=\"https://highclass.nl/\" rel=\"noopener noreferrer\" target=\"_blank\">HighClass.nl</a>.",
   "f_links":[("Hoe het werkt","#hoe"),("Vragen","#faq"),("Privacy","#"),("Voorwaarden","#"),("Contact","#")],
   "f_legal":"Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam · KvK 97957232 · BTW NL868303550B01 · © 2026",
   "su_title":"Aanmelden – SugarDates",
@@ -93,10 +93,10 @@ COPY = {
          ("What does it cost?","Creating an account is free. Some features, like sending messages, use credits. No subscription, and you always see the cost first."),
          ("Do I have to use my real name?","No. You choose a username. Your email isn't shown to other members."),
          ("What happens to my data?","We don't make your data public. You can ask us to delete your account at any time. See our privacy policy."),
-         ("Is this an escort site?","No. SugarDates is a dating site. Offering or asking for sex for money isn't allowed.")],
+         ("Is this an escort site?","No. SugarDates is a dating site. Offering or asking for sex for money isn't allowed. Forest Road B.V. also runs [[en/paydates/|Paydates.nl]] (escort and paydate advertisements in the Netherlands) and [[en/highclass/|HighClass.nl]] (high class escorts across Europe).")],
   "band_alt":"Mood image: man and woman toasting with champagne at a canal-side terrace, not real members",
   "close_h2":"Choose your role.", "close_lead":"Signing up takes a few minutes. A nickname is enough.",
-  "f_about":"SugarDates.net is the US site of SugarDates, on the same platform as SugarDates.nl. Operated by Forest Road B.V.",
+  "f_about":"SugarDates.net is the US site of SugarDates, on the same platform as SugarDates.nl. Operated by Forest Road B.V., the company behind <a href=\"https://paydates.nl/\" rel=\"noopener noreferrer\" target=\"_blank\">Paydates.nl</a> and <a href=\"https://highclass.nl/\" rel=\"noopener noreferrer\" target=\"_blank\">HighClass.nl</a>.",
   "f_links":[("How it works","#how"),("FAQ","#faq"),("Privacy","#"),("Terms","#"),("Contact","#")],
   "f_legal":"Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam, the Netherlands · Chamber of Commerce 97957232 · VAT NL868303550B01 · © 2026",
   "su_title":"Join – SugarDates",
@@ -232,12 +232,22 @@ HUB = {
         ("Voor wie",[("Sugardaddy","sugardaddy/"),("Sugarbaby","sugarbaby/"),("Wat is sugardating?","wat-is-sugardating/")]),
         ("Populair",[("Dating zonder relatie","dating-zonder-relatie/"),("Discreet daten","discreet-daten/"),("Daten als je getrouwd bent","daten-als-je-getrouwd-bent/"),("No strings attached","no-strings-attached/"),("Arrangement dating","arrangement-dating/"),("Sugardaddy gezocht","sugardaddy-gezocht/"),("Sugarbaby gezocht","sugarbaby-gezocht/")]),
         ("Steden",[("Amsterdam","sugardating/amsterdam/"),("Rotterdam","sugardating/rotterdam/"),("Den Haag","sugardating/den-haag/"),("Utrecht","sugardating/utrecht/"),("Eindhoven","sugardating/eindhoven/"),("België","sugardating/belgie/")])],
- "en": [("SugarDates",[("How it works","en/how-it-works/"),("Affiliate program","en/affiliate-program/"),("Safety","en/safety/"),("FAQ","en/faq/")]),
+ "en": [("SugarDates",[("How it works","en/how-it-works/"),("Cost","en/cost/"),("Affiliate program","en/affiliate-program/"),("Safety","en/safety/"),("FAQ","en/faq/")]),
         ("Guides",[("Sugar daddy","en/sugar-daddy/"),("Sugar baby","en/sugar-baby/"),("What is sugar dating?","en/what-is-sugar-dating/")]),
         ("Popular",[("Discreet dating","en/discreet-dating/"),("No strings attached","en/no-strings-attached/"),("Dating while married","en/dating-while-married/"),("Older man, younger woman","en/older-man-younger-woman/"),("Arrangement dating","en/arrangement-dating/")]),
         ("Cities",[("New York","en/sugar-dating/new-york/"),("Los Angeles","en/sugar-dating/los-angeles/"),("Miami","en/sugar-dating/miami/"),("Chicago","en/sugar-dating/chicago/"),("Las Vegas","en/sugar-dating/las-vegas/")])],
 }
 LEGAL_LINKS = {"nl":[("Privacy","#"),("Voorwaarden","#"),("Contact","#")], "en":[("Privacy","#"),("Terms","#"),("Contact","#")]}
+SISTERS = {
+ "nl": ("Ook van Forest Road B.V.", [
+    ("Paydates.nl", "paydates/", "Escort- en paydate-advertenties in Nederland"),
+    ("HighClass.nl", "highclass/", "High class escorts en companions in Europa"),
+ ]),
+ "en": ("Also from Forest Road B.V.", [
+    ("Paydates.nl", "en/paydates/", "Escort and paydate advertisements in the Netherlands"),
+    ("HighClass.nl", "en/highclass/", "High class escorts and companions across Europe"),
+ ]),
+}
 UI = {
  "nl":{"menu":"Menu","close":"Menu sluiten","nav":"Hoofdmenu","crumbs":"Kruimelpad","home":"Home","more_faq":"Alle vragen","more_daddy":"Meer over sugardaddy's","more_baby":"Meer over sugarbaby's","more_how":"Lees hoe het werkt","foot_nav":"Sitemap"},
  "en":{"menu":"Menu","close":"Close menu","nav":"Main menu","crumbs":"Breadcrumb","home":"Home","more_faq":"All questions","more_daddy":"More about sugar daddies","more_baby":"More about sugar babies","more_how":"See how it works","foot_nav":"Sitemap"},
@@ -267,11 +277,16 @@ def footer(c, root, hrefs):
     lang = c["lang"]
     cols = "".join(f'<div class="hub-col"><h2 class="hub-h">{h}</h2><ul>' + "".join(f'<li><a href="{href(root,s)}">{t}</a></li>' for t, s in items) + '</ul></div>' for h, items in HUB[lang])
     legal = "".join(f'<li><a href="{h}">{t}</a></li>' for t, h in LEGAL_LINKS[lang])
+    sis_k, sis_items = SISTERS[lang]
+    sisters = f'<div class="foot-sisters"><p class="foot-sis-k">{sis_k}</p><ul>' + "".join(
+        f'<li><a href="{href(root,s)}"><strong>{n}</strong><span>{d}</span></a></li>' for n, s, d in sis_items
+    ) + '</ul></div>'
     return f'''<footer class="foot"><div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">{brand(root, href(root, home_slug(lang)))}<p>{c["f_about"]}</p></div>
       <nav class="hub" aria-label="{UI[lang]["foot_nav"]}">{cols}</nav>
     </div>
+    {sisters}
     <div class="foot-bottom"><div><ul class="foot-links">{legal}</ul><p>{c["f_legal"]}</p></div>{langline(c, hrefs)}</div>
   </div></footer>'''
 
@@ -294,11 +309,14 @@ def crumbs_ld(lang, crumbs):
     items = [("Home", home_slug(lang))] + list(crumbs)
     return {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":i+1,"name":n,"item":BASE+s} for i,(n,s) in enumerate(items)]}
 
-def faq_ld(qas):
-    return {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in qas]}
+def plain(s):
+    return re.sub(r"\[\[([^|\]]+)\|([^\]]+)\]\]", r"\2", s)
 
-def faq_html(qas):
-    return "".join(f'<details><summary>{q}<span class="pm" aria-hidden="true"></span></summary><div class="ans">{a}</div></details>' for q,a in qas)
+def faq_ld(qas):
+    return {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":plain(a)}} for q,a in qas]}
+
+def faq_html(qas, root="./"):
+    return "".join(f'<details><summary>{q}<span class="pm" aria-hidden="true"></span></summary><div class="ans">{inline(root, a)}</div></details>' for q,a in qas)
 
 # ---------------------------------------------------------------- landing extras
 OFFER = {
@@ -399,7 +417,7 @@ def landing(c):
 
   <section class="faq-sec" id="faq"><div class="wrap faq-grid">
     <div><p class="kicker">{c["faq_kicker"]}</p><h2>{c["faq_h2"]}</h2><a class="link-sub" href="{href(root, faq_slug)}">{u["more_faq"]} {ARR}</a></div>
-    <div class="faq">{faq_html(c["faq"])}</div>
+    <div class="faq">{faq_html(c["faq"], root)}</div>
   </div></section>
 
   {city(c, root)}
@@ -435,7 +453,7 @@ def blocks_html(root, blocks):
             cls = "steps" if k == "ol" else "lines"
             out.append(f'<{k} class="{cls}">' + "".join(f"<li>{inline(root, x)}</li>" for x in b[1]) + f"</{k}>")
         elif k == "faq":
-            faqs += b[1]; out.append(f'<div class="faq">{faq_html(b[1])}</div>')
+            faqs += b[1]; out.append(f'<div class="faq">{faq_html(b[1], root)}</div>')
         elif k == "facts":
             out.append('<div class="facts">' + "".join(
                 f'<div><strong>{e(v)}</strong><span>{e(l)}</span></div>' for v, l in b[1]
@@ -458,6 +476,16 @@ def blocks_html(root, blocks):
                 f'<div class="ex-scroll"><table><thead>{thead}</thead><tbody>{body}</tbody><tfoot>{foot}</tfoot></table></div>'
                 f'<ul class="ex-kpis">{kpi}</ul><p class="ex-note">{e(note)}</p></div>'
             )
+        elif k == "brands":
+            cards = []
+            for name, url, desc, here in b[1]:
+                if here:
+                    cards.append(f'<div class="sis-card is-here"><strong>{e(name)}</strong><span>{inline(root, desc)}</span></div>')
+                else:
+                    ext = ' target="_blank" rel="noopener noreferrer"' if url.startswith("http") else ""
+                    dest = url if url.startswith("http") else href(root, url)
+                    cards.append(f'<a class="sis-card" href="{dest}"{ext}><strong>{e(name)}</strong><span>{inline(root, desc)}</span></a>')
+            out.append('<div class="sis">' + "".join(cards) + "</div>")
         elif k == "links":
             out.append(f'<section class="related"><h2>{b[1]}</h2><ul class="rel-list">' +
                        "".join(f'<li><a href="{href(root, s)}"><span>{t}</span>{ARR}</a></li>' for t, s in b[2]) + "</ul></section>")
@@ -486,9 +514,19 @@ def page(p, all_pages):
     role_html = roles(c, su, p.get("role","baby")) if show_roles else ""
     close_h2 = p.get("close_h2", c["close_h2"])
     close_lead = p.get("close_lead", c["close_lead"])
+    close_cta = p.get("close_cta")
+    if close_cta:
+        clabel, curl = close_cta
+        cext = ' target="_blank" rel="noopener noreferrer"' if curl.startswith("http") else ""
+        cta_html = f'<p class="cta-row close-cta"><a class="btn btn-primary" href="{curl}"{cext}>{clabel}</a></p>'
+    else:
+        cta_html = ""
+    pgclass = "pg"
+    if p.get("aff"): pgclass += " pg-aff"
+    if p.get("sis"): pgclass += " pg-sis"
     body = f'''<body>
   {header(c, root, hrefs, navcur)}
-  <main id="inhoud" class="pg{" pg-aff" if p.get("aff") else ""}">
+  <main id="inhoud" class="{pgclass}">
     <div class="pg-hero"><div class="wrap pg-head{" has-media" if img else ""}">
       <div class="pg-intro">
         <nav class="crumbs" aria-label="{u["crumbs"]}"><ol>{cr}</ol></nav>
@@ -502,7 +540,7 @@ def page(p, all_pages):
       {content}
     </article></div>
     <section class="close"><div class="wrap">
-      <h2>{close_h2}</h2><p>{close_lead}</p>{role_html}
+      <h2>{close_h2}</h2><p>{close_lead}</p>{cta_html}{role_html}
     </div></section>
   </main>
   {footer(c, root, hrefs)}

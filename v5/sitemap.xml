@@ -36,6 +36,9 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://realmrhodl.github.io/sugardates-nl/v5/veiligheid/"/>
   </url>
   <url><loc>https://realmrhodl.github.io/sugardates-nl/v5/kosten/</loc>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://realmrhodl.github.io/sugardates-nl/v5/kosten/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://realmrhodl.github.io/sugardates-nl/v5/en/cost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://realmrhodl.github.io/sugardates-nl/v5/kosten/"/>
   </url>
   <url><loc>https://realmrhodl.github.io/sugardates-nl/v5/faq/</loc>
     <xhtml:link rel="alternate" hreflang="nl-NL" href="https://realmrhodl.github.io/sugardates-nl/v5/faq/"/>
@@ -167,5 +170,30 @@
     <xhtml:link rel="alternate" hreflang="nl-NL" href="https://realmrhodl.github.io/sugardates-nl/v5/affiliate-programma/"/>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://realmrhodl.github.io/sugardates-nl/v5/en/affiliate-program/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://realmrhodl.github.io/sugardates-nl/v5/affiliate-programma/"/>
+  </url>
+  <url><loc>https://realmrhodl.github.io/sugardates-nl/v5/en/cost/</loc>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://realmrhodl.github.io/sugardates-nl/v5/kosten/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://realmrhodl.github.io/sugardates-nl/v5/en/cost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://realmrhodl.github.io/sugardates-nl/v5/kosten/"/>
+  </url>
+  <url><loc>https://realmrhodl.github.io/sugardates-nl/v5/paydates/</loc>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://realmrhodl.github.io/sugardates-nl/v5/paydates/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://realmrhodl.github.io/sugardates-nl/v5/en/paydates/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://realmrhodl.github.io/sugardates-nl/v5/paydates/"/>
+  </url>
+  <url><loc>https://realmrhodl.github.io/sugardates-nl/v5/highclass/</loc>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://realmrhodl.github.io/sugardates-nl/v5/highclass/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://realmrhodl.github.io/sugardates-nl/v5/en/highclass/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://realmrhodl.github.io/sugardates-nl/v5/highclass/"/>
+  </url>
+  <url><loc>https://realmrhodl.github.io/sugardates-nl/v5/en/paydates/</loc>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://realmrhodl.github.io/sugardates-nl/v5/paydates/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://realmrhodl.github.io/sugardates-nl/v5/en/paydates/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://realmrhodl.github.io/sugardates-nl/v5/paydates/"/>
+  </url>
+  <url><loc>https://realmrhodl.github.io/sugardates-nl/v5/en/highclass/</loc>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://realmrhodl.github.io/sugardates-nl/v5/highclass/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://realmrhodl.github.io/sugardates-nl/v5/en/highclass/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://realmrhodl.github.io/sugardates-nl/v5/highclass/"/>
   </url>
 </urlset>
