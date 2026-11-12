@@ -14,7 +14,7 @@ import json, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://realmrhodl.github.io/sugardates-nl/v5/"
 MIN_AGE = 18
-CSSV = 24
+CSSV = 25
 CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.5l4 4 8-9"/></svg></span>'
 
 COPY = {
@@ -28,10 +28,9 @@ COPY = {
   "role_baby":"Ik zoek een sugardaddy", "role_daddy":"Ik ben sugardaddy",
   "hero_trust":"Discreet · Geen app nodig · Aanmelden is gratis",
   "hero_alt":"Sfeerbeeld: oudere man en jongere vrouw wandelen samen door een Amsterdamse grachtenstraat, geen echte leden",
-  "intro":"Je zegt wat je zoekt, de ander ook. Geen app op je telefoon, geen echte naam als je die liever voor je houdt. Alleen volwassenen die weten wat ze willen.",
-  "how_kicker":"Hoe het werkt", "how_h2":"Drie stappen.",
+  "how_kicker":"Hoe het werkt",
   "how":[("Maak een profiel","Kies je rol, een gebruikersnaam en je regio. Een bijnaam is genoeg."),
-         ("Zeg wat je zoekt","Gezelschap, begeleiding, samen reizen: zeg het vooraf, zodat niemand hoeft te raden."),
+         ("Zeg wat je zoekt","Gezelschap, begeleiding of samen reizen. Zeg het vooraf, dan hoeft niemand te raden."),
          ("Leer elkaar kennen","Stuur berichten en spreek af wanneer het voor jullie allebei klopt.")],
   "daddy_k":"Sugardaddy", "daddy_h":"Voor de man die geeft, en precies weet wat hij zoekt.",
   "daddy_p":"Je bent gevestigd, je agenda is vol en je wilt gezelschap dat de moeite waard is. Je zegt vooraf wat je zoekt en wat je te bieden hebt.",
@@ -70,10 +69,9 @@ COPY = {
   "role_baby":"I'm looking for a sugar daddy", "role_daddy":"I'm a sugar daddy",
   "hero_trust":"Discreet · No app needed · Free to sign up",
   "hero_alt":"Mood image: older man and younger woman walking together down an Amsterdam street, not real members",
-  "intro":"You say what you want, and so do they. No app on your phone, no real name if you'd rather keep it to yourself. Just adults who know what they want.",
-  "how_kicker":"How it works", "how_h2":"Three steps.",
+  "how_kicker":"How it works",
   "how":[("Create a profile","Choose your role, a username and your area. A nickname is enough."),
-         ("Say what you want","Companionship, mentoring, travel: say it up front, so nobody has to guess."),
+         ("Say what you want","Companionship, mentoring or travel. Say it up front, so nobody has to guess."),
          ("Get to know each other","Send messages and meet when it feels right for both of you.")],
   "daddy_k":"Sugar daddy", "daddy_h":"For the man who gives, and knows exactly what he wants.",
   "daddy_p":"You're established, your calendar is full and you want company worth making time for. You say up front what you're looking for and what you can offer.",
@@ -373,7 +371,7 @@ def landing(c):
     canon = BASE + slug
     LH = {"nl": href(root, ""), "en": href(root, "en/")}
     hid = "hoe" if nl else "how"
-    how = "".join(f'<li><span class="n">0{i+1}</span><h3>{t}</h3><p>{p}</p></li>' for i,(t,p) in enumerate(c["how"]))
+    how = "".join(f'<li><span class="n">0{i+1}</span><div><h3>{t}</h3><p>{p}</p></div></li>' for i,(t,p) in enumerate(c["how"]))
     pr = "".join(f'<li><h3>{t}</h3><p>{p}</p></li>' for t,p in c["pr"])
     more = {"daddy": "sugardaddy/" if nl else "en/sugar-daddy/", "baby": "sugarbaby/" if nl else "en/sugar-baby/"}
     def feature(k, img, rev=False):
@@ -396,10 +394,8 @@ def landing(c):
     <div class="hero-img">{pic(root,"couple",c["hero_alt"],lazy=False)}</div>
   </section>
 
-  <section class="intro"><div class="wrap"><p>{c["intro"]}</p></div></section>
-
   <section class="how" id="{hid}"><div class="wrap">
-    <div class="head-row"><p class="kicker">{c["how_kicker"]}</p><h2>{c["how_h2"]}</h2></div>
+    <h2 class="how-h">{c["how_kicker"]}</h2>
     <ol class="how-list">{how}</ol>
     <a class="link-sub" href="{href(root, how_slug)}">{u["more_how"]} {ARR}</a>
   </div></section>

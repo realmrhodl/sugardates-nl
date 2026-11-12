@@ -56,20 +56,19 @@ p{margin:0}
 .hero-trust{margin:16px 0 0;color:var(--muted);font-size:13px;line-height:20px;max-width:28rem}
 
 /* intro statement */
-.intro{padding:64px 0;border-top:1px solid var(--line)}
-.intro p{font-family:var(--head);font-size:clamp(24px,5.6vw,40px);line-height:1.25;letter-spacing:-.03em;color:var(--ink);max-width:22em}
 
 /* section heads */
 .head-row{margin-bottom:32px}
 .head-row h2,.faq-grid h2,.feature h2,.close h2{font-size:clamp(32px,7vw,56px);line-height:1.05;letter-spacing:-.04em}
 
 /* how */
-.how{padding:0 0 64px}
-.how-list{list-style:none;margin:0;padding:0;display:grid;gap:0}
-.how-list li{border-top:1px solid var(--ink);padding:20px 0 28px}
-.how-list .n{display:block;font-size:13px;color:var(--muted);margin-bottom:12px;font-variant-numeric:tabular-nums}
-.how-list h3{font-size:22px;line-height:28px;letter-spacing:-.02em}
-.how-list p{margin-top:8px;color:var(--ink2);font-size:16px;line-height:24px;max-width:22rem}
+.how{padding:32px 0 36px;border-top:1px solid var(--line)}
+.how-h{font-size:20px;line-height:26px;letter-spacing:-.02em;margin:0 0 12px}
+.how-list{list-style:none;margin:0;padding:0;display:grid;gap:0;border-bottom:1px solid var(--line)}
+.how-list li{display:grid;grid-template-columns:32px 1fr;align-items:baseline;border-top:1px solid var(--line);padding:15px 0}
+.how-list .n{font-size:13px;line-height:22px;color:var(--muted);font-variant-numeric:tabular-nums}
+.how-list h3{font-size:16px;line-height:22px;font-weight:600;letter-spacing:-.01em}
+.how-list p{margin-top:2px;color:var(--ink2);font-size:14px;line-height:20px;max-width:30rem}
 
 /* features (member types) */
 .feature{display:grid;gap:0;border-top:1px solid var(--line)}
@@ -147,7 +146,7 @@ p{margin:0}
   .roles{flex-direction:row;flex-wrap:wrap}
   .roles .btn{width:auto}
   .close .roles{justify-content:center;max-width:none}
-  .how-list,.pr-list{grid-template-columns:repeat(2,1fr);column-gap:32px}
+  .pr-list{grid-template-columns:repeat(2,1fr);column-gap:32px}
   .band{aspect-ratio:16/9}
 }
 @media (min-width:1024px){
@@ -157,12 +156,12 @@ p{margin:0}
   .hero-copy-in{max-width:34rem;margin-left:auto;margin-right:0;width:100%}
   .hero-img{flex:0 0 50%;aspect-ratio:auto;min-height:0;height:auto;align-self:stretch;overflow:hidden}
   .hero-img img{object-position:50% 58%}
-  .intro{padding:var(--sec) 0}
-  .intro p{max-width:20em}
-  .how{padding:0 0 var(--sec)}
+  .how{padding:48px 0 56px}
+  .how-h{font-size:22px;line-height:28px;margin-bottom:16px}
   .head-row{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:36px}
   .head-row .kicker{margin:0}
-  .how-list{grid-template-columns:repeat(3,1fr);column-gap:40px}
+  .how-list{grid-template-columns:repeat(3,1fr);column-gap:40px;border-bottom:0}
+  .how-list li{padding:16px 0 4px}
   .feature{grid-template-columns:1fr 1fr;align-items:stretch;min-height:0;max-height:none}
   .feature-img{width:100%;max-width:100%;height:auto;aspect-ratio:4/5;min-height:0}
   .feature.rev .feature-img{order:2}
@@ -206,7 +205,7 @@ html.menu-open .top{background:#fff;border-bottom-color:var(--line)}
 .cta-row .link-cta{margin-top:0}
 .link-sub{display:inline-flex;align-items:center;gap:8px;color:var(--ink2);font-size:15px;font-weight:500;text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:4px}
 .link-sub:hover{color:var(--ink);text-decoration-color:var(--ink)}
-.how .link-sub{margin-top:8px}
+.how .link-sub{margin-top:16px}
 .faq-grid .link-sub{margin-top:24px}
 
 /* ---------- subpages ---------- */
@@ -394,7 +393,6 @@ textarea.inp{height:auto;min-height:112px;padding:14px 16px;resize:vertical;line
   .hero .sub{margin-top:12px;font-size:16px;line-height:24px}
   .roles{margin-top:20px}
   .hero-trust{margin-top:14px}
-  .intro{padding:64px 0}
 }
 @media (min-width:1024px){
   .hero-copy{padding:64px 64px 64px var(--edge)}
@@ -414,7 +412,7 @@ textarea.inp{height:auto;min-height:112px;padding:14px 16px;resize:vertical;line
 .link-cta{color:var(--brand);border-bottom-color:var(--brand)}
 .link-sub{color:var(--brand);text-decoration-color:rgba(179,18,46,.35)}
 .link-sub:hover{color:var(--brand-hover);text-decoration-color:var(--brand)}
-.how-list li,.faq,.rel-list{border-top-color:var(--ink)}
+.faq,.rel-list{border-top-color:var(--ink)}
 .how-list .n{color:var(--brand);font-weight:500}
 .steps li:before{color:var(--brand);font-weight:500}
 .dnav a[aria-current=page]{color:var(--brand)}
@@ -430,8 +428,6 @@ html.menu-open .top{background:#fff}
 .mnav{background:#fff;border-top-color:var(--line)}
 .mnav-list li{border-bottom-color:var(--line)}
 /* statement + close stay light */
-.intro{background:var(--warm);border-top:0}
-.intro p{color:var(--ink)}
 .close{background:var(--bg);color:var(--ink)}
 .close h2{color:var(--ink)}
 .close p{color:var(--ink2)}
