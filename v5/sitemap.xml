@@ -158,4 +158,14 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://realmrhodl.github.io/sugardates-nl/v5/en/arrangement-dating/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://realmrhodl.github.io/sugardates-nl/v5/arrangement-dating/"/>
   </url>
+  <url><loc>https://realmrhodl.github.io/sugardates-nl/v5/affiliate-programma/</loc>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://realmrhodl.github.io/sugardates-nl/v5/affiliate-programma/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://realmrhodl.github.io/sugardates-nl/v5/en/affiliate-program/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://realmrhodl.github.io/sugardates-nl/v5/affiliate-programma/"/>
+  </url>
+  <url><loc>https://realmrhodl.github.io/sugardates-nl/v5/en/affiliate-program/</loc>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://realmrhodl.github.io/sugardates-nl/v5/affiliate-programma/"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://realmrhodl.github.io/sugardates-nl/v5/en/affiliate-program/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://realmrhodl.github.io/sugardates-nl/v5/affiliate-programma/"/>
+  </url>
 </urlset>

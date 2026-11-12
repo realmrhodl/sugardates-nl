@@ -34,6 +34,12 @@
 - PSPs: **Verotel** for EU (.nl); **CCBill / Segpay** for US (.net) – high-risk dating-friendly processors.
 - **Neutral billing descriptor** on bank statements (discreet-daten page only promises that the statement wording will be shown with the rates – don't claim more until confirmed).
 
+## Affiliate program (decided 11 Nov 2026)
+- Stefan asked for a page matching Seeking's payouts, worldwide, with fast payouts (60 days), always profitable for Forest Road.
+- Seeking's public/direct rates: ~45% on each sale (plus a $2 CPL on some listings); network CPA offers are about $112–150 on first purchase. A flat CPA would lose money on a €49 pack, and a CPL can lose money on unconverted sign-ups.
+- **Our terms (on `affiliate-programma/` and `en/affiliate-program/`):** 45% of the purchase amount excluding VAT, on the first paid purchase and later purchases by that member (60-day click attribution, then ongoing). Commission is **capped at what SugarDates keeps** after payment-provider fees and chargebacks, so a sale is always profitable. Payout within 60 days, worldwide, in EUR or USD matching the purchase domain. Minimum €50 (or dollar equivalent); no maximum. Refunds/chargebacks are clawed back. No CPL, no flat CPA. Adult traffic only; no self-referrals, incentivized sign-ups, spam, or brand bidding. Applications are reviewed first. Do not name Seeking on the page.
+- Partner sign-up form is not built yet (no backend). The page has no dating-role CTAs. Linked from the footer SugarDates column.
+
 ## Open items
 - KvK number 97957232 confirmed by Stefan (10 Nov 2026). Footer: Forest Road B.V., Herengracht 449A, 1017 BR Amsterdam, BTW NL868303550B01.
 - Confirm "zonder abonnement / geen abonnement" wording (matches credits model).

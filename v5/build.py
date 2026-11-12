@@ -14,7 +14,7 @@ import json, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://realmrhodl.github.io/sugardates-nl/v5/"
 MIN_AGE = 18
-CSSV = 17
+CSSV = 18
 CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.5l4 4 8-9"/></svg></span>'
 
 COPY = {
@@ -228,11 +228,11 @@ NAV = {
  "en": [("How it works","en/how-it-works/"),("Sugar daddy","en/sugar-daddy/"),("Sugar baby","en/sugar-baby/"),("Sugar dating","en/what-is-sugar-dating/"),("Cities","en/sugar-dating/"),("Safety","en/safety/")],
 }
 HUB = {
- "nl": [("SugarDates",[("Hoe het werkt","hoe-het-werkt/"),("Kosten","kosten/"),("Veiligheid","veiligheid/"),("Veelgestelde vragen","faq/")]),
+ "nl": [("SugarDates",[("Hoe het werkt","hoe-het-werkt/"),("Kosten","kosten/"),("Affiliateprogramma","affiliate-programma/"),("Veiligheid","veiligheid/"),("Veelgestelde vragen","faq/")]),
         ("Voor wie",[("Sugardaddy","sugardaddy/"),("Sugarbaby","sugarbaby/"),("Wat is sugardating?","wat-is-sugardating/")]),
         ("Populair",[("Dating zonder relatie","dating-zonder-relatie/"),("Discreet daten","discreet-daten/"),("Daten als je getrouwd bent","daten-als-je-getrouwd-bent/"),("No strings attached","no-strings-attached/"),("Arrangement dating","arrangement-dating/"),("Sugardaddy gezocht","sugardaddy-gezocht/"),("Sugarbaby gezocht","sugarbaby-gezocht/")]),
         ("Steden",[("Amsterdam","sugardating/amsterdam/"),("Rotterdam","sugardating/rotterdam/"),("Den Haag","sugardating/den-haag/"),("Utrecht","sugardating/utrecht/"),("Eindhoven","sugardating/eindhoven/"),("België","sugardating/belgie/")])],
- "en": [("SugarDates",[("How it works","en/how-it-works/"),("Safety","en/safety/"),("FAQ","en/faq/")]),
+ "en": [("SugarDates",[("How it works","en/how-it-works/"),("Affiliate program","en/affiliate-program/"),("Safety","en/safety/"),("FAQ","en/faq/")]),
         ("Guides",[("Sugar daddy","en/sugar-daddy/"),("Sugar baby","en/sugar-baby/"),("What is sugar dating?","en/what-is-sugar-dating/")]),
         ("Popular",[("Discreet dating","en/discreet-dating/"),("No strings attached","en/no-strings-attached/"),("Dating while married","en/dating-while-married/"),("Older man, younger woman","en/older-man-younger-woman/"),("Arrangement dating","en/arrangement-dating/")]),
         ("Cities",[("New York","en/sugar-dating/new-york/"),("Los Angeles","en/sugar-dating/los-angeles/"),("Miami","en/sugar-dating/miami/"),("Chicago","en/sugar-dating/chicago/"),("Las Vegas","en/sugar-dating/las-vegas/")])],
@@ -436,6 +436,10 @@ def blocks_html(root, blocks):
             out.append(f'<{k} class="{cls}">' + "".join(f"<li>{inline(root, x)}</li>" for x in b[1]) + f"</{k}>")
         elif k == "faq":
             faqs += b[1]; out.append(f'<div class="faq">{faq_html(b[1])}</div>')
+        elif k == "facts":
+            out.append('<div class="facts">' + "".join(
+                f'<div><strong>{e(v)}</strong><span>{e(l)}</span></div>' for v, l in b[1]
+            ) + '</div>')
         elif k == "links":
             out.append(f'<section class="related"><h2>{b[1]}</h2><ul class="rel-list">' +
                        "".join(f'<li><a href="{href(root, s)}"><span>{t}</span>{ARR}</a></li>' for t, s in b[2]) + "</ul></section>")
@@ -460,6 +464,10 @@ def page(p, all_pages):
     img = p.get("img")
     media = f'<div class="pg-media">{pic(root, img[0], img[1], lazy=False, sizes="(min-width:1024px) 40vw, 100vw")}</div>' if img else ""
     navcur = next((s for t, s in NAV[lang] if slug.startswith(s)), slug)
+    show_roles = p.get("roles", True)
+    role_html = roles(c, su, p.get("role","baby")) if show_roles else ""
+    close_h2 = p.get("close_h2", c["close_h2"])
+    close_lead = p.get("close_lead", c["close_lead"])
     body = f'''<body>
   {header(c, root, hrefs, navcur)}
   <main id="inhoud" class="pg">
@@ -468,7 +476,7 @@ def page(p, all_pages):
         <nav class="crumbs" aria-label="{u["crumbs"]}"><ol>{cr}</ol></nav>
         <h1>{p["h1"]}</h1>
         <p class="lead">{p["lead"]}</p>
-        {roles(c, su, p.get("role","baby"))}
+        {role_html}
       </div>
       {media}
     </div></div>
@@ -476,7 +484,7 @@ def page(p, all_pages):
       {content}
     </article></div>
     <section class="close"><div class="wrap">
-      <h2>{c["close_h2"]}</h2><p>{c["close_lead"]}</p>{roles(c, su, p.get("role","baby"))}
+      <h2>{close_h2}</h2><p>{close_lead}</p>{role_html}
     </div></section>
   </main>
   {footer(c, root, hrefs)}
