@@ -20,6 +20,7 @@ CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox
 COPY = {
 "nl": {
   "lang":"nl", "locale":"nl_NL", "hreflang":"nl-NL", "path":"", "signup":"aanmelden/",
+  "img":{"couple":"couple","daddy":"daddy","baby":"baby","dinner":"dinner"}, "og":"og-hf.jpg",
   "title":"SugarDates – discreet sugardating, op jouw voorwaarden",
   "desc":"Discreet sugardating voor volwassenen die weten wat ze zoeken. Een bijnaam is genoeg en verwachtingen bespreek je vooraf. De Nederlandstalige site voor Nederland en België.",
   "skip":"Naar de inhoud", "cta_top":"Aanmelden",
@@ -61,6 +62,7 @@ COPY = {
 },
 "en": {
   "lang":"en", "locale":"en_US", "hreflang":"en-US", "path":"en/", "signup":"signup/",
+  "img":{"couple":"us/couple","daddy":"us/daddy","baby":"us/baby","dinner":"us/dinner"}, "og":"us/og.jpg",
   "title":"SugarDates – discreet sugar dating, on your terms",
   "desc":"Discreet sugar dating for adults who know what they want. A nickname is enough and expectations are agreed up front. SugarDates.net, for the United States.",
   "skip":"Skip to content", "cta_top":"Join",
@@ -68,7 +70,7 @@ COPY = {
   "hero_sub":"For the established man who knows what he wants, and for the woman looking for him. You agree up front on what you expect from each other. The rest stays between the two of you.",
   "role_baby":"I'm looking for a sugar daddy", "role_daddy":"I'm a sugar daddy",
   "hero_trust":"Discreet · No app needed · Free to sign up",
-  "hero_alt":"Mood image: older man and younger woman walking together down an Amsterdam street, not real members",
+  "hero_alt":"Mood image: older man and younger woman walking arm in arm past New York brownstones in autumn, not real members",
   "how_kicker":"How it works",
   "how":[("Create a profile","Choose your role, a username and your area. A nickname is enough."),
          ("Say what you want","Companionship, mentoring or travel. Say it up front, so nobody has to guess."),
@@ -76,11 +78,11 @@ COPY = {
   "daddy_k":"Sugar daddy", "daddy_h":"For the man who gives, and knows exactly what he wants.",
   "daddy_p":"You're established, your calendar is full and you want company worth making time for. You say up front what you're looking for and what you can offer.",
   "daddy_list":["Company for dinners, travel and events","Supporting or mentoring someone","Clear agreements instead of assumptions"],
-  "daddy_cta":"Join as a sugar daddy", "daddy_alt":"Mood image: grey-haired man in a blazer in a quiet lounge, not a real member",
+  "daddy_cta":"Join as a sugar daddy", "daddy_alt":"Mood image: greying man in a linen blazer by a window overlooking the Miami waterfront, not a real member",
   "baby_k":"Sugar baby", "baby_h":"For anyone who knows what she wants, and says so.",
   "baby_p":"You're independent and you set your own boundaries. You're looking for someone experienced and generous who respects your pace.",
   "baby_list":["An experienced mentor to talk to","New places and experiences","Support that fits what you agree on"],
-  "baby_cta":"Find your sugar daddy", "baby_alt":"Mood image: blonde woman with coffee by the window of a canal-side café, not a real member",
+  "baby_cta":"Find your sugar daddy", "baby_alt":"Mood image: dark-haired woman with an iced coffee on a sunny Los Angeles café patio, not a real member",
   "pr_kicker":"Privacy", "pr_h2":"Discreet by design.",
   "pr":[("Nicknames welcome","You don't have to use your real name."),
         ("You choose what to share","Your location is a city or state, never an address."),
@@ -92,13 +94,13 @@ COPY = {
          ("Do I have to use my real name?","No. You choose a username. Your email isn't shown to other members."),
          ("What happens to my data?","We don't make your data public. You can ask us to delete your account at any time. See our privacy policy."),
          ("Is this an escort site?","No. SugarDates is a dating site. Offering or asking for sex for money isn't allowed. Forest Road B.V. also runs [[en/paydates/|Paydates.nl]] (escort and paydate advertisements in the Netherlands) and [[en/highclass/|HighClass.nl]] (high class escorts across Europe).")],
-  "band_alt":"Mood image: man and woman laughing over dinner by the window of a canal-side restaurant, not real members",
+  "band_alt":"Mood image: man and woman laughing over dinner by the window of a New York restaurant, not real members",
   "close_h2":"Choose your role.", "close_lead":"Signing up takes a few minutes. A nickname is enough.",
   "f_about":"",
   "f_links":[("How it works","#how"),("FAQ","#faq"),("Privacy","#"),("Terms","#"),("Contact","#")],
   "f_legal":"Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam, the Netherlands · Chamber of Commerce 97957232 · VAT NL868303550B01 · © 2026",
   "su_title":"Join – SugarDates",
-  "su_alt":"Mood image: older man and younger woman walking together down an Amsterdam street, not real members",
+  "su_alt":"Mood image: older man and younger woman walking arm in arm past New York brownstones, not real members",
 },
 }
 
@@ -132,7 +134,7 @@ def head(c, title, desc, canon, root, alts=None, robots="index,follow", preload=
   <meta property="og:title" content="{e(title)}">
   <meta property="og:description" content="{e(desc)}">
   <meta property="og:url" content="{canon}">
-  <meta property="og:image" content="{BASE}img/og-hf.jpg">
+  <meta property="og:image" content="{BASE}img/{c.get("og","og-hf.jpg")}">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="{root}assets/logo.svg" type="image/svg+xml">{pre}
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -197,8 +199,10 @@ document.addEventListener('click',function(e){if(!m.contains(e.target))set(false
 m.addEventListener('focusout',function(e){if(e.relatedTarget&&!m.contains(e.relatedTarget))set(false);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!l.hidden){set(false);b.focus();}});});})();</script>"""
 
-SMALL = {"couple":480, "daddy":480, "baby":480, "stroll":480, "dinner":768, "bridge":768}
-FULLW = {"couple":864, "daddy":864, "baby":864, "stroll":864, "dinner":1280, "bridge":1280}
+SMALL = {"couple":480, "daddy":480, "baby":480, "stroll":480, "dinner":768, "bridge":768,
+         "us/couple":480, "us/daddy":480, "us/baby":480, "us/dinner":768, "us/miami":768}
+FULLW = {"couple":864, "daddy":864, "baby":864, "stroll":864, "dinner":1280, "bridge":1280,
+         "us/couple":864, "us/daddy":864, "us/baby":864, "us/dinner":1280, "us/miami":1280}
 def srcset(root, name):
     s = f"{root}img/{name}.webp {FULLW.get(name,864)}w"
     if name in SMALL: s = f"{root}img/{name}-sm.webp {SMALL[name]}w, " + s
@@ -337,7 +341,7 @@ CITY = {
  "en":{"k":"New York · Miami","h":"Sugar dating in your city.",
   "p":"A West Village wine bar, a Brickell rooftop. City by city: the neighborhoods that suit a first date, and how to meet safely.",
   "cta":("Sugar dating in New York","en/sugar-dating/new-york/"),
-  "img":None,
+  "img":("us/miami","Mood image: man and woman walking hand in hand along the Miami waterfront at sunset, not real members"),
   "more":"More cities","cities":[("Miami","en/sugar-dating/miami/"),("Los Angeles","en/sugar-dating/los-angeles/"),("Chicago","en/sugar-dating/chicago/"),("Las Vegas","en/sugar-dating/las-vegas/")]},
 }
 def chips(root, items):
@@ -376,7 +380,7 @@ def landing(c):
     more = {"daddy": "sugardaddy/" if nl else "en/sugar-daddy/", "baby": "sugarbaby/" if nl else "en/sugar-baby/"}
     def feature(k, img, rev=False):
         lst = "".join(f"<li>{x}</li>" for x in c[f"{k}_list"])
-        return f'''<section class="feature{' rev' if rev else ''}"><div class="feature-img">{pic(root,img,c[k+"_alt"])}</div>
+        return f'''<section class="feature{' rev' if rev else ''}"><div class="feature-img">{pic(root,c["img"][img],c[k+"_alt"])}</div>
       <div class="feature-copy"><p class="kicker">{c[k+"_k"]}</p><h2>{c[k+"_h"]}</h2><p class="body">{c[k+"_p"]}</p><ul class="lines">{lst}</ul>
       <div class="cta-row"><a class="link-cta" href="{su}?rol={k}">{c[k+"_cta"]} {ARR}</a><a class="link-sub" href="{href(root, more[k])}">{u["more_"+k]}</a></div></div></section>'''
     faq_slug = "faq/" if nl else "en/faq/"
@@ -391,7 +395,7 @@ def landing(c):
       {roles(c, su)}
       <p class="hero-trust">{c["hero_trust"]}</p>
     </div></div>
-    <div class="hero-img">{pic(root,"couple",c["hero_alt"],lazy=False)}</div>
+    <div class="hero-img">{pic(root,c["img"]["couple"],c["hero_alt"],lazy=False)}</div>
   </section>
 
   <section class="how" id="{hid}"><div class="wrap">
@@ -419,7 +423,7 @@ def landing(c):
 
   {city(c, root)}
 
-  <section class="band">{pic(root,"dinner",c["band_alt"],1280,720,sizes="100vw")}</section>
+  <section class="band">{pic(root,c["img"]["dinner"],c["band_alt"],1280,720,sizes="100vw")}</section>
 
   <section class="close"><div class="wrap">
     <h2>{c["close_h2"]}</h2><p>{c["close_lead"]}</p>{roles(c, su)}
@@ -433,7 +437,7 @@ def landing(c):
 '''
     ld = {"@context":"https://schema.org","@graph": org_ld() + [faq_ld(c["faq"])]}
     return head(c, c["title"], c["desc"], canon, root, {"nl-NL":BASE, "en-US":BASE+"en/"},
-                preload=("couple","(min-width:1024px) 50vw, 100vw"), ld=ld) + body
+                preload=(c["img"]["couple"],"(min-width:1024px) 50vw, 100vw"), ld=ld) + body
 
 # ---------------------------------------------------------------- subpages
 import re
@@ -633,7 +637,7 @@ def signup(c):
     root = "../" if nl else "../../"
     canon = BASE + c["path"] + c["signup"]
     s = dict(SU[c["lang"]]); s["lang"]=c["lang"]; s["storage"]="sugardates-v5-2-"+c["lang"]; s["root"]=root; s["minAge"]=MIN_AGE
-    s["imgs"]={"baby":"baby","daddy":"daddy"}
+    s["imgs"]={"baby":c["img"]["baby"],"daddy":c["img"]["daddy"]}
     SH = {"nl":"./","en":"../en/signup/"} if nl else {"nl":"../../aanmelden/","en":"./"}
     lang = langmenu(c, SH)
     body = f'''<body>
@@ -641,7 +645,7 @@ def signup(c):
   <div class="su-page">
     <header class="top"><div class="top-in">{brand(root, "../")}{lang}</div></header>
     <div class="su-wrap">
-      <aside class="su-visual">{pic(root,"couple",c["su_alt"],lazy=False)}</aside>
+      <aside class="su-visual">{pic(root,c["img"]["couple"],c["su_alt"],lazy=False)}</aside>
       <section class="su-main">
         <div class="su-card">
           <div class="step-meta">
@@ -664,7 +668,7 @@ def signup(c):
 </body>
 </html>
 '''
-    return head(c, c["su_title"], c["desc"], canon, root, {"nl-NL":BASE+"aanmelden/","en-US":BASE+"en/signup/"}, robots="noindex,follow", preload=("couple","(min-width:1024px) 50vw, 100vw")) + body
+    return head(c, c["su_title"], c["desc"], canon, root, {"nl-NL":BASE+"aanmelden/","en-US":BASE+"en/signup/"}, robots="noindex,follow", preload=(c["img"]["couple"],"(min-width:1024px) 50vw, 100vw")) + body
 
 def write(rel, txt):
     p = os.path.join(HERE, rel); os.makedirs(os.path.dirname(p), exist_ok=True)
