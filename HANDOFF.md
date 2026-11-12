@@ -1,4 +1,4 @@
-# SugarDates – handoff (status 11 Nov 2026, desktop layout polish)
+# SugarDates – handoff (status 12 Nov 2026, full copy pass)
 
 ## Repo & hosting
 - GitHub: `realmrhodl/sugardates-nl` (branch `main`), local clone `/workspace/sugardates-nl`
@@ -19,7 +19,7 @@
 - `PLATFORM.md` – platform notes (one DB/accounts for both domains).
 
 ## Decisions
-- **Domains:** SugarDates.nl = Netherlands + rest of EU (nl-NL, EUR); SugarDates.net = USA (en-US, USD). One platform, shared database and accounts (`home_region`, `country`, `locale`).
+- **Domains:** SugarDates.nl = Dutch-language site for the Netherlands and Belgium; Dutch speakers elsewhere in Europe may join (nl-NL, EUR); SugarDates.net = USA (en-US, USD). One platform, shared database and accounts (`home_region`, `country`, `locale`).
 - **Sugardaddy focus:** roles are only *sugardaddy* and *sugarbaby* (sugarmama removed everywhere). Hero/CTAs lead with "Ik zoek een sugardaddy" / "Ik ben sugardaddy".
 - **Age:** 18+ everywhere, but shown **only on signup** (checkbox, birth-year validation, one trust line). No 18+, "niet live", "wachtlijst", "bij livegang" on landing/content pages. Don't claim the site is live.
 - **Signup (waitlist):** 3 steps only — role, basics (username, city/region, birth year), email + 18+ + terms. No password (none is stored or collected). Submit CTA is "Plaats me op de wachtlijst" / "Join the waitlist". Looking-for and bio are deferred until launch.
@@ -46,6 +46,14 @@
 - Footer brand line links **externally** to https://paydates.nl/ and https://highclass.nl/. A footer row "Ook van Forest Road B.V." / "Also from Forest Road B.V." links to the **subpages** `paydates/` and `highclass/` (EN: `en/paydates/`, `en/highclass/`). Those pages explain the difference and have a CTA that opens the live site in a new tab.
 - **Positioning:** SugarDates remains a dating site; sex for money is not allowed. Paydates.nl is the escort- and paydate-advertising platform for the Netherlands. HighClass.nl is the directory for high class escorts and companions across Europe (advertising platform, not an agency). Do not imply SugarDates offers escort listings. Do not put HighClass "lancering 2027" or 18+/21+ on SugarDates content pages.
 - FAQ (home + faq pages) and "verschil met escort" on wat-is-sugardating (and EN twins) point to these subpages. Subpage layout uses `pg-sis`; all other subpages were tightened (less vertical padding, slightly wider prose) on 12 Nov 2026.
+
+## Copy pass (12 Nov 2026)
+- Stefan: “De teksten voor nederland en europa zijn zo slecht” → full rewrite. Never write “Nederland en Europa” (NL is in Europe). Positioning: Dutch-language site for **Nederland en België**; Dutch speakers elsewhere in Europe are welcome (FAQ + hub only). Don't promise “heel Europa” and don't add thin guides for cities we don't cover. sugardates.be is owned but NOT in the switcher yet.
+- Region switcher label: `LOCALES` “Nederland · Nederlands”, `SHORT` “Nederland” / “United States” (NL flag kept).
+- Homepage NL title “SugarDates – discreet sugardating, op jouw voorwaarden”; new hero_sub, desc, intro, footer `f_about` (“Discreet sugardating voor Nederland en België…”).
+- City pages: `nl_city()` / `us_city()` now take a per-city `desc` and `lead` (no template lead). Intros rewritten as dating guidance, not travel brochure. België page rewritten with the same weight as Amsterdam. Hub `sugardating/` split into Nederland / België / “Ook buiten deze steden”.
+- Signup location “other” option is now “België of elders in Europa” (was “Ergens anders in Nederland”; all 12 provinces are already listed).
+- Banned filler in copy: gewoon, prima, fijn, gedoe, giswerk, “zonder omwegen”, exclamation marks.
 
 ## Open items
 - KvK number 97957232 confirmed by Stefan (10 Nov 2026). Footer: Forest Road B.V., Herengracht 449A, 1017 BR Amsterdam, BTW NL868303550B01.

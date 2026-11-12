@@ -20,25 +20,25 @@ CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox
 COPY = {
 "nl": {
   "lang":"nl", "locale":"nl_NL", "hreflang":"nl-NL", "path":"", "signup":"aanmelden/",
-  "title":"SugarDates – discreet sugardating in Nederland en Europa",
-  "desc":"Sugardating waarbij je open bent over wat je zoekt. Maak een profiel, blijf discreet en ontmoet iemand die daarbij past. Voor Nederland en Europa.",
+  "title":"SugarDates – discreet sugardating, op jouw voorwaarden",
+  "desc":"Discreet sugardating voor volwassenen die weten wat ze zoeken. Een bijnaam is genoeg en verwachtingen bespreek je vooraf. De Nederlandstalige site voor Nederland en België.",
   "skip":"Naar de inhoud", "cta_top":"Aanmelden",
   "hero_h1":"Sugardating, open over wat je zoekt.",
-  "hero_sub":"Voor wie een gevestigde sugardaddy zoekt, en voor de man die precies weet wat hij wil. Discreet, in Nederland en Europa.",
+  "hero_sub":"Voor de gevestigde man die weet wat hij wil, en voor wie hem zoekt. Jullie spreken vooraf af wat je van elkaar verwacht. De rest blijft tussen jullie.",
   "role_baby":"Ik zoek een sugardaddy", "role_daddy":"Ik ben sugardaddy",
   "hero_trust":"Discreet · Geen app nodig · Aanmelden is gratis",
   "hero_alt":"Sfeerbeeld: oudere man en jongere vrouw lopen arm in arm door een winkelstraat in Amsterdam, geen echte leden",
-  "intro":"Zeg wat je zoekt. Geen app op je telefoon. Geen echte naam als je die niet wilt delen. Alleen volwassenen die open zijn over wat ze willen.",
+  "intro":"Je zegt wat je zoekt, de ander ook. Geen app op je telefoon, geen echte naam als je die liever voor je houdt. Alleen volwassenen die weten wat ze willen.",
   "how_kicker":"Hoe het werkt", "how_h2":"Drie stappen.",
   "how":[("Maak een profiel","Kies je rol, een gebruikersnaam en je regio. Een bijnaam is genoeg."),
          ("Zeg wat je zoekt","Gezelschap, begeleiding, samen reizen: zeg het vooraf, zodat niemand hoeft te raden."),
-         ("Leer elkaar kennen","Stuur berichten en spreek af wanneer het voor jullie allebei goed voelt.")],
+         ("Leer elkaar kennen","Stuur berichten en spreek af wanneer het voor jullie allebei klopt.")],
   "daddy_k":"Sugardaddy", "daddy_h":"Voor de man die geeft, en precies weet wat hij zoekt.",
-  "daddy_p":"Je bent gevestigd, je hebt het druk en je wilt goed gezelschap. Je zegt vooraf wat je zoekt en wat je kunt bieden.",
+  "daddy_p":"Je bent gevestigd, je agenda is vol en je wilt gezelschap dat de moeite waard is. Je zegt vooraf wat je zoekt en wat je te bieden hebt.",
   "daddy_list":["Gezelschap voor diners, reizen en evenementen","Iemand steunen of begeleiden","Duidelijke afspraken in plaats van verwachtingen"],
   "daddy_cta":"Aanmelden als sugardaddy", "daddy_alt":"Sfeerbeeld: man in pak in een hotellobby, geen echte leden",
   "baby_k":"Sugarbaby", "baby_h":"Voor wie weet wat ze wil, en dat ook zegt.",
-  "baby_p":"Je bent zelfstandig en stelt je eigen grenzen. Je zoekt iemand met ervaring die ruimhartig is en jouw tempo respecteert.",
+  "baby_p":"Je bent zelfstandig en bepaalt je eigen grenzen. Je zoekt een man met ervaring, die ruimhartig is en jouw tempo respecteert.",
   "baby_list":["Een ervaren gesprekspartner of mentor","Nieuwe plekken en ervaringen","Steun die past bij jullie afspraken"],
   "baby_cta":"Vind je sugardaddy", "baby_alt":"Sfeerbeeld: vrouw met designertas en shoppingtas in een Amsterdamse winkelstraat, geen echte leden",
   "pr_kicker":"Privacy", "pr_h2":"Discreet als uitgangspunt.",
@@ -54,7 +54,7 @@ COPY = {
          ("Is dit een escortsite?","Nee. SugarDates is een datingsite. Seks aanbieden of vragen tegen betaling is niet toegestaan. Forest Road B.V. heeft daarvoor [[paydates/|Paydates.nl]] (escort- en paydate-advertenties in Nederland) en [[highclass/|HighClass.nl]] (high class escorts in Europa).")],
   "band_alt":"Sfeerbeeld: man en vrouw toosten met champagne op een terras aan de gracht, geen echte leden",
   "close_h2":"Kies je rol.", "close_lead":"Aanmelden duurt een paar minuten. Een bijnaam is genoeg.",
-  "f_about":"Sugardating voor Nederland en Europa. Een site van Forest Road B.V., het bedrijf achter <a href=\"https://paydates.nl/\" rel=\"noopener noreferrer\" target=\"_blank\">Paydates.nl</a> en <a href=\"https://highclass.nl/\" rel=\"noopener noreferrer\" target=\"_blank\">HighClass.nl</a>.",
+  "f_about":"Discreet sugardating voor Nederland en België. Een site van Forest Road B.V. in Amsterdam, het bedrijf achter <a href=\"https://paydates.nl/\" rel=\"noopener noreferrer\" target=\"_blank\">Paydates.nl</a> en <a href=\"https://highclass.nl/\" rel=\"noopener noreferrer\" target=\"_blank\">HighClass.nl</a>.",
   "f_links":[("Hoe het werkt","#hoe"),("Vragen","#faq"),("Privacy","#"),("Voorwaarden","#"),("Contact","#")],
   "f_legal":"Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam · KvK 97957232 · BTW NL868303550B01 · © 2026",
   "su_title":"Aanmelden – SugarDates",
@@ -63,20 +63,20 @@ COPY = {
 "en": {
   "lang":"en", "locale":"en_US", "hreflang":"en-US", "path":"en/", "signup":"signup/",
   "title":"SugarDates – discreet sugar dating, on your terms",
-  "desc":"Sugar dating where you're upfront about what you want. Create a profile, stay discreet and meet someone who fits. For the United States.",
+  "desc":"Discreet sugar dating for adults who know what they want. A nickname is enough and expectations are agreed up front. SugarDates.net, for the United States.",
   "skip":"Skip to content", "cta_top":"Join",
   "hero_h1":"Sugar dating, upfront about what you want.",
-  "hero_sub":"For anyone looking for an established sugar daddy, and for the man who knows exactly what he wants. Discreet, in the United States.",
+  "hero_sub":"For the established man who knows what he wants, and for the woman looking for him. You agree up front on what you expect from each other. The rest stays between the two of you.",
   "role_baby":"I'm looking for a sugar daddy", "role_daddy":"I'm a sugar daddy",
   "hero_trust":"Discreet · No app needed · Free to sign up",
   "hero_alt":"Mood image: older man and younger woman walking arm in arm on a shopping street, not real members",
-  "intro":"Say what you want. No app on your phone. No real name if you'd rather not share one. Just adults who are open about what they're looking for.",
+  "intro":"You say what you want, and so do they. No app on your phone, no real name if you'd rather keep it to yourself. Just adults who know what they want.",
   "how_kicker":"How it works", "how_h2":"Three steps.",
   "how":[("Create a profile","Choose your role, a username and your area. A nickname is enough."),
          ("Say what you want","Companionship, mentoring, travel: say it up front, so nobody has to guess."),
          ("Get to know each other","Send messages and meet when it feels right for both of you.")],
   "daddy_k":"Sugar daddy", "daddy_h":"For the man who gives, and knows exactly what he wants.",
-  "daddy_p":"You're established, busy and you want good company. You say up front what you're looking for and what you can offer.",
+  "daddy_p":"You're established, your calendar is full and you want company worth making time for. You say up front what you're looking for and what you can offer.",
   "daddy_list":["Company for dinners, travel and events","Supporting or mentoring someone","Clear agreements instead of assumptions"],
   "daddy_cta":"Join as a sugar daddy", "daddy_alt":"Mood image: man in a suit in a hotel lobby, not real members",
   "baby_k":"Sugar baby", "baby_h":"For anyone who knows what she wants, and says so.",
@@ -147,8 +147,8 @@ def head(c, title, desc, canon, root, alts=None, robots="index,follow", preload=
 GLOBE = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15.4 0 18M12 3c-2.6 2.6-2.6 15.4 0 18"/></svg>'
 CHEV = '<svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
 TICKSVG = '<svg class="lm-tick" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
-LOCALES = [("nl","nl-NL","Europa · Nederlands","SugarDates.nl"),("en","en-US","United States · English","SugarDates.net")]
-SHORT = {"nl":"Europa (NL)","en":"United States (EN)"}
+LOCALES = [("nl","nl-NL","Nederland · Nederlands","SugarDates.nl"),("en","en-US","United States · English","SugarDates.net")]
+SHORT = {"nl":"Nederland","en":"United States"}
 
 def _nl_flag():
     # Official Netherlands tricolour: bright vermilion, white, cobalt blue.
@@ -331,12 +331,12 @@ OFFER = {
 }
 CITY = {
  "nl":{"k":"Amsterdam","h":"Sugardating in Amsterdam.",
-  "p":"Van een lunch in de Negen Straatjes tot een diner in Oud-Zuid: Amsterdam is internationaal en tegelijk klein genoeg om discreet af te spreken. Lees welke buurten goed werken voor een eerste ontmoeting.",
+  "p":"Een lunch in de Negen Straatjes, een diner in Oud-Zuid. Amsterdam is groot genoeg om onopgemerkt af te spreken en klein genoeg om alles dichtbij te houden. Lees welke buurten zich lenen voor een eerste ontmoeting.",
   "cta":("Sugardating in Amsterdam","sugardating/amsterdam/"),
   "img":("car","Sfeerbeeld: man helpt een jonge vrouw uit een auto aan een Amsterdamse gracht, geen echte leden"),
   "more":"Andere steden","cities":[("Rotterdam","sugardating/rotterdam/"),("Den Haag","sugardating/den-haag/"),("Utrecht","sugardating/utrecht/"),("Eindhoven","sugardating/eindhoven/"),("België","sugardating/belgie/")]},
  "en":{"k":"New York · Miami","h":"Sugar dating in your city.",
-  "p":"From a West Village wine bar to a Brickell rooftop: local tips on neighborhoods that work well for a first date, plus how to meet safely.",
+  "p":"A West Village wine bar, a Brickell rooftop. City by city: the neighborhoods that suit a first date, and how to meet safely.",
   "cta":("Sugar dating in New York","en/sugar-dating/new-york/"),
   "img":None,
   "more":"More cities","cities":[("Miami","en/sugar-dating/miami/"),("Los Angeles","en/sugar-dating/los-angeles/"),("Chicago","en/sugar-dating/chicago/"),("Las Vegas","en/sugar-dating/las-vegas/")]},
@@ -565,7 +565,7 @@ SU = {
   "lead_baby":"Aanmelden als sugarbaby","lead_daddy":"Aanmelden als sugardaddy",
   "about_h":"Over jou","about_p":"Alleen de basis. Een bijnaam mag.",
   "f_name":"Gebruikersnaam","f_loc":"Stad of provincie","f_loc_ph":"Kies een stad of provincie","f_year":"Geboortejaar","f_year_ph":"Kies je geboortejaar",
-  "grp_cities":"Grote steden","grp_regions":"Provincies","other":"Ergens anders in Nederland",
+  "grp_cities":"Grote steden","grp_regions":"Provincies","other":"België of elders in Europa",
   "about_micro":"We tonen alleen je stad of provincie, nooit je adres. Je moet 18 jaar of ouder zijn.",
   "looking_h":"Wat zoek je?","looking_p":"Zo weten we welke profielen we je straks laten zien.","grp_who":"Ik zoek","grp_what":"Waarvoor? (meerdere mogelijk)",
   "who":[["sugardaddy","Een sugardaddy"],["sugarbaby","Een sugarbaby"],["any","Maakt niet uit"]],
