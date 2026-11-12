@@ -14,7 +14,7 @@ import json, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://realmrhodl.github.io/sugardates-nl/v5/"
 MIN_AGE = 18
-CSSV = 18
+CSSV = 19
 CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.5l4 4 8-9"/></svg></span>'
 
 COPY = {
@@ -440,6 +440,24 @@ def blocks_html(root, blocks):
             out.append('<div class="facts">' + "".join(
                 f'<div><strong>{e(v)}</strong><span>{e(l)}</span></div>' for v, l in b[1]
             ) + '</div>')
+        elif k == "example":
+            heading, intro, headers, rows, totals, kpis, note = b[1], b[2], b[3], b[4], b[5], b[6], b[7]
+            def cells(row, tag="td", first="url"):
+                outc = []
+                for i, c in enumerate(row):
+                    cls = f' class="{first}"' if i == 0 else ' class="num"'
+                    lab = f' data-label="{e(headers[i])}"' if i and i < len(headers) else ""
+                    outc.append(f"<{tag}{cls}{lab}>{e(c)}</{tag}>")
+                return "".join(outc)
+            thead = "<tr>" + cells(headers, "th", first="url") + "</tr>"
+            body = "".join("<tr>" + cells(r) + "</tr>" for r in rows)
+            foot = "<tr>" + cells(totals, "th") + "</tr>"
+            kpi = "".join(f"<li><strong>{e(v)}</strong><span>{e(l)}</span></li>" for v, l in kpis)
+            out.append(
+                f'<div class="ex"><p class="ex-kicker">{e(heading)}</p><p class="ex-intro">{inline(root, intro)}</p>'
+                f'<div class="ex-scroll"><table><thead>{thead}</thead><tbody>{body}</tbody><tfoot>{foot}</tfoot></table></div>'
+                f'<ul class="ex-kpis">{kpi}</ul><p class="ex-note">{e(note)}</p></div>'
+            )
         elif k == "links":
             out.append(f'<section class="related"><h2>{b[1]}</h2><ul class="rel-list">' +
                        "".join(f'<li><a href="{href(root, s)}"><span>{t}</span>{ARR}</a></li>' for t, s in b[2]) + "</ul></section>")
@@ -470,7 +488,7 @@ def page(p, all_pages):
     close_lead = p.get("close_lead", c["close_lead"])
     body = f'''<body>
   {header(c, root, hrefs, navcur)}
-  <main id="inhoud" class="pg">
+  <main id="inhoud" class="pg{" pg-aff" if p.get("aff") else ""}">
     <div class="pg-hero"><div class="wrap pg-head{" has-media" if img else ""}">
       <div class="pg-intro">
         <nav class="crumbs" aria-label="{u["crumbs"]}"><ol>{cr}</ol></nav>

@@ -485,3 +485,57 @@ html.menu-open .top{background:#fff}
 .ok circle{fill:var(--warm)!important}
 .ok path{stroke:var(--brand)!important}
 @media (min-width:640px){.offer-col{padding:40px}}
+
+
+/* affiliate page: tighter, wider, example table */
+.pg-aff .pg-head{padding-top:20px;padding-bottom:20px;gap:16px}
+.pg-aff .crumbs ol{margin-bottom:12px}
+.pg-aff h1{font-size:clamp(36px,7vw,56px)}
+.pg-aff .lead{margin-top:12px;max-width:40rem}
+.pg-aff .prose{max-width:none;padding:8px 0 8px}
+.pg-aff .prose>h2{margin:32px 0 12px;font-size:clamp(24px,4vw,30px)}
+.pg-aff .facts{margin:8px 0 28px}
+.pg-aff .steps,.pg-aff .prose .lines{margin:0 0 8px}
+.pg-aff .steps li,.pg-aff .prose .lines li{padding:12px 0}
+.pg-aff .steps li:last-child{border-bottom:0}
+.pg-aff .prose .faq{margin:0 0 8px}
+.pg-aff .faq summary{padding:16px 0;font-size:17px}
+.pg-aff .related{margin-top:32px}
+.pg-aff .close{margin-top:28px;padding:40px 0 48px}
+.pg-aff .close h2{font-size:clamp(28px,5vw,40px)}
+.ex{margin:8px 0 12px;padding:24px 0 8px;border-top:1px solid var(--line)}
+.ex-kicker{margin:0 0 6px;font:500 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--brand)}
+.ex-intro{margin:0 0 20px;max-width:40rem;color:var(--ink2);font-size:16px;line-height:24px}
+.ex-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -4px}
+.ex table{width:100%;border-collapse:collapse;font-size:14px;line-height:20px;color:var(--ink);min-width:720px}
+.ex th,.ex td{padding:10px 16px 10px 0;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.ex th:first-child,.ex td:first-child{padding-left:0}
+.ex thead th{font:500 11px/16px var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:0;padding-bottom:10px;border-bottom:1px solid var(--ink)}
+.ex .url{font:500 13px/20px var(--sans);letter-spacing:-.01em;white-space:nowrap;color:var(--ink)}
+.ex .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;padding-right:0;padding-left:16px}
+.ex thead th.num,.ex tfoot th.num{text-align:right}
+.ex tbody td{color:var(--ink2)}
+.ex tfoot th{font:500 14px/20px var(--head);letter-spacing:-.015em;color:var(--ink);border-bottom:0;padding-top:12px}
+.ex-kpis{list-style:none;margin:20px 0 0;padding:20px 0 0;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ex-kpis li{margin:0}
+.ex-kpis strong{display:block;font:500 22px/1.1 var(--head);letter-spacing:-.03em;color:var(--ink)}
+.ex-kpis span{display:block;margin-top:4px;font-size:13px;line-height:18px;color:var(--ink2)}
+.ex-note{margin:20px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:13px;line-height:20px;color:var(--muted)}
+@media (max-width:700px){
+  .ex-kpis{grid-template-columns:1fr;gap:12px;padding-top:16px}
+  .ex{padding-top:16px}
+  .ex-scroll{margin:0;overflow:visible}
+  .ex table{min-width:0;width:100%}
+  .ex thead{display:none}
+  .ex tbody tr,.ex tfoot tr{display:block;padding:16px 0;border-bottom:1px solid var(--line)}
+  .ex tfoot tr{border-bottom:0}
+  .ex th,.ex td{display:block;padding:0;border:0;text-align:left;white-space:normal}
+  .ex .url{font-size:14px;line-height:20px;padding:0 0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ex .num{display:flex;justify-content:space-between;align-items:baseline;gap:16px;text-align:right;padding:3px 0;padding-left:0;font-size:14px;color:var(--ink)}
+  .ex .num::before{content:attr(data-label);font:500 11px/16px var(--sans);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);text-align:left}
+  .ex tfoot .url{font:500 14px/20px var(--head)}
+}
+@media (min-width:1024px){
+  .pg-aff .pg-head{padding-top:28px;padding-bottom:16px}
+  .pg-aff .prose{padding-top:4px}
+}
