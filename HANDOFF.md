@@ -76,3 +76,8 @@
 - Privacy/Voorwaarden/Contact pages are `#` placeholders.
 - Real backend (accounts, credits, payments, moderation, age verification) – front-end only so far.
 - Move robots.txt/sitemap to the real domain roots at launch; canonicals currently point at the GitHub Pages preview (`BASE` in build.py).
+
+## Traffic LP `v5/lp/` (12 Nov 2026)
+- Stefan: "Maak ook een LP … vanuit porn traffic, NL markt, speel in op wat mannen echt willen." Standalone pre-lander for men (sugardaddies), noindex,nofollow, not linked from the site or sitemap.
+- Self-contained: inline CSS, no JS, system fonts, own images in `v5/lp/img/` (Higgsfield woman = hero, walk photo below). Does not use `v5/assets/site.css`; `build.py` does not generate it, so a rebuild leaves it alone.
+- All CTAs → `../aanmelden/?rol=daddy`. Dating copy only: no escort/rates, no Paydates/HighClass links, no 18+/niet live/wachtlijst, no stats or testimonials. Footer is the legal line only.
