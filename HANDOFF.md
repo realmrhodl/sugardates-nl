@@ -30,7 +30,7 @@
 ## V6 exploration – "binnenkomen" homepage (12 Nov 2026)
 - Stefan rejected V2–V4 (same landing page in different clothes) and approved one new direction: arrive as if the site already exists — strong photo, one short line, one way in. More Seeking than brochure.
 - `v6/index.html` is a single hand-built page (inline CSS, `noindex`), white + red `#b3122e`, Inter Tight / Inter, text wordmark. Hero = walking couple full-bleed with a white card (H1 “Sugardating, open over wat je zoekt.”, “Een bijnaam is genoeg.”, Aanmelden); below: two editorial portraits (sugardaddy / sugarbaby, one line each); minimal footer. All deeper links go to `../v5/…`, signup to `../v5/aanmelden/` (`?rol=daddy|baby` on the role links).
-- **Exploration only: v5 is still the live/current site.** The new Higgsfield photos (`walk-v1`, `man-gpt-med`, `woman-gpt-med`) live only in `v6/img/` until Stefan says otherwise; do not copy them into v5.
+- v5 now uses Higgsfield photos too (Stefan approved 2026-11-12): see the 2026-11-12 photo note below. v6 keeps its own copies in `v6/img/`.
 - Preview: https://realmrhodl.github.io/sugardates-nl/v6/
 
 ## Decisions
@@ -82,3 +82,4 @@
 - Self-contained: inline CSS, no JS, system fonts, own images in `v5/lp/img/` (Higgsfield woman = hero, walk photo below). Does not use `v5/assets/site.css`; `build.py` does not generate it, so a rebuild leaves it alone.
 - All CTAs → `../aanmelden/?rol=daddy`. Dating copy only: no escort/rates, no Paydates/HighClass links, no 18+/niet live/wachtlijst, no stats or testimonials. Footer is the legal line only.
 - 2026-11-12: v5/lp hero vervangen door blonde vrouw (Higgsfield GPT Image 2.6 medium 2k, bron sugardates-nl-notes/higgs/woman-blonde-v2.jpeg); alleen v5/lp/img + alt-tekst.
+- 2026-11-12: v5 photos replaced with Higgsfield editorial images (GPT Image 2.6 medium 2k). New names in v5/img: couple (hero + signup, bron walk-v1), daddy (man-gpt-med), baby (cafe-woman-v1, job d3adf02a), stroll (woman-gpt-med, sugardaddy-gezocht), dinner (homepage band, job e47bb036), bridge (Amsterdam city section, job 0d2fda11), og-hf.jpg (og:image, crop of dinner). Old walk/man2/woman2/terrace/car/og files stay because v2-v4 still reference them. Band object-position 64% 45% so the woman stays in frame on mobile; CSSV 24.

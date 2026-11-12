@@ -85,7 +85,7 @@ dict(slug="sugardaddy/", lang="nl", alt="en/sugar-daddy/", role="daddy",
  desc="Wat een sugardaddy is, wat hij zoekt en hoe je een sugarbaby vindt die bij je past. Over een goed profiel, heldere afspraken en discretie.",
  h1="Sugardaddy worden",
  lead="Voor de gevestigde man die zijn tijd en aandacht graag geeft, en vooraf zegt wat hij zoekt.",
- crumbs=[("Sugardaddy","sugardaddy/")], img=("man2","Sfeerbeeld: man in een hotellounge, geen echte leden"),
+ crumbs=[("Sugardaddy","sugardaddy/")], img=("daddy","Sfeerbeeld: grijzende man in colbert in een rustige lounge, geen echt lid"),
  blocks=[
   ("h2","Wat is een sugardaddy?"),
   ("p","Meestal een man die het in zijn werk goed heeft gedaan, weinig tijd heeft voor eindeloos daten en precies weet wat hij zoekt: gezelschap, een goed gesprek, iemand om mooie dingen mee te beleven. Hij is ruimhartig, met zijn tijd, zijn netwerk of op een manier die jullie samen afspreken."),
@@ -104,7 +104,7 @@ dict(slug="sugarbaby/", lang="nl", alt="en/sugar-baby/", role="baby",
  desc="Sugarbaby worden: wat het inhoudt, hoe je een sterk profiel maakt en hoe je een sugardaddy leert kennen, op jouw voorwaarden en in jouw tempo.",
  h1="Sugarbaby worden",
  lead="Voor wie zelfstandig is, weet wat ze wil en iemand zoekt met ervaring die ruimhartig is.",
- crumbs=[("Sugarbaby","sugarbaby/")], img=("woman2","Sfeerbeeld: vrouw met koffie op de stoep van een grachtenpand, geen echte leden"),
+ crumbs=[("Sugarbaby","sugarbaby/")], img=("baby","Sfeerbeeld: blonde vrouw met koffie aan het raam van een café aan de gracht, geen echt lid"),
  blocks=[
   ("h2","Wat is een sugarbaby?"),
   ("p","Iemand die een relatie zoekt met een oudere, gevestigde partner, en daar open over is. Sugarbaby's zijn studenten, starters, creatieven en ondernemers. Wat ze gemeen hebben: ze weten wat ze willen en bepalen zelf hun grenzen."),
@@ -278,7 +278,7 @@ dict(slug="en/sugar-daddy/", lang="en", alt="sugardaddy/", role="daddy",
  desc="What a sugar daddy is, what he looks for and how to find a sugar baby who fits. On writing a good profile, clear arrangements and discretion.",
  h1="Become a sugar daddy",
  lead="For the established man who likes to give his time and attention, and says up front what he's looking for.",
- crumbs=[("Sugar daddy","en/sugar-daddy/")], img=("man2","Mood image: man in a hotel lounge, not real members"),
+ crumbs=[("Sugar daddy","en/sugar-daddy/")], img=("daddy","Mood image: grey-haired man in a blazer in a quiet lounge, not a real member"),
  blocks=[
   ("h2","What is a sugar daddy?"),
   ("p","Usually a man who has done well in his career, has little time for endless dating and knows exactly what he wants: company, good conversation, someone to share great experiences with. He's generous, with his time, his network or in a way you agree on together."),
@@ -297,7 +297,7 @@ dict(slug="en/sugar-baby/", lang="en", alt="sugarbaby/", role="baby",
  desc="Becoming a sugar baby: what it involves, how to build a strong profile and how to get to know a sugar daddy, on your terms and at your pace.",
  h1="Become a sugar baby",
  lead="For anyone who is independent, knows what she wants and is looking for someone experienced and generous.",
- crumbs=[("Sugar baby","en/sugar-baby/")], img=("woman2","Mood image: woman with coffee on the steps of a townhouse, not real members"),
+ crumbs=[("Sugar baby","en/sugar-baby/")], img=("baby","Mood image: blonde woman with coffee by the window of a canal-side café, not a real member"),
  blocks=[
   ("h2","What is a sugar baby?"),
   ("p","Someone who wants a relationship with an older, established partner and is open about it. Sugar babies are students, young professionals, creatives and entrepreneurs. What they share: they know what they want and set their own boundaries."),
@@ -537,7 +537,7 @@ ip("oudere-man-jongere-vrouw/","nl","Oudere man, jongere vrouw: daten met leefti
  ("p","Meer over de rollen lees je bij [[sugardaddy/|Sugardaddy]] en [[sugarbaby/|Sugarbaby]]."),
  ("faq",[("Is een groot leeftijdsverschil een probleem?","Niet als jullie allebei volwassen zijn, weten wat je zoekt en elkaars grenzen respecteren."),
          ("Hoe vind ik een oudere man of jongere vrouw?","Maak een profiel, geef aan wie je zoekt en bekijk profielen in je regio.")]),
- rel_nl("oudere-man-jongere-vrouw/")], alt="en/older-man-younger-woman/", img=("walk","Sfeerbeeld: oudere man en jongere vrouw arm in arm in een Amsterdamse winkelstraat, geen echte leden")),
+ rel_nl("oudere-man-jongere-vrouw/")], alt="en/older-man-younger-woman/", img=("couple","Sfeerbeeld: oudere man en jongere vrouw wandelen samen door een Amsterdamse grachtenstraat, geen echte leden")),
 
 ip("rijke-man-ontmoeten/","nl","Rijke man ontmoeten: succesvolle mannen daten | SugarDates",
  "Een rijke of succesvolle man ontmoeten? Zo werkt sugardating: eerlijk zijn over wat je zoekt, een sterk profiel en veilig afspreken.",
@@ -550,7 +550,7 @@ ip("rijke-man-ontmoeten/","nl","Rijke man ontmoeten: succesvolle mannen daten | 
  ("p","Wie meteen grote beloftes doet, of juist om geld of gegevens vraagt, is zelden wie hij zegt te zijn. Lees [[veiligheid/|Veiligheid en privacy]] voor tips."),
  ("faq",[("Hoe ontmoet ik een rijke man?","Maak een profiel als sugarbaby, geef aan wat je zoekt en leer iemand eerst in de chat kennen voordat je afspreekt."),
          ("Wat kost het?","Een account is gratis. Voor sommige functies gebruik je credits; zie [[kosten/|Kosten]].")]),
- rel_nl("rijke-man-ontmoeten/",[("Sugarbaby worden","sugarbaby/")])], img=("man2","Sfeerbeeld: man in pak in een hotellobby, geen echte leden")),
+ rel_nl("rijke-man-ontmoeten/",[("Sugarbaby worden","sugarbaby/")])], img=("daddy","Sfeerbeeld: grijzende man in colbert in een rustige lounge, geen echt lid")),
 
 ip("sugardaddy-gezocht/","nl","Sugardaddy gezocht? Zo vind je er een | SugarDates",
  "Op zoek naar een sugardaddy? Zo vind je een gevestigde man die past bij wat jij zoekt: aandacht, mentorschap, ervaringen en duidelijke afspraken.",
@@ -563,7 +563,7 @@ ip("sugardaddy-gezocht/","nl","Sugardaddy gezocht? Zo vind je er een | SugarDate
  ("ol",["Meld je aan als sugarbaby","Geef aan wie je zoekt en waarvoor","Bekijk profielen in je regio","Leer elkaar kennen in de chat en spreek pas af als het goed voelt"]),
  ("faq",[("Hoe vind ik een sugardaddy?","Meld je aan als sugarbaby, kies bij 'Ik zoek' een sugardaddy en bekijk profielen in je regio."),
          ("Moet ik iets betalen?","Een account is gratis. Voor sommige functies gebruik je credits; zie [[kosten/|Kosten]].")]),
- rel_nl("sugardaddy-gezocht/")], img=("woman2","Sfeerbeeld: vrouw met designertas en shoppingtas in een Amsterdamse winkelstraat, geen echte leden")),
+ rel_nl("sugardaddy-gezocht/")], img=("stroll","Sfeerbeeld: vrouw in lange jas wandelt door een Amsterdamse straat, geen echt lid")),
 
 ip("sugarbaby-gezocht/","nl","Sugarbaby gezocht? Zo vind je er een | SugarDates",
  "Op zoek naar een sugarbaby? Zo vind je iemand die past bij wat jij zoekt: gezelschap, energie en duidelijke afspraken, discreet en in je eigen tempo.",
@@ -656,7 +656,7 @@ ip("en/older-man-younger-woman/","en","Older Man, Younger Woman: Age-Gap Dating 
  ("p","More on the roles: [[en/sugar-daddy/|Sugar daddy]] and [[en/sugar-baby/|Sugar baby]]."),
  ("faq",[("Is a big age gap a problem?","Not if you're both adults, know what you want and respect each other's boundaries."),
          ("How do I meet an older man or younger woman?","Create a profile, say who you're looking for and browse profiles near you.")]),
- rel_en("en/older-man-younger-woman/")], alt="oudere-man-jongere-vrouw/", img=("walk","Mood image: older man and younger woman walking arm in arm on a shopping street, not real members")),
+ rel_en("en/older-man-younger-woman/")], alt="oudere-man-jongere-vrouw/", img=("couple","Mood image: older man and younger woman walking together down an Amsterdam street, not real members")),
 
 ip("en/arrangement-dating/","en","Arrangement Dating: What Is an Arrangement? | SugarDates",
  "What is an arrangement in sugar dating? How agreements work, monthly support versus per date, and what is and isn't allowed.",
@@ -975,10 +975,10 @@ for _p in PAGES:
     if _p["slug"] == "en/safety/":
         _p["blocks"][-1][2].append(("Discreet dating","en/discreet-dating/"))
     if _p["slug"] in ("sugardaddy/",):
-        _p["img"] = ("man2","Sfeerbeeld: man in pak in een hotellobby, geen echte leden")
+        _p["img"] = ("daddy","Sfeerbeeld: grijzende man in colbert in een rustige lounge, geen echt lid")
     if _p["slug"] == "en/sugar-daddy/":
-        _p["img"] = ("man2","Mood image: man in a suit in a hotel lobby, not real members")
+        _p["img"] = ("daddy","Mood image: grey-haired man in a blazer in a quiet lounge, not a real member")
     if _p["slug"] == "sugarbaby/":
-        _p["img"] = ("woman2","Sfeerbeeld: vrouw met designertas en shoppingtas in een Amsterdamse winkelstraat, geen echte leden")
+        _p["img"] = ("baby","Sfeerbeeld: blonde vrouw met koffie aan het raam van een café aan de gracht, geen echt lid")
     if _p["slug"] == "en/sugar-baby/":
-        _p["img"] = ("woman2","Mood image: woman with a designer bag and shopping bag on a city street, not real members")
+        _p["img"] = ("baby","Mood image: blonde woman with coffee by the window of a canal-side café, not a real member")
