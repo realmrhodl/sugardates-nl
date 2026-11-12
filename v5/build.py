@@ -14,7 +14,7 @@ import json, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://realmrhodl.github.io/sugardates-nl/v5/"
 MIN_AGE = 18
-CSSV = 16
+CSSV = 17
 CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.5l4 4 8-9"/></svg></span>'
 
 COPY = {
