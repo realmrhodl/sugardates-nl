@@ -27,6 +27,12 @@
 - The old v4 (removed earlier, backup in notes) is unrelated to this new `v4/`.
 - When Stefan picks one, port that style into `v5/build.py` (or replace v5) rather than maintaining two systems.
 
+## V6 exploration – "binnenkomen" homepage (12 Nov 2026)
+- Stefan rejected V2–V4 (same landing page in different clothes) and approved one new direction: arrive as if the site already exists — strong photo, one short line, one way in. More Seeking than brochure.
+- `v6/index.html` is a single hand-built page (inline CSS, `noindex`), white + red `#b3122e`, Inter Tight / Inter, text wordmark. Hero = walking couple full-bleed with a white card (H1 “Sugardating, open over wat je zoekt.”, “Een bijnaam is genoeg.”, Aanmelden); below: two editorial portraits (sugardaddy / sugarbaby, one line each); minimal footer. All deeper links go to `../v5/…`, signup to `../v5/aanmelden/` (`?rol=daddy|baby` on the role links).
+- **Exploration only: v5 is still the live/current site.** The new Higgsfield photos (`walk-v1`, `man-gpt-med`, `woman-gpt-med`) live only in `v6/img/` until Stefan says otherwise; do not copy them into v5.
+- Preview: https://realmrhodl.github.io/sugardates-nl/v6/
+
 ## Decisions
 - **Domains:** SugarDates.nl = Dutch-language site for the Netherlands and Belgium; Dutch speakers elsewhere in Europe may join (nl-NL, EUR); SugarDates.net = USA (en-US, USD). One platform, shared database and accounts (`home_region`, `country`, `locale`).
 - **Sugardaddy focus:** roles are only *sugardaddy* and *sugarbaby* (sugarmama removed everywhere). Hero/CTAs lead with "Ik zoek een sugardaddy" / "Ik ben sugardaddy".

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SugarDates – sugardating, open over wat je zoekt</title>
+<meta name="description" content="SugarDates is discreet sugardating voor sugardaddy's en sugarbaby's in Nederland en België. Een bijnaam is genoeg.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../v5/assets/logo.svg" type="image/svg+xml">
+<link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="img/walk-800.webp 800w, img/walk-1200.webp 1200w, img/walk-1744.webp 1744w" imagesizes="100vw">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<style>:root{--brand:#b3122e;--brand-h:#8f0e24;--ink:#161616;--mute:#5c5c5c;--line:#e9e7e6;--bg:#fff;--hd:64px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font:400 16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.tt{font-family:"Inter Tight",Inter,system-ui,sans-serif}
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px}.skip:focus{left:16px;z-index:9;background:#fff;padding:8px 12px}
+/* header */
+.top{height:var(--hd);display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:#fff;position:relative;z-index:5}
+.brand{font:500 21px/1 "Inter Tight",Inter,sans-serif;letter-spacing:-.02em}
+.brand i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--brand);margin-left:2px}
+.nav{display:flex;align-items:center;gap:6px}
+.rg{position:relative}
+.rg summary{list-style:none;display:flex;align-items:center;gap:7px;height:36px;padding:0 10px;border-radius:999px;font-size:13px;color:var(--mute);cursor:pointer}
+.rg summary::-webkit-details-marker{display:none}
+.rg summary:hover{color:var(--ink)}
+.rg .flag{border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.rg ul{list-style:none;position:absolute;right:0;top:44px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px;min-width:250px;box-shadow:0 12px 32px rgba(0,0,0,.08)}
+.rg li a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;font-size:14px}
+.rg li a:hover{background:#f6f4f3}
+.rg li small{display:block;color:var(--mute);font-size:12px}
+.rg li a[aria-current]{font-weight:500}
+.lnk{font-size:14px;padding:0 10px;height:36px;display:inline-flex;align-items:center}
+.lnk:hover{color:var(--brand)}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 28px;border-radius:999px;background:var(--brand);color:#fff;font:500 15px/1 Inter,sans-serif;letter-spacing:.005em;transition:background .15s}
+.btn:hover{background:var(--brand-h)}
+.btn-sm{height:36px;padding:0 16px;font-size:13px}
+.rg-lbl{display:none}
+/* hero */
+.hero{position:relative}
+.hero picture,.hero img{width:100%}
+.hero img{aspect-ratio:4/5;object-fit:cover;object-position:50% 18%}
+.hero-c{padding:26px 20px 34px}
+.hero h1{font:500 32px/1.08 "Inter Tight",Inter,sans-serif;letter-spacing:-.025em;max-width:13ch}
+.hero p{margin-top:10px;color:var(--mute);font-size:15px}
+.hero .btn{margin-top:22px;width:100%}
+/* roles */
+.roles{display:grid;gap:40px;padding:56px 20px 64px;border-top:1px solid var(--line)}
+.role img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.role figcaption{padding-top:18px}
+.role h2{font:500 13px/1 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--brand)}
+.role p{font:400 22px/1.25 "Inter Tight",Inter,sans-serif;letter-spacing:-.015em;margin-top:10px;max-width:22ch}
+.role a{display:inline-block;margin-top:14px;font-size:15px;font-weight:500;border-bottom:1px solid currentColor;padding-bottom:2px}
+.role a:hover{color:var(--brand)}
+/* footer */
+.foot{border-top:1px solid var(--line);padding:36px 20px 40px;font-size:13px;color:var(--mute)}
+.foot-row{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:baseline;justify-content:space-between}
+.foot ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 20px}
+.foot a:hover{color:var(--brand)}
+.foot .brand{color:var(--ink);font-size:18px}
+.foot-legal{margin-top:22px;line-height:1.7}
+.foot-legal a{text-decoration:underline;text-underline-offset:2px}
+@media (min-width:720px){
+  .roles{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media (min-width:960px){
+  :root{--hd:76px}
+  .top{padding:0 40px}
+  .nav{gap:10px}
+  .rg-lbl{display:inline}
+  .hero{height:calc(100svh - var(--hd));min-height:600px;max-height:1100px;overflow:hidden}
+  .hero picture{position:absolute;inset:0}
+  .hero img{height:100%;aspect-ratio:auto;object-position:50% 24%}
+  .hero-c{position:absolute;left:40px;bottom:40px;background:#fff;padding:36px 40px 38px;max-width:460px;border-radius:2px}
+  .hero h1{font-size:44px;max-width:none}
+  .hero p{font-size:16px}
+  .hero .btn{width:auto}
+  .roles{padding:96px 40px 104px;gap:40px;max-width:1360px;margin:0 auto;border-top:0}
+  .role p{font-size:26px}
+  .foot{padding:40px 40px 44px}
+  .foot-in{max-width:1440px;margin:0 auto}
+}
+@media (min-width:1280px){
+  .roles{grid-template-columns:1fr 1fr;padding:112px 80px 120px;gap:64px}
+  .top,.foot{padding-left:56px;padding-right:56px}
+  .hero-c{left:56px;bottom:56px}
+}</style>
+</head>
+<body>
+<a class="skip" href="#main">Naar inhoud</a>
+<header class="top">
+  <a class="brand" href="./" aria-label="SugarDates">SugarDates<i aria-hidden="true"></i></a>
+  <nav class="nav" aria-label="Account">
+    <details class="rg">
+      <summary aria-label="Land en taal: Nederland · Nederlands"><svg class="flag" width="20" height="13.33" viewBox="0 0 30 20" aria-hidden="true" focusable="false"><rect width="30" height="20" fill="#FFFFFF"/><rect width="30" height="6.667" fill="#AE1C28"/><rect y="13.333" width="30" height="6.667" fill="#21468B"/></svg><span class="rg-lbl">Nederland</span></summary>
+      <ul>
+        <li><a href="./" aria-current="true"><svg class="flag" width="24" height="16.0" viewBox="0 0 30 20" aria-hidden="true" focusable="false"><rect width="30" height="20" fill="#FFFFFF"/><rect width="30" height="6.667" fill="#AE1C28"/><rect y="13.333" width="30" height="6.667" fill="#21468B"/></svg><span>Nederland · Nederlands<small>SugarDates.nl</small></span></a></li>
+        <li><a href="../v5/en/" hreflang="en-US" lang="en"><svg class="flag" width="24" height="16.0" viewBox="0 0 30 20" aria-hidden="true" focusable="false"><rect width="30" height="20" fill="#FFFFFF"/><rect width="30" height="6.667" fill="#AE1C28"/><rect y="13.333" width="30" height="6.667" fill="#21468B"/></svg><span>United States · English<small>SugarDates.net</small></span></a></li>
+      </ul>
+    </details>
+    <a class="lnk" href="../v5/aanmelden/">Inloggen</a>
+    <a class="btn btn-sm" href="../v5/aanmelden/">Aanmelden</a>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero">
+    <picture>
+      <source type="image/webp" srcset="img/walk-800.webp 800w, img/walk-1200.webp 1200w, img/walk-1744.webp 1744w" sizes="100vw">
+      <img src="img/walk-1200.jpg" width="1200" height="1607" alt="Sfeerbeeld: een man en een vrouw wandelen in gesprek door een Amsterdamse straat. Geen echte leden." fetchpriority="high" decoding="async">
+    </picture>
+    <div class="hero-c">
+      <h1>Sugardating, open over wat je zoekt.</h1>
+      <p>Een bijnaam is genoeg.</p>
+      <a class="btn" href="../v5/aanmelden/">Aanmelden</a>
+    </div>
+  </section>
+
+  <section class="roles" aria-label="Sugardaddy en sugarbaby">
+    <figure class="role">
+      <picture>
+        <source type="image/webp" srcset="img/man-800.webp 800w, img/man-1200.webp 1200w" sizes="(min-width:720px) 50vw, 100vw">
+        <img src="img/man-800.jpg" width="800" height="1072" alt="Sfeerbeeld: een man in een hotellounge. Geen echt lid." loading="lazy" decoding="async">
+      </picture>
+      <figcaption>
+        <h2>Sugardaddy</h2>
+        <p>Gevestigd, en duidelijk over wat hij zoekt.</p>
+        <a href="../v5/aanmelden/?rol=daddy">Ik ben sugardaddy</a>
+      </figcaption>
+    </figure>
+    <figure class="role">
+      <picture>
+        <source type="image/webp" srcset="img/woman-800.webp 800w, img/woman-1200.webp 1200w" sizes="(min-width:720px) 50vw, 100vw">
+        <img src="img/woman-800.jpg" width="800" height="1072" alt="Sfeerbeeld: een vrouw loopt langs een Amsterdamse gracht. Geen echt lid." loading="lazy" decoding="async">
+      </picture>
+      <figcaption>
+        <h2>Sugarbaby</h2>
+        <p>Zelfstandig, en ze bepaalt haar eigen grenzen.</p>
+        <a href="../v5/aanmelden/?rol=baby">Ik zoek een sugardaddy</a>
+      </figcaption>
+    </figure>
+  </section>
+</main>
+<footer class="foot"><div class="foot-in">
+  <div class="foot-row">
+    <a class="brand" href="./" aria-label="SugarDates">SugarDates<i aria-hidden="true"></i></a>
+    <ul>
+      <li><a href="../v5/hoe-het-werkt/">Hoe het werkt</a></li>
+      <li><a href="../v5/veiligheid/">Veiligheid</a></li>
+      <li><a href="../v5/kosten/">Kosten</a></li>
+      <li><a href="../v5/faq/">Vragen</a></li>
+    </ul>
+  </div>
+  <p class="foot-legal">SugarDates is een datingsite; seks tegen betaling is niet toegestaan. Ook van Forest Road B.V.: <a href="../v5/paydates/">Paydates.nl</a> en <a href="../v5/highclass/">HighClass.nl</a>.<br>Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam · KvK 97957232 · BTW NL868303550B01 · © 2026</p>
+</div></footer>
+<script>document.addEventListener("click",function(e){var d=document.querySelector(".rg");if(d&&d.open&&!d.contains(e.target))d.open=false});</script>
+</body>
+</html>
