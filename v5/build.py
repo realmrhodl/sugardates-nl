@@ -14,7 +14,7 @@ import json, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://realmrhodl.github.io/sugardates-nl/v5/"
 MIN_AGE = 18
-CSSV = 20
+CSSV = 21
 CHECK = '<span class="ck" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12.5l4 4 8-9"/></svg></span>'
 
 COPY = {
@@ -54,7 +54,7 @@ COPY = {
          ("Is dit een escortsite?","Nee. SugarDates is een datingsite. Seks aanbieden of vragen tegen betaling is niet toegestaan. Forest Road B.V. heeft daarvoor [[paydates/|Paydates.nl]] (escort- en paydate-advertenties in Nederland) en [[highclass/|HighClass.nl]] (high class escorts in Europa).")],
   "band_alt":"Sfeerbeeld: man en vrouw toosten met champagne op een terras aan de gracht, geen echte leden",
   "close_h2":"Kies je rol.", "close_lead":"Aanmelden duurt een paar minuten. Een bijnaam is genoeg.",
-  "f_about":"Discreet sugardating voor Nederland en België. Een site van Forest Road B.V. in Amsterdam, het bedrijf achter <a href=\"https://paydates.nl/\" rel=\"noopener noreferrer\" target=\"_blank\">Paydates.nl</a> en <a href=\"https://highclass.nl/\" rel=\"noopener noreferrer\" target=\"_blank\">HighClass.nl</a>.",
+  "f_about":"",
   "f_links":[("Hoe het werkt","#hoe"),("Vragen","#faq"),("Privacy","#"),("Voorwaarden","#"),("Contact","#")],
   "f_legal":"Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam · KvK 97957232 · BTW NL868303550B01 · © 2026",
   "su_title":"Aanmelden – SugarDates",
@@ -96,7 +96,7 @@ COPY = {
          ("Is this an escort site?","No. SugarDates is a dating site. Offering or asking for sex for money isn't allowed. Forest Road B.V. also runs [[en/paydates/|Paydates.nl]] (escort and paydate advertisements in the Netherlands) and [[en/highclass/|HighClass.nl]] (high class escorts across Europe).")],
   "band_alt":"Mood image: man and woman toasting with champagne at a canal-side terrace, not real members",
   "close_h2":"Choose your role.", "close_lead":"Signing up takes a few minutes. A nickname is enough.",
-  "f_about":"SugarDates.net is the US site of SugarDates, on the same platform as SugarDates.nl. Operated by Forest Road B.V., the company behind <a href=\"https://paydates.nl/\" rel=\"noopener noreferrer\" target=\"_blank\">Paydates.nl</a> and <a href=\"https://highclass.nl/\" rel=\"noopener noreferrer\" target=\"_blank\">HighClass.nl</a>.",
+  "f_about":"",
   "f_links":[("How it works","#how"),("FAQ","#faq"),("Privacy","#"),("Terms","#"),("Contact","#")],
   "f_legal":"Forest Road B.V. · Herengracht 449A, 1017 BR Amsterdam, the Netherlands · Chamber of Commerce 97957232 · VAT NL868303550B01 · © 2026",
   "su_title":"Join – SugarDates",
@@ -283,7 +283,7 @@ def footer(c, root, hrefs):
     ) + '</ul></div>'
     return f'''<footer class="foot"><div class="wrap">
     <div class="foot-top">
-      <div class="foot-brand">{brand(root, href(root, home_slug(lang)))}<p>{c["f_about"]}</p></div>
+      <div class="foot-brand">{brand(root, href(root, home_slug(lang)))}{("".join(("<p>", c["f_about"], "</p>")) if c.get("f_about") else "")}</div>
       <nav class="hub" aria-label="{UI[lang]["foot_nav"]}">{cols}</nav>
     </div>
     {sisters}
