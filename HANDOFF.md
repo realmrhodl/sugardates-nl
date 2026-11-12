@@ -81,3 +81,4 @@
 - Stefan: "Maak ook een LP … vanuit porn traffic, NL markt, speel in op wat mannen echt willen." Standalone pre-lander for men (sugardaddies), noindex,nofollow, not linked from the site or sitemap.
 - Self-contained: inline CSS, no JS, system fonts, own images in `v5/lp/img/` (Higgsfield woman = hero, walk photo below). Does not use `v5/assets/site.css`; `build.py` does not generate it, so a rebuild leaves it alone.
 - All CTAs → `../aanmelden/?rol=daddy`. Dating copy only: no escort/rates, no Paydates/HighClass links, no 18+/niet live/wachtlijst, no stats or testimonials. Footer is the legal line only.
+- 2026-11-12: v5/lp hero vervangen door blonde vrouw (Higgsfield GPT Image 2.6 medium 2k, bron sugardates-nl-notes/higgs/woman-blonde-v2.jpeg); alleen v5/lp/img + alt-tekst.
