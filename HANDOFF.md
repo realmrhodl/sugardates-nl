@@ -133,3 +133,8 @@ Two separate, single-language teasers (12 Nov late evening PT: Stefan found the 
 - US city guides: New York, Boston, Washington DC, Miami, Atlanta, Dallas, Houston, Chicago, Los Angeles, San Francisco, Seattle, Las Vegas; hub grouped East Coast / The South / Texas / Midwest / The West. NL keeps NL+BE cities.
 - US copy pass on all EN pages (closing panel “Ready when you are.”, “Join for free”, “Read next”, rideshare wording, rewritten leads, USD wording on cost/affiliate, FAQ “Where is SugarDates available?” = 50 states + DC). No NL/Europe/euro references on US pages except the operator address on Company information. NL pages: SugarDates.net/VS/dollar mentions removed.
 - hreflang: NL pages nl-NL + nl-BE, US pages en-US; pages without a twin are self-referencing. City hubs switch to each other.
+
+## 2026-11-13 – Teaser production package for sugardates.nl
+- Stefan: "we hosten m op .nl" + "send me html css js files". Both teasers are hosted on sugardates.nl: `/` (NL) and `/en/` (EN).
+- `teaser-en.html` copy is no longer US-only: “A nickname is all it takes. / SugarDates opens in 2027, in Dutch and English.”, meta line “Netherlands · Belgium · sugardates.nl”, lang=en, og:locale en_GB, hreflang `en`. og image `teaser-assets/og-type-us.png` regenerated with that copy.
+- Self-hostable package (compiled Tailwind 3.4.19, no CDN, no third-party requests, lang.js, .htaccess, robots/sitemap): `/workspace/sugardates-teaser-dist/` + `/workspace/sugardates-teaser.zip` on the box. Build sources: `/workspace/sd-build/` (tailwind.config.js, input.css, gen.py, og.py, test.py). Rebuild: `python3 gen.py && npx tailwindcss -c tailwind.config.js -i input.css -o ../sugardates-teaser-dist/assets/css/style.css --minify`.
