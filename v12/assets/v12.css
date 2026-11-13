@@ -261,3 +261,17 @@ select.inp{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 @media (min-width:960px){.close-in.close-simple{display:block;padding:64px}}
 
 .sec.full .faq{max-width:860px}
+
+/* company info + short footer */
+.foot-legal a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(28,25,23,.35)}
+.foot-legal a:hover{color:var(--ink);text-decoration-color:var(--ink)}
+.phero.plain h1{max-width:22ch}
+.phero.plain .lead{max-width:52ch}
+.legal-dl{max-width:58ch;padding:8px 0 24px}
+.legal-dl>div+div{margin-top:28px}
+.legal-dl dt{font:600 15px/1.35 Outfit,sans-serif;color:var(--graphite);letter-spacing:.02em}
+.legal-dl dd{margin-top:6px;font-size:17.5px;line-height:1.65;color:#2a2622}
+.legal-copy{margin-top:8px;padding-bottom:24px;color:var(--graphite);font-size:15px}
+@media (min-width:960px){
+  .phero.plain .wrap{grid-template-columns:1fr}
+}
