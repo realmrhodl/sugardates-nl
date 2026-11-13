@@ -278,7 +278,7 @@ dict(slug="en/sugar-daddy/", lang="en", alt="sugardaddy/", role="daddy",
  desc="What a sugar daddy is, what he looks for and how to find a sugar baby who fits. On writing a good profile, clear arrangements and discretion.",
  h1="Become a sugar daddy",
  lead="For the established man who likes to give his time and attention, and says up front what he's looking for.",
- crumbs=[("Sugar daddy","en/sugar-daddy/")], img=("us/daddy","Mood image: grey-bearded man in an armchair, looking out of a Miami apartment window at the bay, not a real member"),
+ crumbs=[("Sugar daddy","en/sugar-daddy/")], img=("us/daddy","Mood image: man in a navy blazer in an armchair, looking out of a Miami apartment window at the bay, not a real member"),
  blocks=[
   ("h2","What is a sugar daddy?"),
   ("p","Usually a man who has done well in his career, has little time for endless dating and knows exactly what he wants: company, good conversation, someone to share great experiences with. He's generous, with his time, his network or in a way you agree on together."),
@@ -977,7 +977,7 @@ for _p in PAGES:
     if _p["slug"] in ("sugardaddy/",):
         _p["img"] = ("daddy","Sfeerbeeld: grijzende man in colbert in een rustige lounge, geen echt lid")
     if _p["slug"] == "en/sugar-daddy/":
-        _p["img"] = ("us/daddy","Mood image: grey-bearded man in an armchair, looking out of a Miami apartment window at the bay, not a real member")
+        _p["img"] = ("us/daddy","Mood image: man in a navy blazer in an armchair, looking out of a Miami apartment window at the bay, not a real member")
     if _p["slug"] == "sugarbaby/":
         _p["img"] = ("baby","Sfeerbeeld: blonde vrouw met koffie aan het raam van een café aan de gracht, geen echt lid")
     if _p["slug"] == "en/sugar-baby/":

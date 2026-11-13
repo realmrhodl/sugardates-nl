@@ -78,7 +78,7 @@ COPY = {
   "daddy_k":"Sugar daddy", "daddy_h":"For the man who gives, and knows exactly what he wants.",
   "daddy_p":"You're established, your calendar is full and you want company worth making time for. You say up front what you're looking for and what you can offer.",
   "daddy_list":["Company for dinners, travel and events","Supporting or mentoring someone","Clear agreements instead of assumptions"],
-  "daddy_cta":"Join as a sugar daddy", "daddy_alt":"Mood image: grey-bearded man in an armchair, looking out of a Miami apartment window at the bay, not a real member",
+  "daddy_cta":"Join as a sugar daddy", "daddy_alt":"Mood image: man in a navy blazer in an armchair, looking out of a Miami apartment window at the bay, not a real member",
   "baby_k":"Sugar baby", "baby_h":"For anyone who knows what she wants, and says so.",
   "baby_p":"You're independent and you set your own boundaries. You're looking for someone experienced and generous who respects your pace.",
   "baby_list":["An experienced mentor to talk to","New places and experiences","Support that fits what you agree on"],
