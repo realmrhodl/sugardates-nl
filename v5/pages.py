@@ -278,7 +278,7 @@ dict(slug="en/sugar-daddy/", lang="en", alt="sugardaddy/", role="daddy",
  desc="What a sugar daddy is, what he looks for and how to find a sugar baby who fits. On writing a good profile, clear arrangements and discretion.",
  h1="Become a sugar daddy",
  lead="For the established man who likes to give his time and attention, and says up front what he's looking for.",
- crumbs=[("Sugar daddy","en/sugar-daddy/")], img=("us/daddy","Mood image: greying man in a linen blazer by a window overlooking the Miami waterfront, not a real member"),
+ crumbs=[("Sugar daddy","en/sugar-daddy/")], img=("us/daddy","Mood image: grey-bearded man in an armchair, looking out of a Miami apartment window at the bay, not a real member"),
  blocks=[
   ("h2","What is a sugar daddy?"),
   ("p","Usually a man who has done well in his career, has little time for endless dating and knows exactly what he wants: company, good conversation, someone to share great experiences with. He's generous, with his time, his network or in a way you agree on together."),
@@ -297,7 +297,7 @@ dict(slug="en/sugar-baby/", lang="en", alt="sugarbaby/", role="baby",
  desc="Becoming a sugar baby: what it involves, how to build a strong profile and how to get to know a sugar daddy, on your terms and at your pace.",
  h1="Become a sugar baby",
  lead="For anyone who is independent, knows what she wants and is looking for someone experienced and generous.",
- crumbs=[("Sugar baby","en/sugar-baby/")], img=("us/baby","Mood image: dark-haired woman with an iced coffee on a sunny Los Angeles café patio, not a real member"),
+ crumbs=[("Sugar baby","en/sugar-baby/")], img=("us/baby","Mood image: woman with braids writing in a notebook on a Los Angeles café patio, not a real member"),
  blocks=[
   ("h2","What is a sugar baby?"),
   ("p","Someone who wants a relationship with an older, established partner and is open about it. Sugar babies are students, young professionals, creatives and entrepreneurs. What they share: they know what they want and set their own boundaries."),
@@ -656,7 +656,7 @@ ip("en/older-man-younger-woman/","en","Older Man, Younger Woman: Age-Gap Dating 
  ("p","More on the roles: [[en/sugar-daddy/|Sugar daddy]] and [[en/sugar-baby/|Sugar baby]]."),
  ("faq",[("Is a big age gap a problem?","Not if you're both adults, know what you want and respect each other's boundaries."),
          ("How do I meet an older man or younger woman?","Create a profile, say who you're looking for and browse profiles near you.")]),
- rel_en("en/older-man-younger-woman/")], alt="oudere-man-jongere-vrouw/", img=("us/couple","Mood image: older man and younger woman walking arm in arm past New York brownstones in autumn, not real members")),
+ rel_en("en/older-man-younger-woman/")], alt="oudere-man-jongere-vrouw/", img=("us/couple","Mood image: older man and younger woman talking as they walk past New York brownstones on a grey autumn day, not real members")),
 
 ip("en/arrangement-dating/","en","Arrangement Dating: What Is an Arrangement? | SugarDates",
  "What is an arrangement in sugar dating? How agreements work, monthly support versus per date, and what is and isn't allowed.",
@@ -977,8 +977,8 @@ for _p in PAGES:
     if _p["slug"] in ("sugardaddy/",):
         _p["img"] = ("daddy","Sfeerbeeld: grijzende man in colbert in een rustige lounge, geen echt lid")
     if _p["slug"] == "en/sugar-daddy/":
-        _p["img"] = ("us/daddy","Mood image: greying man in a linen blazer by a window overlooking the Miami waterfront, not a real member")
+        _p["img"] = ("us/daddy","Mood image: grey-bearded man in an armchair, looking out of a Miami apartment window at the bay, not a real member")
     if _p["slug"] == "sugarbaby/":
         _p["img"] = ("baby","Sfeerbeeld: blonde vrouw met koffie aan het raam van een café aan de gracht, geen echt lid")
     if _p["slug"] == "en/sugar-baby/":
-        _p["img"] = ("us/baby","Mood image: dark-haired woman with an iced coffee on a sunny Los Angeles café patio, not a real member")
+        _p["img"] = ("us/baby","Mood image: woman with braids writing in a notebook on a Los Angeles café patio, not a real member")
