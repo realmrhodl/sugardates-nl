@@ -9,11 +9,11 @@
 <meta name="theme-color" content="#f4f4f5">
 <meta property="og:title" content="SugarDates – lancering 2027">
 <meta property="og:description" content="Sugardating, open over wat je zoekt. In 2027, in het Nederlands en in het Engels.">
-<meta property="og:image" content="https://realmrhodl.github.io/sugardates-nl/v12/img/dinner-2160.webp">
+<meta property="og:image" content="https://realmrhodl.github.io/sugardates-nl/teaser-assets/og.jpg">
 <link rel="icon" href="v12/assets/logo.svg" type="image/svg+xml">
 <link rel="canonical" href="https://realmrhodl.github.io/sugardates-nl/teaser.html">
 <link rel="preload" as="font" type="font/woff2" href="v12/fonts/outfit-latin-wght.woff2" crossorigin>
-<link rel="preload" as="image" type="image/webp" href="v12/img/dinner-2160.webp" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="teaser-assets/cafe-2160.webp" fetchpriority="high">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
@@ -70,7 +70,7 @@ body{-webkit-font-smoothing:antialiased}
     linear-gradient(180deg, rgba(244,244,245,.28) 0%, rgba(244,244,245,0) 22%, rgba(244,244,245,0) 82%, rgba(244,244,245,.35) 100%);
 }
 @media (max-width: 867px){
-  .veil{background:none}
+  .veil{background:linear-gradient(180deg, rgba(20,18,16,.48) 0%, rgba(20,18,16,.14) 26%, rgba(20,18,16,0) 52%)}
   .photo-frame{position:relative;height:42vh;min-height:240px;max-height:340px}
   .photo-frame img{position:absolute;inset:0;height:100%;width:100%;max-height:none}
 }
@@ -83,16 +83,16 @@ body{-webkit-font-smoothing:antialiased}
 <a class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-30 focus:bg-white focus:px-3 focus:py-2 focus:rounded-lg" href="#main">Naar inhoud</a>
 
 <div class="relative min-h-[100dvh] flex flex-col min-[868px]:h-[100dvh] min-[868px]:overflow-hidden">
-  <div class="photo-frame relative min-[868px]:absolute min-[868px]:inset-0 overflow-hidden bg-[#2a241f] shrink-0" aria-hidden="true">
+  <div class="photo-frame relative min-[868px]:absolute min-[868px]:inset-0 overflow-hidden bg-[#3a3a3c] shrink-0" aria-hidden="true">
     <picture>
-      <source type="image/webp" srcset="v12/img/dinner-720.webp 720w, v12/img/dinner-1080.webp 1080w, v12/img/dinner-1600.webp 1600w, v12/img/dinner-2160.webp 2160w" sizes="100vw">
+      <source type="image/webp" srcset="teaser-assets/cafe-720.webp 720w, teaser-assets/cafe-1080.webp 1080w, teaser-assets/cafe-1600.webp 1600w, teaser-assets/cafe-2160.webp 2160w" sizes="100vw">
       <img
-        src="v12/img/dinner.jpg"
-        width="1600" height="1067"
+        src="teaser-assets/cafe.jpg"
+        width="1600" height="900"
         alt=""
         decoding="async"
         fetchpriority="high"
-        class="absolute inset-0 h-full w-full object-cover object-[62%_42%] max-[867px]:object-[78%_36%] animate-kenburns motion-reduce:animate-none">
+        class="absolute inset-0 h-full w-full object-cover object-[68%_46%] max-[867px]:object-[86%_40%] animate-kenburns motion-reduce:animate-none">
     </picture>
     <div class="veil absolute inset-0 animate-veil motion-reduce:animate-none pointer-events-none"></div>
   </div>
