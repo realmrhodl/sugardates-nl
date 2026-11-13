@@ -87,7 +87,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <nav aria-label="Language" class="flex items-center gap-1 rounded-full border border-ink/10 bg-white/60 p-1 text-[12px] font-semibold tracking-[0.12em] backdrop-blur"><a href="teaser.html" hreflang="nl" lang="nl" data-lang="nl" class="rounded-full px-3 py-1.5 transition-colors text-graphite hover:text-ink">NL</a><a href="teaser-en.html" hreflang="en" lang="en" data-lang="en" class="rounded-full px-3 py-1.5 transition-colors bg-ink text-white" aria-current="true">EN</a></nav>
   </header>
 
-  <main id="main" class="flex flex-1 flex-col items-center justify-center py-14 text-center sm:py-16">
+  <main id="main" class="flex flex-1 flex-col items-center justify-center py-12 text-center sm:py-10">
     <p class="flex items-center gap-4 text-[12px] font-semibold uppercase tracking-[0.3em] text-graphite animate-fadeup [animation-delay:250ms]">
       <span class="block h-px w-8 sm:w-12 origin-right bg-ink/35 animate-drawc [animation-delay:450ms]" aria-hidden="true"></span>
       Coming 2027
@@ -105,10 +105,15 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     </p>
 
     <span class="rule mt-10 sm:mt-12 block h-px w-full max-w-[28rem] origin-center animate-drawc [animation-delay:1650ms]" aria-hidden="true"></span>
+    <ul class="mt-8 sm:mt-10 grid w-full max-w-[52rem] gap-6 sm:grid-cols-3 sm:gap-10 animate-fadeup [animation-delay:1800ms]" aria-label="How SugarDates works">
+      <li><p class="text-[15px] font-semibold text-ink/90">Your name stays private</p><p class="mt-1 text-[14px] leading-[1.5] text-graphite">Your profile shows a nickname only.</p></li>
+      <li><p class="text-[15px] font-semibold text-ink/90">Expectations up front</p><p class="mt-1 text-[14px] leading-[1.5] text-graphite">You say what you want before you meet.</p></li>
+      <li><p class="text-[15px] font-semibold text-ink/90">A discreet profile</p><p class="mt-1 text-[14px] leading-[1.5] text-graphite">You decide who sees your photos.</p></li>
+    </ul>
   </main>
 
   <footer class="flex items-center justify-between border-t border-ink/10 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-5 text-[12.5px] text-graphite animate-fadein [animation-delay:1900ms]">
-    <p>Forest Road B.V. · © 2026</p>
+    <p>Forest Road B.V. · © 2026 · <a href="v12/en/company-information/" class="underline decoration-ink/20 underline-offset-4 transition-colors hover:text-ink">Company information</a></p>
   </footer>
 </div>
 </body>
