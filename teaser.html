@@ -61,6 +61,13 @@ body{-webkit-font-smoothing:antialiased;background:linear-gradient(160deg,#fbfbf
   *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
 }
 </style>
+<script>
+(function(){var cur=document.documentElement.lang.slice(0,2);var k='sd-lang';var s=null;try{s=localStorage.getItem(k)}catch(e){}
+var q=new URLSearchParams(location.search).get('lang');if(q==='nl'||q==='en'){s=q;try{localStorage.setItem(k,q)}catch(e){}}
+var want=s;if(!want){var L=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'nl']);want=String(L[0]||'nl').toLowerCase().indexOf('nl')===0?'nl':'en';}
+if(want!==cur){location.replace(want==='nl'?'teaser.html':'teaser-en.html');}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a){try{localStorage.setItem(k,a.getAttribute('data-lang'))}catch(x){}}});})();
+</script>
 </head>
 <body class="m-0 min-h-[100dvh] font-sans text-ink overflow-x-hidden">
 <a class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-30 focus:bg-white focus:px-3 focus:py-2 focus:rounded-lg" href="#main">Naar inhoud</a>
@@ -82,6 +89,7 @@ body{-webkit-font-smoothing:antialiased;background:linear-gradient(160deg,#fbfbf
 
   <header class="flex items-center justify-between pt-6 sm:pt-8 animate-fadein">
     <span class="text-[21px] sm:text-[22px] font-bold leading-none tracking-[0.005em]">SugarDates</span>
+    <nav aria-label="Taal" class="flex items-center gap-1 rounded-full border border-ink/10 bg-white/60 p-1 text-[12px] font-semibold tracking-[0.12em] backdrop-blur"><a href="teaser.html" hreflang="nl" lang="nl" data-lang="nl" class="rounded-full px-3 py-1.5 transition-colors bg-ink text-white" aria-current="true">NL</a><a href="teaser-en.html" hreflang="en" lang="en" data-lang="en" class="rounded-full px-3 py-1.5 transition-colors text-graphite hover:text-ink">EN</a></nav>
   </header>
   <span class="mt-6 block h-px w-full origin-left bg-line animate-draw [animation-delay:150ms]" aria-hidden="true"></span>
 
@@ -117,7 +125,6 @@ body{-webkit-font-smoothing:antialiased;background:linear-gradient(160deg,#fbfbf
 
   <footer class="flex items-center justify-between border-t border-ink/10 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-5 text-[12.5px] text-graphite animate-fadein [animation-delay:1600ms]">
     <p>Forest Road B.V. · © 2026</p>
-    <a href="teaser-en.html" hreflang="en-US" lang="en" class="underline decoration-ink/20 underline-offset-4 transition-colors hover:text-ink hover:decoration-ink/50">United States</a>
   </footer>
 </div>
 </body>
