@@ -118,3 +118,8 @@
 - `--grad` = white radial top-left `rgba(255,255,255,.75)` + cool grey radial bottom-right `rgba(196,196,200,.38)` over `linear-gradient(165deg,#fbfbfc,#f1f1f2 36%,#e5e5e7 70%,#d9d9dc)`; all text on bands ink `#1c1917` (secondary `#3a3a3c`). Buttons ink everywhere (`.btn-w` now ink too), hover `#3d342f`. Chips `#f3f3f4`, mist `#f5f5f6`, line `#e6e6e8`, closing panel `linear-gradient(165deg,#fafafa,#f0f0f1)`, accents graphite `#5c5c5e`. Hero card/subpage photo: soft ink hairline + shadow. theme-color `#f4f4f5`. Form errors `#a3463c`.
 - Notes: `sugardates-nl-notes/v12/` (`restyle_v12_css.py`, `shot_v12.py`, `check_all.py`).
 - Footer shortened (12 Nov 2026): legal line is now `Forest Road B.V. · © 2026` plus a text link to **Bedrijfsgegevens** (`/v12/bedrijfsgegevens/`) or **Company information** (`/v12/en/company-information/`). Address, KvK/Chamber, VAT and the dating slogan live only on those pages (noindex, grey-white v12 system). v5–v11 untouched.
+
+- Company pages (12 Nov 2026): the paid-sex sentence was taken off Bedrijfsgegevens / Company information; that wording belongs in the terms (not written yet). About line is now “SugarDates is een datingsite. Discreet sugardating, op jouw voorwaarden.” / English equivalent.
+
+## Teaser (12 Nov 2026)
+- `teaser.html` at the repo root: https://realmrhodl.github.io/sugardates-nl/teaser.html — announces a 2027 launch of a SugarDates sugardating site in Dutch and English. v12 grey-white look, self-hosted Outfit, NL couple photo, noindex, no signup form, Forest Road B.V. © 2026. Does not redirect the site root (`index.html` still goes to v5).

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SugarDates – lancering 2027</title>
+<meta name="description" content="In 2027 lanceren we een sugardating-site, in het Nederlands en in het Engels.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#f4f4f5">
+<meta property="og:title" content="SugarDates – lancering 2027">
+<meta property="og:description" content="In 2027 lanceren we een sugardating-site, in het Nederlands en in het Engels.">
+<meta property="og:image" content="https://realmrhodl.github.io/sugardates-nl/v12/img/og.jpg">
+<link rel="icon" href="v12/assets/logo.svg" type="image/svg+xml">
+<link rel="canonical" href="https://realmrhodl.github.io/sugardates-nl/teaser.html">
+<link rel="preload" as="font" type="font/woff2" href="v12/fonts/outfit-latin-wght.woff2" crossorigin>
+<style>
+@font-face{font-family:Outfit;src:url(v12/fonts/outfit-latin-wght.woff2) format("woff2");font-weight:300 800;font-style:normal;font-display:swap}
+:root{
+  --paper:#fff;
+  --ink:#1c1917;
+  --ink-2:#3a3a3c;
+  --graphite:#5c5c5e;
+  --line:#e6e6e8;
+  --grad:radial-gradient(60% 80% at 0% 0%,rgba(255,255,255,.75),rgba(255,255,255,0) 70%),radial-gradient(55% 75% at 100% 100%,rgba(196,196,200,.38),rgba(196,196,200,0) 70%),linear-gradient(165deg,#fbfbfc 0%,#f1f1f2 36%,#e5e5e7 70%,#d9d9dc 100%);
+  --r:24px;
+  --sh:rgba(28,25,23,.10) 0 1px 8px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;height:100%}
+body{
+  min-height:100%;
+  min-height:100dvh;
+  display:flex;
+  flex-direction:column;
+  font:400 16px/1.55 Outfit,system-ui,-apple-system,"Segoe UI",sans-serif;
+  letter-spacing:.012em;
+  color:var(--ink);
+  background:var(--grad);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px}
+.skip:focus{left:16px;z-index:20;background:#fff;padding:8px 12px;border-radius:8px}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 24px}
+header{padding:22px 0}
+.brand{font:700 22px/1 Outfit,sans-serif;letter-spacing:.005em}
+main{flex:1;display:flex;align-items:center;padding:12px 0 48px}
+.hero{display:grid;gap:40px;align-items:center;width:100%}
+.copy .year{
+  display:inline-block;
+  font:600 13px/1 Outfit,sans-serif;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--graphite);
+  margin-bottom:18px;
+}
+h1{font:700 40px/1.08 Outfit,sans-serif;letter-spacing:-.018em;max-width:16ch}
+.en{margin-top:22px;font-size:19px;line-height:1.45;color:var(--ink-2);max-width:28ch}
+.card{
+  background:#fff;
+  border-radius:var(--r);
+  padding:12px;
+  box-shadow:0 0 0 1px rgba(28,25,23,.05),0 20px 44px -22px rgba(28,25,23,.28);
+}
+.card img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border-radius:16px;
+  background:#e8e8ea;
+}
+footer{padding:0 0 28px;color:var(--graphite);font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;align-items:center}
+footer a{border-bottom:1px solid transparent}
+footer a:hover{color:var(--ink);border-bottom-color:currentColor}
+@media (min-width:860px){
+  .hero{grid-template-columns:1.05fr .85fr;gap:72px;padding:20px 0 32px}
+  h1{font-size:56px}
+  .en{font-size:21px;margin-top:28px}
+  .card{max-width:460px;justify-self:end}
+}
+@media (max-width:859px){
+  h1{font-size:34px}
+  .card{max-width:420px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Naar inhoud</a>
+<header><div class="wrap"><span class="brand">SugarDates</span></div></header>
+<main id="main">
+  <div class="wrap hero">
+    <div class="copy">
+      <p class="year">2027</p>
+      <h1>In 2027 lanceren we een sugardating-site, in het Nederlands en in het Engels.</h1>
+      <p class="en" lang="en">In 2027 we’re launching a sugar dating site, in Dutch and in English.</p>
+    </div>
+    <div class="card">
+      <picture>
+        <source type="image/webp" srcset="v12/img/couple-720.webp 720w, v12/img/couple-1080.webp 1080w, v12/img/couple-1440.webp 1440w" sizes="(min-width:860px) 460px, calc(100vw - 64px)">
+        <img src="v12/img/couple.jpg" width="1080" height="1350" alt="Sfeerbeeld: oudere man en jongere vrouw wandelen samen door een Amsterdamse grachtenstraat, geen echte leden" decoding="async" fetchpriority="high">
+      </picture>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Forest Road B.V. · © 2026</p>
+  </div>
+</footer>
+</body>
+</html>
