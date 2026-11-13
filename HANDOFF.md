@@ -96,3 +96,9 @@
 - Pages: home, aanmelden, and every SugarDates page from `v5/pages.py` (NL + EN) except Paydates/HighClass sister pages and `v5/lp/`. Sister-site sentences/links are stripped in v8. `wat-is-sugardating/` and `en/what-is-sugar-dating/` use Stefan's new copy (t66u) and are linked from the footer.
 - Images: re-exported from the Higgsfield raws (`sugardates-nl-notes/higgs/` + `/us/`) to `v8/img/` and `v8/img/us/`: portraits 4:5 at 480/720/1080/1440w, wides 3:2 at 720/1080/1600/2160w (WebP q80 + JPEG fallback), gentle shared grade (–7% saturation, +4% contrast, slight matte), og.jpg per locale.
 - Generator (outside repo): `sugardates-nl-notes/v8/build_v8.py` (imports v5 content read-only), images `export_img.py`, screenshots `shot_v8.py`, overflow/image check `check_all.py`.
+
+## v9 – champagne → rose-quartz gradient (12 Nov 2026)
+- Stefan (t67u) found v8's flat red ugly ("probeer een andere kleur of gradient of iets gaafs"). **`v9/`** is a straight copy of v8 (48 pages NL+EN, same copy/photos/fonts/JS, noindex) with only the colour system changed; v5–v8 untouched. CSS `v9/assets/v9.css`, signup storage key `sugardates-v9-*`, canonicals/og point at `/v9/`.
+- Colours: white page, ink `#1c1917`; hero/statement/subpage bands + signup visual use `--grad` = soft rose glow bottom-right + champagne glow top-left over `linear-gradient(165deg,#f7ecd8,#f4e2cf 26%,#f0d5c4 50%,#eac6ba 75%,#e5b9b0)`; all text on bands is ink. Buttons ink `#1c1917` / hover `#3d342f` (outline buttons ink border). Chips `#f7efe3`, mist `#f6f1ea`, line `#ece4da`, accents muted rose `#b07a72` (text-on-white `#9a645c`). Closing panel light champagne wash. Logo SVG ink. theme-color `#f7ecd8`. No `#b3122e`/`#8f0e24`/yellow.
+- Subpage heroes: photo now sits fully on the gradient band (v8's half-red/half-white cut dropped).
+- Notes: `sugardates-nl-notes/v9/` (`restyle_v9_css.py` = CSS diff from v8, `shot_v9.py`, `check_all.py`).
