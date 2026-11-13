@@ -136,5 +136,5 @@ Two separate, single-language teasers (12 Nov late evening PT: Stefan found the 
 
 ## 2026-11-13 – Teaser production package for sugardates.nl
 - Stefan: "we hosten m op .nl" + "send me html css js files". Both teasers are hosted on sugardates.nl: `/` (NL) and `/en/` (EN).
-- `teaser-en.html` copy is no longer US-only: “A nickname is all it takes. / SugarDates opens in 2027, in Dutch and English.”, meta line “Netherlands · Belgium · sugardates.nl”, lang=en, og:locale en_GB, hreflang `en`. og image `teaser-assets/og-type-us.png` regenerated with that copy.
+- 2026-11-13 later: Stefan "lets focus on USA": EN teaser targets the US again while hosted at sugardates.nl/en/ — “A nickname is all it takes. / SugarDates opens in the United States.”, meta line “United States”, lang=en-US, hreflang en-US, og:locale en_US; og image regenerated.
 - Self-hostable package (compiled Tailwind 3.4.19, no CDN, no third-party requests, lang.js, .htaccess, robots/sitemap): `/workspace/sugardates-teaser-dist/` + `/workspace/sugardates-teaser.zip` on the box. Build sources: `/workspace/sd-build/` (tailwind.config.js, input.css, gen.py, og.py, test.py). Rebuild: `python3 gen.py && npx tailwindcss -c tailwind.config.js -i input.css -o ../sugardates-teaser-dist/assets/css/style.css --minify`.
