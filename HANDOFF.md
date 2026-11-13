@@ -102,3 +102,8 @@
 - Colours: white page, ink `#1c1917`; hero/statement/subpage bands + signup visual use `--grad` = soft rose glow bottom-right + champagne glow top-left over `linear-gradient(165deg,#f7ecd8,#f4e2cf 26%,#f0d5c4 50%,#eac6ba 75%,#e5b9b0)`; all text on bands is ink. Buttons ink `#1c1917` / hover `#3d342f` (outline buttons ink border). Chips `#f7efe3`, mist `#f6f1ea`, line `#ece4da`, accents muted rose `#b07a72` (text-on-white `#9a645c`). Closing panel light champagne wash. Logo SVG ink. theme-color `#f7ecd8`. No `#b3122e`/`#8f0e24`/yellow.
 - Subpage heroes: photo now sits fully on the gradient band (v8's half-red/half-white cut dropped).
 - Notes: `sugardates-nl-notes/v9/` (`restyle_v9_css.py` = CSS diff from v8, `shot_v9.py`, `check_all.py`).
+
+## v10 – warm antique gold, no pink (12 Nov 2026)
+- Stefan rejected v9's champagne/rose ("Lelijke kleur") and chose "Warm goud, zonder roze". **`v10/`** is a straight copy of v9 (48 pages NL+EN, same copy/photos/fonts/JS, noindex) with only colours changed; v5–v9 untouched. CSS `v10/assets/v10.css`, storage key `sugardates-v10-*`, canonicals/og → `/v10/`.
+- `--grad` = brass glow bottom-right `rgba(156,126,58,.30)` + ivory glow top-left over `linear-gradient(165deg,#f8f2de,#ede1ba 30%,#dcc788 60%,#cdb26a 85%,#c4a95e)`; text on bands ink `#1c1917`. Buttons ink / hover `#3d342f`. Chips `#f6f0dc`, mist `#f7f3e6`, line `#e6dcbc`, accents brass `#8a6d32` (text `#7a5e22`). theme-color `#f8f2de`. Form errors stay `#a3463c`. No rose/pink, `#ffdb5b`, `#b3122e`.
+- Notes: `sugardates-nl-notes/v10/` (`restyle_v10_css.py`, `shot_v10.py`, `check_all.py`).
