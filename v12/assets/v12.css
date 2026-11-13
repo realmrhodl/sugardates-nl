@@ -275,3 +275,30 @@ select.inp{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 @media (min-width:960px){
   .phero.plain .wrap{grid-template-columns:1fr}
 }
+
+/* us home (SugarDates.net) – same palette, own layout */
+.kicker{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--graphite)}
+.us-hero .hero-c .kicker{margin:0 0 14px;font-size:13px;color:var(--graphite)}
+.us-hero h1{max-width:13ch}
+.hero-acts{display:grid;gap:10px;margin-top:28px}
+.hero-acts .btn{margin-top:0;width:100%}
+.us-hero .hero-c p.trust{margin-top:16px;font-size:14px;color:var(--graphite)}
+.how{padding:64px 0 8px}
+.how .stepcards{margin-top:28px}
+.how-more{margin-top:24px}
+.us-roles{padding-top:56px}
+.cities-us{padding:8px 0 72px}
+.cities-us .wrap{display:grid;gap:28px}
+.cities-us .frame img{aspect-ratio:3/2}
+.cities-c p{margin-top:14px;font-size:18px;line-height:1.55;color:var(--graphite);max-width:40ch}
+.cities-c .links{margin-top:22px}
+@media (min-width:720px){.hero-acts{display:flex;flex-wrap:wrap}.hero-acts .btn{width:auto}}
+@media (min-width:960px){
+  .us-hero .wrap{grid-template-columns:.9fr 1.1fr}
+  .us-hero .card.big{order:-1;justify-self:start}
+  .how{padding:104px 0 16px}
+  .how .stepcards.three{grid-template-columns:repeat(3,1fr);margin-top:44px}
+  .us-roles{padding-top:88px}
+  .cities-us{padding:16px 0 112px}
+  .cities-us .wrap{grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+}
